@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="PC IT – programų perinstaliavimas, nuotolinė pagalba ir kompiuterių optimizavimas Šilutėje. Kainos nuo 15€.">
-<title>PC IT – Kompiuterių remontas ir nuotolinė pagalba Šilutėje | Kainoraštis</title>
+<title>PC IT – Kompiuterių remontas ir nuotolinė pagalba Šilutėje | Kainoraštis ir Užklausa</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -28,7 +28,7 @@ linear-gradient(135deg,#020817 0%,#06152b 55%,#03111f 100%)}
 h1{font-size:clamp(40px,6vw,68px);line-height:1.04;margin-bottom:20px}
 h1 span{color:#13b5ff}
 .hero p{font-size:20px;color:#c9d9ea;max-width:680px;margin-bottom:30px}
-.btn{display:inline-block;background:#0ea5e9;color:#001421;font-weight:900;padding:14px 23px;border-radius:10px;margin:4px 8px 4px 0;box-shadow:0 8px 25px #0ea5e933}
+.btn{display:inline-block;background:#0ea5e9;color:#001421;font-weight:900;padding:14px 23px;border-radius:10px;margin:4px 8px 4px 0;box-shadow:0 8px 25px #0ea5e933;cursor:pointer;border:none}
 .btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
 .btn.alt{background:#eef6ff;color:#07111f}
 .logo-card{display:flex;justify-content:center}
@@ -53,6 +53,16 @@ section{padding:80px 0}
 .remote-card h3{margin:10px 0 10px;font-size:20px;color:#ffffff}
 .remote-card p{color:#cbd5e1;font-size:15px}
 
+/* Forma */
+.form-container{max-width:700px;margin:0 auto;background:#071a30;border:1px solid #1e3a5f;padding:40px;border-radius:20px;box-shadow:0 15px 35px #00000044}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;margin-bottom:8px;font-weight:700;color:#93c5fd}
+.form-group input, .form-group select, .form-group textarea{width:100%;padding:12px 16px;background:#020817;border:1px solid #2b4c7e;border-radius:8px;color:#fff;font-size:16px}
+.form-group textarea{resize:vertical;height:120px}
+.checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.checkbox-item{display:flex;align-items:center;gap:10px;background:#020817;padding:10px 14px;border:1px solid #2b4c7e;border-radius:8px;cursor:pointer}
+.checkbox-item input{width:18px;height:18px;accent-color:#0ea5e9}
+
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
 .about-box{border:1px solid #19466b;background:linear-gradient(145deg,#071a30,#03101e);border-radius:22px;padding:36px}
 .about-box img{display:block;width:170px;margin:0 auto 18px}
@@ -62,7 +72,7 @@ section{padding:80px 0}
 .contact p{color:#c9d9ea;margin:10px auto 26px}
 footer{background:#010611;color:#7f92a8;text-align:center;padding:25px;font-size:14px}
 @media(max-width:760px){
-nav ul{display:none}.hero{min-height:auto;padding:70px 0}.hero-grid,.about-grid,.remote-cards{grid-template-columns:1fr}
+nav ul{display:none}.hero{min-height:auto;padding:70px 0}.hero-grid,.about-grid,.remote-cards,.checkbox-grid{grid-template-columns:1fr}
 .logo-card{order:-1}.logo-card img{width:240px}.cards{grid-template-columns:1fr}
 section{padding:58px 0}.brand span{font-size:20px}
 }
@@ -79,8 +89,8 @@ section{padding:58px 0}.brand span{font-size:20px}
 </a>
 <ul>
 <li><a href="#paslaugos">Paslaugos</a></li>
-<li><a href="#nuotoliniu-budu">Nuotolinis tvarkymas</a></li>
-<li><a href="#apie">Apie</a></li>
+<li><a href="#nuotoliniu-budu">Nuotolinis</a></li>
+<li><a href="#uzklausa">Registruoti gedimą</a></li>
 <li><a href="#kontaktai">Kontaktai</a></li>
 </ul>
 </nav>
@@ -94,8 +104,8 @@ section{padding:58px 0}.brand span{font-size:20px}
 <div class="badge">📍 ŠILUTĖ • SAUGI NUOTOLINĖ PAGALBA</div>
 <h1>Kompiuteris lėtas ar ožiuojasi?<br><span>Sutvarkome Šilutėje ir nuotoliniu būdu.</span></h1>
 <p>Pilnas Windows perrašymas, operatyvi nuotolinė pagalba per „RustDesk“ jūsų akivaizdoje, programinės įrangos optimizavimas.</p>
-<a class="btn" href="#kontaktai">💬 Susisiekti</a>
-<a class="btn alt" href="#nuotoliniu-budu">Kaip vyksta nuotolinis tvarkymas?</a>
+<a class="btn" href="#uzklausa">📝 Pildyti užklausą</a>
+<a class="btn alt" href="#nuotoliniu-budu">Kaip tai veikia?</a>
 </div>
 <div class="logo-card">
 <img src="pc-it-logo.png" alt="PC IT – kompiuterių remontas Šilutėje">
@@ -110,18 +120,18 @@ section{padding:58px 0}.brand span{font-size:20px}
 <div class="remote-cards">
 <div class="remote-card">
 <div class="step-num">1</div>
-<h3>Susisiekite ir aptarkime</h3>
-<p>Parašykite mums per „Facebook“ arba el. paštu. Trumpai papasakokite, kas nutiko su jūsų kompiuteriu.</p>
+<h3>Užpildykite užklausą</h3>
+<p>Pažymėkite savo problemą žemiau esančioje formoje arba parašykite mums tiesiogiai.</p>
 </div>
 <div class="remote-card">
 <div class="step-num">2</div>
 <h3>Saugus prisijungimas</h3>
-<p>Naudojame saugią programą „RustDesk“. Jūs matote kiekvieną mūsų pelės judesį ekrane ir galite bet kada nutraukti seansą.</p>
+<p>Naudojame saugią programą „RustDesk“. Jūs matote kiekvieną mūsų pelės judesį ekrane.</p>
 </div>
 <div class="remote-card">
 <div class="step-num">3</div>
 <h3>Sutvarkyta ir patikrinta</h3>
-<p>Pašaliname gedimus, išvalome šlamštą bei virusus, o po visko apmokate tik pasiekus rezultatą (pagal susitarimą).</p>
+<p>Pašaliname gedimus, o po visko apmokate tik pasiekus rezultatą (pagal susitarimą).</p>
 </div>
 </div>
 </div>
@@ -133,7 +143,7 @@ section{padding:58px 0}.brand span{font-size:20px}
 <p class="subtitle">Skaidrios kainos ir profesionali pagalba kompiuteriams Šilutėje bei nuotoliniu būdu.</p>
 <div class="cards">
 <div class="card">
-<div><div class="ico">🌐</div><h3>Nuotolinė pagalba (RustDesk)</h3><p>Greitai ir saugiai jūsų akivaizdoje: virusų ir šlamšto šalininmas, naršyklių valymas, spartinimas.</p></div>
+<div><div class="ico">🌐</div><h3>Nuotolinė pagalba (RustDesk)</h3><p>Greitai ir saugiai jūsų akivaizdoje: virusų ir šlamšto šalinimas, naršyklių valymas.</p></div>
 <div><span class="price">Nuo 15 € / Pagal susitarimą</span></div>
 </div>
 <div class="card">
@@ -152,43 +162,3 @@ section{padding:58px 0}.brand span{font-size:20px}
 <div><div class="ico">💾</div><h3>Duomenų atkūrimas</h3><p>Pagalba bandant atkurti netyčia ištrintas nuotraukas, dokumentus ar failus.</p></div>
 <div><span class="price">Pagal susitarimą</span></div>
 </div>
-<div class="card">
-<div><div class="ico">🧩</div><h3>Programos ir tvarkyklės</h3><p>Reikalingų papildomų programų, tvarkyklių ir komponentų sutvarkymas.</p></div>
-<div><span class="price">Nuo 15–20 €</span></div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="apie">
-<div class="wrap about-grid">
-<div>
-<h2 class="title" style="text-align:left">Kodėl verta kreiptis Šilutėje?</h2>
-<p>Nebūtina kompiuterio niekur vežti ir laukti savaitėmis – daugelį problemų išsprendžiame **nuotoliniu būdu** per „RustDesk“ arba sutvarkome vietoje **Šilutėje**.</p>
-<ul class="checks">
-<li>Nuotolinis remontas jūsų akivaizdoje</li>
-<li>Aiškus ir sąžiningas kainoraštis</li>
-<li>Windows ir programinės įrangos atnaujinimas</li>
-<li>Operatyvus bendravimas ir patarimai</li>
-</ul>
-</div>
-<div class="about-box">
-<img src="pc-it-logo.png" alt="PC IT Šilutė">
-<p style="text-align:center;color:#c9d9ea">Šilutė • Nuotolinė pagalba<br>Programų perinstaliavimas</p>
-</div>
-</div>
-</section>
-
-<section id="kontaktai" class="contact">
-<div class="wrap">
-<h2 class="title">Reikia pagalbos su kompiuteriu Šilutėje?</h2>
-<p>Susisiekite per Facebook arba parašykite el. laišką. Aptarsime gedimą ir rasime geriausią sprendimą!</p>
-<a class="btn" href="https://www.facebook.com/profile.php?id=61592840316716" target="_blank" rel="noopener noreferrer">💬 Parašyti Facebook</a>
-<a class="btn alt" href="mailto:itservizassilute@gmail.com">✉️ itservizassilute@gmail.com</a>
-</div>
-</section>
-</main>
-
-<footer>© 2026 PC IT Šilutė • Nuotolinė pagalba • Programų perinstaliavimas • Kainos pagal susitarimą</footer>
-</body>
-</html>
