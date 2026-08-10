@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PC IT – kompiuterių Windows perinstaliavimas, optimizavimas, diagnostika ir programinės įrangos sutvarkymas.">
+  <title>PC IT | Kompiuterių priežiūra ir optimizavimas</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:#172033;background:#f6f8fc;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1100px;margin:auto;padding:0 22px}
+    header{background:#101827;color:white;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0002}
+    nav{height:70px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:24px;font-weight:800;letter-spacing:.5px}.logo span{color:#38bdf8}
+    nav ul{display:flex;gap:25px;list-style:none;font-weight:600}
+    nav a:hover{color:#38bdf8}
+    .hero{background:linear-gradient(135deg,#101827 0%,#172b46 60%,#0e7490 100%);color:white;padding:92px 0 100px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:45px;align-items:center}
+    .tag{display:inline-block;background:#38bdf822;border:1px solid #38bdf855;color:#7dd3fc;padding:7px 13px;border-radius:30px;font-weight:700;margin-bottom:20px}
+    h1{font-size:clamp(40px,6vw,68px);line-height:1.05;margin-bottom:22px}
+    .hero p{font-size:20px;color:#dbeafe;max-width:650px;margin-bottom:30px}
+    .btn{display:inline-block;background:#38bdf8;color:#082032;font-weight:800;padding:14px 22px;border-radius:10px;margin-right:10px}
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+    .btn.alt{background:white;color:#172033}
+    .hero-card{background:#ffffff12;border:1px solid #ffffff22;border-radius:22px;padding:30px;backdrop-filter:blur(5px)}
+    .hero-card .icon{font-size:52px;margin-bottom:15px}.hero-card h3{font-size:24px;margin-bottom:8px}
+    section{padding:75px 0}.section-title{text-align:center;font-size:36px;margin-bottom:12px}
+    .section-sub{text-align:center;color:#64748b;max-width:650px;margin:0 auto 40px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:white;border:1px solid #e4e9f2;border-radius:16px;padding:27px;box-shadow:0 8px 25px #1720330a}
+    .card .emoji{font-size:34px}.card h3{margin:12px 0 7px;font-size:20px}.card p{color:#64748b}
+    .about{background:white}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+    .about-box{background:#eef8ff;border-radius:22px;padding:35px}.about-box strong{font-size:44px;color:#0284c7;display:block}
+    .checks{list-style:none;margin-top:22px}.checks li{margin:12px 0}.checks li:before{content:"✓";color:#0284c7;font-weight:900;margin-right:10px}
+    .contact{background:#101827;color:white;text-align:center}.contact p{color:#cbd5e1;margin:12px auto 28px}
+    footer{background:#0b1220;color:#94a3b8;text-align:center;padding:25px;font-size:14px}
+    @media(max-width:760px){
+      nav ul{display:none}.hero{padding:65px 0}.hero-grid,.about-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}
+      section{padding:55px 0}.hero-card{display:none}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#">PC <span>IT</span></a>
+      <ul>
+        <li><a href="#paslaugos">Paslaugos</a></li>
+        <li><a href="#apie">Apie</a></li>
+        <li><a href="#kontaktai">Kontaktai</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="tag">💻 Kompiuterių priežiūra</div>
+        <h1>Kompiuteris lėtas?<br>Padėkime jam veikti geriau.</h1>
+        <p>Windows perinstaliavimas, kompiuterio optimizavimas, programų ir tvarkyklių sutvarkymas bei pagalba sprendžiant įvairias PC problemas.</p>
+        <a class="btn" href="#kontaktai">Susisiekti</a>
+        <a class="btn alt" href="#paslaugos">Paslaugos</a>
+      </div>
+      <div class="hero-card">
+        <div class="icon">⚙️</div>
+        <h3>PC IT</h3>
+        <p>Praktiška pagalba, kai kompiuteris pradeda strigti, lėtėti ar kelti problemų.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="paslaugos">
+    <div class="wrap">
+      <h2 class="section-title">Paslaugos</h2>
+      <p class="section-sub">Pagrindinės kompiuterių priežiūros ir programinės įrangos paslaugos.</p>
+      <div class="cards">
+        <div class="card"><div class="emoji">🪟</div><h3>Windows perinstaliavimas</h3><p>Windows įdiegimas, nustatymas, aktyvavimo ir pagrindinių nustatymų sutvarkymas.</p></div>
+        <div class="card"><div class="emoji">⚡</div><h3>Kompiuterio optimizavimas</h3><p>Peržiūrime sistemą, paleisties programas, nereikalingą programinę įrangą ir kitus stabdžius.</p></div>
+        <div class="card"><div class="emoji">🔧</div><h3>Gedimų diagnostika</h3><p>Padedame nustatyti, kodėl kompiuteris lėtėja, stringa, persikrauna ar veikia nestabiliai.</p></div>
+        <div class="card"><div class="emoji">💾</div><h3>Duomenų atkūrimas</h3><p>Pagalba bandant atkurti netyčia ištrintas nuotraukas ir kitus failus.</p></div>
+        <div class="card"><div class="emoji">🧩</div><h3>Programos ir tvarkyklės</h3><p>Reikalingų programų, tvarkyklių ir pagrindinių sistemos komponentų sutvarkymas.</p></div>
+        <div class="card"><div class="emoji">🎮</div><h3>PC paruošimas žaidimams</h3><p>Sistemos ir nustatymų sutvarkymas, kad kompiuteris būtų paruoštas žaidimams.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="apie">
+    <div class="wrap about-grid">
+      <div>
+        <h2 class="section-title" style="text-align:left">Paprastai ir aiškiai</h2>
+        <p>Kompiuterio problemos ne visada reiškia, kad reikia pirkti naują kompiuterį. Pirmiausia verta išsiaiškinti, kas iš tikrųjų negerai.</p>
+        <ul class="checks">
+          <li>Individualus problemos įvertinimas</li>
+          <li>Windows ir programinės įrangos sutvarkymas</li>
+          <li>Kompiuterio veikimo optimizavimas</li>
+          <li>Paaiškiname, kas buvo atlikta</li>
+        </ul>
+      </div>
+      <div class="about-box">
+        <strong>PC IT</strong>
+        <p>Kompiuterių perinstaliavimas • optimizavimas • priežiūra</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontaktai">
+    <div class="wrap">
+      <h2 class="section-title">Reikia pagalbos su kompiuteriu?</h2>
+      <p>Parašykite per Facebook – aptarsime problemą ir susitarsime dėl paslaugos.</p>
+      <!-- ČIA ĮRAŠYSIME TAVO FACEBOOK PUSLAPIO NUORODĄ -->
+      <a class="btn" href="https://www.facebook.com/" target="_blank">💬 Parašyti Facebook</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 PC IT • Kompiuterių priežiūra ir optimizavimas
+</footer>
+</body>
+</html>
