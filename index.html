@@ -61,6 +61,12 @@ h1 span{color:var(--accent);background:linear-gradient(90deg, #0ea5e9, #6366f1);
 .logo-card img{width:min(400px,90%);border-radius:50%;filter:drop-shadow(0 0 30px #0ea5e922);animation: float 6s ease-in-out infinite;}
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 
+/* Garantijos juosta (Nauja!) */
+.guarantee-bar{background:linear-gradient(90deg, #071a30, #031226);border-top:1px solid #1e3a5f;border-bottom:1px solid #1e3a5f;padding:25px 0}
+.guarantee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.guarantee-item{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--text);font-weight:600;font-size:15px}
+.guarantee-item i{color:var(--accent);font-size:24px}
+
 /* Section & Cards */
 section{padding:90px 0}
 .light{background:#f8fafc;color:#0f172a}
@@ -76,6 +82,7 @@ section{padding:90px 0}
 .card h3{font-size:20px;margin-bottom:10px;font-weight:700}
 .card p{color:#475569;margin-bottom:20px;font-size:15px}
 .price{font-weight:800;color:var(--accent);background:#0ea5e90f;padding:8px 14px;border-radius:10px;display:inline-block;font-size:14px}
+.card-guarantee{display:block;font-size:12px;color:#0369a1;font-weight:700;margin-top:8px}
 
 /* Remote Section */
 .remote-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -123,6 +130,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 @media(max-width:960px){
     .cards, .remote-cards, .reviews-grid{grid-template-columns:repeat(2,1fr)}
     .about-grid{grid-template-columns:1fr}
+    .guarantee-grid{grid-template-columns:1fr;gap:15px}
 }
 @media(max-width:760px){
     nav ul{display:none}
@@ -185,6 +193,25 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </div>
 </section>
 
+<div class="guarantee-bar">
+<div class="wrap">
+<div class="guarantee-grid">
+<div class="guarantee-item">
+<i class="fa-solid fa-circle-check"></i>
+<span data-lt="Apmokėjimas tik po sėkmingo darbo" data-en="Payment only after successful work">Apmokėjimas tik po sėkmingo darbo</span>
+</div>
+<div class="guarantee-item">
+<i class="fa-solid fa-lock"></i>
+<span data-lt="Saugus seansas jūsų akivaizdoje" data-en="Secure session right before your eyes">Saugus seansas jūsų akivaizdoje</span>
+</div>
+<div class="guarantee-item">
+<i class="fa-solid fa-handshake"></i>
+<span data-lt="Sąžiningos ir aiškios kainos" data-en="Fair and transparent pricing">Sąžiningos ir aiškios kainos</span>
+</div>
+</div>
+</div>
+</div>
+
 <section id="nuotoliniu-budu" class="dark-sec">
 <div class="wrap">
 <h2 class="title" data-lt="Kaip veikia nuotolinė pagalba?" data-en="How does remote support work?">Kaip veikia nuotolinė pagalba?</h2>
@@ -220,7 +247,10 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <h3 data-lt="Nuotolinė pagalba (RustDesk)" data-en="Remote Support (RustDesk)">Nuotolinė pagalba (RustDesk)</h3>
     <p data-lt="Greitai ir saugiai jūsų akivaizdoje: virusų ir šlamšto šalinimas, naršyklių valymas." data-en="Quickly and securely right before your eyes: virus and junk removal, browser cleanup.">Greitai ir saugiai jūsų akivaizdoje: virusų ir šlamšto šalinimas, naršyklių valymas.</p>
 </div>
-<div><span class="price" data-lt="Nuo 15 € / Pagal susitarimą" data-en="From €15 / By agreement">Nuo 15 € / Pagal susitarimą</span></div>
+<div>
+    <span class="price" data-lt="Nuo 15 € / Pagal susitarimą" data-en="From €15 / By agreement">Nuo 15 € / Pagal susitarimą</span>
+    <span class="card-guarantee" data-lt="✓ Mokate tik pasiekus rezultatą" data-en="✓ Pay only upon result">✓ Mokate tik pasiekus rezultatą</span>
+</div>
 </div>
 <div class="card">
 <div>
@@ -228,7 +258,10 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <h3 data-lt="Windows perrašymas" data-en="Windows Reinstallation">Windows perrašymas</h3>
     <p data-lt="Pilnas „Windows“ perrašymas, draiverių ir reikalingų programų paketas." data-en="Full Windows reinstallation, driver and necessary software package.">Pilnas „Windows“ perrašymas, draiverių ir reikalingų programų paketas.</p>
 </div>
-<div><span class="price" data-lt="Nuo 30 €" data-en="From €30">Nuo 30 €</span></div>
+<div>
+    <span class="price" data-lt="Nuo 30 €" data-en="From €30">Nuo 30 €</span>
+    <span class="card-guarantee" data-lt="✓ Pilnas paruošimas darbui" data-en="✓ Full setup for work">✓ Pilnas paruošimas darbui</span>
+</div>
 </div>
 <div class="card">
 <div>
@@ -236,7 +269,10 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <h3 data-lt="Kompiuterio optimizavimas" data-en="Computer Optimization">Kompiuterio optimizavimas</h3>
     <p data-lt="Pašaliname nereikalingas programas, sutvarkome paleistį ir pagreitiname darbą." data-en="We remove unnecessary programs, fix startup and speed up performance.">Pašaliname nereikalingas programas, sutvarkome paleistį ir pagreitiname darbą.</p>
 </div>
-<div><span class="price" data-lt="Nuo 15–20 €" data-en="From €15–20">Nuo 15–20 €</span></div>
+<div>
+    <span class="price" data-lt="Nuo 15–20 €" data-en="From €15–20">Nuo 15–20 €</span>
+    <span class="card-guarantee" data-lt="✓ Greitesnis kompiuterio veikimas" data-en="✓ Faster computer performance">✓ Greitesnis kompiuterio veikimas</span>
+</div>
 </div>
 <div class="card">
 <div>
@@ -244,7 +280,10 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <h3 data-lt="Gedimų diagnostika" data-en="Fault Diagnostics">Gedimų diagnostika</h3>
     <p data-lt="Ieškome priežasties, kodėl kompiuteris lėtėja, stringa ar veikia nestabiliai." data-en="We look for the reason why the computer slows down, freezes or behaves unstably.">Ieškome priežasties, kodėl kompiuteris lėtėja, stringa ar veikia nestabiliai.</p>
 </div>
-<div><span class="price" data-lt="Pagal susitarimą" data-en="By agreement">Pagal susitarimą</span></div>
+<div>
+    <span class="price" data-lt="Pagal susitarimą" data-en="By agreement">Pagal susitarimą</span>
+    <span class="card-guarantee" data-lt="✓ Nemokama konsultacija" data-en="✓ Free consultation">✓ Nemokama konsultacija</span>
+</div>
 </div>
 <div class="card">
 <div>
@@ -252,7 +291,10 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <h3 data-lt="Duomenų atkūrimas" data-en="Data Recovery">Duomenų atkūrimas</h3>
     <p data-lt="Pagalba bandant atkurti netyčia ištrintas nuotraukas, dokumentus ar failus." data-en="Help trying to recover accidentally deleted photos, documents or files.">Pagalba bandant atkurti netyčia ištrintas nuotraukas, dokumentus ar failus.</p>
 </div>
-<div><span class="price" data-lt="Pagal susitarimą" data-en="By agreement">Pagal susitarimą</span></div>
+<div>
+    <span class="price" data-lt="Pagal susitarimą" data-en="By agreement">Pagal susitarimą</span>
+    <span class="card-guarantee" data-lt="✓ Konfidencialumo garantija" data-en="✓ Confidentiality guarantee">✓ Konfidencialumo garantija</span>
+</div>
 </div>
 <div class="card">
 <div>
@@ -260,7 +302,10 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <h3 data-lt="Programos ir tvarkyklės" data-en="Software & Drivers">Programos ir tvarkyklės</h3>
     <p data-lt="Reikalingų papildomų programų, tvarkyklių ir komponentų sutvarkymas." data-en="Setting up necessary additional software, drivers and components.">Reikalingų papildomų programų, tvarkyklių ir komponentų sutvarkymas.</p>
 </div>
-<div><span class="price" data-lt="Nuo 15–20 €" data-en="From €15–20">Nuo 15–20 €</span></div>
+<div>
+    <span class="price" data-lt="Nuo 15–20 €" data-en="From €15–20">Nuo 15–20 €</span>
+    <span class="card-guarantee" data-lt="✓ Patikimas suderinamumas" data-en="✓ Reliable compatibility">✓ Patikimas suderinamumas</span>
+</div>
 </div>
 </div>
 </div>
