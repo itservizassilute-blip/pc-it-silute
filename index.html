@@ -455,11 +455,14 @@ function setLang(lang, save = true) {
   });
 }
 
-// Kai užsikrauna bet kuris puslapis, patikriname, ar vartotojas buvo pasirinkęs EN
+// Užsikrovus puslapiui, iškart nustatome lietuvių kalbą kaip numatytąją,
+// o jei naršyklės atmintyje išsaugota 'en', aktyvuojame anglų.
 window.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('preferred_lang');
   if (savedLang === 'en') {
     setLang('en', false);
+  } else {
+    setLang('lt', false);
   }
 });
 </script>
