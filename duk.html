@@ -106,7 +106,11 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <footer data-lt="© 2026 PC IT Šilutė • Kompiuterių remontas vietoje • Pristatymas susitarus" data-en="© 2026 PC IT Šilutė • Local Computer Repair • Delivery by agreement">© 2026 PC IT Šilutė • Kompiuterių remontas vietoje • Pristatymas susitarus</footer>
 
 <script>
-function setLang(lang) {
+function setLang(lang, save = true) {
+  if (save) {
+    localStorage.setItem('preferred_lang', lang);
+  }
+  
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
   const activeBtn = lang === 'lt' ? document.querySelector('button[onclick*="lt"]') : document.querySelector('button[onclick*="en"]');
   if(activeBtn) activeBtn.classList.add('active');
@@ -127,6 +131,14 @@ function setLang(lang) {
     }
   });
 }
+
+// Kai užsikrauna bet kuris puslapis, patikriname, ar vartotojas buvo pasirinkęs EN
+window.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('preferred_lang');
+  if (savedLang === 'en') {
+    setLang('en', false);
+  }
+});
 </script>
 </body>
 </html>
