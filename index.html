@@ -6,88 +6,108 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="PC IT – programų perinstaliavimas, nuotolinė pagalba ir kompiuterių optimizavimas Šilutėje.">
 <title>PC IT – Kompiuterių remontas ir nuotolinė pagalba Šilutėje</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
+:root {
+    --bg: #020817;
+    --card-bg: #071a3088;
+    --accent: #0ea5e9;
+    --text: #eef6ff;
+    --text-muted: #93c5fd;
+    --glass: rgba(2, 8, 23, 0.7);
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#020817;color:#eef6ff;line-height:1.6}
-a{text-decoration:none;color:inherit}
+body{font-family:'Urbanist', sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit;transition:0.3s}
 .wrap{max-width:1120px;margin:auto;padding:0 22px}
-header{position:sticky;top:0;z-index:20;background:#020817ee;border-bottom:1px solid #1e3a5f;backdrop-filter:blur(10px)}
-nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800}
-.brand img{width:52px;height:52px;object-fit:contain}
-.brand span{font-size:23px;letter-spacing:.5px}
-.brand b{color:#12aef3}
-nav ul{display:flex;gap:20px;list-style:none;font-weight:700;align-items:center}
-nav a:hover{color:#18b5ff}
 
-/* Kalbų perjungėjo stilius */
-.lang-switcher{display:flex;gap:6px;background:#071a30;border:1px solid #1e3a5f;padding:4px 8px;border-radius:8px}
-.lang-btn{background:none;border:none;color:#93c5fd;font-weight:700;cursor:pointer;font-size:13px;padding:2px 6px;border-radius:4px}
-.lang-btn.active{background:#0ea5e9;color:#020817}
+/* Header */
+header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
+nav{height:80px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px}
+.brand img{width:48px;height:48px;object-fit:contain}
+.brand b{color:var(--accent)}
+nav ul{display:flex;gap:25px;list-style:none;font-weight:600;align-items:center}
+nav a:hover{color:var(--accent)}
 
-.hero{min-height:680px;display:flex;align-items:center;background:radial-gradient(circle at 75% 35%,#07598555 0,transparent 35%),linear-gradient(135deg,#020817 0%,#06152b 55%,#03111f 100%)}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}
-.badge{display:inline-block;color:#5dd5ff;border:1px solid #0ea5e955;background:#0ea5e912;border-radius:30px;padding:7px 14px;font-weight:800;margin-bottom:18px}
-h1{font-size:clamp(40px,6vw,68px);line-height:1.04;margin-bottom:20px}
-h1 span{color:#13b5ff}
-.hero p{font-size:20px;color:#c9d9ea;max-width:680px;margin-bottom:30px}
-.btn{display:inline-block;background:#0ea5e9;color:#001421;font-weight:900;padding:14px 23px;border-radius:10px;margin:4px 8px 4px 0;box-shadow:0 8px 25px #0ea5e933;cursor:pointer;border:none}
-.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
-.btn.alt{background:#eef6ff;color:#07111f}
-.btn.messenger{background:#0084FF;color:#fff}
-.logo-card{display:flex;justify-content:center}
-.logo-card img{width:min(390px,90%);border-radius:50%;box-shadow:0 0 55px #008cff22}
-section{padding:80px 0}
-.light{background:#f5f9fd;color:#172033}
-.dark-sec{background:#040f22;color:#eef6ff}
-.title{text-align:center;font-size:38px;margin-bottom:10px}
-.subtitle{text-align:center;color:#718096;max-width:680px;margin:0 auto 42px}
-.dark-sec .subtitle{color:#93c5fd}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:white;border:1px solid #e1e8f0;border-radius:17px;padding:28px;box-shadow:0 10px 30px #0b19300c;display:flex;flex-direction:column;justify-content:space-between}
-.card .ico{font-size:36px}
-.card h3{margin:12px 0 6px;font-size:20px}
-.card p{color:#66758a;margin-bottom:16px}
-.price{font-weight:800;color:#0369a1;background:#e0f2fe;padding:6px 12px;border-radius:8px;display:inline-block;font-size:15px}
+/* Kalbų perjungėjas */
+.lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px}
+.lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:12px;padding:5px 10px;border-radius:7px;transition:0.3s}
+.lang-btn.active{background:var(--accent);color:var(--bg)}
 
-.remote-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:20px}
-.remote-card{background:#071a30;border:1px solid #1e3a5f;border-radius:16px;padding:30px;position:relative;box-shadow:0 10px 30px #00000033}
-.step-num{position:absolute;top:-16px;left:25px;background:#0ea5e9;color:#020817;font-weight:900;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px}
-.remote-card h3{margin:10px 0 10px;font-size:20px;color:#ffffff}
-.remote-card p{color:#cbd5e1;font-size:15px}
+/* Hero */
+.hero{min-height:85vh;display:flex;align-items:center;position:relative;background: radial-gradient(circle at 80% 20%, #0ea5e915 0%, transparent 40%);}
+.hero-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:50px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;color:var(--accent);border:1px solid #0ea5e933;background:#0ea5e90a;border-radius:30px;padding:8px 16px;font-weight:700;margin-bottom:20px;font-size:14px;letter-spacing:1px}
+h1{font-size:clamp(42px,7vw,72px);line-height:1.1;margin-bottom:24px;font-weight:800}
+h1 span{color:var(--accent);background:linear-gradient(90deg, #0ea5e9, #6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero p{font-size:20px;color:var(--text-muted);max-width:600px;margin-bottom:35px}
 
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-bottom:30px}
-.review-card{background:#ffffff;color:#172033;border:1px solid #e1e8f0;border-radius:16px;padding:25px;box-shadow:0 10px 30px #0b19300c}
-.stars{color:#f59e0b;font-size:18px;margin-bottom:10px}
-.review-card p{color:#4a5568;font-style:italic;margin-bottom:14px;font-size:15px}
-.review-author{font-weight:700;color:#0369a1;font-size:14px}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:16px 28px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 15px 30px #0ea5e955;filter:brightness(1.1)}
+.btn.alt{background:transparent;color:var(--text);border:1px solid #1e3a5f}
+.btn.messenger{background:#0084FF;color:#fff;box-shadow:0 10px 25px #0084ff33}
 
-.video-container{display:flex;justify-content:center;margin-top:20px}
-.video-container iframe{max-width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+/* Logo Animacija */
+.logo-card{position:relative;display:flex;justify-content:center}
+.logo-card img{width:min(420px,95%);border-radius:50%;filter:drop-shadow(0 0 30px #0ea5e922);animation: float 6s ease-in-out infinite;}
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 
-.form-container{max-width:700px;margin:0 auto;background:#071a30;border:1px solid #1e3a5f;padding:40px;border-radius:20px;box-shadow:0 15px 35px #00000044}
-.form-group{margin-bottom:20px}
-.form-group label{display:block;margin-bottom:8px;font-weight:700;color:#93c5fd}
-.form-group input, .form-group select, .form-group textarea{width:100%;padding:12px 16px;background:#020817;border:1px solid #2b4c7e;border-radius:8px;color:#fff;font-size:16px}
-.form-group textarea{resize:vertical;height:120px}
-.checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
-.checkbox-item{display:flex;align-items:center;gap:10px;background:#020817;padding:10px 14px;border:1px solid #2b4c7e;border-radius:8px;cursor:pointer}
-.checkbox-item input{width:18px;height:18px;accent-color:#0ea5e9}
+/* Section & Cards */
+section{padding:100px 0}
+.light{background:#f8fafc;color:#0f172a}
+.dark-sec{background:var(--bg)}
+.title{text-align:center;font-size:42px;margin-bottom:12px;font-weight:800}
+.subtitle{text-align:center;color:var(--text-muted);max-width:700px;margin:0 auto 50px;font-size:18px}
+.light .subtitle{color:#64748b}
 
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.about-box{border:1px solid #19466b;background:linear-gradient(145deg,#071a30,#03101e);border-radius:22px;padding:36px}
-.about-box img{display:block;width:170px;margin:0 auto 18px}
-.checks{list-style:none;margin-top:20px}.checks li{margin:12px 0}
-.checks li:before{content:"✓";color:#08aeef;font-weight:900;margin-right:10px}
-.contact{background:linear-gradient(135deg,#031226,#062642);text-align:center}
-.contact p{color:#c9d9ea;margin:10px auto 26px}
-footer{background:#010611;color:#7f92a8;text-align:center;padding:25px;font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:white;border:1px solid #e2e8f0;border-radius:24px;padding:35px;transition:0.4s;display:flex;flex-direction:column;justify-content:space-between}
+.card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,0.05);border-color:var(--accent)}
+.card .ico{font-size:40px;color:var(--accent);margin-bottom:20px;display:block}
+.card h3{font-size:22px;margin-bottom:12px;font-weight:700}
+.card p{color:#475569;margin-bottom:20px;font-size:15px}
+.price{font-weight:800;color:var(--accent);background:#0ea5e90f;padding:8px 16px;border-radius:10px;display:inline-block;font-size:14px}
 
+/* Remote Section */
+.remote-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.remote-card{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:24px;padding:40px;backdrop-filter:blur(10px);transition:0.4s}
+.remote-card:hover{border-color:var(--accent);background:#0ea5e905}
+.step-num{background:var(--accent);color:var(--bg);font-weight:900;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.remote-card h3{margin-bottom:12px;color:#fff}
+.remote-card p{color:var(--text-muted)}
+
+/* Review Cards */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:#fff;color:var(--bg);border-radius:24px;padding:30px;box-shadow:0 10px 30px rgba(0,0,0,0.03)}
+.stars{color:#f59e0b;margin-bottom:15px;display:flex;gap:3px}
+
+/* Forms */
+.form-container{max-width:700px;margin:0 auto;background:var(--card-bg);border:1px solid #1e3a5f;padding:50px;border-radius:30px;backdrop-filter:blur(10px)}
+.form-group label{display:block;margin-bottom:10px;font-weight:600;color:var(--text-muted)}
+.form-group input, .form-group textarea{width:100%;padding:15px;background:var(--bg);border:1px solid #1e3a5f;border-radius:12px;color:#fff;font-family:inherit}
+.checkbox-item{display:flex;align-items:center;gap:12px;background:#1e3a5f33;padding:12px 18px;border:1px solid #1e3a5f;border-radius:12px;cursor:pointer;transition:0.3s}
+.checkbox-item:hover{background:#1e3a5f66}
+
+footer{padding:40px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px}
+
+@media(max-width:960px){
+    .cards, .remote-cards, .reviews-grid{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:760px){
-nav ul{display:none}.hero{min-height:auto;padding:70px 0}.hero-grid,.about-grid,.remote-cards,.reviews-grid,.checkbox-grid{grid-template-columns:1fr}
-.logo-card{order:-1}.logo-card img{width:240px}.cards{grid-template-columns:1fr}
-section{padding:58px 0}.brand span{font-size:20px}
+    nav ul{display:none}
+    .hero-grid{grid-template-columns:1fr;text-align:center}
+    .hero p{margin-left:auto;margin-right:auto}
+    .logo-card{order:-1}.logo-card img{width:280px}
+    .cards, .remote-cards, .reviews-grid, .checkbox-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -97,16 +117,14 @@ section{padding:58px 0}.brand span{font-size:20px}
 <div class="wrap">
 <nav>
 <a class="brand" href="#">
-<img src="pc-it-logo.png" alt="PC IT logotipas">
+<img src="pc-it-logo.png" alt="PC IT">
 <span>PC <b>IT</b> Šilutė</span>
 </a>
 <ul>
 <li><a href="#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
 <li><a href="#nuotoliniu-budu" data-lt="Nuotolinis" data-en="Remote">Nuotolinis</a></li>
-<li><a href="#video" data-lt="Reels" data-en="Reels">Reels</a></li>
 <li><a href="#atsiliepimai" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
 <li><a href="#uzklausa" data-lt="Užklausa" data-en="Inquiry">Užklausa</a></li>
-<li><a href="#kontaktai" data-lt="Kontaktai" data-en="Contact">Kontaktai</a></li>
 <li>
 <div class="lang-switcher">
 <button class="lang-btn active" onclick="setLang('lt')">LT</button>
@@ -122,37 +140,45 @@ section{padding:58px 0}.brand span{font-size:20px}
 <section class="hero">
 <div class="wrap hero-grid">
 <div>
-<div class="badge" data-lt="📍 ŠILUTĖ • SAUGI NUOTOLINĖ PAGALBA" data-en="📍 ŠILUTĖ • SECURE REMOTE SUPPORT">📍 ŠILUTĖ • SAUGI NUOTOLINĖ PAGALBA</div>
-<h1 data-lt="Kompiuteris lėtas ar ožiuojasi?<br><span>Sutvarkome Šilutėje ir nuotoliniu būdu.</span>" data-en="Is your computer slow or acting up?<br><span>We fix it in Šilutė and remotely.</span>">Kompiuteris lėtas ar ožiuojasi?<br><span>Sutvarkome Šilutėje ir nuotoliniu būdu.</span></h1>
-<p data-lt="Pilnas Windows perrašymas, operatyvi nuotolinė pagalba per „RustDesk“ jūsų akivaizdoje, programinės įrangos optimizavimas." data-en="Full Windows reinstallation, prompt remote support via RustDesk right before your eyes, software optimization.">Pilnas Windows perrašymas, operatyvi nuotolinė pagalba per „RustDesk“ jūsų akivaizdoje, programinės įrangos optimizavimas.</p>
-<a class="btn messenger" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="💬 Rašykit Messenger" data-en="💬 Write on Messenger">💬 Rašykit Messenger</a>
-<a class="btn" href="#uzklausa" data-lt="📝 Pildyti užklausą" data-en="📝 Fill Inquiry">📝 Pildyti užklausą</a>
+<div class="badge" data-lt="📍 ŠILUTĖ • SAUGI NUOTOLINĖ PAGALBA" data-en="📍 ŠILUTĖ • SECURE REMOTE SUPPORT">
+    <i class="fa-solid fa-shield-halved"></i> <span>ŠILUTĖ • SAUGI NUOTOLINĖ PAGALBA</span>
+</div>
+<h1 data-lt="Kompiuteris lėtas ar ožiuojasi?<br><span>Sutvarkome Šilutėje.</span>" data-en="Is your PC slow or acting up?<br><span>We fix it in Šilutė.</span>">
+    Kompiuteris lėtas ar ožiuojasi?<br><span>Sutvarkome Šilutėje.</span>
+</h1>
+<p data-lt="Pilnas Windows perrašymas, operatyvi nuotolinė pagalba jūsų akivaizdoje bei kompiuterių optimizavimas." data-en="Full Windows reinstallation, prompt remote support right before your eyes, and system optimization.">
+    Pilnas Windows perrašymas, operatyvi nuotolinė pagalba jūsų akivaizdoje bei kompiuterių optimizavimas.
+</p>
+<div class="hero-btns">
+    <a class="btn messenger" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="💬 Rašykit Messenger" data-en="💬 Write Messenger">💬 Rašykit Messenger</a>
+    <a class="btn alt" href="#uzklausa" data-lt="📝 Pildyti užklausą" data-en="📝 Fill Inquiry">📝 Pildyti užklausą</a>
+</div>
 </div>
 <div class="logo-card">
-<img src="pc-it-logo.png" alt="PC IT Šilutė">
+<img src="pc-it-logo.png" alt="PC IT">
 </div>
 </div>
 </section>
 
 <section id="nuotoliniu-budu" class="dark-sec">
 <div class="wrap">
-<h2 class="title" data-lt="Kaip veikia nuotolinė pagalba?" data-en="How does remote support work?">Kaip veikia nuotolinė pagalba?</h2>
+<h2 class="title" data-lt="Kaip tai veikia?" data-en="How it works?">Kaip tai veikia?</h2>
 <p class="subtitle" data-lt="Taupykite laiką – nereikia niekur vežti kompiuterio. Viską sutvarkome saugiai jūsų akivaizdoje." data-en="Save time – no need to take your computer anywhere. We fix everything safely right before your eyes.">Taupykite laiką – nereikia niekur vežti kompiuterio. Viską sutvarkome saugiai jūsų akivaizdoje.</p>
 <div class="remote-cards">
 <div class="remote-card">
 <div class="step-num">1</div>
-<h3 data-lt="Užpildykite užklausą" data-en="Fill out the inquiry">Užpildykite užklausą</h3>
-<p data-lt="Pažymėkite savo problemą žemiau esančioje formoje arba parašykite mums tiesiogiai." data-en="Mark your problem in the form below or contact us directly.">Pažymėkite savo problemą žemiau esančioje formoje arba parašykite mums tiesiogiai.</p>
+<h3 data-lt="Registracija" data-en="Registration">Registracija</h3>
+<p data-lt="Pažymėkite problemą formoje arba parašykite mums tiesiogiai." data-en="Mark your problem in the form or message us directly.">Pažymėkite problemą formoje arba parašykite mums tiesiogiai.</p>
 </div>
 <div class="remote-card">
 <div class="step-num">2</div>
-<h3 data-lt="Saugus prisijungimas" data-en="Secure connection">Saugus prisijungimas</h3>
-<p data-lt="Naudojame saugią programą „RustDesk“. Jūs matote kiekvieną mūsų pelės judesį ekrane." data-en="We use the secure RustDesk application. You see every movement of our mouse on screen.">Naudojame saugią programą „RustDesk“. Jūs matote kiekvieną mūsų pelės judesį ekrane.</p>
+<h3 data-lt="Prisijungimas" data-en="Connection">Prisijungimas</h3>
+<p data-lt="Naudojame saugią RustDesk programą. Jūs matote kiekvieną judesį." data-en="We use secure RustDesk app. You see every move we make.">Naudojame saugią RustDesk programą. Jūs matote kiekvieną judesį.</p>
 </div>
 <div class="remote-card">
 <div class="step-num">3</div>
-<h3 data-lt="Sutvarkyta ir patikrinta" data-en="Fixed and checked">Sutvarkyta ir patikrinta</h3>
-<p data-lt="Pašaliname gedimus, o po visko apmokate tik pasiekus rezultatą (pagal susitarimą)." data-en="We remove faults, and you only pay after achieving the result (by agreement).">Pašaliname gedimus, o po visko apmokate tik pasiekus rezultatą (pagal susitarimą).</p>
+<h3 data-lt="Rezultatas" data-en="Result">Rezultatas</h3>
+<p data-lt="Sutvarkome gedimą, o apmokate tik pasiekus rezultatą." data-en="We fix the issue, and you only pay after the result.">Sutvarkome gedimą, o apmokate tik pasiekus rezultatą.</p>
 </div>
 </div>
 </div>
@@ -160,153 +186,82 @@ section{padding:58px 0}.brand span{font-size:20px}
 
 <section id="paslaugos" class="light">
 <div class="wrap">
-<h2 class="title" data-lt="Paslaugos ir kainoraštis" data-en="Services and Pricing">Paslaugos ir kainoraštis</h2>
-<p class="subtitle" data-lt="Skaidrios kainos ir profesionali pagalba kompiuteriams Šilutėje bei nuotoliniu būdu." data-en="Transparent prices and professional computer support in Šilutė and remotely.">Skaidrios kainos ir profesionali pagalba kompiuteriams Šilutėje bei nuotoliniu būdu.</p>
+<h2 class="title" data-lt="Paslaugos" data-en="Services">Paslaugos</h2>
+<p class="subtitle" data-lt="Profesionali pagalba kompiuteriams Šilutėje bei nuotoliniu būdu." data-en="Professional computer support in Šilutė and remotely.">Profesionali pagalba kompiuteriams Šilutėje bei nuotoliniu būdu.</p>
 <div class="cards">
 <div class="card">
-<div><div class="ico">🌐</div><h3 data-lt="Nuotolinė pagalba (RustDesk)" data-en="Remote Support (RustDesk)">Nuotolinė pagalba (RustDesk)</h3><p data-lt="Greitai ir saugiai jūsų akivaizdoje: virusų ir šlamšto šalinimas, naršyklių valymas." data-en="Quickly and securely right before your eyes: virus and junk removal, browser cleanup.">Greitai ir saugiai jūsų akivaizdoje: virusų ir šlamšto šalinimas, naršyklių valymas.</p></div>
-<div><span class="price" data-lt="Nuo 15 € / Pagal susitarimą" data-en="From €15 / By agreement">Nuo 15 € / Pagal susitarimą</span></div>
+    <div>
+        <i class="fa-solid fa-globe ico"></i>
+        <h3 data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</h3>
+        <p data-lt="Virusų šalinimas, naršyklių valymas, klaidų taisymas nuotoliniu būdu." data-en="Virus removal, browser cleanup, fixing errors remotely.">Virusų šalinimas, naršyklių valymas, klaidų taisymas nuotoliniu būdu.</p>
+    </div>
+    <span class="price" data-lt="Nuo 15 €" data-en="From €15">Nuo 15 €</span>
 </div>
 <div class="card">
-<div><div class="ico">🪟</div><h3 data-lt="Windows perrašymas" data-en="Windows Reinstallation">Windows perrašymas</h3><p data-lt="Pilnas „Windows“ perrašymas, draiverių ir reikalingų programų paketas." data-en="Full Windows reinstallation, driver and necessary software package.">Pilnas „Windows“ perrašymas, draiverių ir reikalingų programų paketas.</p></div>
-<div><span class="price" data-lt="Nuo 30 €" data-en="From €30">Nuo 30 €</span></div>
+    <div>
+        <i class="fa-brands fa-windows ico"></i>
+        <h3 data-lt="Windows perrašymas" data-en="Windows Install">Windows perrašymas</h3>
+        <p data-lt="Pilnas OS įrašymas su visomis tvarkyklėmis ir bazinėmis programomis." data-en="Full OS installation with all drivers and basic software.">Pilnas OS įrašymas su visomis tvarkyklėmis ir bazinėmis programomis.</p>
+    </div>
+    <span class="price" data-lt="Nuo 30 €" data-en="From €30">Nuo 30 €</span>
 </div>
 <div class="card">
-<div><div class="ico">⚡</div><h3 data-lt="Kompiuterio optimizavimas" data-en="Computer Optimization">Kompiuterio optimizavimas</h3><p data-lt="Pašaliname nereikalingas programas, sutvarkome paleistį ir pagreitiname darbą." data-en="We remove unnecessary programs, fix startup and speed up performance.">Pašaliname nereikalingas programas, sutvarkome paleistį ir pagreitiname darbą.</p></div>
-<div><span class="price" data-lt="Nuo 15–20 €" data-en="From €15–20">Nuo 15–20 €</span></div>
-</div>
-<div class="card">
-<div><div class="ico">🔧</div><h3 data-lt="Gedimų diagnostika" data-en="Fault Diagnostics">Gedimų diagnostika</h3><p data-lt="Ieškome priežasties, kodėl kompiuteris lėtėja, stringa ar veikia nestabiliai." data-en="We look for the reason why the computer slows down, freezes or behaves unstably.">Ieškome priežasties, kodėl kompiuteris lėtėja, stringa ar veikia nestabiliai.</p></div>
-<div><span class="price" data-lt="Pagal susitarimą" data-en="By agreement">Pagal susitarimą</span></div>
-</div>
-<div class="card">
-<div><div class="ico">💾</div><h3 data-lt="Duomenų atkūrimas" data-en="Data Recovery">Duomenų atkūrimas</h3><p data-lt="Pagalba bandant atkurti netyčia ištrintas nuotraukas, dokumentus ar failus." data-en="Help trying to recover accidentally deleted photos, documents or files.">Pagalba bandant atkurti netyčia ištrintas nuotraukas, dokumentus ar failus.</p></div>
-<div><span class="price" data-lt="Pagal susitarimą" data-en="By agreement">Pagal susitarimą</span></div>
-</div>
-<div class="card">
-<div><div class="ico">🧩</div><h3 data-lt="Programos ir tvarkyklės" data-en="Software & Drivers">Programos ir tvarkyklės</h3><p data-lt="Reikalingų papildomų programų, tvarkyklių ir komponentų sutvarkymas." data-en="Setting up necessary additional software, drivers and components.">Reikalingų papildomų programų, tvarkyklių ir komponentų sutvarkymas.</p></div>
-<div><span class="price" data-lt="Nuo 15–20 €" data-en="From €15–20">Nuo 15–20 €</span></div>
+    <div>
+        <i class="fa-solid fa-bolt ico"></i>
+        <h3 data-lt="Optimizavimas" data-en="Optimization">Optimizavimas</h3>
+        <p data-lt="Kompiuterio spartinimas, nereikalingų procesų ir šlamšto valymas." data-en="PC speedup, cleaning unnecessary processes and junk files.">Kompiuterio spartinimas, nereikalingų procesų ir šlamšto valymas.</p>
+    </div>
+    <span class="price" data-lt="Nuo 15 €" data-en="From €15">Nuo 15 €</span>
 </div>
 </div>
 </div>
 </section>
 
-<section id="video" class="dark-sec" style="background:#030d22;">
+<section id="uzklausa" class="dark-sec">
 <div class="wrap">
-<h2 class="title" data-lt="Darbo užkulisiai ir vaizdo įrašai" data-en="Behind the Scenes & Videos">Darbo užkulisiai ir vaizdo įrašai</h2>
-<p class="subtitle" data-lt="Pažiūrėkite trumpą vaizdo įrašą iš mūsų kasdienio darbo." data-en="Watch a short video from our daily work.">Pažiūrėkite trumpą vaizdo įrašą iš mūsų kasdienio darbo.</p>
-<div class="video-container">
-<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F904624699392411%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-</div>
-</div>
-</section>
-
-<section id="atsiliepimai" class="dark-sec" style="background:#020614;">
-<div class="wrap">
-<h2 class="title" data-lt="Klientų atsiliepimai" data-en="Customer Reviews">Klientų atsiliepimai</h2>
-<p class="subtitle" data-lt="Ką apie mūsų paslaugas sako šilutiškiai ir kiti klientai." data-en="What Šilutė locals and other clients say about our services.">Ką apie mūsų paslaugas sako šilutiškiai ir kiti klientai.</p>
-<div class="reviews-grid">
-<div class="review-card">
-<div class="stars">★★★★★</div>
-<p data-lt="„Labai greitai sutvarkė nuotoliniu būdu per RustDesk, kompiuteris vėl skraido. Tikra rekomendacija!“" data-en="&quot;Fixed very quickly remotely via RustDesk, the computer is flying again. Highly recommended!&quot;">„Labai greitai sutvarkė nuotoliniu būdu per RustDesk, kompiuteris vėl skraido. Tikra rekomendacija!“</p>
-<div class="review-author">— Tomas V. (Šilutė)</div>
-</div>
-<div class="review-card">
-<div class="stars">★★★★★</div>
-<p data-lt="„Puikus aptarnavimas ir sąžiningos kainos. Perrašė Windows ir surašė visas reikalingas programas per dieną.“" data-en="&quot;Great service and fair prices. Reinstalled Windows and set up all required programs within a day.&quot;">„Puikus aptarnavimas ir sąžiningos kainos. Perrašė Windows ir surašė visas reikalingas programas per dieną.“</p>
-<div class="review-author">— Sandra L.</div>
-</div>
-<div class="review-card">
-<div class="stars">★★★★★</div>
-<p data-lt="„Superinė pagalba kai reikėjo skubiai išvalyti virusus. Nereikėjo net niekur vežti kompiuterio!“" data-en="&quot;Super help when I needed to quickly clean viruses. Didn't even need to take the computer anywhere!&quot;">„Superinė pagalba kai reikėjo skubiai išvalyti virusus. Nereikėjo net niekur vežti kompiuterio!“</p>
-<div class="review-author">— Mantas K.</div>
-</div>
-</div>
-<div style="text-align:center;margin-top:20px;">
-<a class="btn messenger" href="https://www.facebook.com/profile.php?id=61592840316716" target="_blank" rel="noopener noreferrer" data-lt="⭐ Parašyti atsiliepimą Facebook" data-en="⭐ Write a review on Facebook">⭐ Parašyti atsiliepimą Facebook</a>
-</div>
-</div>
-</section>
-
-<section id="uzklausa" class="dark-sec" style="background:#020b1c;">
-<div class="wrap">
-<h2 class="title" data-lt="Registruoti kompiuterio gedimą" data-en="Register a Computer Fault">Registruoti kompiuterio gedimą</h2>
-<p class="subtitle" data-lt="Užpildykite žemiau esančią formą, ir mes kuo skubiau su jumis susisieksime!" data-en="Fill out the form below and we will contact you as soon as possible!">Užpildykite žemiau esančią formą, ir mes kuo skubiau su jumis susisieksime!</p>
-
+<h2 class="title" data-lt="Turite klausimų?" data-en="Have questions?">Turite klausimų?</h2>
 <div class="form-container">
-<form action="https://formspree.io/f/mkjwjqvd" method="POST">
-<div class="form-group">
-<label data-lt="Jūsų vardas:" data-en="Your name:">Jūsų vardas:</label>
-<input type="text" name="vardas" required placeholder="Įveskite savo vardą">
+    <form action="https://formspree.io/f/mkjwjqvd" method="POST">
+        <div class="form-group" style="margin-bottom:20px">
+            <label data-lt="Vardas:" data-en="Name:">Vardas:</label>
+            <input type="text" name="name" required>
+        </div>
+        <div class="form-group" style="margin-bottom:20px">
+            <label data-lt="Kontaktai (Tel / El.paštas):" data-en="Contact (Phone / Email):">Kontaktai:</label>
+            <input type="text" name="contact" required>
+        </div>
+        <div class="form-group" style="margin-bottom:30px">
+            <label data-lt="Žinutė:" data-en="Message:">Žinutė:</label>
+            <textarea name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn" style="width:100%; justify-content:center" data-lt="Siųsti užklausą" data-en="Send Inquiry">Siųsti užklausą</button>
+    </form>
 </div>
-
-<div class="form-group">
-<label data-lt="Tel. numeris arba el. paštas:" data-en="Phone number or email:">Tel. numeris arba el. paštas:</label>
-<input type="text" name="kontaktai" required placeholder="Pvz.: +37060000000 arba el. paštas">
-</div>
-
-<div class="form-group">
-<label data-lt="Kokia problema kyla? (Pažymėkite)" data-en="What is the problem? (Select)">Kokia problema kyla? (Pažymėkite)</label>
-<div class="checkbox-grid">
-<label class="checkbox-item"><input type="checkbox" name="problema[]" value="Kompiuteris lėtas / stringa"> <span data-lt="Lėtas / stringa" data-en="Slow / freezing">Lėtas / stringa</span></label>
-<label class="checkbox-item"><input type="checkbox" name="problema[]" value="Windows perrašymo poreikis"> <span data-lt="Reikia Windows" data-en="Need Windows">Reikia Windows</span></label>
-<label class="checkbox-item"><input type="checkbox" name="problema[]" value="Virusai / šlamštas"> <span data-lt="Virusai / šlamštas" data-en="Viruses / junk">Virusai / šlamštas</span></label>
-<label class="checkbox-item"><input type="checkbox" name="problema[]" value="Nuotolinė pagalba RustDesk"> <span data-lt="Nuotolinė pagalba" data-en="Remote support">Nuotolinė pagalba</span></label>
-</div>
-</div>
-
-<div class="form-group">
-<label data-lt="Papildomas gedimo aprašymas:" data-en="Additional fault description:">Papildomas gedimo aprašymas:</label>
-<textarea name="aprasymas" placeholder="Trumpai aprašykite, kas nutiko su kompiuteriu..."></textarea>
-</div>
-
-<button type="submit" class="btn" style="width:100%;padding:16px;font-size:17px;" data-lt="🚀 Siųsti užklausą" data-en="🚀 Send Inquiry">🚀 Siųsti užklausą</button>
-</form>
-</div>
-</div>
-</section>
-
-<section id="apie">
-<div class="wrap about-grid">
-<div>
-<h2 class="title" style="text-align:left" data-lt="Kodėl verta kreiptis Šilutėje?" data-en="Why choose us in Šilutė?">Kodėl verta kreiptis Šilutėje?</h2>
-<p data-lt="Nebūtina kompiuterio niekur vežti ir laukti savaitėmis – daugelį problemų išsprendžiame **nuotoliniu būdu** per „RustDesk“ arba sutvarkome vietoje **Šilutėje**." data-en="No need to take your computer anywhere and wait for weeks – we solve most problems **remotely** via RustDesk or fix them locally in **Šilutė**">Nebūtina kompiuterio niekur vežti ir laukti savaitėmis – daugelį problemų išsprendžiame **nuotoliniu būdu** per „RustDesk“ arba sutvarkome vietoje **Šilutėje**.</p>
-<ul class="checks">
-<li data-lt="Nuotolinis remontas jūsų akivaizdoje" data-en="Remote repair right before your eyes">Nuotolinis remontas jūsų akivaizdoje</li>
-<li data-lt="Aiškus ir sąžiningas kainoraštis" data-en="Clear and fair pricing">Aiškus ir sąžiningas kainoraštis</li>
-<li data-lt="Windows ir programinės įrangos atnaujinimas" data-en="Windows and software updates">Windows ir programinės įrangos atnaujinimas</li>
-<li data-lt="Operatyvus bendravimas ir patarimai" data-en="Prompt communication and advice">Operatyvus bendravimas ir patarimai</li>
-</ul>
-</div>
-<div class="about-box">
-<img src="pc-it-logo.png" alt="PC IT Šilutė">
-<p style="text-align:center;color:#c9d9ea" data-lt="Šilutė • Nuotolinė pagalba<br>Programų perinstaliavimas" data-en="Šilutė • Remote Support<br>Software Reinstallation">Šilutė • Nuotolinė pagalba<br>Programų perinstaliavimas</p>
-</div>
-</div>
-</section>
-
-<section id="kontaktai" class="contact">
-<div class="wrap">
-<h2 class="title" data-lt="Susisiekite tiesiogiai" data-en="Contact Us Directly">Susisiekite tiesiogiai</h2>
-<p data-lt="Jei norite pasikonsultuoti akimirksniu, parašykite per Messenger arba el. paštu." data-en="If you want instant consultation, write via Messenger or email.">Jei norite pasikonsultuoti akimirksniu, parašykite per Messenger arba el. paštu.</p>
-<a class="btn messenger" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="💬 Rašyti Messenger" data-en="💬 Write Messenger">💬 Rašyti Messenger</a>
-<a class="btn alt" href="mailto:itservizassilute@gmail.com">✉️ itservizassilute@gmail.com</a>
 </div>
 </section>
 </main>
 
-<footer data-lt="© 2026 PC IT Šilutė • Nuotolinė pagalba • Programų perinstaliavimas • Kainos pagal susitarimą" data-en="© 2026 PC IT Šilutė • Remote Support • Software Reinstallation • Prices by agreement">© 2026 PC IT Šilutė • Nuotolinė pagalba • Programų perinstaliavimas • Kainos pagal susitarimą</footer>
+<footer>
+    <p data-lt="© 2026 PC IT Šilutė • Nuotolinė pagalba" data-en="© 2026 PC IT Šilutė • Remote Support">© 2026 PC IT Šilutė • Nuotolinė pagalba</p>
+</footer>
 
 <script>
 function setLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
+  const activeBtn = lang === 'lt' ? document.querySelector('button[onclick*="lt"]') : document.querySelector('button[onclick*="en"]');
+  if(activeBtn) activeBtn.classList.add('active');
   
   document.querySelectorAll('[data-lt]').forEach(el => {
-    if(lang === 'en' && el.getAttribute('data-en')) {
-      el.innerHTML = el.getAttribute('data-en');
-    } else if(lang === 'lt' && el.getAttribute('data-lt')) {
-      el.innerHTML = el.getAttribute('data-lt');
+    // Saugome ikonas, jei jos yra viduje
+    const icon = el.querySelector('i');
+    const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
+    
+    if (icon) {
+        // Jei yra ikona, keičiame tik tekstą šalia jos (badge atveju)
+        const textNode = el.querySelector('span') || el;
+        textNode.innerHTML = langText;
+    } else {
+        el.innerHTML = langText;
     }
   });
 }
