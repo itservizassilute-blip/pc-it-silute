@@ -35,14 +35,24 @@ h1 span{color:#13b5ff}
 .logo-card img{width:min(390px,90%);border-radius:50%;box-shadow:0 0 55px #008cff22}
 section{padding:80px 0}
 .light{background:#f5f9fd;color:#172033}
+.dark-sec{background:#040f22;color:#eef6ff}
 .title{text-align:center;font-size:38px;margin-bottom:10px}
 .subtitle{text-align:center;color:#718096;max-width:680px;margin:0 auto 42px}
+.dark-sec .subtitle{color:#93c5fd}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .card{background:white;border:1px solid #e1e8f0;border-radius:17px;padding:28px;box-shadow:0 10px 30px #0b19300c;display:flex;flex-direction:column;justify-content:space-between}
 .card .ico{font-size:36px}
 .card h3{margin:12px 0 6px;font-size:20px}
 .card p{color:#66758a;margin-bottom:16px}
 .price{font-weight:800;color:#0369a1;background:#e0f2fe;padding:6px 12px;border-radius:8px;display:inline-block;font-size:15px}
+
+/* Nuotolinio bloko kortelės */
+.remote-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:20px}
+.remote-card{background:#071a30;border:1px solid #1e3a5f;border-radius:16px;padding:30px;position:relative;box-shadow:0 10px 30px #00000033}
+.step-num{position:absolute;top:-16px;left:25px;background:#0ea5e9;color:#020817;font-weight:900;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 4px 10px #0ea5e966}
+.remote-card h3{margin:10px 0 10px;font-size:20px;color:#ffffff}
+.remote-card p{color:#cbd5e1;font-size:15px}
+
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
 .about-box{border:1px solid #19466b;background:linear-gradient(145deg,#071a30,#03101e);border-radius:22px;padding:36px}
 .about-box img{display:block;width:170px;margin:0 auto 18px}
@@ -52,7 +62,7 @@ section{padding:80px 0}
 .contact p{color:#c9d9ea;margin:10px auto 26px}
 footer{background:#010611;color:#7f92a8;text-align:center;padding:25px;font-size:14px}
 @media(max-width:760px){
-nav ul{display:none}.hero{min-height:auto;padding:70px 0}.hero-grid,.about-grid{grid-template-columns:1fr}
+nav ul{display:none}.hero{min-height:auto;padding:70px 0}.hero-grid,.about-grid,.remote-cards{grid-template-columns:1fr}
 .logo-card{order:-1}.logo-card img{width:240px}.cards{grid-template-columns:1fr}
 section{padding:58px 0}.brand span{font-size:20px}
 }
@@ -68,7 +78,8 @@ section{padding:58px 0}.brand span{font-size:20px}
 <span>PC <b>IT</b> Šilutė</span>
 </a>
 <ul>
-<li><a href="#paslaugos">Paslaugos ir kainos</a></li>
+<li><a href="#paslaugos">Paslaugos</a></li>
+<li><a href="#nuotoliniu-budu">Nuotolinis tvarkymas</a></li>
 <li><a href="#apie">Apie</a></li>
 <li><a href="#kontaktai">Kontaktai</a></li>
 </ul>
@@ -80,14 +91,38 @@ section{padding:58px 0}.brand span{font-size:20px}
 <section class="hero">
 <div class="wrap hero-grid">
 <div>
-<div class="badge">📍 ŠILUTĖ • NUOTOLINĖ PAGALBA PER „RUSTDESK“</div>
+<div class="badge">📍 ŠILUTĖ • SAUGI NUOTOLINĖ PAGALBA</div>
 <h1>Kompiuteris lėtas ar ožiuojasi?<br><span>Sutvarkome Šilutėje ir nuotoliniu būdu.</span></h1>
 <p>Pilnas Windows perrašymas, operatyvi nuotolinė pagalba per „RustDesk“ jūsų akivaizdoje, programinės įrangos optimizavimas.</p>
 <a class="btn" href="#kontaktai">💬 Susisiekti</a>
-<a class="btn alt" href="#paslaugos">Peržiūrėti kainoraštį</a>
+<a class="btn alt" href="#nuotoliniu-budu">Kaip vyksta nuotolinis tvarkymas?</a>
 </div>
 <div class="logo-card">
 <img src="pc-it-logo.png" alt="PC IT – kompiuterių remontas Šilutėje">
+</div>
+</div>
+</section>
+
+<section id="nuotoliniu-budu" class="dark-sec">
+<div class="wrap">
+<h2 class="title">Kaip veikia nuotolinė pagalba?</h2>
+<p class="subtitle">Taupykite laiką – nereikia niekur vežti kompiuterio. Viską sutvarkome saugiai jūsų akivaizdoje.</p>
+<div class="remote-cards">
+<div class="remote-card">
+<div class="step-num">1</div>
+<h3>Susisiekite ir aptarkime</h3>
+<p>Parašykite mums per „Facebook“ arba el. paštu. Trumpai papasakokite, kas nutiko su jūsų kompiuteriu.</p>
+</div>
+<div class="remote-card">
+<div class="step-num">2</div>
+<h3>Saugus prisijungimas</h3>
+<p>Naudojame saugią programą „RustDesk“. Jūs matote kiekvieną mūsų pelės judesį ekrane ir galite bet kada nutraukti seansą.</p>
+</div>
+<div class="remote-card">
+<div class="step-num">3</div>
+<h3>Sutvarkyta ir patikrinta</h3>
+<p>Pašaliname gedimus, išvalome šlamštą bei virusus, o po visko apmokate tik pasiekus rezultatą (pagal susitarimą).</p>
+</div>
 </div>
 </div>
 </section>
