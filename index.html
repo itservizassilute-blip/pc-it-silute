@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="PC IT – programų perinstaliavimas, nuotolinė pagalba ir kompiuterių optimizavimas Šilutėje. Kainos nuo 15€.">
-<title>PC IT – Kompiuterių remontas ir nuotolinė pagalba Šilutėje | Kainoraštis ir Užklausa</title>
+<title>PC IT – Kompiuterių remontas ir nuotolinė pagalba Šilutėje | Kainoraštis ir Atsiliepimai</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -18,7 +18,7 @@ nav{height:76px;display:flex;align-items:center;justify-content:space-between}
 .brand img{width:52px;height:52px;object-fit:contain}
 .brand span{font-size:23px;letter-spacing:.5px}
 .brand b{color:#12aef3}
-nav ul{display:flex;gap:28px;list-style:none;font-weight:700}
+nav ul{display:flex;gap:24px;list-style:none;font-weight:700}
 nav a:hover{color:#18b5ff}
 .hero{min-height:680px;display:flex;align-items:center;background:
 radial-gradient(circle at 75% 35%,#07598555 0,transparent 35%),
@@ -31,6 +31,7 @@ h1 span{color:#13b5ff}
 .btn{display:inline-block;background:#0ea5e9;color:#001421;font-weight:900;padding:14px 23px;border-radius:10px;margin:4px 8px 4px 0;box-shadow:0 8px 25px #0ea5e933;cursor:pointer;border:none}
 .btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
 .btn.alt{background:#eef6ff;color:#07111f}
+.btn.messenger{background:#0084FF;color:#fff}
 .logo-card{display:flex;justify-content:center}
 .logo-card img{width:min(390px,90%);border-radius:50%;box-shadow:0 0 55px #008cff22}
 section{padding:80px 0}
@@ -53,6 +54,13 @@ section{padding:80px 0}
 .remote-card h3{margin:10px 0 10px;font-size:20px;color:#ffffff}
 .remote-card p{color:#cbd5e1;font-size:15px}
 
+/* Atsiliepimai */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-bottom:30px}
+.review-card{background:#ffffff;color:#172033;border:1px solid #e1e8f0;border-radius:16px;padding:25px;box-shadow:0 10px 30px #0b19300c}
+.stars{color:#f59e0b;font-size:18px;margin-bottom:10px}
+.review-card p{color:#4a5568;font-style:italic;margin-bottom:14px;font-size:15px}
+.review-author{font-weight:700;color:#0369a1;font-size:14px}
+
 /* Forma */
 .form-container{max-width:700px;margin:0 auto;background:#071a30;border:1px solid #1e3a5f;padding:40px;border-radius:20px;box-shadow:0 15px 35px #00000044}
 .form-group{margin-bottom:20px}
@@ -72,7 +80,7 @@ section{padding:80px 0}
 .contact p{color:#c9d9ea;margin:10px auto 26px}
 footer{background:#010611;color:#7f92a8;text-align:center;padding:25px;font-size:14px}
 @media(max-width:760px){
-nav ul{display:none}.hero{min-height:auto;padding:70px 0}.hero-grid,.about-grid,.remote-cards,.checkbox-grid{grid-template-columns:1fr}
+nav ul{display:none}.hero{min-height:auto;padding:70px 0}.hero-grid,.about-grid,.remote-cards,.reviews-grid,.checkbox-grid{grid-template-columns:1fr}
 .logo-card{order:-1}.logo-card img{width:240px}.cards{grid-template-columns:1fr}
 section{padding:58px 0}.brand span{font-size:20px}
 }
@@ -90,8 +98,8 @@ section{padding:58px 0}.brand span{font-size:20px}
 <ul>
 <li><a href="#paslaugos">Paslaugos</a></li>
 <li><a href="#nuotoliniu-budu">Nuotolinis</a></li>
-<li><a href="#uzklausa">Registruoti gedimą</a></li>
-<li><a href="#apie">Apie</a></li>
+<li><a href="#atsiliepimai">Atsiliepimai</a></li>
+<li><a href="#uzklausa">Užklausa</a></li>
 <li><a href="#kontaktai">Kontaktai</a></li>
 </ul>
 </nav>
@@ -105,8 +113,8 @@ section{padding:58px 0}.brand span{font-size:20px}
 <div class="badge">📍 ŠILUTĖ • SAUGI NUOTOLINĖ PAGALBA</div>
 <h1>Kompiuteris lėtas ar ožiuojasi?<br><span>Sutvarkome Šilutėje ir nuotoliniu būdu.</span></h1>
 <p>Pilnas Windows perrašymas, operatyvi nuotolinė pagalba per „RustDesk“ jūsų akivaizdoje, programinės įrangos optimizavimas.</p>
+<a class="btn messenger" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer">💬 Rašykit Messenger</a>
 <a class="btn" href="#uzklausa">📝 Pildyti užklausą</a>
-<a class="btn alt" href="#nuotoliniu-budu">Kaip tai veikia?</a>
 </div>
 <div class="logo-card">
 <img src="pc-it-logo.png" alt="PC IT – kompiuterių remontas Šilutėje">
@@ -171,6 +179,33 @@ section{padding:58px 0}.brand span{font-size:20px}
 </div>
 </section>
 
+<section id="atsiliepimai" class="dark-sec" style="background:#020614;">
+<div class="wrap">
+<h2 class="title">Klientų atsiliepimai</h2>
+<p class="subtitle">Ką apie mūsų paslaugas sako šilutiškiai ir kiti klientai.</p>
+<div class="reviews-grid">
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>„Labai greitai sutvarkė nuotoliniu būdu per RustDesk, kompiuteris vėl skraido. Tikra rekomendacija!“</p>
+<div class="review-author">— Tomas V. (Šilutė)</div>
+</div>
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>„Puikus aptarnavimas ir sąžiningos kainos. Perrašė Windows ir surašė visas reikalingas programas per dieną.“</p>
+<div class="review-author">— Sandra L.</div>
+</div>
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>„Superinė pagalba kai reikėjo skubiai išvalyti virusus. Nereikėjo net niekur vežti kompiuterio!“</p>
+<div class="review-author">— Mantas K.</div>
+</div>
+</div>
+<div style="text-align:center;margin-top:20px;">
+<a class="btn messenger" href="https://www.facebook.com/profile.php?id=61592840316716" target="_blank" rel="noopener noreferrer">⭐ Parašyti atsiliepimą Facebook</a>
+</div>
+</div>
+</section>
+
 <section id="uzklausa" class="dark-sec" style="background:#020b1c;">
 <div class="wrap">
 <h2 class="title">Registruoti kompiuterio gedimą</h2>
@@ -231,8 +266,8 @@ section{padding:58px 0}.brand span{font-size:20px}
 <section id="kontaktai" class="contact">
 <div class="wrap">
 <h2 class="title">Susisiekite tiesiogiai</h2>
-<p>Jei norite pasikonsultuoti greičiau, parašykite per Facebook arba tiesiogiai el. paštu.</p>
-<a class="btn" href="https://www.facebook.com/profile.php?id=61592840316716" target="_blank" rel="noopener noreferrer">💬 Parašyti Facebook</a>
+<p>Jei norite pasikonsultuoti akimirksniu, parašykite per Messenger arba el. paštu.</p>
+<a class="btn messenger" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer">💬 Rašyti Messenger</a>
 <a class="btn alt" href="mailto:itservizassilute@gmail.com">✉️ itservizassilute@gmail.com</a>
 </div>
 </section>
