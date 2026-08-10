@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dažniausiai užduodami klausimai apie kompiuterių remontą, nuotolinę pagalbą ir Windows perrašymą Šilutėje.">
+<title>DUK | PC IT Šilutė</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root {
+    --bg: #020817;
+    --card-bg: #071a3088;
+    --accent: #0ea5e9;
+    --text: #eef6ff;
+    --text-muted: #93c5fd;
+    --glass: rgba(2, 8, 23, 0.7);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Urbanist', sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit;transition:0.3s}
+.wrap{max-width:900px;margin:auto;padding:0 22px}
+
+/* Header */
+header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
+nav{height:80px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px}
+.brand img{width:48px;height:48px;object-fit:contain}
+.brand b{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;font-weight:600;align-items:center}
+nav a:hover{color:var(--accent)}
+
+/* Kalbų perjungėjas */
+.lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px}
+.lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:12px;padding:5px 10px;border-radius:7px;transition:0.3s}
+.lang-btn.active{background:var(--accent);color:var(--bg)}
+
+/* Content */
+.content-section{padding:80px 0}
+h1{font-size:clamp(36px, 5vw, 50px);margin-bottom:16px;font-weight:800;text-align:center}
+h1 span{color:var(--accent)}
+
+.faq-container{margin-top:40px;display:flex;flex-direction:column;gap:20px}
+.faq-card{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:20px;padding:30px;backdrop-filter:blur(10px);transition:0.3s}
+.faq-card:hover{border-color:var(--accent)}
+.faq-card h3{font-size:20px;margin-bottom:12px;color:#fff;display:flex;align-items:center;gap:12px}
+.faq-card h3 i{color:var(--accent);font-size:18px}
+.faq-card p{color:var(--text-muted);font-size:16px}
+
+.back-btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:12px 24px;border-radius:12px;margin-top:40px}
+.back-btn:hover{filter:brightness(1.1)}
+
+footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611;margin-top:60px}
+
+@media(max-width:760px){
+    .faq-card{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap" style="max-width:1120px;">
+<nav>
+<a class="brand" href="index.html">
+<img src="pc-it-logo.png" alt="PC IT">
+<span>PC <b>IT</b> Šilutė</span>
+</a>
+<ul>
+<li><a href="index.html" data-lt="Pradžia" data-en="Home">Pradžia</a></li>
+<li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
+<li><a href="duk.html" style="color:var(--accent)" data-lt="DUK" data-en="FAQ">DUK</a></li>
+<li><a href="index.html#kontaktai" data-lt="Kontaktai" data-en="Contact">Kontaktai</a></li>
+<li>
+<div class="lang-switcher">
+<button class="lang-btn active" onclick="setLang('lt')">LT</button>
+<button class="lang-btn" onclick="setLang('en')">EN</button>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="content-section">
+<div class="wrap">
+<h1 data-lt="Dažniausiai užduodami <span>klausimai</span>" data-en="Frequently Asked <span>Questions</span>">
+    Dažniausiai užduodami <span>klausimai</span>
+</h1>
+<p style="text-align:center;color:var(--text-muted);font-size:18px;max-width:700px;margin:0 auto;" data-lt="Atsakymai į populiariausius klientų klausimus apie kompiuterių remontą ir nuotolinę pagalbą." data-en="Answers to the most popular customer questions about computer repair and remote support.">
+    Atsakymai į populiariausius klientų klausimai apie kompiuterių remontą ir nuotolinę pagalbą.
+</p>
+
+<div class="faq-container">
+<div class="faq-card">
+<h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ar būtina kompiuterį vežti pas jus?" data-en="<i class='fa-solid fa-circle-question'></i> Is it necessary to bring the computer to you?">
+    <i class="fa-solid fa-circle-question"></i> Ar būtina kompiuterį vežti pas jus?
+</h3>
+<p data-lt="Ne nebūtina! Daugumą programinių problemų, virusų šalinimo, sistemų optimizavimo ar „Windows“ konfigūravimo sėkmingai išsprendžiame **nuotoliniu būdu per „RustDesk“** programą jūsų akivaizdoje." data-en="No, it is not! Most software issues, virus removal, system optimization, or Windows configuration are successfully resolved **remotely via RustDesk** right before your eyes.">
+    Ne, nebūtina! Daugumą programinių problemų, virusų šalinimo, sistemų optimizavimo ar „Windows“ konfigūravimo sėkmingai išsprendžiame **nuotoliniu būdu per „RustDesk“** programą jūsų akivaizdoje.
+</p>
+</div>
+
+<div class="faq-card">
+<h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kaip veikia saugus nuotolinis prisijungimas?" data-en="<i class='fa-solid fa-circle-question'></i> How does secure remote connection work?">
+    <i class="fa-solid fa-circle-question"></i> Kaip veikia saugus nuotolinis prisijungimas?
+</h3>
+<p data-lt="Naudojame patikimą „RustDesk“ programą. Prisijungimas galimas tik jums suteikus vienkartinį prisijungimo kodą, o viso proceso metu ekrane matote kiekvieną mūsų pelės judesį ir galite bet kada nutraukti seansą." data-en="We use the reliable RustDesk application. Connection is only possible after you provide a one-time connection code, and during the whole process, you see every movement of our mouse on screen and can terminate the session at any time.">
+    Naudojame patikimą „RustDesk“ programą. Prisijungimas galimas tik jums suteikus vienkartinį prisijungimo kodą, o viso proceso metu ekrane matote kiekvieną mūsų pelės judesį ir galite bet kada nutraukti seansą.
+</p>
+</div>
+
+<div class="faq-card">
+<h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kiek laiko užtrunka Windows perrašymas?" data-en="<i class='fa-solid fa-circle-question'></i> How long does Windows reinstallation take?">
+    <i class="fa-solid fa-circle-question"></i> Kiek laiko užtrunka Windows perrašymas?
+</h3>
+<p data-lt="Paprastai pilnas „Windows“ operacinės sistemos perrašymas, draiverių ir visų reikalingų pagrindinių programų surašymas užtrunka nuo kelių valandų iki dienos (priklausomai nuo kompiuterio spartos)." data-en="Usually, a full Windows operating system reinstallation, drivers, and setup of all necessary basic software takes from a few hours to a day (depending on computer speed).">
+    Paprastai pilnas „Windows“ operacinės sistemos perrašymas, draiverių ir visų reikalingų pagrindinių programų surašymas užtrunka nuo kelių valandų iki dienos (priklausomai nuo kompiuterio spartos).
+</p>
+</div>
+
+<div class="faq-card">
+<h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kokia paslaugų kaina?" data-en="<i class='fa-solid fa-circle-question'></i> What is the price of the services?">
+    <i class="fa-solid fa-circle-question"></i> Kokia paslaugų kaina?
+</h3>
+<p data-lt="Nuotolinė pagalba kainuoja nuo 15 €, o „Windows“ perrašymas – nuo 30 €. Dėl sudėtingesnių gedimų ar specifinių darbų kainos tariamės individualiai prieš pradedant darbus, todėl jokių netikėtų mokesčių nebūna." data-en="Remote support costs from €15, and Windows reinstallation from €30. For more complex faults or specific jobs, prices are agreed individually before starting work, so there are no unexpected fees.">
+    Nuotolinė pagalba kainuoja nuo 15 €, o „Windows“ perrašymas – nuo 30 €. Dėl sudėtingesnių gedimų ar specifinių darbų kainos tariamės individualiai prieš pradedant darbus, todėl jokių netikėtų mokesčių nebūna.
+</p>
+</div>
+</div>
+
+<div style="text-align:center;">
+<a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> <span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to home page">Grįžti į pagrindinį puslapį</span></a>
+</div>
+</div>
+</section>
+</main>
+
+<footer data-lt="© 2026 PC IT Šilutė • Nuotolinė pagalba • Programų perinstaliavimas" data-en="© 2026 PC IT Šilutė • Remote Support • Software Reinstallation">© 2026 PC IT Šilutė • Nuotolinė pagalba • Programų perinstaliavimas</footer>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+  const activeBtn = lang === 'lt' ? document.querySelector('button[onclick*="lt"]') : document.querySelector('button[onclick*="en"]');
+  if(activeBtn) activeBtn.classList.add('active');
+  
+  document.querySelectorAll('[data-lt]').forEach(el => {
+    const icon = el.querySelector('i');
+    const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
+    
+    if (icon) {
+        const textNode = el.querySelector('span');
+        if(textNode) {
+            textNode.innerHTML = langText;
+        } else {
+            el.innerHTML = `<i class="${icon.className}"></i> ` + langText;
+        }
+    } else {
+        el.innerHTML = langText;
+    }
+  });
+}
+</script>
+</body>
+</html>
