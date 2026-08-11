@@ -47,6 +47,42 @@ section{padding:90px 0}
 .content-box p{margin-bottom:20px;font-size:17px;color:var(--text-muted)}
 .content-box h3{color:#fff;margin:30px 0 15px;font-size:22px}
 
+/* AKCENTO KORTELĖ VIETOJE VIDEO */
+.highlight-card {
+    margin: 35px 0;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(7, 26, 48, 0.8));
+    border: 1px solid var(--accent);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15);
+}
+.highlight-card h4 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.highlight-card p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.os-badges {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.os-badge {
+    background: #1e3a5f;
+    color: var(--accent);
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 14px;
+    border: 1px solid var(--accent);
+}
+
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:15px 26px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s}
 .btn:hover{transform:translateY(-3px);filter:brightness(1.1)}
 
@@ -101,6 +137,15 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <p data-lt="Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Man svarbu, kad klientas žinotų, už ką moka, todėl visada iš anksto suderiname darbus ir kainas." data-en="We first look for the cause of the problem, not a reason to sell a new computer. It's important to me that the client knows what they are paying for, so we always agree on work and prices in advance.">Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Man svarbu, kad klientas žinotų, už ką moka, todėl visada iš anksto suderiname darbus ir kainas.</p>
 
 <p data-lt="Šiandien „PC IT Šilutė“ – tai nauja veikla, paremta ilgamete patirtimi. Kompiuteriai tvarkomi lokaliai mūsų dirbtuvėse, su galimybe atvežti ar susitarus parvežti atgal. Jei jūsų kompiuteris pradėjo ožiuotis – žinokite, kur kreiptis." data-en="Today 'PC IT Šilutė' is a new activity based on long-term experience. Computers are repaired locally in our workshop, with pickup or return delivery by agreement. If your computer is acting up – you know where to turn.">Šiandien „PC IT Šilutė“ – tai nauja veikla, paremta ilgamete patirtimi. Kompiuteriai tvarkomi lokaliai mūsų dirbtuvėse, su galimybe atvežti ar susitarus parvežti atgal. Jei jūsų kompiuteris pradėjo ožiuotis – žinokite, kur kreiptis.</p>
+
+<div class="highlight-card">
+    <h4 data-lt="💻 Profesionalus sistemų diegimas ir optimizavimas" data-en="💻 Professional System Installation & Optimization">💻 Profesionalus sistemų diegimas ir optimizavimas</h4>
+    <p data-lt="Tvarkingas ir švarus operacinės sistemos paruošimas sklandžiam jūsų kompiuterio darbui." data-en="Clean and proper operating system setup for smooth operation of your computer.">Tvarkingas ir švarus operacinės sistemos paruošimas sklandžiam jūsų kompiuterio darbui.</p>
+    <div class="os-badges">
+        <span class="os-badge">Windows 10</span>
+        <span class="os-badge">Windows 11</span>
+    </div>
+</div>
 
 <div style="margin-top: 30px; text-align: center;">
     <a href="index.html#uzklausa" class="btn" data-lt="📝 Registruoti gedimą" data-en="📝 Register a fault">📝 Registruoti gedimą</a>
