@@ -47,40 +47,42 @@ section{padding:90px 0}
 .content-box p{margin-bottom:20px;font-size:17px;color:var(--text-muted)}
 .content-box h3{color:#fff;margin:30px 0 15px;font-size:22px}
 
-/* AKCENTO KORTELĖ VIETOJE VIDEO */
-.highlight-card {
-    margin: 35px 0;
-    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(7, 26, 48, 0.8));
-    border: 1px solid var(--accent);
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15);
+/* TECHNOLOGINĖ EVOLIUCIJA (TIMELINE) */
+.evolution-timeline {
+    margin: 40px 0;
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid var(--accent);
 }
-.highlight-card h4 {
-    color: #fff;
-    margin-bottom: 10px;
-    font-size: 20px;
+.evo-step {
+    position: relative;
+    margin-bottom: 25px;
 }
-.highlight-card p {
-    color: var(--text-muted);
-    font-size: 16px;
+.evo-step:last-child {
     margin-bottom: 0;
 }
-.os-badges {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+.evo-step::before {
+    content: '';
+    position: absolute;
+    left: -37px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
 }
-.os-badge {
-    background: #1e3a5f;
-    color: var(--accent);
-    padding: 8px 16px;
-    border-radius: 10px;
+.evo-year {
     font-weight: 800;
-    font-size: 14px;
-    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 15px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+.evo-desc {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:15px 26px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s}
@@ -129,23 +131,29 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <p class="subtitle" data-lt="Sąžiningas meistras ir techninė pagalba Šilutėje bei aplinkiniuose rajonuose." data-en="Honest master and technical support in Šilutė and surrounding areas.">Sąžiningas meistras ir techninė pagalba Šilutėje bei aplinkiniuose rajonuose.</p>
 
 <div class="content-box">
-<p data-lt="Sveiki! Esu žmogus, kuris už technologijų vairo sėdi jau labai seniai. Patirtis technologijų srityje – nuo 1988 metų. Per šį laiką mačiau viską – nuo pirmųjų iki dantų dylančių asmeninių kompiuterių iki galingų šiuolaikinių sistemų." data-en="Hello! I am someone who has been behind the wheel of technology for a very long time. Experience in technology – since 1988. Over this time I've seen everything – from early PCs to modern powerful systems.">Sveiki! Esu žmogus, kuris už technologijų vairo sėdi jau labai seniai. Patirtis technologijų srityje – nuo 1988 metų. Per šį laiką mačiau viską – nuo pirmųjų iki dantų dylančių asmeninių kompiuterių iki galingų šiuolaikinių sistemų.</p>
+<p data-lt="Sveiki! Esu žmogus, kuris už technologijų vairo sėdi jau labai seniai. Patirtis technologijų srityje – nuo 1988 metų. Per šį laiką mačiau visą asmeninių kompiuterių ir programinės įrangos evoliuciją." data-en="Hello! I am someone who has been behind the wheel of technology for a very long time. Experience in technology – since 1988. Over this time I've witnessed the entire evolution of personal computers and software.">Sveiki! Esu žmogus, kuris už technologijų vairo sėdi jau labai seniai. Patirtis technologijų srityje – nuo 1988 metų. Per šį laiką mačiau visą asmeninių kompiuterių ir programinės įrangos evoliuciją.</p>
 
-<p data-lt="Viskas prasidėjo labai paprastai – nuo noro suprasti, kaip viskas veikia iš vidaus. Laikui bėgant pamačiau, kad rinkoje trūksta paprasto, žmogiško bendravimo. Kartais klientai kreipiasi išsigandę, kad „kompiuteris visai sugedo“, kai tuo tarpu jam tereikia paprasto švaraus Windows perrašymo ar optimizavimo, o ne naujo įrenginio už tūkstantį eurų." data-en="It all started simply – from a desire to understand how things work inside. Over time, I saw that the market lacked simple, human communication. Sometimes clients come frightened that their computer is 'completely broken', when it just needs a clean Windows reinstallation or optimization, not a new device for a thousand euros.">Viskas prasidėjo labai paprastai – nuo noro suprasti, kaip viskas veikia iš vidaus. Laikui bėgant pamačiau, kad rinkoje trūksta paprasto, žmogiško bendravimo. Kartais klientai kreipiasi išsigandę, kad „kompiuteris visai sugedo“, kai tuo tarpu jam tereikia paprasto švaraus Windows perrašymo ar optimizavimo, o ne naujo įrenginio už tūkstantį eurų.</p>
+<p data-lt="Viskas prasidėjo nuo pirmųjų sistemų ir programavimo pagrindų, kai kiekviena komanda ir gedimas reikalavo gilaus supratimo. Laikui bėgant keitėsi ir pati technika, ir darbo įrankiai, taigi patirtis leidžia greitai ir tiksliai atskirti tikrąją gedimo priežastį nuo smulkių programinių trukdžių." data-en="It all started with early systems and programming basics, where every command and failure required deep understanding. Over time, both the technology and working tools evolved, allowing experience to quickly and accurately pinpoint the root cause of failures.">Viskas prasidėjo nuo pirmųjų sistemų ir programavimo pagrindų, kai kiekviena komanda ir gedimas reikalavo gilaus supratimo. Laikui bėgant keitėsi ir pati technika, ir darbo įrankiai, taigi patirtis leidžia greitai ir tiksliai atskirti tikrąją gedimo priežastį nuo smulkių programinių trukdžių.</p>
+
+<div class="evolution-timeline">
+    <div class="evo-step">
+        <div class="evo-year" data-lt="1988 metai — Pradžia" data-en="1988 — The Beginning">1988 metai — Pradžia</div>
+        <div class="evo-desc" data-lt="Pirmosios pažintys su kompiuterine technika, MS-DOS aplinka, Pascal programavimu ir sistemų sandara." data-en="First encounters with computer technology, MS-DOS environment, Pascal programming, and system architecture.">Pirmosios pažintys su kompiuterine technika, MS-DOS aplinka, Pascal programavimu ir sistemų sandara.</div>
+    </div>
+    <div class="evo-step">
+        <div class="evo-year" data-lt="Evoliucijos dešimtmečiai" data-en="Decades of Evolution">Evoliucijos dešimtmečiai</div>
+        <div class="evo-desc" data-lt="Perėjimas per visas pagrindines Windows eros laidas – nuo Windows 95/98 iki XP ir modernių sprendimų." data-en="Transition through all major Windows eras – from Windows 95/98 to XP and modern solutions.">Perėjimas per visas pagrindines Windows eros laidas – nuo Windows 95/98 iki XP ir modernių sprendimų.</div>
+    </div>
+    <div class="evo-step">
+        <div class="evo-year" data-lt="Šiandien — Windows 10 & 11" data-en="Today — Windows 10 & 11">Šiandien — Windows 10 & 11</div>
+        <div class="evo-desc" data-lt="Profesionali diagnostika, spartus sistemų optimizavimas ir patikimas kompiuterių remontas Šilutėje." data-en="Professional diagnostics, rapid system optimization, and reliable computer repair in Šilutė.">Profesionali diagnostika, spartus sistemų optimizavimas ir patikimas kompiuterių remontas Šilutėje.</div>
+    </div>
+</div>
 
 <h3 data-lt="Mano principas paprastas" data-en="My principle is simple">Mano principas paprastas</h3>
 <p data-lt="Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Man svarbu, kad klientas žinotų, už ką moka, todėl visada iš anksto suderiname darbus ir kainas." data-en="We first look for the cause of the problem, not a reason to sell a new computer. It's important to me that the client knows what they are paying for, so we always agree on work and prices in advance.">Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Man svarbu, kad klientas žinotų, už ką moka, todėl visada iš anksto suderiname darbus ir kainas.</p>
 
 <p data-lt="Šiandien „PC IT Šilutė“ – tai nauja veikla, paremta ilgamete patirtimi. Kompiuteriai tvarkomi lokaliai mūsų dirbtuvėse, su galimybe atvežti ar susitarus parvežti atgal. Jei jūsų kompiuteris pradėjo ožiuotis – žinokite, kur kreiptis." data-en="Today 'PC IT Šilutė' is a new activity based on long-term experience. Computers are repaired locally in our workshop, with pickup or return delivery by agreement. If your computer is acting up – you know where to turn.">Šiandien „PC IT Šilutė“ – tai nauja veikla, paremta ilgamete patirtimi. Kompiuteriai tvarkomi lokaliai mūsų dirbtuvėse, su galimybe atvežti ar susitarus parvežti atgal. Jei jūsų kompiuteris pradėjo ožiuotis – žinokite, kur kreiptis.</p>
-
-<div class="highlight-card">
-    <h4 data-lt="💻 Profesionalus sistemų diegimas ir optimizavimas" data-en="💻 Professional System Installation & Optimization">💻 Profesionalus sistemų diegimas ir optimizavimas</h4>
-    <p data-lt="Tvarkingas ir švarus operacinės sistemos paruošimas sklandžiam jūsų kompiuterio darbui." data-en="Clean and proper operating system setup for smooth operation of your computer.">Tvarkingas ir švarus operacinės sistemos paruošimas sklandžiam jūsų kompiuterio darbui.</p>
-    <div class="os-badges">
-        <span class="os-badge">Windows 10</span>
-        <span class="os-badge">Windows 11</span>
-    </div>
-</div>
 
 <div style="margin-top: 30px; text-align: center;">
     <a href="index.html#uzklausa" class="btn" data-lt="📝 Registruoti gedimą" data-en="📝 Register a fault">📝 Registruoti gedimą</a>
