@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Dažnai užduodami klausimai apie kompiuterių remontą, kainas ir terminą PC IT Šilutė.">
-<title>DUK – Dažniausiai užduodami klausimai • PC IT Šilutė</title>
+<meta name="description" content="Dažniausiai užduodami klausimai apie kompiuterių remontą, kainas ir terminą PC IT Šilutė.">
+<title>Kompiuterių remonto DUK – PC IT Šilutė</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,6 @@ body{font-family:'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, Helve
 a{text-decoration:none;color:inherit;transition:0.3s}
 .wrap{max-width:1120px;margin:auto;padding:0 22px}
 
-/* Header */
 header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
 nav{height:80px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px}
@@ -36,12 +35,10 @@ nav{height:80px;display:flex;align-items:center;justify-content:space-between}
 nav ul{display:flex;gap:22px;list-style:none;font-weight:600;align-items:center}
 nav a:hover{color:var(--accent)}
 
-/* Kalbų perjungėjas */
 .lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px}
 .lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:12px;padding:5px 10px;border-radius:7px;transition:0.3s}
 .lang-btn.active{background:var(--accent);color:var(--bg)}
 
-/* Page Content */
 section{padding:90px 0}
 .title{text-align:center;font-size:38px;margin-bottom:12px;font-weight:800}
 .subtitle{text-align:center;color:var(--text-muted);max-width:700px;margin:0 auto 50px;font-size:18px}
@@ -52,7 +49,6 @@ section{padding:90px 0}
 .faq-card h3 i{color:var(--accent)}
 .faq-card p{color:var(--text-muted);font-size:16px}
 
-/* Footer */
 footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
 
 @media(max-width:760px){
@@ -106,15 +102,6 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </div>
 
 <div class="faq-card">
-    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ar mano failai bus išsaugoti?" data-en="<i class='fa-solid fa-circle-question'></i> Will my files be saved?">
-        <i class="fa-solid fa-circle-question"></i> Ar mano failai bus išsaugoti?
-    </h3>
-    <p data-lt="Prieš Windows perrašymą visada aptariame asmeninių duomenų klausimą. Jei reikia išsaugoti nuotraukas, dokumentus ar kitus failus, pirmiausia pasirūpiname jų perkėlimu arba atsargine kopija." data-en="Before Windows reinstallation, we always discuss personal data. If you need to save photos, documents or other files, we make sure to back them up or transfer them first.">
-        Prieš Windows perrašymą visada aptariame asmeninių duomenų klausimą. Jei reikia išsaugoti nuotraukas, dokumentus ar kitus failus, pirmiausia pasirūpiname jų perkėlimu arba atsargine kopija.
-    </p>
-</div>
-
-<div class="faq-card">
     <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ar būtina perrašyti Windows, jei kompiuteris lėtas?" data-en="<i class='fa-solid fa-circle-question'></i> Is it necessary to reinstall Windows if the computer is slow?">
         <i class="fa-solid fa-circle-question"></i> Ar būtina perrašyti Windows, jei kompiuteris lėtas?
     </h3>
@@ -124,20 +111,38 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </div>
 
 <div class="faq-card">
-    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kiek laiko trunka kompiuterio remontas?" data-en="<i class='fa-solid fa-circle-question'></i> How long does the repair take?">
-        <i class="fa-solid fa-circle-question"></i> Kiek laiko trunka kompiuterio remontas?
+    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ar mano nuotraukos ir dokumentai bus išsaugoti?" data-en="<i class='fa-solid fa-circle-question'></i> Will my photos and documents be saved?">
+        <i class="fa-solid fa-circle-question"></i> Ar mano nuotraukos ir dokumentai bus išsaugoti?
     </h3>
-    <p data-lt="Dažniausiai standartiniai darbai (kaip Windows perrašymas ar optimizavimas) atliekami per 1 darbo dieną." data-en="Usually standard jobs (like Windows reinstallation or optimization) are completed within 1 business day.">
-        Dažniausiai standartiniai darbai (kaip Windows perrašymas ar optimizavimas) atliekami per 1 darbo dieną.
+    <p data-lt="Prieš Windows perrašymą visada aptariame asmeninių duomenų išsaugojimą. Jei reikia, pirmiausia pasirūpiname svarbių failų perkėlimu arba atsargine kopija." data-en="Before Windows reinstallation, we always discuss saving personal data. If needed, we first take care of moving important files or making a backup.">
+        Prieš Windows perrašymą visada aptariame asmeninių duomenų išsaugojimą. Jei reikia, pirmiausia pasirūpiname svarbių failų perkėlimu arba atsargine kopija.
     </p>
 </div>
 
 <div class="faq-card">
-    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kaip pristatyti kompiuterį?" data-en="<i class='fa-solid fa-circle-question'></i> How to deliver the computer?">
-        <i class="fa-solid fa-circle-question"></i> Kaip pristatyti kompiuterį?
+    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ar galima kompiuterį sutvarkyti nuotoliniu būdu?" data-en="<i class='fa-solid fa-circle-question'></i> Can the computer be fixed remotely?">
+        <i class="fa-solid fa-circle-question"></i> Ar galima kompiuterį sutvarkyti nuotoliniu būdu?
     </h3>
-    <p data-lt="Kompiuterį galite patys atvežti į mūsų dirbtuves Šilutėje. Jei neturite tam laiko ar galimybės, susitarus galime jį paimti ir parvežti atgal už papildomą mokestį." data-en="You can bring the computer yourself to our workshop in Šilutė. If you don't have time or a way, by agreement we can pick it up and return it for an extra fee.">
-        Kompiuterį galite patys atvežti į mūsų dirbtuves Šilutėje. Jei neturite tam laiko ar galimybės, susitarus galime jį paimti ir parvežti atgal už papildomą mokestį.
+    <p data-lt="Kai kurias programines problemas galima išspręsti nuotoliniu būdu per „RustDesk“. Ši paslauga teikiama tik iš anksto susitarus ir nėra pagrindinis mūsų aptarnavimo būdas." data-en="Some software problems can be solved remotely via RustDesk. This service is provided only by prior agreement and is not our main maintenance method.">
+        Kai kurias programines problemas galima išspręsti nuotoliniu būdu per „RustDesk“. Ši paslauga teikiama tik iš anksto susitarus ir nėra pagrindinis mūsų aptarnavimo būdas.
+    </p>
+</div>
+
+<div class="faq-card">
+    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kada kompiuterio remontuoti neapsimoka?" data-en="<i class='fa-solid fa-circle-question'></i> When is computer repair not worth it?">
+        <i class="fa-solid fa-circle-question"></i> Kada kompiuterio remontuoti neapsimoka?
+    </h3>
+    <p data-lt="Jei nustatome, kad remonto kaina būtų neproporcinga kompiuterio vertei, apie tai atvirai pasakome. Tokiu atveju galime pasiūlyti alternatyvas, tačiau sprendimą visada priima klientas." data-en="If we determine that the repair cost would be disproportionate to the value of the computer, we tell you openly. In such a case we can offer alternatives, but the decision is always up to the client.">
+        Jei nustatome, kad remonto kaina būtų neproporcinga kompiuterio vertei, apie tai atvirai pasakome. Tokiu atveju galime pasiūlyti alternatyvas, tačiau sprendimą visada priima klientas.
+    </p>
+</div>
+
+<div class="faq-card">
+    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kiek laiko trunka darbai?" data-en="<i class='fa-solid fa-circle-question'></i> How long do works take?">
+        <i class="fa-solid fa-circle-question"></i> Kiek laiko trunka darbai?
+    </h3>
+    <p data-lt="Dažniausiai standartiniai darbai (kaip Windows perrašymas ar optimizavimas) atliekami per 1 darbo dieną." data-en="Usually standard jobs (like Windows reinstallation or optimization) are completed within 1 business day.">
+        Dažniausiai standartiniai darbai (kaip Windows perrašymas ar optimizavimas) atliekami per 1 darbo dieną.
     </p>
 </div>
 
