@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PC IT – Dazniausiai užduodami klausimai apie kompiuterių remontą Šilutėje.">
-<title>DUK – PC IT Šilutė</title>
+<meta name="description" content="Dažnai užduodami klausimai apie kompiuterių remontą, kainas ir terminą PC IT Šilutė.">
+<title>DUK – Dažniausiai užduodami klausimai • PC IT Šilutė</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,10 +23,11 @@
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+body{font-family:'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit;transition:0.3s}
 .wrap{max-width:1120px;margin:auto;padding:0 22px}
 
+/* Header */
 header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
 nav{height:80px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px}
@@ -35,20 +36,29 @@ nav{height:80px;display:flex;align-items:center;justify-content:space-between}
 nav ul{display:flex;gap:22px;list-style:none;font-weight:600;align-items:center}
 nav a:hover{color:var(--accent)}
 
+/* Kalbų perjungėjas */
 .lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px}
 .lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:12px;padding:5px 10px;border-radius:7px;transition:0.3s}
 .lang-btn.active{background:var(--accent);color:var(--bg)}
 
-section{padding:80px 0}
-.title{font-size:38px;margin-bottom:20px;font-weight:800}
-.faq-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:30px}
-.faq-card{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:20px;padding:25px;backdrop-filter:blur(10px)}
-.faq-card h3{color:#fff;font-size:20px;margin-bottom:10px}
+/* Page Content */
+section{padding:90px 0}
+.title{text-align:center;font-size:38px;margin-bottom:12px;font-weight:800}
+.subtitle{text-align:center;color:var(--text-muted);max-width:700px;margin:0 auto 50px;font-size:18px}
+
+.faq-container{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.faq-card{background:var(--card-bg);border:1px solid #1e3a5f;padding:30px;border-radius:24px;backdrop-filter:blur(10px)}
+.faq-card h3{color:#fff;margin-bottom:10px;font-size:20px;display:flex;align-items:center;gap:12px}
+.faq-card h3 i{color:var(--accent)}
 .faq-card p{color:var(--text-muted);font-size:16px}
 
+/* Footer */
 footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
 
-@media(max-width:760px){nav ul{display:none}}
+@media(max-width:760px){
+    nav ul{display:none}
+    .faq-card{padding:20px}
+}
 </style>
 </head>
 <body>
@@ -64,7 +74,9 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
 <li><a href="index.html#remontas-vietoje" data-lt="Kaip veikia" data-en="How it works">Kaip veikia</a></li>
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
-<li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
+<li><a href="duk.html" style="color:var(--accent)" data-lt="DUK" data-en="FAQ">DUK</a></li>
+<li><a href="index.html#atsiliepimai" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
+<li><a href="index.html#uzklausa" data-lt="Užklausa" data-en="Inquiry">Užklausa</a></li>
 <li><a href="index.html#kontaktai" data-lt="Kontaktai" data-en="Contact">Kontaktai</a></li>
 <li>
 <div class="lang-switcher">
@@ -80,64 +92,91 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <main>
 <section>
 <div class="wrap">
-<h1 class="title" data-lt="Dažniausiai užduodami klausimai (DUK)" data-en="Frequently Asked Questions (FAQ)">Dažniausiai užduodami klausimai (DUK)</h1>
-<p style="color:var(--text-muted); font-size:18px;" data-lt="Atsakymai į dažniausiai kylančius klausimus apie mūsų paslaugas Šilutėje." data-en="Answers to frequently asked questions about our services in Šilutė.">Atsakymai į dažniausiai kylančius klausimus apie mūsų paslaugas Šilutėje.</p>
+<h1 class="title" data-lt="Dažniausiai užduodami klausimai" data-en="Frequently Asked Questions">Dažniausiai užduodami klausimai</h1>
+<p class="subtitle" data-lt="Viskas, ką naudinga žinoti prieš atvežant kompiuterį remontui." data-en="Everything you need to know before bringing your computer for repair.">Viskas, ką naudinga žinoti prieš atvežant kompiuterį remontui.</p>
 
-<div class="faq-grid">
+<div class="faq-container">
 <div class="faq-card">
-<h3 data-lt="Kiek užtrunka Windows perrašymas?" data-en="How long does Windows reinstallation take?">Kiek užtrunka Windows perrašymas?</h3>
-<p data-lt="Dažniausiai darbai atliekami per 1 darbo dieną. Jei kompiuterį atvežate ryte, dažnai sutvarkome ir paruošiame atsiėmimui jau tą pačią dieną." data-en="Usually works are completed within 1 business day. If you bring the computer in the morning, we often fix and prepare it for pickup on the same day.">Dažniausiai darbai atliekami per 1 darbo dieną. Jei kompiuterį atvežate ryte, dažnai sutvarkome ir paruošiame atsiėmimui jau tą pačią dieną.</p>
+    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ar prieš remontą žinosiu, kiek kainuos?" data-en="<i class='fa-solid fa-circle-question'></i> Will I know the price before repair?">
+        <i class="fa-solid fa-circle-question"></i> Ar prieš remontą žinosiu, kiek kainuos?
+    </h3>
+    <p data-lt="Taip. Prieš pradedant darbus aptariame problemą, darbų apimtį ir kainą. Jei atliekant diagnostiką paaiškėja, kad reikalingi papildomi darbai, dėl jų pirmiausia susitariame su jumis." data-en="Yes. Before starting work, we discuss the problem, scope of work and price. If diagnostics reveal additional work is needed, we always consult with you first.">
+        Taip. Prieš pradedant darbus aptariame problemą, darbų apimtį ir kainą. Jei atliekant diagnostiką paaiškėja, kad reikalingi papildomi darbai, dėl jų pirmiausia susitariame su jumis.
+    </p>
 </div>
 
 <div class="faq-card">
-<h3 data-lt="Ar reikia atvežti kompiuterį pas jus?" data-en="Do I need to bring the computer to you?">Ar reikia atvežti kompiuterį pas jus?</h3>
-<p data-lt="Taip, pagrindinis remontas ir priežiūra vyksta mūsų dirbtuvėse Šilutėje. Tačiau susitarus galime sutarti dėl paėmimo ir pristatymo atgal į jūsų namus už papildomą mokestį." data-en="Yes, main repair and maintenance takes place in our workshop in Šilutė. However, by agreement, we can arrange pickup and return delivery to your home for an extra fee.">Taip, pagrindinis remontas ir priežiūra vyksta mūsų dirbtuvėse Šilutėje. Tačiau susitarus galime sutarti dėl paėmimo ir pristatymo atgal į jūsų namus už papildomą mokestį.</p>
+    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ar mano failai bus išsaugoti?" data-en="<i class='fa-solid fa-circle-question'></i> Will my files be saved?">
+        <i class="fa-solid fa-circle-question"></i> Ar mano failai bus išsaugoti?
+    </h3>
+    <p data-lt="Prieš Windows perrašymą visada aptariame asmeninių duomenų klausimą. Jei reikia išsaugoti nuotraukas, dokumentus ar kitus failus, pirmiausia pasirūpiname jų perkėlimu arba atsargine kopija." data-en="Before Windows reinstallation, we always discuss personal data. If you need to save photos, documents or other files, we make sure to back them up or transfer them first.">
+        Prieš Windows perrašymą visada aptariame asmeninių duomenų klausimą. Jei reikia išsaugoti nuotraukas, dokumentus ar kitus failus, pirmiausia pasirūpiname jų perkėlimu arba atsargine kopija.
+    </p>
 </div>
 
 <div class="faq-card">
-<h3 data-lt="Kada reikia mokėti už paslaugas?" data-en="When do I need to pay for services?">Kada reikia mokėti už paslaugas?</h3>
-<p data-lt="Atsiskaitoma tik tada, kai darbas yra visiškai atliktas, jūsų kompiuteris sutvarkytas ir įsitikinate jo veikimu." data-en="Payment is made only when the work is fully completed, your computer is repaired, and you verify its operation.">Atsiskaitoma tik tada, kai darbas yra visiškai atliktas, jūsų kompiuteris sutvarkytas ir įsitikinate jo veikimu.</p>
+    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ar būtina perrašyti Windows, jei kompiuteris lėtas?" data-en="<i class='fa-solid fa-circle-question'></i> Is it necessary to reinstall Windows if the computer is slow?">
+        <i class="fa-solid fa-circle-question"></i> Ar būtina perrašyti Windows, jei kompiuteris lėtas?
+    </h3>
+    <p data-lt="Ne visada. Pirmiausia įvertiname problemą. Jei kompiuterį galima sutvarkyti optimizuojant sistemą, šalinant nereikalingas programas ar kitus trukdžius, Windows perrašyti nebūtina." data-en="Not always. We evaluate the problem first. If the computer can be fixed by system optimization, removing unnecessary apps or other tweaks, reinstallation isn't necessary.">
+        Ne visada. Pirmiausia įvertiname problemą. Jei kompiuterį galima sutvarkyti optimizuojant sistemą, šalinant nereikalingas programas ar kitus trukdžius, Windows perrašyti nebūtina.
+    </p>
+</div>
+
+<div class="faq-card">
+    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kiek laiko trunka kompiuterio remontas?" data-en="<i class='fa-solid fa-circle-question'></i> How long does the repair take?">
+        <i class="fa-solid fa-circle-question"></i> Kiek laiko trunka kompiuterio remontas?
+    </h3>
+    <p data-lt="Dažniausiai standartiniai darbai (kaip Windows perrašymas ar optimizavimas) atliekami per 1 darbo dieną." data-en="Usually standard jobs (like Windows reinstallation or optimization) are completed within 1 business day.">
+        Dažniausiai standartiniai darbai (kaip Windows perrašymas ar optimizavimas) atliekami per 1 darbo dieną.
+    </p>
+</div>
+
+<div class="faq-card">
+    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kaip pristatyti kompiuterį?" data-en="<i class='fa-solid fa-circle-question'></i> How to deliver the computer?">
+        <i class="fa-solid fa-circle-question"></i> Kaip pristatyti kompiuterį?
+    </h3>
+    <p data-lt="Kompiuterį galite patys atvežti į mūsų dirbtuves Šilutėje. Jei neturite tam laiko ar galimybės, susitarus galime jį paimti ir parvežti atgal už papildomą mokestį." data-en="You can bring the computer yourself to our workshop in Šilutė. If you don't have time or a way, by agreement we can pick it up and return it for an extra fee.">
+        Kompiuterį galite patys atvežti į mūsų dirbtuves Šilutėje. Jei neturite tam laiko ar galimybės, susitarus galime jį paimti ir parvežti atgal už papildomą mokestį.
+    </p>
+</div>
+
+<div class="faq-card">
+    <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kada atsiskaitymo momentas?" data-en="<i class='fa-solid fa-circle-question'></i> When is payment due?">
+        <i class="fa-solid fa-circle-question"></i> Kada atsiskaitymo momentas?
+    </h3>
+    <p data-lt="Atsiskaitoma tik tada, kai darbas yra visiškai atliktas, kompiuteris patikrintas ir jūs įsitikinate rezultatu." data-en="Payment is made only when the work is fully completed, the computer tested and you are satisfied with the result.">
+        Atsiskaitoma tik tada, kai darbas yra visiškai atliktas, kompiuteris patikrintas ir jūs įsitikinate rezultatu.
+    </p>
 </div>
 </div>
 </div>
 </section>
 </main>
 
-<footer data-lt="© 2026 PC IT Šilutė • Kompiuterių remontas vietoje • Pristatymas susitarus" data-en="© 2026 PC IT Šilutė • Local Computer Repair • Delivery by agreement">© 2026 PC IT Šilutė • Kompiuterių remontas vietoje • Pristatymas susitarus</footer>
+<footer data-lt="© 2026 PC IT Šilutė ir apylinkės • Kompiuterių remontas vietoje" data-en="© 2026 PC IT Šilutė & surroundings • Local Computer Repair">© 2026 PC IT Šilutė ir apylinkės • Kompiuterių remontas vietoje</footer>
 
 <script>
 function setLang(lang, save = true) {
-  if (save) {
-    localStorage.setItem('preferred_lang', lang);
-  }
-  
+  if (save) { localStorage.setItem('preferred_lang', lang); }
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
   const activeBtn = lang === 'lt' ? document.querySelector('button[onclick*="lt"]') : document.querySelector('button[onclick*="en"]');
   if(activeBtn) activeBtn.classList.add('active');
-  
   document.querySelectorAll('[data-lt]').forEach(el => {
     const icon = el.querySelector('i');
     const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
-    
     if (icon) {
         const textNode = el.querySelector('span');
-        if(textNode) {
-            textNode.innerHTML = langText;
-        } else {
-            el.innerHTML = `<i class="${icon.className}"></i> ` + langText;
-        }
+        if(textNode) { textNode.innerHTML = langText; }
+        else { el.innerHTML = `<i class="${icon.className}"></i> ` + langText; }
     } else {
         el.innerHTML = langText;
     }
   });
 }
-
-// Kai užsikrauna bet kuris puslapis, patikriname, ar vartotojas buvo pasirinkęs EN
 window.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('preferred_lang');
-  if (savedLang === 'en') {
-    setLang('en', false);
-  }
+  if (savedLang === 'en') { setLang('en', false); } else { setLang('lt', false); }
 });
 </script>
 </body>
