@@ -103,6 +103,10 @@ section{padding:90px 0}
 .video-container{display:flex;justify-content:center;margin-top:20px}
 .video-container iframe{max-width:100%;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,0.4)}
 
+/* Help Box */
+.help-box{max-width:700px;margin:0 auto 30px;background:#0ea5e911;border:1px solid #0ea5e944;padding:25px 35px;border-radius:20px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.help-box p{color:var(--text);font-weight:600;font-size:16px;margin:0}
+
 /* Forms */
 .form-container{max-width:700px;margin:0 auto;background:var(--card-bg);border:1px solid #1e3a5f;padding:45px;border-radius:30px;backdrop-filter:blur(10px)}
 .form-group{margin-bottom:20px}
@@ -138,6 +142,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     .hero p{margin-left:auto;margin-right:auto}
     .logo-card{order:-1}.logo-card img{width:240px}
     .cards, .process-grid, .reviews-grid, .checkbox-grid{grid-template-columns:1fr}
+    .help-box{flex-direction:column;text-align:center}
 }
 </style>
 </head>
@@ -179,8 +184,8 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <h1 data-lt="Kompiuteris pradėjo ožiuotis?<br><span>Sutvarkome Šilutėje, vietoje.</span>" data-en="Is your computer acting up?<br><span>We fix it locally in Šilutė.</span>">
     Kompiuteris pradėjo ožiuotis?<br><span>Sutvarkome Šilutėje, vietoje.</span>
 </h1>
-<p data-lt="Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Pilnas Windows paruošimas, kruopštus remontas ir optimizavimas mūsų dirbtuvėse Šilutėje." data-en="Loading slowly, annoying ads or freezing apps? Full Windows setup, careful repair and optimization in our workshop in Šilutė.">
-    Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Pilnas Windows paruošimas, kruopštus remontas ir optimizavimas mūsų dirbtuvėse Šilutėje.
+<p data-lt="Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Švarus Windows paruošimas, kruopštus remontas ir optimizavimas mūsų dirbtuvėse Šilutėje." data-en="Loading slowly, annoying ads or freezing apps? Clean Windows setup, careful repair and optimization in our workshop in Šilutė.">
+    Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Švarus Windows paruošimas, kruopštus remontas ir optimizavimas mūsų dirbtuvėse Šilutėje.
 </p>
 <div>
     <a class="btn messenger" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="💬 Rašykit Messenger" data-en="💬 Write Messenger">💬 Rašykit Messenger</a>
@@ -202,7 +207,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </div>
 <div class="guarantee-item">
 <i class="fa-solid fa-box-open"></i>
-<span data-lt="Paruoštas kaip naujas iš parduotuvės" data-en="Ready like new from the store">Paruoštas kaip naujas iš parduotuvės</span>
+<span data-lt="Švariai paruoštas darbui" data-en="Cleanly prepared for work">Švariai paruoštas darbui</span>
 </div>
 <div class="guarantee-item">
 <i class="fa-solid fa-circle-check"></i>
@@ -245,11 +250,11 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <div>
     <i class="fa-brands fa-windows ico"></i>
     <h3 data-lt="Windows perrašymas" data-en="Windows Reinstallation">Windows perrašymas</h3>
-    <p data-lt="Kompiuteris paruošiamas kaip naujas iš parduotuvės: su naujausiomis tvarkyklėmis (draiveriais), biuro paketu, grotuvais ir archyvatoriais. Pasiėmus telieka pasirinkti kalbą, regioną ir įsivesti savo paskyrą." data-en="The computer is prepared like new from the store: with latest drivers, office suite, media players and archivers. Upon pickup, you only need to choose language, region and enter your account.">Kompiuteris paruošiamas kaip naujas iš parduotuvės: su naujausiomis tvarkyklėmis (draiveriais), biuro paketu, grotuvais ir archyvatoriais. Pasiėmus telieka pasirinkti kalbą, regioną ir įsivesti savo paskyrą.</p>
+    <p data-lt="Švarus Windows įdiegimas su naujausiomis tvarkyklėmis (draiveriais), biuro paketu, naršykle, PDF skaitytuvu, archyvatoriumi bei medijos grotuvu." data-en="Clean Windows installation with latest drivers, office suite, browser, PDF reader, archiver and media player.">Švarus Windows įdiegimas su naujausiomis tvarkyklėmis (draiveriais), biuro paketu, naršykle, PDF skaitytuvu, archyvatoriumi bei medijos grotuvu.</p>
 </div>
 <div>
     <span class="price" data-lt="Nuo 30 €" data-en="From €30">Nuo 30 €</span>
-    <span class="card-guarantee" data-lt="✓ Kaip naujas iš parduotuvės" data-en="✓ Like new from the store">✓ Kaip naujas iš parduotuvės</span>
+    <span class="card-guarantee" data-lt="✓ Švariai paruoštas darbui" data-en="✓ Cleanly prepared for work">✓ Švariai paruoštas darbui</span>
 </div>
 </div>
 <div class="card">
@@ -270,7 +275,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <p data-lt="Ieškome priežasties, kodėl kompiuteris lėtėja, stringa ar veikia nestabiliai." data-en="We look for the reason why the computer slows down, freezes or behaves unstably.">Ieškome priežasties, kodėl kompiuteris lėtėja, stringa ar veikia nestabiliai.</p>
 </div>
 <div>
-    <span class="price" data-lt="Pagal susitarimą" data-en="By agreement">Pagal susitarimą</span>
+    <span class="price" data-lt="Nuo 10 €" data-en="From €10">Nuo 10 €</span>
     <span class="card-guarantee" data-lt="✓ Tikslus gedimo nustatymas" data-en="✓ Precise fault detection">✓ Tikslus gedimo nustatymas</span>
 </div>
 </div>
@@ -299,7 +304,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <div class="card" style="border: 2px dashed var(--accent);">
 <div>
     <i class="fa-solid fa-laptop ico" style="color:var(--accent)"></i>
-    <h3 data-lt="Nuotolinė pagalba (Alternatyva)" data-en="Remote Support (Alternative)">Nuotolinė pagalba (Alternatyva)</h3>
+    <h3 data-lt="Nuotolinė pagalba – alternatyva" data-en="Remote Support – Alternative">Nuotolinė pagalba – alternatyva</h3>
     <p data-lt="Kai kuriais atvejais (pagal susitarimą) galima programinė pagalba nuotoliniu būdu per „RustDesk“." data-en="In some cases (by agreement), software support can be done remotely via RustDesk.">Kai kuriais atvejais (pagal susitarimą) galima programinė pagalba nuotoliniu būdu per „RustDesk“.</p>
 </div>
 <div>
@@ -329,21 +334,21 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <div class="review-card">
 <div>
 <div class="stars">★★★★★</div>
-<p data-lt="„Atvežiau kompiuterį į dirbtuves Šilutėje, perrašė Windows, paruošė darbui su naujausiomis tvarkyklėmis ir kitą dieną jau atsiėmiau sutvarkytą. Puiku!“" data-en="&quot;Brought the computer to the workshop in Šilutė, reinstalled Windows, prepared for work with latest drivers and picked it up fixed the next day. Great!&quot;">„Atvežiau kompiuterį į dirbtuves Šilutėje, perrašė Windows, paruošė darbui su naujausiomis tvarkyklėmis ir kitą dieną jau atsiėmiau sutvarkytą. Puiku!“</p>
+<p data-lt="„Atvežiau kompiuterį į dirbtuves Šilutėje, sutvarkė operatyviai, įrašė viską, ko reikia darbui, ir kitą dieną jau atsiėmiau. Labai patogu!“" data-en="&quot;Brought the computer to the workshop in Šilutė, fixed it promptly, installed everything needed for work and picked it up the next day. Very convenient!&quot;">„Atvežiau kompiuterį į dirbtuves Šilutėje, sutvarkė operatyviai, įrašė viską, ko reikia darbui, ir kitą dieną jau atsiėmiau. Labai patogu!“</p>
 </div>
 <div class="review-author">— Tomas V. (Šilutė)</div>
 </div>
 <div class="review-card">
 <div>
 <div class="stars">★★★★★</div>
-<p data-lt="„Labai patogu, kad galima susitarti dėl pristatymo atgal į namus, nereikėjo pačiam vėl važiuoti. Rekomenduoju!“" data-en="&quot;Very convenient that we could arrange return delivery home, didn't have to drive again myself. Recommended!&quot;">„Labai patogu, kad galima susitarti dėl pristatymo atgal į namus, nereikėjo pačiam vėl važiuoti. Rekomenduoju!“</p>
+<p data-lt="„Super, kad nereikėjo pačiam vėl važiuoti – susitarėm, kad parveš atgal tiesiai į namus. Sutaupiau laiko, kompiuteris vėl skraido.“" data-en="&quot;Super that I didn't have to drive back myself – we agreed to have it delivered straight home. Saved time, computer is flying again.&quot;">„Super, kad nereikėjo pačiam vėl važiuoti – susitarėm, kad parveš atgal tiesiai į namus. Sutaupiau laiko, kompiuteris vėl skraido.“</p>
 </div>
 <div class="review-author">— Sandra L.</div>
 </div>
 <div class="review-card">
 <div>
 <div class="stars">★★★★★</div>
-<p data-lt="„Sąžiningas meistras Šilutėje. Paaiškino gedimą, sutvarkė operatyviai ir už normalią kainą.“" data-en="&quot;Honest master in Šilutė. Explained the fault, fixed it promptly and for a normal price.&quot;">„Sąžiningas meistras Šilutėje. Paaiškino gedimą, sutvarkė operatyviai ir už normalią kainą.“</p>
+<p data-lt="„Normalus, sąžiningas meistras Šilutėje. Paaiškino, kas buvo nutikę, neskaitė paskaitų ir padarė viską už normalią kainą.“" data-en="&quot;Normal, honest master in Šilutė. Explained what happened, didn't lecture and did everything for a normal price.&quot;">„Normalus, sąžiningas meistras Šilutėje. Paaiškino, kas buvo nutikę, neskaitė paskaitų ir padarė viską už normalią kainą.“</p>
 </div>
 <div class="review-author">— Mantas K.</div>
 </div>
@@ -358,6 +363,11 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <div class="wrap">
 <h2 class="title" data-lt="Registruoti kompiuterio gedimą" data-en="Register a Computer Fault">Registruoti kompiuterio gedimą</h2>
 <p class="subtitle" data-lt="Užpildykite žemiau esančią formą, aptarsime gedimą ir suderinsime atvežimą!" data-en="Fill out the form below, we will discuss the fault and coordinate delivery!">Užpildykite žemiau esančią formą, aptarsime gedimą ir suderinsime atvežimą!</p>
+
+<div class="help-box">
+<p data-lt="💡 Nežinote, kuri paslauga jums reikalinga? Parašykite kas nutiko – įvertinsime ir pasiūlysime sprendimą." data-en="💡 Don't know which service you need? Write what happened – we'll evaluate and offer a solution.">💡 Nežinote, kuri paslauga jums reikalinga? Parašykite kas nutiko – įvertinsime ir pasiūlysime sprendimą.</p>
+<a class="btn messenger" style="padding:10px 18px; font-size:14px; margin:0;" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="💬 Klausti" data-en="💬 Ask">💬 Klausti</a>
+</div>
 
 <div class="form-container">
 <form action="https://formspree.io/f/mkjwjqvd" method="POST">
@@ -378,6 +388,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <label class="checkbox-item"><input type="checkbox" name="problema[]" value="Windows perrašymo poreikis"> <span data-lt="Reikia Windows" data-en="Need Windows">Reikia Windows</span></label>
 <label class="checkbox-item"><input type="checkbox" name="problema[]" value="Virusai / šlamštas"> <span data-lt="Virusai / šlamštas" data-en="Viruses / junk">Virusai / šlamštas</span></label>
 <label class="checkbox-item"><input type="checkbox" name="problema[]" value="Reikalingas pristatymas / paėmimas"> <span data-lt="Reikalingas paėmimas / pristatymas" data-en="Pickup / delivery needed">Reikalingas paėmimas / pristatymas</span></label>
+<label class="checkbox-item"><input type="checkbox" name="problema[]" value="Norėčiau nuotolinės pagalbos"> <span data-lt="🌐 Norėčiau nuotolinės pagalbos" data-en="🌐 Want remote support">🌐 Norėčiau nuotolinės pagalbos</span></label>
 </div>
 </div>
 
@@ -400,7 +411,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <ul class="checks">
 <li style="color:var(--text);" data-lt="Patikimas remontas dirbtuvėse Šilutėje" data-en="Reliable repair in Šilutė workshop"><i class="fa-solid fa-check"></i> <span>Patikimas remontas dirbtuvėse Šilutėje</span></li>
 <li style="color:var(--text);" data-lt="Galimas pristatymas atgal" data-en="Return delivery available"><i class="fa-solid fa-check"></i> <span>Galimas pristatymas atgal</span></li>
-<li style="color:var(--text);" data-lt="Paruoštas kaip naujas iš salono (su visomis programomis ir tvarkyklėmis)" data-en="Prepared like new from the store (with all programs and drivers)"><i class="fa-solid fa-check"></i> <span>Paruoštas kaip naujas iš salono (su visomis programomis ir tvarkyklėmis)</span></li>
+<li style="color:var(--text);" data-lt="Švariai paruoštas darbui (su visomis tvarkyklėmis)" data-en="Cleanly prepared for work (with all drivers)"><i class="fa-solid fa-check"></i> <span>Švariai paruoštas darbui (su visomis tvarkyklėmis)</span></li>
 <li style="color:var(--text);" data-lt="Aiškus kainų ir darbų suderinimas" data-en="Clear price and work coordination"><i class="fa-solid fa-check"></i> <span>Aiškus kainų ir darbų suderinimas</span></li>
 </ul>
 <div style="margin-top: 25px;">
