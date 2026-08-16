@@ -4,8 +4,16 @@
 <meta name="google-site-verification" content="9HHZStCOf6CGXHCcgVjp6vmrdG7brj5vt7xB4nFKcbI">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PC IT – kompiuterių remontas, Windows perrašymas ir priežiūra Šilutėje bei aplinkiniuose rajonuose. Atvežkite pas mus arba užsisakykite pristatymą atgal.">
-<title>PC IT – Kompiuterių remontas Šilutėje ir nuotolinė pagalba</title>
+<meta name="description" content="PC IT Šilutė – kompiuterių remontas, Windows diegimas, optimizavimas, programos ir nuotolinė pagalba Šilutėje bei aplink. Kaina suderinama iš anksto.">
+<title>PC IT Šilutė – Kompiuterių remontas, Windows ir optimizavimas</title>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://itservizassilute-blip.github.io/pc-it-silute/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PC IT Šilutė – Kompiuterių remontas ir programinė pagalba">
+<meta property="og:description" content="Kompiuterių remontas, Windows, optimizavimas ir programinė pagalba Šilutėje bei aplink.">
+<meta property="og:url" content="https://itservizassilute-blip.github.io/pc-it-silute/">
+<meta property="og:image" content="https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png">
+<meta name="twitter:card" content="summary">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -130,7 +138,13 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     .about-grid{grid-template-columns:1fr}
     .guarantee-grid{grid-template-columns:1fr;gap:15px}
 }
+.mobile-cta{display:none}
 @media(max-width:760px){
+    body{padding-bottom:68px}
+    .mobile-cta{position:fixed;display:flex;left:12px;right:12px;bottom:12px;z-index:120;gap:10px}
+    .mobile-cta .btn{flex:1;justify-content:center;margin:0;padding:13px 10px;font-size:14px}
+    .mobile-cta .btn.alt{background:rgba(2,8,23,.94);backdrop-filter:blur(10px)}
+
     nav ul{display:none}
     .hero-grid{grid-template-columns:1fr;text-align:center}
     .hero p{margin-left:auto;margin-right:auto}
@@ -178,8 +192,8 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <h1 data-lt="Kompiuteris pradėjo ožiuotis?<br><span>Sutvarkome Šilutėje, vietoje.</span>" data-en="Is your computer acting up?<br><span>We fix it locally in Šilutė.</span>">
     Kompiuteris pradėjo ožiuotis?<br><span>Sutvarkome Šilutėje, vietoje.</span>
 </h1>
-<p data-lt="Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Švarus Windows paruošimas, kruopštus remontas ir optimizavimas vietoje, Šilutėje." data-en="Loading slowly, annoying ads or freezing apps? Clean Windows setup, careful repair and optimization locally in Šilutė.">
-    Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Švarus Windows paruošimas, kruopštus remontas ir optimizavimas vietoje, Šilutėje.
+<p data-lt="Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Švarus Windows paruošimas, kruopštus remontas ir optimizavimas Šilutėje." data-en="Loading slowly, annoying ads or freezing apps? Clean Windows setup, careful repair and optimization locally in Šilutė.">
+    Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Švarus Windows paruošimas, kruopštus remontas ir optimizavimas Šilutėje.
 </p>
 <div>
     <a class="btn messenger" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="💬 Rašykit Messenger" data-en="💬 Write Messenger">💬 Rašykit Messenger</a>
@@ -229,7 +243,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </div>
 <div class="guarantee-item">
 <i class="fa-solid fa-calendar-days"></i>
-<span data-lt="Kainą suderinam iš anksto (+ savaitgaliais)" data-en="Price agreed in advance (+ weekends)">Kainą suderinam iš anksto (+ savaitgaliais)</span>
+<span data-lt="Kainą suderiname iš anksto • Galimas aptarnavimas savaitgaliais" data-en="Price agreed in advance (+ weekends)">Kainą suderiname iš anksto • Galimas aptarnavimas savaitgaliais</span>
 </div>
 </div>
 </div>
@@ -262,7 +276,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <section id="paslaugos" class="light">
 <div class="wrap">
 <h2 class="title" data-lt="Paslaugos ir kainoraštis" data-en="Services and Pricing">Paslaugos ir kainoraštis</h2>
-<p class="subtitle" data-lt="Kompiuterių tvarkymo paslaugos Šilutėje su galimybe pristatyti atgal." data-en="Computer services in Šilutė with return delivery option.">Kompiuterių tvarkymo paslaugos Šilutėje su galimybe pristatyti atgal.</p>
+<p class="subtitle" data-lt="Kompiuterių tvarkymo paslaugos Šilutėje. Pristatymas atgal – susitarus." data-en="Computer services in Šilutė with return delivery option.">Kompiuterių tvarkymo paslaugos Šilutėje. Pristatymas atgal – susitarus.</p>
 <div class="cards">
 <div class="card">
 <div>
@@ -346,41 +360,48 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 
 <section id="atsiliepimai" class="dark-sec" style="background:#020614;">
 <div class="wrap">
-<h2 class="title" data-lt="Klientų atsiliepimai" data-en="Customer Reviews">Klientų atsiliepimai</h2>
-<p class="subtitle" data-lt="Ką apie mūsų paslaugas sako šilutiškiai ir kiti klientai." data-en="What Šilutė locals and other clients say about our services.">Ką apie mūsų paslaugas sako šilutiškiai ir kiti klientai.</p>
+<h2 class="title" data-lt="Kodėl verta rinktis PC IT Šilutėje?" data-en="Why choose PC IT in Šilutė?">Kodėl verta rinktis PC IT Šilutėje?</h2>
+<p class="subtitle" data-lt="Paprastas bendravimas, aiškiai suderinti darbai ir sprendimas pagal realią kompiuterio problemą." data-en="Simple communication, clearly agreed work and a solution based on the actual computer problem.">Paprastas bendravimas, aiškiai suderinti darbai ir sprendimas pagal realią kompiuterio problemą.</p>
+
 <div class="reviews-grid">
 <div class="review-card">
 <div>
-<div class="stars">★★★★★</div>
-<p data-lt="„Atvežiau kompiuterį pas meistrą Šilutėje, sutvarkė operatyviai, įrašė viską, ko reikia darbui, ir kitą dieną jau atsiėmiau. Labai patogu!“" data-en="&quot;Brought the computer to the master in Šilutė, fixed it promptly, installed everything needed for work and picked it up the next day. Very convenient!&quot;">„Atvežiau kompiuterį pas meistrą Šilutėje, sutvarkė operatyviai, įrašė viską, ko reikia darbui, ir kitą dieną jau atsiėmiau. Labai patogu!“</p>
+<div class="stars"><i class="fa-solid fa-magnifying-glass"></i></div>
+<h3 style="margin-bottom:10px;" data-lt="Pirmiausia – problema" data-en="Problem first">Pirmiausia – problema</h3>
+<p data-lt="Pirmiausia ieškome priežasties, o ne siūlome pirkti naują kompiuterį. Jei problemą galima išspręsti – pasakome kaip." data-en="We first look for the cause instead of pushing a new computer. If the problem can be fixed, we explain how.">Pirmiausia ieškome priežasties, o ne siūlome pirkti naują kompiuterį. Jei problemą galima išspręsti – pasakome kaip.</p>
 </div>
-<div class="review-author">— Tomas V. (Šilutė)</div>
+<div class="review-author">✓ Aiškus sprendimas</div>
 </div>
+
 <div class="review-card">
 <div>
-<div class="stars">★★★★★</div>
-<p data-lt="„Super, kad nereikėjo pačiam vėl važiuoti – susitarėm, kad parveš atgal tiesiai į namus. Sutaupiau laiko, kompiuteris vėl skraido.“" data-en="&quot;Super that I didn't have to drive back myself – we agreed to have it delivered straight home. Saved time, computer is flying again.&quot;">„Super, kad nereikėjo pačiam vėl važiuoti – susitarėm, kad parveš atgal tiesiai į namus. Sutaupiau laiko, kompiuteris vėl skraido.“</p>
+<div class="stars"><i class="fa-solid fa-euro-sign"></i></div>
+<h3 style="margin-bottom:10px;" data-lt="Kaina suderinama iš anksto" data-en="Price agreed in advance">Kaina suderinama iš anksto</h3>
+<p data-lt="Prieš atliekant darbus aptariame, ką reikės padaryti ir kiek tai maždaug kainuos. Jokio neaiškaus „pamatysime po remonto“." data-en="Before starting, we discuss what needs to be done and the approximate cost. No unclear 'we'll see after the repair'.">Prieš atliekant darbus aptariame, ką reikės padaryti ir kiek tai maždaug kainuos. Jokio neaiškaus „pamatysime po remonto“.</p>
 </div>
-<div class="review-author">— Sandra L.</div>
+<div class="review-author">✓ Skaidrus susitarimas</div>
 </div>
+
 <div class="review-card">
 <div>
-<div class="stars">★★★★★</div>
-<p data-lt="„Normalus, sąžiningas meistras Šilutėje. Paaiškino, kas buvo nutikę, neskaitė paskaitų ir padarė viską už normalią kainą.“" data-en="&quot;Normal, honest master in Šilutė. Explained what happened, didn't lecture and did everything for a normal price.&quot;">„Normalus, sąžiningas meistras Šilutėje. Paaiškino, kas buvo nutikę, neskaitė paskaitų ir padarė viską už normalią kainą.“</p>
+<div class="stars"><i class="fa-solid fa-calendar-check"></i></div>
+<h3 style="margin-bottom:10px;" data-lt="Patogu susitarti" data-en="Easy to arrange">Patogu susitarti</h3>
+<p data-lt="Galimas aptarnavimas savaitgaliais, o kai kuriais atvejais – pristatymas atgal arba nuotolinė programinė pagalba." data-en="Weekend service is possible, and in some cases return delivery or remote software support is available.">Galimas aptarnavimas savaitgaliais, o kai kuriais atvejais – pristatymas atgal arba nuotolinė programinė pagalba.</p>
 </div>
-<div class="review-author">— Mantas K.</div>
+<div class="review-author">✓ Šilutė ir apylinkės</div>
 </div>
 </div>
+
 <div style="text-align:center;">
-<a class="btn messenger" href="https://www.facebook.com/profile.php?id=61592840316716" target="_blank" rel="noopener noreferrer" data-lt="⭐ Parašyti atsiliepimą Facebook" data-en="⭐ Write a review on Facebook">⭐ Parašyti atsiliepimą Facebook</a>
+<a class="btn messenger" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="💬 Parašyti ir paklausti" data-en="💬 Message us">💬 Parašyti ir paklausti</a>
 </div>
 </div>
 </section>
 
 <section id="uzklausa" class="dark-sec" style="background:#020b1c;">
 <div class="wrap">
-<h2 class="title" data-lt="Registruoti kompiuterio gedimą" data-en="Register a Computer Fault">Registruoti kompiuterio gedimą</h2>
-<p class="subtitle" data-lt="Užpildykite žemiau esančią formą, aptarsime gedimą ir suderinsime atvežimą!" data-en="Fill out the form below, we will discuss the fault and coordinate delivery!">Užpildykite žemiau esančią formą, aptarsime gedimą ir suderinsime atvežimą!</p>
+<h2 class="title" data-lt="Pateikti kompiuterio užklausą" data-en="Send a Computer Inquiry">Pateikti kompiuterio užklausą</h2>
+<p class="subtitle" data-lt="Užpildykite formą – aptarsime problemą ir suderinsime, kaip patogiausia perduoti kompiuterį." data-en="Fill out the form below, we will discuss the fault and coordinate delivery!">Užpildykite formą – aptarsime problemą ir suderinsime, kaip patogiausia perduoti kompiuterį.</p>
 
 <div class="help-box">
 <p data-lt="💡 Nežinote, kuri paslauga jums reikalinga? Parašykite kas nutiko – įvertinsime ir pasiūlysime sprendimą." data-en="💡 Don't know which service you need? Write what happened – we'll evaluate and offer a solution.">💡 Nežinote, kuri paslauga jums reikalinga? Parašykite kas nutiko – įvertinsime ir pasiūlysime sprendimą.</p>
@@ -391,12 +412,12 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <form action="https://formspree.io/f/mkjwjqvd" method="POST">
 <div class="form-group">
 <label data-lt="Jūsų vardas:" data-en="Your name:">Jūsų vardas:</label>
-<input type="text" name="vardas" required placeholder="Įveskite savo vardą">
+<input type="text" name="vardas" required autocomplete="name" placeholder="Įveskite savo vardą">
 </div>
 
 <div class="form-group">
 <label data-lt="Tel. numeris arba el. paštas:" data-en="Phone number or email:">Tel. numeris arba el. paštas:</label>
-<input type="text" name="kontaktai" required placeholder="Pvz.: +37060000000 arba el. paštas">
+<input type="text" name="kontaktai" required autocomplete="email" placeholder="Pvz.: +37060000000 arba el. paštas">
 </div>
 
 <div class="form-group">
@@ -482,5 +503,11 @@ window.addEventListener('DOMContentLoaded', () => {
   if (savedLang === 'en') { setLang('en', false); } else { setLang('lt', false); }
 });
 </script>
+
+<div class="mobile-cta" aria-label="Greitas susisiekimas">
+    <a class="btn messenger" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="💬 Messenger" data-en="💬 Messenger">💬 Messenger</a>
+    <a class="btn alt" href="#uzklausa" data-lt="📝 Užklausa" data-en="📝 Inquiry">📝 Užklausa</a>
+</div>
+
 </body>
 </html>
