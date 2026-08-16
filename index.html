@@ -40,7 +40,7 @@ nav a:hover{color:var(--accent)}
 .lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:12px;padding:5px 10px;border-radius:7px;transition:0.3s}
 .lang-btn.active{background:var(--accent);color:var(--bg)}
 
-.hero{min-height:85vh;display:flex;align-items:center;position:relative;background: radial-gradient(circle at 80% 20%, #0ea5e915 0%, transparent 40%);}
+.hero{min-height:80vh;display:flex;align-items:center;position:relative;background: radial-gradient(circle at 80% 20%, #0ea5e915 0%, transparent 40%);}
 .hero-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:50px;align-items:center}
 .badge{display:inline-flex;align-items:center;gap:8px;color:var(--accent);border:1px solid #0ea5e933;background:#0ea5e90a;border-radius:30px;padding:8px 16px;font-weight:700;margin-bottom:20px;font-size:14px;letter-spacing:1px}
 h1{font-size:clamp(38px,5.5vw,62px);line-height:1.1;margin-bottom:24px;font-weight:800}
@@ -56,7 +56,14 @@ h1 span{color:var(--accent);background:linear-gradient(90deg, #0ea5e9, #6366f1);
 .logo-card img{width:min(400px,90%);border-radius:50%;filter:drop-shadow(0 0 30px #0ea5e922);animation: float 6s ease-in-out infinite;}
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 
-.guarantee-bar{background:linear-gradient(90deg, #071a30, #031226);border-top:1px solid #1e3a5f;border-bottom:1px solid #1e3a5f;padding:25px 0}
+/* Skausmų blokas reels lankytojams */
+.pain-points-section{background:#040e24;border-top:1px solid #1e3a5f;border-bottom:1px solid #1e3a5f;padding:45px 0}
+.pain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pain-item{background:#071a3088;border:1px solid #1e3a5f;border-radius:16px;padding:20px;text-align:center;font-weight:600;font-size:15px;color:var(--text);display:flex;flex-direction:column;align-items:center;gap:8px;transition:0.3s}
+.pain-item:hover{border-color:var(--accent);transform:translateY(-4px)}
+.pain-item i{color:var(--accent);font-size:22px}
+
+.guarantee-bar{background:linear-gradient(90deg, #071a30, #031226);border-bottom:1px solid #1e3a5f;padding:25px 0}
 .guarantee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
 .guarantee-item{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--text);font-weight:600;font-size:15px}
 .guarantee-item i{color:var(--accent);font-size:24px}
@@ -119,6 +126,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 
 @media(max-width:960px){
     .cards, .process-grid, .reviews-grid{grid-template-columns:repeat(2,1fr)}
+    .pain-grid{grid-template-columns:repeat(2,1fr)}
     .about-grid{grid-template-columns:1fr}
     .guarantee-grid{grid-template-columns:1fr;gap:15px}
 }
@@ -127,7 +135,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     .hero-grid{grid-template-columns:1fr;text-align:center}
     .hero p{margin-left:auto;margin-right:auto}
     .logo-card{order:-1}.logo-card img{width:240px}
-    .cards, .process-grid, .reviews-grid, .checkbox-grid{grid-template-columns:1fr}
+    .cards, .process-grid, .reviews-grid, .checkbox-grid, .pain-grid{grid-template-columns:1fr}
     .help-box{flex-direction:column;text-align:center}
 }
 </style>
@@ -164,14 +172,14 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <section class="hero">
 <div class="wrap hero-grid">
 <div>
-<div class="badge" data-lt="📍 ŠILUTĖ IR APYLINKĖS • PROFESIONALUS KOMPIUTERIŲ REMONTAS" data-en="📍 ŠILUTĖ & SURROUNDINGS • PROFESSIONAL COMPUTER REPAIR">
-    <i class="fa-solid fa-screwdriver-wrench"></i> <span>📍 ŠILUTĖ IR APYLINKĖS • PROFESIONALUS KOMPIUTERIŲ REMONTAS</span>
+<div class="badge" data-lt="📍 ŠILUTĖ IR APYLINKĖS • KOMPIUTERIŲ REMONTAS IR PROGRAMINĖ PAGALBA" data-en="📍 ŠILUTĖ & SURROUNDINGS • COMPUTER REPAIR & SOFTWARE SUPPORT">
+    <i class="fa-solid fa-screwdriver-wrench"></i> <span>📍 ŠILUTĖ IR APYLINKĖS • KOMPIUTERIŲ REMONTAS IR PROGRAMINĖ PAGALBA</span>
 </div>
 <h1 data-lt="Kompiuteris pradėjo ožiuotis?<br><span>Sutvarkome Šilutėje, vietoje.</span>" data-en="Is your computer acting up?<br><span>We fix it locally in Šilutė.</span>">
     Kompiuteris pradėjo ožiuotis?<br><span>Sutvarkome Šilutėje, vietoje.</span>
 </h1>
-<p data-lt="Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Švarus Windows paruošimas, kruopštus remontas ir optimizavimas mūsų dirbtuvėse Šilutėje." data-en="Loading slowly, annoying ads or freezing apps? Clean Windows setup, careful repair and optimization in our workshop in Šilutė.">
-    Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Švarus Windows paruošimas, kruopštus remontas ir optimizavimas mūsų dirbtuvėse Šilutėje.
+<p data-lt="Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Švarus Windows paruošimas, kruopštus remontas ir optimizavimas vietoje, Šilutėje." data-en="Loading slowly, annoying ads or freezing apps? Clean Windows setup, careful repair and optimization locally in Šilutė.">
+    Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Švarus Windows paruošimas, kruopštus remontas ir optimizavimas vietoje, Šilutėje.
 </p>
 <div>
     <a class="btn messenger" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="💬 Rašykit Messenger" data-en="💬 Write Messenger">💬 Rašykit Messenger</a>
@@ -184,20 +192,44 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </div>
 </section>
 
+<!-- Skausmų blokas reels lankytojams -->
+<div class="pain-points-section">
+<div class="wrap">
+<div class="pain-grid">
+<div class="pain-item">
+<i class="fa-solid fa-triangle-exclamation"></i>
+<span data-lt="Kompiuteris lėtai įsijungia ir stringa?" data-en="Computer boots slowly and freezes?">Kompiuteris lėtai įsijungia ir stringa?</span>
+</div>
+<div class="pain-item">
+<i class="fa-solid fa-rectangle-ad"></i>
+<span data-lt="Lenda įkyrios reklamos naršyklėje?" data-en="Annoying browser popups and ads?">Lenda įkyrios reklamos naršyklėje?</span>
+</div>
+<div class="pain-item">
+<i class="fa-brands fa-windows"></i>
+<span data-lt="Reikia švariai perrašyti Windows?" data-en="Need a clean Windows reinstall?">Reikia švariai perrašyti Windows?</span>
+</div>
+<div class="pain-item">
+<i class="fa-solid fa-gears"></i>
+<span data-lt="Pilna nereikalingo šlamšto / virusų?" data-en="Full of junk files / viruses?">Pilna nereikalingo šlamšto / virusų?</span>
+</div>
+</div>
+</div>
+</div>
+
 <div class="guarantee-bar">
 <div class="wrap">
 <div class="guarantee-grid">
 <div class="guarantee-item">
 <i class="fa-solid fa-shop"></i>
-<span data-lt="Remontas dirbtuvėse Šilutėje" data-en="Repair in Šilutė workshop">Remontas dirbtuvėse Šilutėje</span>
+<span data-lt="Remontas Šilutėje, vietoje" data-en="Repair locally in Šilutė">Remontas Šilutėje, vietoje</span>
 </div>
 <div class="guarantee-item">
 <i class="fa-solid fa-box-open"></i>
 <span data-lt="Švariai paruoštas darbui" data-en="Cleanly prepared for work">Švariai paruoštas darbui</span>
 </div>
 <div class="guarantee-item">
-<i class="fa-solid fa-circle-check"></i>
-<span data-lt="Kainą ir darbus suderiname iš anksto" data-en="Price and work agreed in advance">Kainą ir darbus suderiname iš anksto</span>
+<i class="fa-solid fa-calendar-days"></i>
+<span data-lt="Kainą suderinam iš anksto (+ savaitgaliais)" data-en="Price agreed in advance (+ weekends)">Kainą suderinam iš anksto (+ savaitgaliais)</span>
 </div>
 </div>
 </div>
@@ -216,7 +248,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <div class="process-card">
 <div class="step-num">2</div>
 <h3 data-lt="Remontas Šilutėje" data-en="Repair in Šilutė">Remontas Šilutėje</h3>
-<p data-lt="Kompiuteris tvarkomas mūsų dirbtuvėse Šilutėje. (Pagal poreikį galime parvežti atgal už papildomą mokestį)." data-en="The computer is repaired in our workshop in Šilutė. (Optional return delivery for an extra fee).">Kompiuteris tvarkomas mūsų dirbtuvėse Šilutėje. (Pagal poreikį galime parvežti atgal už papildomą mokestį).</p>
+<p data-lt="Kompiuteris tvarkomas Šilutėje, pas meistrą. (Pagal poreikį galime parvežti atgal už papildomą mokestį)." data-en="The computer is repaired locally in Šilutė. (Optional return delivery for an extra fee).">Kompiuteris tvarkomas Šilutėje, pas meistrą. (Pagal poreikį galime parvežti atgal už papildomą mokestį).</p>
 </div>
 <div class="process-card">
 <div class="step-num">3</div>
@@ -230,7 +262,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <section id="paslaugos" class="light">
 <div class="wrap">
 <h2 class="title" data-lt="Paslaugos ir kainoraštis" data-en="Services and Pricing">Paslaugos ir kainoraštis</h2>
-<p class="subtitle" data-lt="Profesionalios kompiuterių paslaugos Šilutėje su galimybe pristatyti atgal." data-en="Professional computer services in Šilutė with return delivery option.">Profesionalios kompiuterių paslaugos Šilutėje su galimybe pristatyti atgal.</p>
+<p class="subtitle" data-lt="Kompiuterių tvarkymo paslaugos Šilutėje su galimybe pristatyti atgal." data-en="Computer services in Šilutė with return delivery option.">Kompiuterių tvarkymo paslaugos Šilutėje su galimybe pristatyti atgal.</p>
 <div class="cards">
 <div class="card">
 <div>
@@ -320,7 +352,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <div class="review-card">
 <div>
 <div class="stars">★★★★★</div>
-<p data-lt="„Atvežiau kompiuterį į dirbtuves Šilutėje, sutvarkė operatyviai, įrašė viską, ko reikia darbui, ir kitą dieną jau atsiėmiau. Labai patogu!“" data-en="&quot;Brought the computer to the workshop in Šilutė, fixed it promptly, installed everything needed for work and picked it up the next day. Very convenient!&quot;">„Atvežiau kompiuterį į dirbtuves Šilutėje, sutvarkė operatyviai, įrašė viską, ko reikia darbui, ir kitą dieną jau atsiėmiau. Labai patogu!“</p>
+<p data-lt="„Atvežiau kompiuterį pas meistrą Šilutėje, sutvarkė operatyviai, įrašė viską, ko reikia darbui, ir kitą dieną jau atsiėmiau. Labai patogu!“" data-en="&quot;Brought the computer to the master in Šilutė, fixed it promptly, installed everything needed for work and picked it up the next day. Very convenient!&quot;">„Atvežiau kompiuterį pas meistrą Šilutėje, sutvarkė operatyviai, įrašė viską, ko reikia darbui, ir kitą dieną jau atsiėmiau. Labai patogu!“</p>
 </div>
 <div class="review-author">— Tomas V. (Šilutė)</div>
 </div>
@@ -393,11 +425,11 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <div class="wrap about-grid">
 <div>
 <h2 class="title" style="text-align:left; color:#fff;" data-lt="Kodėl verta kreiptis Šilutėje?" data-en="Why choose us in Šilutė?">Kodėl verta kreiptis Šilutėje?</h2>
-<p style="color:var(--text-muted); font-size:16px;" data-lt="Kompiuteris tvarkomas profesionaliai mūsų dirbtuvėse Šilutėje (patirtis technologijų srityje – nuo 1988 metų). Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Jei neturite laiko vežti, susitarus galime parvežti jį atgal." data-en="The computer is professionally repaired in our workshop in Šilutė (experience in technology since 1988). We first look for the cause of the problem, not a reason to sell a new computer. If you don't have time to transport it, we can bring it back by agreement.">Kompiuteris tvarkomas profesionaliai mūsų dirbtuvėse Šilutėje (patirtis technologijų srityje – nuo 1988 metų). Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Jei neturite laiko vežti, susitarus galime parvežti jį atgal.</p>
+<p style="color:var(--text-muted); font-size:16px;" data-lt="Kompiuteris tvarkomas kruopščiai Šilutėje (patirtis technologijų srityje – nuo 1988 metų). Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Jei neturite laiko vežti, susitarus galime parvežti jį atgal, taip pat galimas aptarnavimas ir savaitgaliais." data-en="The computer is carefully repaired in Šilutė (experience in technology since 1988). We first look for the cause of the problem, not a reason to sell a new computer. If you don't have time to transport it, we can bring it back by agreement, and weekend service is also possible.">Kompiuteris tvarkomas kruopščiai Šilutėje (patirtis technologijų srityje – nuo 1988 metų). Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Jei neturite laiko vežti, susitarus galime parvežti jį atgal, taip pat galimas aptarnavimas ir savaitgaliais.</p>
 <ul class="checks">
-<li style="color:var(--text);" data-lt="Patikimas remontas dirbtuvėse Šilutėje" data-en="Reliable repair in Šilutė workshop"><i class="fa-solid fa-check"></i> <span>Patikimas remontas dirbtuvėse Šilutėje</span></li>
+<li style="color:var(--text);" data-lt="Patikimas remontas Šilutėje, vietoje" data-en="Reliable repair locally in Šilutė"><i class="fa-solid fa-check"></i> <span>Patikimas remontas Šilutėje, vietoje</span></li>
 <li style="color:var(--text);" data-lt="Galimas pristatymas atgal" data-en="Return delivery available"><i class="fa-solid fa-check"></i> <span>Galimas pristatymas atgal</span></li>
-<li style="color:var(--text);" data-lt="Švariai paruoštas darbui (su visomis tvarkyklėmis)" data-en="Cleanly prepared for work (with all drivers)"><i class="fa-solid fa-check"></i> <span>Švariai paruoštas darbui (su visomis tvarkyklėmis)</span></li>
+<li style="color:var(--text);" data-lt="Galimas aptarnavimas ir savaitgaliais" data-en="Weekend service available"><i class="fa-solid fa-check"></i> <span>Galimas aptarnavimas ir savaitgaliais</span></li>
 <li style="color:var(--text);" data-lt="Aiškus kainų ir darbų suderinimas" data-en="Clear price and work coordination"><i class="fa-solid fa-check"></i> <span>Aiškus kainų ir darbų suderinimas</span></li>
 </ul>
 <div style="margin-top: 25px;">
