@@ -2,40 +2,200 @@
 <html lang="lt">
 <head>
 <meta charset="UTF-8">
-<title>Nuotolinė pagalba | PC IT Šilutė</title>
-<!-- Naudokite tuos pačius stilius kaip ir index.html, kad dizainas sutaptų -->
-<link rel="stylesheet" href="style.css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nuotolinė kompiuterio pagalba per RustDesk – greitas problemų sprendimas per atstumą Šilutėje ir visoje Lietuvoje.">
+<title>Nuotolinė pagalba – PC IT Šilutė</title>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://itservizassilute-blip.github.io/pc-it-silute/nuotoline-pagalba.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nuotolinė pagalba – PC IT Šilutė">
+<meta property="og:description" content="Skubi kompiuterio pagalba per atstumą naudojant RustDesk programą.">
+<meta property="og:url" content="https://itservizassilute-blip.github.io/pc-it-silute/nuotoline-pagalba.html">
+<meta property="og:image" content="https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
-    /* Galite tiesiog įdėti stilių bloką iš index.html čia */
-    body { background: #020817; color: #eef6ff; font-family: sans-serif; }
-    .page-wrap { max-width: 800px; margin: 50px auto; padding: 20px; text-align: center; }
+:root {
+    --bg: #020817;
+    --card-bg: #071a3088;
+    --accent: #0ea5e9;
+    --text: #eef6ff;
+    --text-muted: #93c5fd;
+    --glass: rgba(2, 8, 23, 0.7);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit;transition:0.3s}
+.wrap{max-width:1120px;margin:auto;padding:0 22px}
+
+/* Header & Nav */
+header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
+nav{height:80px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px}
+.brand img{width:48px;height:48px;object-fit:contain}
+.brand b{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;font-weight:600;align-items:center}
+nav a:hover{color:var(--accent)}
+
+.lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px}
+.lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:12px;padding:5px 10px;border-radius:7px;transition:0.3s}
+.lang-btn.active{background:var(--accent);color:var(--bg)}
+
+/* Page Content */
+section{padding:70px 0 90px}
+.page-header{text-align:center;max-width:800px;margin:0 auto 45px}
+.page-header h1{font-size:clamp(32px, 4.5vw, 48px);font-weight:800;margin-bottom:15px}
+.page-header h1 span{color:var(--accent);background:linear-gradient(90deg, #0ea5e9, #6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.page-header p{font-size:18px;color:var(--text-muted)}
+
+.remote-container{max-width:850px;margin:0 auto;background:var(--card-bg);border:1px solid #1e3a5f;border-radius:28px;padding:45px;backdrop-filter:blur(10px);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
+.step-card{background:#031022;border:1px solid #1e3a5f;border-radius:20px;padding:24px;text-align:center}
+.step-num{background:var(--accent);color:var(--bg);font-weight:900;width:32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 15px}
+.step-card h3{font-size:17px;margin-bottom:8px;font-weight:700}
+.step-card p{font-size:14px;color:var(--text-muted)}
+
+.download-box{text-align:center;background:linear-gradient(145deg, #071a30, #031226);border:1px solid #1e3a5f;border-radius:20px;padding:30px;margin-bottom:40px}
+.download-box h3{font-size:20px;margin-bottom:10px}
+.download-box p{color:var(--text-muted);font-size:15px;margin-bottom:20px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:14px 26px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 15px 30px #0ea5e955;filter:brightness(1.1)}
+.btn.alt{background:transparent;color:var(--text);border:1px solid #1e3a5f}
+
+.video-wrapper{margin-top:30px;text-align:center}
+.video-wrapper h3{font-size:18px;margin-bottom:15px;color:var(--text-muted)}
+.video-frame{position:relative;width:100%;padding-bottom:56.25%;height:0;border-radius:16px;overflow:hidden;border:1px solid #1e3a5f;box-shadow:0 15px 35px rgba(0,0,0,0.4)}
+.video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+.back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:30px}
+.back-link:hover{color:var(--accent)}
+
+/* Footer */
+footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
+
+@media(max-width:768px){
+    .steps-grid{grid-template-columns:1fr}
+    nav ul{display:none}
+    .remote-container{padding:20px}
+}
 </style>
 </head>
 <body>
 
 <header>
-    <div class="wrap"><nav><a class="brand" href="index.html">PC <b>IT</b> Šilutė</a></nav></div>
+<div class="wrap">
+<nav>
+<a class="brand" href="index.html">
+<img src="pc-it-logo.png" alt="PC IT">
+<span>PC <b>IT</b> Šilutė</span>
+</a>
+<ul>
+<li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
+<li><a href="nuotoline-pagalba.html" style="color:var(--accent)" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
+<li><a href="index.html#remontas-vietoje" data-lt="Kaip veikia" data-en="How it works">Kaip veikia</a></li>
+<li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
+<li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
+<li><a href="index.html#atsiliepimai" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
+<li><a href="index.html#uzklausa" data-lt="Užklausa" data-en="Inquiry">Užklausa</a></li>
+<li><a href="index.html#kontaktai" data-lt="Kontaktai" data-en="Contact">Kontaktai</a></li>
+<li>
+<div class="lang-switcher">
+<button class="lang-btn active" onclick="setLang('lt')">LT</button>
+<button class="lang-btn" onclick="setLang('en')">EN</button>
+</div>
+</li>
+</ul>
+</nav>
+</div>
 </header>
 
-<main class="page-wrap">
-    <h1 style="margin-bottom: 20px;">Nuotolinė pagalba per „RustDesk“</h1>
-    <p style="margin-bottom: 40px; color: #93c5fd;">Kai gedimas nereikalauja fizinio meistro įsikišimo, viską sutvarkysime per atstumą.</p>
+<main>
+<section>
+<div class="wrap">
+<div class="page-header">
+<span style="color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:1px; display:inline-block; margin-bottom:10px;" data-lt="🌐 SKUBI PROGRAMINĖ PAGALBA PER ATSTUMĄ" data-en="🌐 URGENT REMOTE SOFTWARE SUPPORT">🌐 SKUBI PROGRAMINĖ PAGALBA PER ATSTUMĄ</span>
+<h1 data-lt="Nuotolinė pagalba per <span>„RustDesk“</span>" data-en="Remote Support via <span>„RustDesk“</span>">
+    Nuotolinė pagalba per <span>„RustDesk“</span>
+</h1>
+<p data-lt="Jei gedimas nereikalauja fizinio meistro įsikišimo, viską saugiai sutvarkysime per atstumą, jums niekur nereikės vežti kompiuterio." data-en="If the fault does not require physical intervention, we will safely fix everything remotely without you needing to travel.">
+    Jei gedimas nereikalauja fizinio meistro įsikišimo, viską saugiai sutvarkysime per atstumą, jums niekur nereikės vežti kompiuterio.
+</p>
+</div>
 
-    <!-- Čia įdėkite tą patį bloką, kurį buvau sukūręs aukščiau (su 3 žingsniais) -->
-    <div style="background:#071a3088; border:1px solid #1e3a5f; border-radius:24px; padding:40px;">
-        <h3>Kaip pasiruošti?</h3>
-        <!-- ... 3 žingsniai ... -->
-        <a class="btn" href="https://rustdesk.com/" target="_blank">Atsisiųsti RustDesk</a>
-        
-        <div style="margin-top: 30px;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/kcSB6jatr_s" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
+<div class="remote-container">
+<div class="steps-grid">
+<div class="step-card">
+<div class="step-num">1</div>
+<h3 data-lt="Atsisiųskite" data-en="Download">Atsisiųskite</h3>
+<p data-lt="Parsisiųskite saugią „RustDesk“ programą paspaudę žemiau esantį mygtuką." data-en="Download the secure RustDesk application using the button below.">Parsisiųskite saugią „RustDesk“ programą paspaudę žemiau esantį mygtuką.</p>
+</div>
+<div class="step-card">
+<div class="step-num">2</div>
+<h3 data-lt="Paleiskite" data-en="Run">Paleiskite</h3>
+<p data-lt="Įjunkite parsisiųstą failą (įdiegimo nereikia) ir pamatysite savo duomenis." data-en="Open the downloaded file (no installation needed) and see your credentials.">Įjunkite parsisiųstą failą (įdiegimo nereikia) ir pamatysite savo duomenis.</p>
+</div>
+<div class="step-card">
+<div class="step-num">3</div>
+<h3 data-lt="Padiktuokite" data-en="Provide ID">Padiktuokite</h3>
+<p data-lt="Praneškite mums savo ID bei slaptažodį – mes prisijungsime ir sutvarkysime." data-en="Provide us your ID and password – we will connect and fix the issue.">Praneškite mums savo ID bei slaptažodį – mes prisijungsime ir sutvarkysime.</p>
+</div>
+</div>
 
-    <div style="margin-top: 40px;">
-        <a href="index.html" class="btn alt">← Grįžti į pradinį</a>
-    </div>
+<div class="download-box">
+<h3 data-lt="Paruošta atsisiuntimui" data-en="Ready for Download">Paruošta atsisiuntimui</h3>
+<p data-lt="Spauskite žemiau, kad parsisiųstumėte oficialią „RustDesk“ programą Windows kompiuteriui." data-en="Click below to download the official RustDesk application for Windows.">Spauskite žemiau, kad parsisiųstumėte oficialią „RustDesk“ programą Windows kompiuteriui.</p>
+<!-- Pakeiskite nuorodą į tiesioginį RustDesk .exe failą arba oficialų puslapį -->
+<a href="https://rustdesk.com/" target="_blank" rel="noopener noreferrer" class="btn">
+    <i class="fa-solid fa-download"></i> <span data-lt="Atsisiųsti „RustDesk“" data-en="Download „RustDesk“">Atsisiųsti „RustDesk“</span>
+</a>
+</div>
+
+<div class="video-wrapper">
+<h3 data-lt="Kaip naudotis „RustDesk“ (vaizdo instrukcija)" data-en="How to use RustDesk (Video Guide)">Kaip naudotis „RustDesk“ (vaizdo instrukcija)</h3>
+<div class="video-frame">
+<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F904624699392411%2F&show_text=false&width=560&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+</div>
+</div>
+
+<div style="text-align: center;">
+<a href="index.html" class="back-link">
+    <i class="fa-solid fa-arrow-left"></i> <span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to main page">Grįžti į pagrindinį puslapį</span>
+</a>
+</div>
+
+</div>
+</div>
+</section>
 </main>
+
+<footer>
+<div class="wrap">
+<p>© 2026 PC IT Šilutė. Visos teisės saugomos.</p>
+</div>
+</footer>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    document.querySelectorAll('[data-lt]').forEach(el => {
+        if (lang === 'en' && el.getAttribute('data-en')) {
+            el.innerHTML = el.getAttribute('data-en');
+        } else if (lang === 'lt' && el.getAttribute('data-lt')) {
+            el.innerHTML = el.getAttribute('data-lt');
+        }
+    });
+}
+</script>
 
 </body>
 </html>
