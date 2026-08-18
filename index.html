@@ -166,7 +166,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
 <li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
 <li><a href="#atsiliepimai" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
-<li><a href="#uzklausa" data-lt="Užklausa" data-en="Inquiry">Inquiry</a></li>
+<li><a href="#uzklausa" data-lt="Užklausa" data-en="Inquiry">Užklausa</a></li>
 <li><a href="#kontaktai" data-lt="Kontaktai" data-en="Contact">Kontaktai</a></li>
 <li>
 <div class="lang-switcher">
@@ -297,7 +297,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <p data-lt="Pašaliname nereikalingas programas, sutvarkome paleistį ir pagreitiname darbą." data-en="We remove unnecessary programs, fix startup and speed up performance.">Pašaliname nereikalingas programas, sutvarkome paleistį ir pagreitiname darbą.</p>
 </div>
 <div>
-    <span class="price" data-lt="Nuo 15–20 €" data-en="From €15–20">Nuo 15–20 €</span>
+    <span class="price" data-lt="Nuo 15 €" data-en="From €15">Nuo 15 €</span>
     <span class="card-guarantee" data-lt="✓ Greitesnis veikimas" data-en="✓ Faster performance">✓ Greitesnis veikimas</span>
 </div>
 </div>
@@ -308,7 +308,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <p data-lt="Ieškome priežasties, kodėl kompiuteris lėtėja, stringa ar veikia nestabiliai." data-en="We look for the reason why the computer slows down, freezes or behaves unstably.">Ieškome priežasties, kodėl kompiuteris lėtėja, stringa ar veikia nestabiliai.</p>
 </div>
 <div>
-    <span class="price" data-lt="Nuo 10 €" data-en="From €10">Nuo 10 €</span>
+    <span class="price" data-lt="Nuo 15 €" data-en="From €15">Nuo 15 €</span>
     <span class="card-guarantee" data-lt="✓ Tikslus gedimo nustatymas" data-en="✓ Precise fault detection">✓ Tikslus gedimo nustatymas</span>
 </div>
 </div>
@@ -319,18 +319,18 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <p data-lt="Pagalba bandant atkurti netyčia ištrintas nuotraukas, dokumentus ar failus." data-en="Help trying to recover accidentally deleted photos, documents or files.">Pagalba bandant atkurti netyčia ištrintas nuotraukas, dokumentus ar failus.</p>
 </div>
 <div>
-    <span class="price" data-lt="Pagal susitarimą" data-en="By agreement">Pagal susitarimą</span>
+    <span class="price" data-lt="Nuo 15 €" data-en="From €15">Nuo 15 €</span>
     <span class="card-guarantee" data-lt="✓ Asmens duomenų konfidencialumas" data-en="✓ Personal data confidentiality">✓ Asmens duomenų konfidencialumas</span>
 </div>
 </div>
 <div class="card">
 <div>
     <i class="fa-solid fa-puzzle-piece ico"></i>
-    <h3 data-lt="Programos ir tvarkyklės" data-en="Programs & Drivers">Programos ir tvarkyklės</h3>
+    <h3 data-lt="Programos ir tvarkyklės" data-en="Programs & Drivers">Programs & Drivers</h3>
     <p data-lt="Reikalingų papildomų programų, tvarkyklių ir komponentų sutvarkymas." data-en="Setting up necessary additional software, drivers and components.">Reikalingų papildomų programų, tvarkyklių ir komponentų sutvarkymas.</p>
 </div>
 <div>
-    <span class="price" data-lt="Nuo 15–20 €" data-en="From €15–20">Nuo 15–20 €</span>
+    <span class="price" data-lt="Nuo 15 €" data-en="From €15">Nuo 15 €</span>
     <span class="card-guarantee" data-lt="✓ Patikimas suderinamumas" data-en="✓ Reliable compatibility">✓ Patikimas suderinamumas</span>
 </div>
 </div>
@@ -366,7 +366,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <p class="subtitle" data-lt="Naudojotės mūsų paslaugomis? Palikite savo atsiliepimą ar komentarą – mums tai labai svarbu!" data-en="Used our services? Leave your review or comment – it's very important to us!">Naudojotės mūsų paslaugomis? Palikite savo atsiliepimą ar komentarą – mums tai labai svarbu!</p>
 
 <div class="review-form-box">
-<form action="https://formspree.io/f/mkjwjqvd" method="POST">
+<form id="reviewForm" action="https://formspree.io/f/mkjwjqvd" method="POST">
 <div class="form-group">
 <label data-lt="Jūsų vardas:" data-en="Your name:">Jūsų vardas:</label>
 <input type="text" name="atsiliepimo_vardas" required autocomplete="name" placeholder="Įveskite savo vardą">
@@ -375,9 +375,11 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <div class="form-group">
 <label data-lt="Įvertinimas (Žvaigždutėmis):" data-en="Rating (Stars):">Įvertinimas (Žvaigždutėmis):</label>
 <select name="ivertinimas" class="form-control">
-<option value="5 žvaigždutės - Puikiai!" data-lt="⭐⭐⭐⭐⭐ Puikiai!" data-en="⭐⭐⭐⭐⭐ Excellent!">⭐⭐⭐⭐⭐ Puikiai!</option>
-<option value="4 žvaigždutės - Gerai" data-lt="⭐⭐⭐⭐ Labai gerai" data-en="⭐⭐⭐⭐ Very Good">⭐⭐⭐⭐ Labai gerai</option>
-<option value="3 žvaigždutės - Vidutiniškai" data-lt="⭐⭐⭐ Vidutiniškai" data-en="⭐⭐⭐ Average">⭐⭐⭐ Vidutiniškai</option>
+<option value="5 žvaigždutės" data-lt="⭐⭐⭐⭐⭐ (5/5) Puikiai" data-en="⭐⭐⭐⭐⭐ (5/5) Excellent">⭐⭐⭐⭐⭐ (5/5) Puikiai</option>
+<option value="4 žvaigždutės" data-lt="⭐⭐⭐⭐ (4/5) Labai gerai" data-en="⭐⭐⭐⭐ (4/5) Very Good">⭐⭐⭐⭐ (4/5) Labai gerai</option>
+<option value="3 žvaigždutės" data-lt="⭐⭐⭐ (3/5) Vidutiniškai" data-en="⭐⭐⭐ (3/5) Average">⭐⭐⭐ (3/5) Vidutiniškai</option>
+<option value="2 žvaigždutės" data-lt="⭐⭐ (2/5) Prastai" data-en="⭐⭐ (2/5) Poor">⭐⭐ (2/5) Prastai</option>
+<option value="1 žvaigždutė" data-lt="⭐ (1/5) Labai prastai" data-en="⭐ (1/5) Very Poor">⭐ (1/5) Labai prastai</option>
 </select>
 </div>
 
@@ -386,10 +388,15 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <textarea name="atsiliepimo_tekstas" required placeholder="Parašykite, kaip patiko paslaugos, ar viskas veikia sklandžiai..."></textarea>
 </div>
 
-<button type="submit" class="btn" style="width:100%; justify-content:center; padding:16px; font-size:17px;" data-lt="⭐ Siųsti atsiliepimą" data-en="⭐ Send Review">⭐ Siųsti atsiliepimą</button>
-</form>
+<div class="form-group" style="display:flex; align-items:flex-start; gap:12px; margin-top:15px;">
+<input type="checkbox" name="sutikimas_viesinimui" value="Taip" id="viesinimas" required style="width:20px; height:20px; margin-top:3px; accent-color:var(--accent);">
+<label for="viesinimas" style="font-size:14px; color:var(--text-muted); cursor:pointer; margin-bottom:0;" data-lt="Sutinku, kad mano vardas ir atsiliepimas būtų skelbiami PC IT Šilutė svetainėje." data-en="I agree that my name and review can be published on the PC IT Šilutė website.">Sutinku, kad mano vardas ir atsiliepimas būtų skelbiami PC IT Šilutė svetainėje.</label>
 </div>
 
+<button type="submit" class="btn" style="width:100%; justify-content:center; padding:16px; font-size:17px; margin-top:20px;" data-lt="⭐ Siųsti atsiliepimą" data-en="⭐ Send Review">⭐ Siųsti atsiliepimą</button>
+</form>
+
+</div>
 </div>
 </section>
 
@@ -501,6 +508,7 @@ function setLang(lang, save = true) {
         }
     });
 }
+
 window.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('preferred_lang');
   if (savedLang === 'en') { setLang('en', false); } else { setLang('lt', false); }
