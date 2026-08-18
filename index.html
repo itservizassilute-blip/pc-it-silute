@@ -193,8 +193,8 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <h1 data-lt="Kompiuteris pradėjo ožiuotis?<br><span>Sutvarkome Šilutėje, vietoje.</span>" data-en="Is your computer acting up?<br><span>We fix it locally in Šilutė.</span>">
     Kompiuteris pradėjo ožiuotis?<br><span>Sutvarkome Šilutėje, vietoje.</span>
 </h1>
-<p data-lt="Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Švarus Windows paruošimas, kruopštus remontas ir optimizavimas Šilutėje." data-en="Loading slowly, annoying ads or freezing apps? Clean Windows setup, careful repair and optimization locally in Šilutė.">
-    Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Švarus Windows paruošimas, kruopštus remontas ir optimizavimas Šilutėje.
+<p data-lt="Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Windows diegimas, kruopštus remontas ir optimizavimas Šilutėje." data-en="Loading slowly, annoying ads or freezing apps? Windows setup, careful repair and optimization locally in Šilutė.">
+    Lėtai kraunasi, lenda įkyrios reklamos ar stringa programos? Windows diegimas, kruopštus remontas ir optimizavimas Šilutėje.
 </p>
 <div>
     <a class="btn messenger" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="💬 Rašykit Messenger" data-en="💬 Write Messenger">💬 Rašykit Messenger</a>
@@ -243,12 +243,12 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <span data-lt="30 d. garantija darbams" data-en="30-day work warranty">30 d. garantija darbams</span>
 </div>
 <div class="guarantee-item">
-<i class="fa-solid fa-box-open"></i>
-<span data-lt="Švariai paruoštas darbui" data-en="Cleanly prepared for work">Švariai paruoštas darbui</span>
+<i class="fa-solid fa-coins"></i>
+<span data-lt="Kainą suderiname iš anksto" data-en="Price agreed in advance">Kainą suderiname iš anksto</span>
 </div>
 <div class="guarantee-item">
 <i class="fa-solid fa-calendar-days"></i>
-<span data-lt="Kainą suderiname iš anksto" data-en="Price agreed in advance">Kainą suderiname iš anksto</span>
+<span data-lt="Galimas aptarnavimas savaitgaliais" data-en="Weekend service available">Galimas aptarnavimas savaitgaliais</span>
 </div>
 </div>
 </div>
@@ -489,26 +489,32 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </footer>
 
 <script>
-function setLang(lang) {
+function setLang(lang, save = true) {
+    if (save) { localStorage.setItem('preferred_lang', lang); }
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-    
+    const activeBtn = lang === 'lt' ? document.querySelector('button[onclick*="lt"]') : document.querySelector('button[onclick*="en"]');
+    if(activeBtn) activeBtn.classList.add('active');
+
     document.querySelectorAll('[data-lt]').forEach(el => {
-        if (lang === 'en' && el.getAttribute('data-en')) {
-            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                el.placeholder = el.getAttribute('data-en');
+        const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = langText;
+        } else {
+            const icon = el.querySelector('i');
+            if (icon) {
+                const textNode = el.querySelector('span');
+                if(textNode) { textNode.innerHTML = langText; }
+                else { el.innerHTML = `<i class="${icon.className}"></i> ` + langText; }
             } else {
-                el.innerHTML = el.getAttribute('data-en');
-            }
-        } else if (lang === 'lt' && el.getAttribute('data-lt')) {
-            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                el.placeholder = el.getAttribute('data-lt');
-            } else {
-                el.innerHTML = el.getAttribute('data-lt');
+                el.innerHTML = langText;
             }
         }
     });
 }
+window.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('preferred_lang');
+  if (savedLang === 'en') { setLang('en', false); } else { setLang('lt', false); }
+});
 </script>
 
 </body>
