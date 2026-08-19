@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Dažniausiai užduodami klausimai apie kompiuterių remontą, Windows diegimą, kainas ir duomenų saugumą Šilutėje. Atsakymai į Jūsų klausimus.">
-<title>DUK – Dažniausiai užduodami klausimai | PC IT Šilutė</title>
+<meta name="description" content="Dažniausiai užduodami klausimai apie kompiuterių remontą, kainas, garantijas ir atsiskaitymą PC IT Šilutė.">
+<title>Dažniausiai užduodami klausimai (DUK) – PC IT Šilutė</title>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://itservizassilute-blip.github.io/pc-it-silute/duk.html">
 
@@ -27,10 +27,10 @@
 html{scroll-behavior:smooth}
 body{font-family:'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit;transition:0.3s}
-.wrap{max-width:900px;margin:auto;padding:0 22px}
+.wrap{max-width:1120px;margin:auto;padding:0 22px}
 
 header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
-nav{max-width:1120px;margin:auto;height:80px;display:flex;align-items:center;justify-content:space-between;padding:0 22px}
+nav{height:80px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px}
 .brand img{width:48px;height:48px;object-fit:contain}
 .brand b{color:var(--accent)}
@@ -41,207 +41,132 @@ nav a:hover{color:var(--accent)}
 .lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:12px;padding:5px 10px;border-radius:7px;transition:0.3s}
 .lang-btn.active{background:var(--accent);color:var(--bg)}
 
-section{padding:70px 0}
-.title{font-size:clamp(32px,4.5vw,44px);font-weight:800;margin-bottom:15px;line-height:1.2;text-align:center}
-.subtitle{color:var(--text-muted);font-size:18px;margin-bottom:50px;text-align:center}
+section{padding:70px 0 90px}
+.page-header{text-align:center;max-width:800px;margin:0 auto 45px}
+.page-header h1{font-size:clamp(32px, 4.5vw, 48px);font-weight:800;margin-bottom:15px}
+.page-header p{font-size:18px;color:var(--text-muted)}
 
-.faq-category{font-size:20px;font-weight:800;color:var(--accent);margin:40px 0 20px;display:flex;align-items:center;gap:10px}
-.faq-category:first-of-type{margin-top:0}
+.faq-container{max-width:850px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.faq-item{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:20px;padding:25px 30px;backdrop-filter:blur(10px);transition:0.3s}
+.faq-item:hover{border-color:var(--accent)}
+.faq-item h3{font-size:19px;margin-bottom:12px;color:var(--text);font-weight:700;display:flex;align-items:center;gap:12px}
+.faq-item h3 i{color:var(--accent);font-size:18px}
+.faq-item p{color:var(--text-muted);font-size:15px}
 
-/* Akordeono stilius */
-details{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:16px;margin-bottom:15px;backdrop-filter:blur(10px);transition:0.3s;overflow:hidden}
-details[open]{border-color:var(--accent);box-shadow:0 10px 25px rgba(14,165,233,0.1)}
-summary{padding:20px 24px;font-size:17px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none}
-summary::-webkit-details-marker{display:none}
-summary::after{content:'\f078';font-family:'Font Awesome 6 Free';font-weight:900;font-size:14px;color:var(--accent);transition:transform 0.3s}
-details[open] summary::after{transform:rotate(180deg)}
-.faq-content{padding:0 24px 24px;color:var(--text-muted);font-size:16px;border-top:1px solid #1e3a5f33;padding-top:16px}
+.back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:40px}
+.back-link:hover{color:var(--accent)}
 
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:15px 26px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s}
-.btn:hover{transform:translateY(-3px);filter:brightness(1.1)}
-.btn.alt{background:transparent;color:var(--text);border:1px solid #1e3a5f}
-
-.contact{background:linear-gradient(135deg,#031226,#062642);text-align:center;margin-top:40px}
-footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
-
-@media(max-width:960px){
-    nav ul{display:none}
-}
+@media(max-width:768px){ nav ul{display:none} .faq-item{padding:20px} }
 </style>
 </head>
 <body>
 
 <header>
-<nav>
-<a class="brand" href="index.html">
-<img src="pc-it-logo.png" alt="PC IT">
-<span>PC <b>IT</b> Šilutė</span>
-</a>
+<div class="wrap"><nav>
+<a class="brand" href="index.html"><img src="pc-it-logo.png" alt="PC IT"><span>PC <b>IT</b> Šilutė</span></a>
 <ul>
 <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
 <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
-<li><a href="index.html#remontas-vietoje" data-lt="Kaip veikia" data-en="How it works">Kaip veikia</a></li>
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
 <li><a href="duk.html" style="color:var(--accent)" data-lt="DUK" data-en="FAQ">DUK</a></li>
-<li><a href="index.html#atsiliepimai" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
-<li><a href="index.html#uzklausa" data-lt="Užklausa" data-en="Inquiry">Užklausa</a></li>
-<li><a href="index.html#kontaktai" data-lt="Kontaktai" data-en="Contact">Kontaktai</a></li>
-<li>
-<div class="lang-switcher">
+<li><div class="lang-switcher">
 <button class="lang-btn active" onclick="setLang('lt')">LT</button>
 <button class="lang-btn" onclick="setLang('en')">EN</button>
-</div>
-</li>
+</div></li>
 </ul>
-</nav>
+</nav></div>
 </header>
 
 <main>
 <section>
 <div class="wrap">
-<h1 class="title" data-lt="Dažniausiai užduodami klausimai" data-en="Frequently Asked Questions">Dažniausiai užduodami klausimai</h1>
-<p class="subtitle" data-lt="Atsakymai į svarbiausius klausimus apie kompiuterių remontą, kainas, duomenų saugumą ir darbo tvarką Šilutėje." data-en="Answers to key questions about computer repair, pricing, data security, and working procedures in Šilutė.">Atsakymai į svarbiausius klausimus apie kompiuterių remontą, kainas, duomenų saugumą ir darbo tvarką Šilutėje.</p>
-
-<!-- 💰 Kaina ir remontas -->
-<div class="faq-category">
-    <i class="fa-solid fa-coins"></i> 
-    <span data-lt="Kaina ir remontas" data-en="Pricing & Repair">Kaina ir remontas</span>
+<div class="page-header">
+<h1 data-lt="Dažniausiai užduodami klausimai" data-en="Frequently Asked Questions">Dažniausiai užduodami klausimai</h1>
+<p data-lt="Atsakymai į dažniausiai kylančius klausimus apie kompiuterių remontą, kainas ir saugumą." data-en="Answers to common questions about computer repair, pricing, and security.">Atsakymai į dažniausiai kylančius klausimus apie kompiuterių remontą, kainas ir saugumą.</p>
 </div>
 
-<details>
-<summary data-lt="Ar prieš remontą žinosiu, kiek kainuos?" data-en="Will I know the cost before repair?">Ar prieš remontą žinosiu, kiek kainuos?</summary>
-<div class="faq-content" data-lt="Taip, visada iš anksto atliekame diagnostiką, įvertiname gedimą ir suderiname galutinę darbų kainą. Jokių paslėptų mokesčių ar netikėtų staigumų atsiimant kompiuterį nebus." data-en="Yes, we always perform diagnostics in advance, evaluate the fault, and agree on the final price of the work. There will be no hidden fees or unexpected surprises upon picking up the computer.">
-Taip, visada iš anksto atliekame diagnostiką, įvertiname gedimą ir suderiname galutinę darbų kainą. Jokių paslėptų mokesčių ar netikėtų staigumų atsiimant kompiuterį nebus.
-</div>
-</details>
+<div class="faq-container">
+    <div class="faq-item">
+        <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kokia yra paslaugų kaina ir ar ji nesikeičia eigoje?" data-en="<i class='fa-solid fa-circle-question'></i> What is the price and does it change during repair?">
+            <i class='fa-solid fa-circle-question'></i> <span data-lt="Kokia yra paslaugų kaina ir ar ji nesikeičia eigoje?" data-en="What is the price and does it change during repair?">Kokia yra paslaugų kaina ir ar ji nesikeičia eigoje?</span>
+        </h3>
+        <p data-lt="Visos pagrindinės paslaugos (Windows įdiegimas, optimizavimas, diagnostika) turi aiškias pradines kainas nuo 15–30 €. Tiksli darbų kaina **visada suderinama iš anksto** prieš pradedant bet kokius remonto darbus, todėl jokių netikėtų staigmenų nebūna."
+           data-en="All main services (Windows setup, optimization, diagnostics) have clear starting prices from €15–30. The exact price is **always agreed in advance** before starting any repair work, so there are no unexpected surprises.">
+        Visos pagrindinės paslaugos (Windows įdiegimas, optimizavimas, diagnostika) turi aiškias pradines kainas nuo 15–30 €. Tiksli darbų kaina **visada suderinama iš anksto** prieš pradedant bet kokius remonto darbus, todėl jokių netikėtų staigmenų nebūna.</p>
+    </div>
 
-<details>
-<summary data-lt="Kada atsiskaitoma už paslaugas?" data-en="When is payment due for services?">Kada atsiskaitoma už paslaugas?</summary>
-<div class="faq-content" data-lt="Atsiskaitoma tik tuomet, kai darbai yra fully atlikti, Jūs patikrinate kompiuterio veikimą ir įsitikinate, kad problema sėkmingai išspręsta." data-en="Payment is made only when the work is fully completed, you check the computer's performance, and ensure that the problem has been successfully resolved.">
-Atsiskaitoma tik tuomet, kai darbai yra fully atlikti, Jūs patikrinate kompiuterio veikimą ir įsitikinate, kad problema sėkmingai išspręsta.
-</div>
-</details>
+    <div class="faq-item">
+        <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ar atliktiems darbams suteikiama garantija?" data-en="<i class='fa-solid fa-circle-question'></i> Is there a warranty on completed work?">
+            <i class='fa-solid fa-circle-question'></i> <span data-lt="Ar atliktiems darbams suteikiama garantija?" data-en="Is there a warranty on completed work?">Ar atliktiems darbams suteikiama garantija?</span>
+        </h3>
+        <p data-lt="Taip, visiems atliktiems programiniams ir remonto darbams suteikiama **30 dienų garantija atliktiems darbams**. Jei per šį laikotarpį vėl pasireiškia ta pati sutvarkyta problema, ją pašaliname nemokamai."
+           data-en="Yes, all completed software and repair work comes with a **30-day warranty on completed work**. If the same fixed problem reappears within this period, we fix it free of charge.">
+        Taip, visiems atliktiems programiniams ir remonto darbams suteikiama **30 dienų garantija atliktiems darbams**. Jei per šį laikotarpį vėl pasireiškia ta pati sutvarkyta problema, ją pašaliname nemokamai.</p>
+    </div>
 
-<details>
-<summary data-lt="Kada kompiuterio remontuoti neapsimoka?" data-en="When is it not worth repairing a computer?">Kada kompiuterio remontuoti neapsimoka?</summary>
-<div class="faq-content" data-lt="Jei kompiuteris yra labai senas, jo techniniai parametrai nebetraukia šiuolaikinių užduočių, o remonto kaina priartėtų prie naujesnio, galingesnio naudoto kompiuterio vertės – atvirai pasakome, kad remontas neprasmingas. Mes nesistengiame parduoti remonto bet kokia kaina." data-en="If the computer is very old, its technical parameters can no longer handle modern tasks, and the repair cost would approach the value of a newer, more powerful used computer – we openly state that repair does not make sense. We do not try to sell repairs at all costs.">
-Jei kompiuteris yra labai senas, jo techniniai parametrai nebetraukia šiuolaikinių užduočių, o remonto kaina priartėtų prie naujesnio, galingesnio naudoto kompiuterio vertės – atvirai pasakome, kad remontas neprasmingas. Mes nesistengiame parduoti remonto bet kokia kaina.
-</div>
-</details>
+    <div class="faq-item">
+        <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ar saugūs mano asmens duomenys ir failai?" data-en="<i class='fa-solid fa-circle-question'></i> Are my personal data and files safe?">
+            <i class='fa-solid fa-circle-question'></i> <span data-lt="Ar saugūs mano asmens duomenys ir failai?" data-en="Are my personal data and files safe?">Ar saugūs mano asmens duomenys ir failai?</span>
+        </h3>
+        <p data-lt="Konfidencialumas yra griežtai užtikrinamas. Jūsų asmeniniai dokumentai, nuotraukos ar slaptažodžiai niekur nėra platinami ar peržiūrimi be tiesioginio poreikio remonto darbams."
+           data-en="Confidentiality is strictly ensured. Your personal documents, photos, or passwords are never distributed or viewed without a direct need for repair work.">
+        Konfidencialumas yra griežtai užtikrinamas. Jūsų asmeniniai dokumentai, nuotraukos ar slaptažodžiai niekur nėra platinami ar peržiūrimi be tiesioginio poreikio remonto darbams.</p>
+    </div>
 
+    <div class="faq-item">
+        <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ar reikia palikti kompiuterio slaptažodį?" data-en="<i class='fa-solid fa-circle-question'></i> Do I need to leave my computer password?">
+            <i class='fa-solid fa-circle-question'></i> <span data-lt="Ar reikia palikti kompiuterio slaptažodį?" data-en="Do I need to leave my computer password?">Ar reikia palikti kompiuterio slaptažodį?</span>
+        </h3>
+        <p data-lt="Jei atliekamas programinis remontas, Windows tvarkymas ar optimizavimas, slaptažodis yra reikalingas tam, kad meistras galėtų patikrinti sistemos veiklą po atliktų darbų. Jei pageidaujate, slaptažodį galite laikinai pasikeisti arba pateikti jį tik atiduodant kompiuterį."
+           data-en="If software repair, Windows management, or optimization is performed, a password is required so the tech can check system performance after work is done. If you prefer, you can temporarily change your password or provide it only when dropping off the computer.">
+        Jei atliekamas programinis remontas, Windows tvarkymas ar optimizavimas, slaptažodis yra reikalingas tam, kad meistras galėtų patikrinti sistemos veiklą po atliktų darbų. Jei pageidaujate, slaptažodį galite laikinai pasikeisti arba pateikti jį tik atiduodant kompiuterį.</p>
+    </div>
 
-<!-- 💻 Windows ir programinė įranga -->
-<div class="faq-category">
-    <i class="fa-solid fa-laptop-code"></i> 
-    <span data-lt="Windows ir programinė įranga" data-en="Windows & Software">Windows ir programinė įranga</span>
-</div>
+    <div class="faq-item">
+        <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ką daryti, jei neturiu galimybės atvežti kompiuterio pats?" data-en="<i class='fa-solid fa-circle-question'></i> What if I cannot bring the computer myself?">
+            <i class='fa-solid fa-circle-question'></i> <span data-lt="Ką daryti, jei neturiu galimybės atvežti kompiuterio pats?" data-en="What if I cannot bring the computer myself?">Ką daryti, jei neturiu galimybės atvežti kompiuterio pats?</span>
+        </h3>
+        <p data-lt="Susisiekite su mumis – Šilutėje ir apylinkėse pagal susitarimą galime sutarti dėl kompiuterio paėmimo arba pristatymo atgal."
+           data-en="Contact us – in Šilutė and surroundings, by agreement, we can coordinate computer pickup or return delivery.">
+        Susisiekite su mumis – Šilutėje ir apylinkėse pagal susitarimą galime sutarti dėl kompiuterio paėmimo arba pristatymo atgal.</p>
+    </div>
 
-<details>
-<summary data-lt="Ar būtina perrašyti Windows, jei kompiuteris lėtas?" data-en="Is it necessary to reinstall Windows if the computer is slow?">Ar būtina perrašyti Windows, jei kompiuteris lėtas?</summary>
-<div class="faq-content" data-lt="Nebūtinai. Dažnai lėtą veikimą sukelia susikaupę nereikalingi failai, foninės programos arba lėtas standusis diskas. Pirmiausia įvertiname situaciją – kartais pakanka sistemos optimizavimo ir valymo, o ne visiško perrašymo." data-en="Not necessarily. Often, slow performance is caused by accumulated unnecessary files, background programs, or a slow hard drive. We evaluate the situation first – sometimes system optimization and cleaning are enough rather than a complete reinstallation.">
-Nebūtinai. Dažnai lėtą veikimą sukelia susikaupę nereikalingi failai, foninės programos arba lėtas standusis diskas. Pirmiausia įvertiname situaciją – kartais pakanka sistemos optimizavimo ir valymo, o ne visiško perrašymo.
-</div>
-</details>
+    <div class="faq-item">
+        <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kada galima atlikti nuotolinį remontą?" data-en="<i class='fa-solid fa-circle-question'></i> When can remote repair be performed?">
+            <i class='fa-solid fa-circle-question'></i> <span data-lt="Kada galima atlikti nuotolinį remontą?" data-en="When can remote repair be performed?">Kada galima atlikti nuotolinį remontą?</span>
+        </h3>
+        <p data-lt="Nuotolinė pagalba per „RustDesk“ tinka tada, kai kompiuteris įsijungia, turi interneto ryšį, o problemos yra susijusios su programine įranga ar nustatymais. Jei kompiuteris nepasikrauna ar sugedo aparatūra – reikalinga fizinė apžiūra."
+           data-en="Remote support via RustDesk is suitable when the computer turns on, has internet connection, and issues are related to software or settings. If the computer won't boot or hardware is broken, physical inspection is required.">
+        Nuotolinė pagalba per „RustDesk“ tinka tada, kai kompiuteris įsijungia, turi interneto ryšį, o problemos yra susijusios su programine įranga ar nustatymais. Jei kompiuteris nepasikrauna ar sugedo aparatūra – reikalinga fizinė apžiūra.</p>
+    </div>
 
-<details>
-<summary data-lt="Ar po Windows perrašymo liks mano failai ir programos?" data-en="Will my files and programs remain after Windows reinstallation?">Ar po Windows perrašymo liks mano failai ir programos?</summary>
-<div class="faq-content" data-lt="Perrašant operacinę sistemą (Windows), asmeniniai failai (nuotraukos, dokumentai) yra išsaugomi (jei pasirinktas atitinkamas būdas arba sutarta iš anksto), tačiau pačias programas ir žaidimus reikės įdiegti iš naujo. Prieš atliekant darbus, visada aptariame, ką svarbu išsaugoti." data-en="When reinstalling the operating system (Windows), personal files (photos, documents) are preserved (if the appropriate method is chosen or agreed upon in advance), but the programs and games themselves will need to be reinstalled. Before doing any work, we always discuss what is important to save.">
-Perrašant operacinę sistemą (*Windows*), asmeniniai failai (nuotraukos, dokumentai) yra išsaugomi (jei pasirinktas atitinkamas būdas arba sutarta iš anksto), tačiau pačias programas ir žaidimus reikės įdiegti iš naujo. Prieš atliekant darbus, visada aptariame, ką svarbu išsaugoti.
-</div>
-</details>
+    <div class="faq-item">
+        <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Ar apsimoka remontuoti labai seną kompiuterį?" data-en="<i class='fa-solid fa-circle-question'></i> Is it worth repairing a very old computer?">
+            <i class='fa-solid fa-circle-question'></i> <span data-lt="Ar apsimoka remontuoti labai seną kompiuterį?" data-en="Is it worth repairing a very old computer?">Ar apsimoka remontuoti labai seną kompiuterį?</span>
+        </h3>
+        <p data-lt="Atlikę pirminę diagnostiką visada atvirai pasakome, ar remontas turės prasmę. Jei investicija neatsipirks arba kompiuteris morališkai pasenęs, nesieksime „bet kokia kaina“ remontuoti – patarsime, kas būtų geriausia."
+           data-en="After initial diagnostics, we always openly state whether repair makes sense. If the investment won't pay off or the computer is morally obsolete, we won't push for repairs at all costs – we'll advise what's best.">
+        Atlikę pirminę diagnostiką visada atvirai pasakome, ar remontas turės prasmę. Jei investicija neatsipirks arba kompiuteris morališkai pasenęs, nesieksime „bet kokia kaina“ remontuoti – patarsime, kas būtų geriausia.</p>
+    </div>
 
-<details>
-<summary data-lt="Ar galite pagreitinti seną kompiuterį neperrašant Windows?" data-en="Can you speed up an old computer without reinstalling Windows?">Ar galite pagreitinti seną kompiuterį neperrašant Windows?</summary>
-<div class="faq-content" data-lt="Taip, dažnai padeda profesionalus sisteminis valymas, nereikalingų programų pašalinimas (bloatware tvarkymas), paleisties optimizavimas arba aparatinis atnaujinimas (pavyzdžiui, lėto HDD disko pakeitimas į greitą SSD)." data-en="Yes, professional system cleaning, removal of unnecessary programs (bloatware management), startup optimization, or hardware upgrades (such as replacing a slow HDD with a fast SSD) often help.">
-Taip, dažnai padeda profesionalus sisteminis valymas, nereikalingų programų pašalinimas (*bloatware* tvarkymas), paleisties optimizavimas arba aparatinis atnaujinimas (pavyzdžiui, lėto HDD disko pakeitimas į greitą SSD).
-</div>
-</details>
-
-
-<!-- 🔒 Duomenys -->
-<div class="faq-category">
-    <i class="fa-solid fa-lock"></i> 
-    <span data-lt="Duomenys ir saugumas" data-en="Data & Security">Duomenys ir saugumas</span>
-</div>
-
-<details>
-<summary data-lt="Ar mano nuotraukos ir dokumentai bus išsaugoti?" data-en="Will my photos and documents be saved?">Ar mano nuotraukos ir dokumentai bus išsaugoti?</summary>
-<div class="faq-content" data-lt="Taip, asmeniniai Jūsų failai mums yra prioritetas. Prieš atlikdami bet kokius rimtus sistemos tvarkymo darbus, visada pasirūpiname saugiu duomenų išsaugojimu." data-en="Yes, your personal files are our priority. Before performing any major system maintenance work, we always ensure safe data preservation.">
-Taip, asmeniniai Jūsų failai mums yra prioritetas. Prieš atlikdami bet kokius rimtus sistemos tvarkymo darbus, visada pasirūpiname saugiu duomenų išsaugojimu.
-</div>
-</details>
-
-<details>
-<summary data-lt="Ar galite padaryti atsarginę duomenų kopiją?" data-en="Can you make a data backup?">Ar galite padaryti atsarginę duomenų kopiją?</summary>
-<div class="faq-content" data-lt="Žinoma. Jei pageidaujate, galime perkelti ir padaryti pilną svarbių Jūsų dokumentų, nuotraukų bei nustatymų atsarginę kopiją (backup) į išorinę laikmeną arba debesų kompiuteriją." data-en="Of course. If you wish, we can transfer and make a full backup of your important documents, photos, and settings to an external media or cloud storage.">
-Žinoma. Jei pageidaujate, galime perkelti ir padaryti pilną svarbių Jūsų dokumentų, nuotraukų bei nustatymų atsarginę kopiją (*backup*) į išorinę laikmeną arba debesų kompiuteriją.
-</div>
-</details>
-
-
-<!-- 📍 Aptarnavimas -->
-<div class="faq-category">
-    <i class="fa-solid fa-location-dot"></i> 
-    <span data-lt="Aptarnavimas ir vieta" data-en="Service & Location">Aptarnavimas ir vieta</span>
+    <div class="faq-item">
+        <h3 data-lt="<i class='fa-solid fa-circle-question'></i> Kaip galima atsiskaityti už paslaugas?" data-en="<i class='fa-solid fa-circle-question'></i> How can I pay for services?">
+            <i class='fa-solid fa-circle-question'></i> <span data-lt="Kaip galima atsiskaityti už paslaugas?" data-en="How can I pay for services?">Kaip galima atsiskaityti už paslaugas?</span>
+        </h3>
+        <p data-lt="Atsiskaitymas atliekamas atsiimant sutaisytą kompiuterį arba iš anksto sutartu būdu (grynaisiais arba pavedimu)."
+           data-en="Payment is made upon picking up the repaired computer or by prior agreement (cash or bank transfer).">
+        Atsiskaitymas atliekamas atsiimant sutaisytą kompiuterį arba iš anksto sutartu būdu (grynaisiais arba pavedimu).</p>
+    </div>
 </div>
 
-<details>
-<summary data-lt="Ar reikia iš anksto registruotis?" data-en="Do I need to register in advance?">Ar reikia iš anksto registruotis?</summary>
-<div class="faq-content" data-lt="Pageidautina prieš vykstant susisiekti telefonu arba per „Messenger“, kad galėtume suderinti patogiausią laiką ir iš anksto aptarti Jūsų kompiuterio problemą." data-en="It is advisable to contact us by phone or via Messenger before coming, so we can coordinate the most convenient time and discuss your computer problem in advance.">
-Pageidautina prieš vykstant susisiekti telefonu arba per „Messenger“, kad galėtume suderinti patogiausią laiką ir iš anksto aptarti Jūsų kompiuterio problemą.
+<div style="text-align: center;">
+    <a href="index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> <span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to main page">Grįžti į pagrindinį puslapį</span>
+    </a>
 </div>
-</details>
-
-<details>
-<summary data-lt="Kur pristatyti kompiuterį?" data-en="Where should I deliver the computer?">Kur pristatyti kompiuterį?</summary>
-<div class="faq-content" data-lt="Paslaugos teikiamos Šilutėje. Dėl tikslaus kompiuterio priėmimo ir perdavimo vietos visuomet sutariame asmeniškai susisiekus nurodytais kontaktais." data-en="Services are provided in Šilutė. We always agree on the exact drop-off and pickup location personally via the provided contacts.">
-Paslaugos teikiamos Šilutėje. Dėl tikslaus kompiuterio priėmimo ir perdavimo vietos visuomet sutariame asmeniškai susisiekus nurodytais kontaktais.
-</div>
-</details>
-
-<details>
-<summary data-lt="Ar galima kompiuterį sutvarkyti nuotoliniu būdu?" data-en="Can the computer be fixed remotely?">Ar galima kompiuterį sutvarkyti nuotoliniu būdu?</summary>
-<div class="faq-content" data-lt="Taip! Jei problema yra programinė (lėtas veikimas, virusų valymas, programų diegimas, nustatymai) ir kompiuteris įsijungia turi internetą, daugelį dalykų galime sutvarkyti nuotoliniu būdu per specialią saugią programą (TeamViewer arba RustDesk), Jums net nesikeliant nuo sofos." data-en="Yes! If the issue is software-related (slow performance, virus cleaning, software installation, settings) and the computer turns on and has internet access, we can fix many things remotely via a secure program (TeamViewer or RustDesk) without you even getting off the couch.">
-Taip! Jei problema yra programinė (lėtas veikimas, virusų valymas, programų diegimas, nustatymai) ir kompiuteris įsijungia bei turi internetą, daugelį dalykų galime sutvarkyti nuotoliniu būdu per specialią saugią programą (*TeamViewer* arba *RustDesk*), Jums net nesikeliant nuo sofos.
-</div>
-</details>
-
-
-<!-- ⏱️ Darbai ir garantija -->
-<div class="faq-category">
-    <i class="fa-solid fa-clock"></i> 
-    <span data-lt="Darbai ir garantija" data-en="Work & Warranty">Darbai ir garantija</span>
-</div>
-
-<details>
-<summary data-lt="Kiek laiko trunka darbai?" data-en="How long does the work take?">Kiek laiko trunka darbai?</summary>
-<div class="faq-content" data-lt="Paprastai standartinis kompiuterio optimizavimas ar Windows diegimas užtrunka nuo kelių valandų iki 1 darbo dienos. Sudėtingesni aparatiniai gedimai ar detalių paieška gali užtrukti šiek tiek ilgiau, tačiau apie trukmę visada įspėjame iš anksto." data-en="Usually, standard computer optimization or Windows installation takes from a few hours to 1 working day. More complex hardware faults or part searches may take a bit longer, but we always warn about the duration in advance.">
-Paprastai standartinis kompiuterio optimizavimas ar *Windows* diegimas užtrunka nuo kelių valandų iki 1 darbo dienos. Sudėtingesni aparatiniai gedimai ar detalių paieška gali užtrukti šiek tiek ilgiau, tačiau apie trukmę visada įspėjame iš anksto.
-</div>
-</details>
-
-<details>
-<summary data-lt="Ar suteikiate garantiją atliktiems darbams?" data-en="Do you provide a warranty for the work done?">Ar suteikiate garantiją atliktiems darbams?</summary>
-<div class="faq-content" data-lt="Taip, visiems atliktiems programiniams darbams suteikiu 30 dienų garantiją. Jei po sutvarkymo kyla tų pačių nesklandumų – nemokamai patikrinu ir išsprendžiu problemą." data-en="Yes, I provide a 30-day warranty for all completed software work. If the same issues arise after repair – I check and resolve the problem for free.">
-Taip, visiems atliktiems programiniams darbams suteikiu 30 dienų garantiją. Jei po sutvarkymo kyla tų pačių nesklandumų – nemokamai patikrinu ir išsprendžiu problemą.
-</div>
-</details>
 
 </div>
 </section>
-
-<!-- Kontaktai -->
-<section class="contact">
-<div class="wrap">
-<h2 class="title" style="color:#fff; font-size:28px;" data-lt="Neradote atsakymo į savo klausimą?" data-en="Didn't find an answer to your question?">Neradote atsakymo į savo klausimą?</h2>
-<p style="color:var(--text-muted); margin:10px auto 26px; font-size:18px;" data-lt="Parašykite tiesiogiai, ir mes mielai viską paaiškinsime asmeniškai." data-en="Write directly, and we will gladly explain everything personally.">Parašykite tiesiogiai, ir mes mielai viską paaiškinsime asmeniškai.</p>
-<div>
-    <a class="btn" style="background:#0084FF; color:#fff;" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="💬 Rašyti Messenger" data-en="💬 Write Messenger">💬 Rašyti Messenger</a>
-    <a class="btn alt" href="index.html#uzklausa" data-lt="📝 Pildyti užklausą" data-en="📝 Fill Inquiry">📝 Pildyti užklausą</a>
-</div>
-</div>
-</section>
-
 </main>
 
 <footer>
@@ -252,33 +177,20 @@ Taip, visiems atliktiems programiniams darbams suteikiu 30 dienų garantiją. Je
 
 <script>
 function setLang(lang, save = true) {
-    if (save) { localStorage.setItem('preferred_lang', lang); }
+    if (save) localStorage.setItem('preferred_lang', lang);
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
     const activeBtn = lang === 'lt' ? document.querySelector('button[onclick*="lt"]') : document.querySelector('button[onclick*="en"]');
     if(activeBtn) activeBtn.classList.add('active');
 
     document.querySelectorAll('[data-lt]').forEach(el => {
-        const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-            el.placeholder = langText;
-        } else {
-            const icon = el.querySelector('i');
-            if (icon) {
-                const textNode = el.querySelector('span');
-                if(textNode) { textNode.innerHTML = langText; }
-                else { el.innerHTML = `<i class="${icon.className}"></i> ` + langText; }
-            } else {
-                el.innerHTML = langText;
-            }
-        }
+        el.innerHTML = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
     });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('preferred_lang');
-  if (savedLang === 'en') { setLang('en', false); } else { setLang('lt', false); }
+  const savedLang = localStorage.getItem('preferred_lang') || 'lt';
+  setLang(savedLang, false);
 });
 </script>
-
 </body>
 </html>
