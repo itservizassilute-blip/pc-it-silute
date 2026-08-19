@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Apie PC IT Šilutė – sąžiningas kompiuterių remontas ir ilgametė patirtis nuo 1988 metų.">
-<title>PC IT Šilutė – apie mus ir kompiuterių remonto patirtį</title>
+<meta name="description" content="Apie PC IT Šilutė – sąžiningas kompiuterių meistras Šilutėje. Asmeninė patirtis nuo 1988 metų, aiškios kainos ir kokybiškas remontas.">
+<title>Apie mus – PC IT Šilutė</title>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://itservizassilute-blip.github.io/pc-it-silute/apie.html">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,59 +42,48 @@ nav a:hover{color:var(--accent)}
 .lang-btn.active{background:var(--accent);color:var(--bg)}
 
 section{padding:90px 0}
-.title{text-align:center;font-size:38px;margin-bottom:12px;font-weight:800}
-.subtitle{text-align:center;color:var(--text-muted);max-width:700px;margin:0 auto 50px;font-size:18px}
+.dark-sec{background:var(--bg)}
+.title{font-size:clamp(32px,4.5vw,48px);font-weight:800;margin-bottom:20px;line-height:1.2}
+.subtitle{color:var(--text-muted);font-size:18px;margin-bottom:30px}
 
-.content-box{max-width:800px;margin:0 auto;background:var(--card-bg);border:1px solid #1e3a5f;padding:50px;border-radius:30px;backdrop-filter:blur(10px)}
-.content-box p{margin-bottom:20px;font-size:17px;color:var(--text-muted)}
-.content-box h3{color:#fff;margin:30px 0 15px;font-size:22px}
+/* Apie puslapio specifika */
+.about-hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:center}
+.about-text p{color:var(--text-muted);font-size:17px;margin-bottom:20px}
 
-/* TECHNOLOGINĖ EVOLIUCIJA (TIMELINE) */
-.evolution-timeline {
-    margin: 40px 0;
-    position: relative;
-    padding-left: 30px;
-    border-left: 2px solid var(--accent);
-}
-.evo-step {
-    position: relative;
-    margin-bottom: 25px;
-}
-.evo-step:last-child {
-    margin-bottom: 0;
-}
-.evo-step::before {
-    content: '';
-    position: absolute;
-    left: -37px;
-    top: 4px;
-    width: 12px;
-    height: 12px;
-    background: var(--accent);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--accent);
-}
-.evo-year {
-    font-weight: 800;
-    color: var(--accent);
-    font-size: 15px;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-}
-.evo-desc {
-    color: var(--text);
-    font-size: 16px;
-    font-weight: 600;
-}
+.stats-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:40px 0}
+.stat-card{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:16px;padding:20px;text-align:center;backdrop-filter:blur(10px)}
+.stat-card .num{font-size:28px;font-weight:800;color:var(--accent);margin-bottom:5px}
+.stat-card .label{font-size:13px;color:var(--text-muted);font-weight:600}
+
+.visual-mockup-card{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:24px;padding:20px;text-align:center;backdrop-filter:blur(10px);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.visual-mockup-card img{width:100%;border-radius:14px;object-fit:cover;border:1px solid #1e3a5f}
+.visual-mockup-card p{margin-top:15px;font-size:14px;color:var(--text-muted);font-weight:600}
+
+/* Timeline laiko juosta */
+.timeline-section{background:#040e24;border-top:1px solid #1e3a5f;border-bottom:1px solid #1e3a5f;padding:80px 0}
+.timeline-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.timeline-card{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:20px;padding:30px;position:relative;backdrop-filter:blur(10px);transition:0.3s}
+.timeline-card:hover{border-color:var(--accent);transform:translateY(-5px)}
+.timeline-year{display:inline-block;background:var(--accent);color:var(--bg);font-weight:800;font-size:14px;padding:6px 14px;border-radius:10px;margin-bottom:16px}
+.timeline-card h3{font-size:20px;margin-bottom:12px;font-weight:700}
+.timeline-card p{color:var(--text-muted);font-size:15px}
+
+.principle-box{max-width:800px;margin:0 auto;background:linear-gradient(145deg,#071a30,#03101e);border:1px solid #1e3a5f;border-radius:24px;padding:45px;text-align:center;backdrop-filter:blur(10px)}
+.principle-box i{font-size:40px;color:var(--accent);margin-bottom:20px}
+.principle-box h3{font-size:24px;margin-bottom:15px;font-weight:800}
+.principle-box p{color:var(--text-muted);font-size:17px;line-height:1.7}
 
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:15px 26px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s}
 .btn:hover{transform:translateY(-3px);filter:brightness(1.1)}
+.btn.alt{background:transparent;color:var(--text);border:1px solid #1e3a5f}
 
+.contact{background:linear-gradient(135deg,#031226,#062642);text-align:center}
 footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
 
-@media(max-width:760px){
+@media(max-width:960px){
+    .about-hero-grid, .timeline-grid{grid-template-columns:1fr}
+    .stats-bar{grid-template-columns:1fr}
     nav ul{display:none}
-    .content-box{padding:25px}
 }
 </style>
 </head>
@@ -106,13 +97,14 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <span>PC <b>IT</b> Šilutė</span>
 </a>
 <ul>
-<li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
-<li><a href="index.html#remontas-vietoje" data-lt="Kaip veikia" data-en="How it works">Kaip veikia</a></li>
-<li><a href="apie.html" style="color:var(--accent)" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
-<li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
-<li><a href="index.html#atsiliepimai" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
-<li><a href="index.html#uzklausa" data-lt="Užklausa" data-en="Inquiry">Užklausa</a></li>
-<li><a href="index.html#kontaktai" data-lt="Kontaktai" data-en="Contact">Kontaktai</a></li>
+<li><a href="index.html#paslaugos">Paslaugos</a></li>
+<li><a href="nuotoline-pagalba.html">Nuotolinė pagalba</a></li>
+<li><a href="index.html#remontas-vietoje">Kaip veikia</a></li>
+<li><a href="apie.html" style="color:var(--accent)">Apie mus</a></li>
+<li><a href="duk.html">DUK</a></li>
+<li><a href="index.html#atsiliepimai">Atsiliepimai</a></li>
+<li><a href="index.html#uzklausa">Užklausa</a></li>
+<li><a href="index.html#kontaktai">Kontaktai</a></li>
 <li>
 <div class="lang-switcher">
 <button class="lang-btn active" onclick="setLang('lt')">LT</button>
@@ -125,60 +117,105 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </header>
 
 <main>
-<section>
+<!-- Apie mus pagrindinis blokas -->
+<section class="dark-sec">
+<div class="wrap about-hero-grid">
+<div class="about-text">
+<h1 class="title">Sąžiningas meistras ir techninė pagalba Šilutėje</h1>
+<p>Sveiki! Esu kompiuterių meistras iš Šilutės. Technologijomis domiuosi nuo 1988 metų – nuo MS-DOS laikų iki šiuolaikinių Windows 11 sistemų.</p>
+<p>Per šį ilgą laiką išmokau vieną paprastą dalyką: daugumą problemų galima sklandžiai sutvarkyti, jei pirmiausia surandama tikroji gedimo priežastis, o ne siūlomi brangūs ir nereikalingi sprendimai.</p>
+
+<div class="stats-bar">
+<div class="stat-card">
+<div class="num">1988 m.</div>
+<div class="label">Technologijų pradžia</div>
+</div>
+<div class="stat-card">
+<div class="num">Windows</div>
+<div class="label">Pilna specializacija</div>
+</div>
+<div class="stat-card">
+<div class="num">100%</div>
+<div class="label">Suderinamos kainos</div>
+</div>
+</div>
+
+<div style="margin-top: 30px;">
+<a href="index.html#uzklausa" class="btn">🚀 Pateikti užklausą</a>
+</div>
+</div>
+
+<!-- Įkelta reali nuotrauka su sutvarkyta sistema -->
+<div class="visual-mockup-card">
+<img src="sutvarkyta-sistema.png" alt="Tvarkinga Windows sistema be klaidų">
+<p>✓ Švarios, optimizuotos ir be klaidų veikiančios sistemos</p>
+</div>
+</div>
+</section>
+
+<!-- Laiko juosta (Timeline) -->
+<section class="timeline-section">
 <div class="wrap">
-<h1 class="title" data-lt="Apie PC IT Šilutė" data-en="About PC IT Šilutė">Apie PC IT Šilutė</h1>
-<p class="subtitle" data-lt="Sąžiningas meistras ir techninė pagalba Šilutėje bei aplinkiniuose rajonuose." data-en="Honest master and technical support in Šilutė and surrounding areas.">Sąžiningas meistras ir techninė pagalba Šilutėje bei aplinkiniuose rajonuose.</p>
+<h2 class="title" style="text-align:center;">Meistro kelias ir patirtis</h2>
+<p class="subtitle" style="text-align:center;">Nuo pirmųjų programavimo bei technikos žingsnių iki profesionalaus serviso Šilutėje.</p>
 
-<div class="content-box">
-<p data-lt="Sveiki, esu Mindaugas. Šilutė – mano gimtasis miestas, čia gimiau, augau ir čia teikiu kompiuterinės pagalbos paslaugas. Šiame krašte daugelis mane pažįsta, tad ir technologijų srityje vadovaujuosi sąžiningumu bei atsakomybe. Patirtis kompiuterinėje technikoje – nuo 1988 metų. Per šį laiką mačiau visą asmeninių kompiuterių ir programinės įrangos evoliuciją." data-en="Hello, I'm Mindaugas. Šilutė is my hometown – I was born and raised here, and this is where I provide technical support. Many people in this region know me, so I approach my work with integrity and a strong sense of responsibility. I have been working with computer technology since 1988, witnessing the entire evolution of personal computing and software.">Sveiki, esu Mindaugas. Šilutė – mano gimtasis miestas, čia gimiau, augau ir čia teikiu kompiuterinės pagalbos paslaugas. Šiame krašte daugelis mane pažįsta, tad ir technologijų srityje vadovaujuosi sąžiningumu bei atsakomybe. Patirtis kompiuterinėje technikoje – nuo 1988 metų. Per šį laiką mačiau visą asmeninių kompiuterių ir programinės įrangos evoliuciją.</p>
-
-<p data-lt="Viskas prasidėjo nuo pirmųjų sistemų ir programavimo pagrindų, kai kiekviena komanda ir gedimas reikalavo gilaus supratimo. Laikui bėgant keitėsi ir pati technika, ir darbo įrankiai, taigi patirtis leidžia greitai ir tiksliai atskirti tikrąją gedimo priežastį nuo smulkių programinių trukdžių." data-en="It all started with early systems and programming basics, where every command and failure required deep understanding. Over time, both the technology and working tools evolved, allowing experience to quickly and accurately pinpoint the root cause of failures.">Viskas prasidėjo nuo pirmųjų sistemų ir programavimo pagrindų, kai kiekviena komanda ir gedimas reikalavo gilaus supratimo. Laikui bėgant keitėsi ir pati technika, ir darbo įrankiai, taigi patirtis leidžia greitai ir tiksliai atskirti tikrąją gedimo priežastį nuo smulkių programinių trukdžių.</p>
-
-<div class="evolution-timeline">
-    <div class="evo-step">
-        <div class="evo-year" data-lt="1988 metai — Pradžia" data-en="1988 — The Beginning">1988 metai — Pradžia</div>
-        <div class="evo-desc" data-lt="Pirmosios pažintys su kompiuterine technika, MS-DOS aplinka, Pascal programavimu ir sistemų sandara." data-en="First encounters with computer technology, MS-DOS environment, Pascal programming, and system architecture.">Pirmosios pažintys su kompiuterine technika, MS-DOS aplinka, Pascal programavimu ir sistemų sandara.</div>
-    </div>
-    <div class="evo-step">
-        <div class="evo-year" data-lt="Evoliucijos dešimtmečiai" data-en="Decades of Evolution">Evoliucijos dešimtmečiai</div>
-        <div class="evo-desc" data-lt="Perėjimas per visas pagrindines Windows eros laidas – nuo Windows 95/98 iki XP ir modernių sprendimų." data-en="Transition through all major Windows eras – from Windows 95/98 to XP and modern solutions.">Perėjimas per visas pagrindines Windows eros laidas – nuo Windows 95/98 iki XP ir modernių sprendimų.</div>
-    </div>
-    <div class="evo-step">
-        <div class="evo-year" data-lt="Šiandien — Windows 10 & 11" data-en="Today — Windows 10 & 11">Šiandien — Windows 10 & 11</div>
-        <div class="evo-desc" data-lt="Profesionali diagnostika, spartus sistemų optimizavimas ir patikimas kompiuterių remontas Šilutėje." data-en="Professional diagnostics, rapid system optimization, and reliable computer repair in Šilutė.">Profesionali diagnostika, spartus sistemų optimizavimas ir patikimas kompiuterių remontas Šilutėje.</div>
-    </div>
+<div class="timeline-grid">
+<div class="timeline-card">
+<span class="timeline-year">1988 m. Pradžia</span>
+<h3>Pirmasis kontaktas</h3>
+<p>Pažintis su kompiuterine technika dar mokyklos suole, gilinimasis į MS-DOS pagrindus ir pirmąją skaitmeninę logiką.</p>
 </div>
 
-<h3 data-lt="Mano principas paprastas" data-en="My principle is simple">Mano principas paprastas</h3>
-<p data-lt="Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Man svarbu, kad klientas žinotų, už ką moka, todėl visada iš anksto suderiname darbus ir kainas. Visiems atliktiems programiniams darbams suteikiu 30 dienų garantiją." data-en="We first look for the cause of the problem, not a reason to sell a new computer. It's important to me that the client knows what they are paying for, so we always agree on work and prices in advance. I provide a 30-day warranty for all completed software services.">Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Man svarbu, kad klientas žinotų, už ką moka, todėl visada iš anksto suderiname darbus ir kainas. Visiems atliktiems programiniams darbams suteikiu 30 dienų garantiją.</p>
-
-<p data-lt="Šiandien „PC IT Šilutė“ – tai nauja veikla, paremta ilgamete patirtimi. Kompiuteriai tvarkomi lokaliai mūsų dirbtuvėse, su galimybe atvežti ar susitarus parvežti atgal. Jei jūsų kompiuteris pradėjo ožiuotis – žinokite, kur kreiptis." data-en="Today 'PC IT Šilutė' is a new activity based on long-term experience. Computers are repaired locally in our workshop, with pickup or return delivery by agreement. If your computer is acting up – you know where to turn.">Šiandien „PC IT Šilutė“ – tai nauja veikla, paremta ilgamete patirtimi. Kompiuteriai tvarkomi lokaliai mūsų dirbtuvėse, su galimybe atvežti ar susitarus parvežti atgal. Jei jūsų kompiuteris pradėjo ožiuotis – žinokite, kur kreiptis.</p>
-
-<div style="margin-top: 30px; text-align: center;">
-    <a href="index.html#uzklausa" class="btn" data-lt="📝 Registruoti gedimą" data-en="📝 Register a fault">📝 Registruoti gedimą</a>
+<div class="timeline-card">
+<span class="timeline-year">Evoliucija</span>
+<h3>Sistemų patirtis</h3>
+<p>Perėjimas per visas Windows operacinių sistemų kartas, gilus aparatinės bei programinės įrangos derinimas ir nuolatinis tobulėjimas.</p>
 </div>
+
+<div class="timeline-card">
+<span class="timeline-year">Šiandien</span>
+<h3>PC IT Šilutė</h3>
+<p>Specializuotos vietinės paslaugos Šilutėje: švarus Windows diegimas, optimizavimas, gedimų šalinimas ir nuotolinė pagalba.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Pagrindinis principas -->
+<section class="dark-sec">
+<div class="wrap">
+<div class="principle-box">
+<i class="fa-solid fa-shield-heart"></i>
+<h3>Mūsų darbo principas</h3>
+<p>Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį ar brangias paslaugas. Jei neturite laiko vežti į vietą – susitarus galime parvežti atgal, o pagalba pasiekiama net ir savaitgaliais.</p>
+</div>
+</div>
+</section>
+
+<!-- Kontaktai -->
+<section class="contact">
+<div class="wrap">
+<h2 class="title" style="color:#fff;">Turite klausimų ar norite pasikonsultuoti?</h2>
+<p style="color:var(--text-muted); margin:10px auto 26px; font-size:18px;">Susisiekite tiesiogiai per Messenger arba užpildykite užklausos formą.</p>
+<div>
+    <a class="btn" style="background:#0084FF; color:#fff;" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer">💬 Rašyti Messenger</a>
+    <a class="btn alt" href="index.html#uzklausa">📝 Pildyti užklausą</a>
 </div>
 </div>
 </section>
 </main>
 
-<footer data-lt="© 2026 PC IT Šilutė ir apylinkės • Kompiuterių remontas vietoje" data-en="© 2026 PC IT Šilutė & surroundings • Local Computer Repair">© 2026 PC IT Šilutė ir apylinkės • Kompiuterių remontas vietoje</footer>
+<footer>
+<div class="wrap">
+<p>© 2026 PC IT Šilutė. Visos teisės saugomos.</p>
+</div>
+</footer>
 
 <script>
-function setLang(lang, save = true) {
-  if (save) { localStorage.setItem('preferred_lang', lang); }
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-  const activeBtn = lang === 'lt' ? document.querySelector('button[onclick*="lt"]') : document.querySelector('button[onclick*="en"]');
-  if(activeBtn) activeBtn.classList.add('active');
-  document.querySelectorAll('[data-lt]').forEach(el => {
-    el.innerHTML = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
-  });
+function setLang(lang) {
+    localStorage.setItem('preferred_lang', lang);
 }
-window.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('preferred_lang');
-  if (savedLang === 'en') { setLang('en', false); } else { setLang('lt', false); }
-});
 </script>
+
 </body>
 </html>
