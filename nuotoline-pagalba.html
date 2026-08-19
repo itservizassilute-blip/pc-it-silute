@@ -61,7 +61,15 @@ section{padding:70px 0 90px}
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:14px 26px;border-radius:12px;cursor:pointer;border:none;transition:0.3s}
 .btn:hover{transform:translateY(-3px);filter:brightness(1.1)}
 
-@media(max-width:768px){ .steps-grid{grid-template-columns:1fr} nav ul{display:none} }
+.video-wrapper{margin-top:30px;text-align:center}
+.video-wrapper h3{font-size:18px;margin-bottom:15px;color:var(--text-muted)}
+.video-frame{position:relative;width:100%;padding-bottom:56.25%;height:0;border-radius:16px;overflow:hidden;border:1px solid #1e3a5f;box-shadow:0 15px 35px rgba(0,0,0,0.4)}
+.video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+.back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:30px}
+.back-link:hover{color:var(--accent)}
+
+@media(max-width:768px){ .steps-grid{grid-template-columns:1fr} nav ul{display:none} .remote-container{padding:20px} }
 </style>
 </head>
 <body>
@@ -104,13 +112,33 @@ section{padding:70px 0 90px}
     </div>
 
     <div class="download-box">
-        <a href="https://github.com/rustdesk/rustdesk/releases/download/1.3.6/rustdesk-1.3.6-x86_64.exe" class="btn"><i class="fa-solid fa-download"></i> <span data-lt="Atsisiųsti „RustDesk“" data-en="Download RustDesk">Atsisiųsti „RustDesk“</span></a>
+        <a href="https://github.com/rustdesk/rustdesk/releases/download/1.3.6/rustdesk-1.3.6-x86_64.exe" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-download"></i> <span data-lt="Atsisiųsti „RustDesk“" data-en="Download RustDesk">Atsisiųsti „RustDesk“</span></a>
         <p style="margin-top:15px; font-size:14px; color:var(--text-muted);" data-lt="Kaina: nuo 15 € (prieš darbą suderinama)." data-en="Price: from €15 (agreed before work).">Kaina: nuo 15 € (prieš darbą suderinama).</p>
     </div>
+
+    <div class="video-wrapper">
+        <h3 data-lt="Kaip naudotis „RustDesk“ (vaizdo instrukcija)" data-en="How to use RustDesk (Video Guide)">Kaip naudotis „RustDesk“ (vaizdo instrukcija)</h3>
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/kcSB6jatr_s" title="How to Use RustDesk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> <span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to main page">Grįžti į pagrindinį puslapį</span>
+        </a>
+    </div>
+
 </div>
 </div>
 </section>
 </main>
+
+<footer>
+<div class="wrap">
+<p>© 2026 PC IT Šilutė. Visos teisės saugomos.</p>
+</div>
+</footer>
 
 <script>
 function setLang(lang, save = true) {
