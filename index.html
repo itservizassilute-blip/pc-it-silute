@@ -100,8 +100,9 @@ section{padding:90px 0}
 
 .review-form-box{max-width:700px;margin:0 auto;background:var(--card-bg);border:1px solid #1e3a5f;padding:45px;border-radius:30px;backdrop-filter:blur(10px)}
 
-.video-container{display:flex;justify-content:center;margin-top:20px}
-.video-container iframe{max-width:100%;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,0.4)}
+.video-container{display:flex;justify-content:center;margin-top:20px;width:100%}
+.video-responsive{position:relative;width:100%;max-width:560px;aspect-ratio:560/314;}
+.video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;overflow:hidden;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,0.4)}
 
 .help-box{max-width:700px;margin:0 auto 30px;background:#0ea5e911;border:1px solid #0ea5e944;padding:25px 35px;border-radius:20px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .help-box p{color:var(--text);font-weight:600;font-size:16px;margin:0}
@@ -354,7 +355,9 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <h2 class="title" data-lt="Darbo užkulisiai ir vaizdo įrašai" data-en="Behind the Scenes & Videos">Darbo užkulisiai ir vaizdo įrašai</h2>
 <p class="subtitle" data-lt="Pažiūrėkite trumpą vaizdo įrašą iš mūsų kasdienio darbo." data-en="Watch a short video from our daily work.">Pažiūrėkite trumpą vaizdo įrašą iš mūsų kasdienio darbo.</p>
 <div class="video-container">
-<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F904624699392411%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+<div class="video-responsive">
+<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F904624699392411%2F&show_text=false&width=560&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+</div>
 </div>
 </div>
 </section>
@@ -448,7 +451,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <div class="wrap about-grid">
 <div>
 <h2 class="title" style="text-align:left; color:#fff;" data-lt="Kodėl verta kreiptis Šilutėje?" data-en="Why choose us in Šilutė?">Kodėl verta kreiptis Šilutėje?</h2>
-<p style="color:var(--text-muted); font-size:16px;" data-lt="Kompiuteris tvarkomas kruopščiai Šilutėje (patirtis technologijų srityje – nuo 1988 metų). Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Jei neturite laiko vežti, susitarus galime parvežti jį atgal, taip pat galimas aptarnavimas ir savaitgaliais." data-en="The computer is carefully repaired in Šilutė (experience in technology since 1988). We first look for the cause of the problem, not a reason to sell a new computer. If you don't have time to transport it, we can bring it back by agreement, and weekend service is also possible.">Kompiuteris tvarkomas kruopščiai Šilutėje (patirtis technologijų srityje – nuo 1988 metų). Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Jei neturite laiko vežti, susitarus galime parvežti jį atgal, taip pat galimas aptarnavimas ir savaitgaliais.</p>
+<p style="color:var(--text-muted); font-size:16px;" data-lt="Kompiuteris tvarkomas kruopščiai Šilutėje (asmeninė meistro patirtis technologijose – nuo 1988 m., dar nuo mokyklos suolo). Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Jei neturite laiko vežti, susitarus galime parvežti jį atgal, taip pat galimas aptarnavimas ir savaitgaliais." data-en="The computer is carefully repaired in Šilutė (personal master's experience in technology since 1988, starting from school days). We first look for the cause of the problem, not a reason to sell a new computer. If you don't have time to transport it, we can bring it back by agreement, and weekend service is also possible.">Kompiuteris tvarkomas kruopščiai Šilutėje (asmeninė meistro patirtis technologijose – nuo 1988 m., dar nuo mokyklos suolo). Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį. Jei neturite laiko vežti, susitarus galime parvežti jį atgal, taip pat galimas aptarnavimas ir savaitgaliais.</p>
 <ul class="checks">
 <li style="color:var(--text);" data-lt="Patikimas remontas Šilutėje, vietoje" data-en="Reliable repair locally in Šilutė"><i class="fa-solid fa-check"></i> <span>Patikimas remontas Šilutėje, vietoje</span></li>
 <li style="color:var(--text);" data-lt="30 d. garantija atliktiems darbams" data-en="30-day warranty on completed work"><i class="fa-solid fa-check"></i> <span>30 d. garantija atliktiems darbams</span></li>
