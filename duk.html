@@ -209,7 +209,7 @@ section{padding:60px 0 90px}
 <i class="fa-solid fa-chevron-down"></i>
 </button>
 <div class="accordion-content">
-<p data-lt="Taip! Jei kompiuteris įsijungia ir turi interneto ryšį, nesudėtingas programines problemas ar nustatymus galime sut Infatti per atstumą per „RustDesk“ programą." data-en="Yes! If the computer turns on and has internet connection, we can fix minor software issues or settings remotely via RustDesk.">Taip! Jei kompiuteris įsijungia ir turi interneto ryšį, nesudėtingas programines problemas ar nustatymus galime sutvarkyti per atstumą per „RustDesk“ programą.</p>
+<p data-lt="Taip! Jei kompiuteris įsijungia ir turi interneto ryšį, nesudėtingas programines problemas ar nustatymus galime sutvarkyti per atstumą per „RustDesk“ programą." data-en="Yes! If the computer turns on and has internet connection, we can fix minor software issues or settings remotely via RustDesk.">Taip! Jei kompiuteris įsijungia ir turi interneto ryšį, nesudėtingas programines problemas ar nustatymus galime sutvarkyti per atstumą per „RustDesk“ programą.</p>
 </div>
 </div>
 
@@ -254,20 +254,11 @@ section{padding:60px 0 90px}
 </footer>
 
 <script>
-// Akordeono funkcionalumas
 document.querySelectorAll('.accordion-header').forEach(header => {
     header.addEventListener('click', () => {
         const accordion = header.parentElement;
         const content = accordion.querySelector('.accordion-content');
         
-        // Uždarom kitus (nebūtina, bet patogu)
-        // document.querySelectorAll('.accordion').forEach(item => {
-        //     if(item !== accordion) {
-        //         item.classList.remove('active');
-        //         item.querySelector('.accordion-content').style.maxHeight = null;
-        //     }
-        // });
-
         accordion.classList.toggle('active');
         if (accordion.classList.contains('active')) {
             content.style.maxHeight = content.scrollHeight + "px";
