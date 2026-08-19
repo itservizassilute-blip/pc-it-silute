@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://itservizassilute-blip.github.io/pc-it-silute/sitemap.xml
