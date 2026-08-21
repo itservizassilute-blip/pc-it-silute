@@ -89,7 +89,7 @@ section{padding:90px 0}
 .card .ico{font-size:36px;color:var(--accent);margin-bottom:18px;display:block}
 .card h3{font-size:20px;margin-bottom:10px;font-weight:700}
 .card p{color:#475569;margin-bottom:20px;font-size:15px}
-.price{font-weight:800;color:var(--accent);background:#0ea5e90f;padding:8px 14px;border-radius:10px;display:inline-block;font-size:14px}
+.price-badge{font-weight:700;color:#0369a1;background:#0ea5e911;padding:8px 14px;border-radius:10px;display:inline-block;font-size:14px;border:1px solid #0ea5e933}
 .card-guarantee{display:block;font-size:12px;color:#0369a1;font-weight:700;margin-top:8px}
 
 .deep-clean-feature {
@@ -104,49 +104,14 @@ section{padding:90px 0}
     align-items: center;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
-.deep-clean-content h3 {
-    font-size: 26px;
-    color: #fff;
-    margin-bottom: 15px;
-    font-weight: 800;
-}
-.deep-clean-content p {
-    color: var(--text-muted);
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-.deep-clean-list {
-    list-style: none;
-    margin-bottom: 25px;
-}
-.deep-clean-list li {
-    color: var(--text);
-    font-size: 15px;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.deep-clean-list li i {
-    color: var(--accent);
-}
-.deep-clean-img-wrap {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid #1e3a5f;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-    background: #020817;
-}
-.deep-clean-img-wrap img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease;
-}
-.deep-clean-img-wrap:hover img {
-    transform: scale(1.03);
-}
+.deep-clean-content h3 { font-size: 26px; color: #fff; margin-bottom: 15px; font-weight: 800; }
+.deep-clean-content p { color: var(--text-muted); font-size: 16px; margin-bottom: 20px; }
+.deep-clean-list { list-style: none; margin-bottom: 25px; }
+.deep-clean-list li { color: var(--text); font-size: 15px; margin: 10px 0; display: flex; align-items: center; gap: 12px; }
+.deep-clean-list li i { color: var(--accent); }
+.deep-clean-img-wrap { position: relative; border-radius: 20px; overflow: hidden; border: 1px solid #1e3a5f; box-shadow: 0 15px 35px rgba(0,0,0,0.4); background: #020817; }
+.deep-clean-img-wrap img { width: 100%; height: auto; display: block; transition: transform 0.5s ease; }
+.deep-clean-img-wrap:hover img { transform: scale(1.03); }
 
 .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .process-card{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:24px;padding:35px;backdrop-filter:blur(10px);transition:0.4s}
@@ -220,6 +185,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </a>
 <ul>
 <li><a href="#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
+<li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
 <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
 <li><a href="#remontas-vietoje" data-lt="Kaip veikia" data-en="How it works">Kaip veikia</a></li>
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
@@ -335,8 +301,8 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 
 <section id="paslaugos" class="light">
 <div class="wrap">
-<h2 class="title" data-lt="Paslaugos ir kainoraštis" data-en="Services and Pricing">Paslaugos ir kainoraštis</h2>
-<p class="subtitle" data-lt="Kompiuterių tvarkymo paslaugos Šilutėje. Pristatymas atgal – susitarus." data-en="Computer services in Šilutė with return delivery option.">Kompiuterių tvarkymo paslaugos Šilutėje. Pristatymas atgal – susitarus.</p>
+<h2 class="title" data-lt="Mūsų teikiamos paslaugos" data-en="Our Services">Mūsų teikiamos paslaugos</h2>
+<p class="subtitle" data-lt="Profesionali pagalba jūsų kompiuteriui Šilutėje. Detalesnį kainoraštį rasite paspaudę žemiau." data-en="Professional help for your computer in Šilutė. Find detailed pricing below.">Profesionali pagalba jūsų kompiuteriui Šilutėje. Detalesnį kainoraštį rasite paspaudę žemiau.</p>
 <div class="cards">
 <div class="card">
 <div>
@@ -345,7 +311,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <p data-lt="Švarus Windows įdiegimas su naujausiomis tvarkyklėmis (draiveriais), biuro programomis, naršykle, PDF skaitytuvu, archyvatoriumi bei medijos grotuvu." data-en="Clean Windows installation with latest drivers, office applications, browser, PDF reader, archiver and media player.">Švarus Windows įdiegimas su naujausiomis tvarkyklėmis (draiveriais), biuro programomis, naršykle, PDF skaitytuvu, archyvatoriumi bei medijos grotuvu.</p>
 </div>
 <div>
-    <span class="price" data-lt="Nuo 30 €" data-en="From €30">Nuo 30 €</span>
+    <span class="price-badge" data-lt="Individualus derinimas" data-en="Individual setup">Individualus derinimas</span>
     <span class="card-guarantee" data-lt="✓ 30 d. garantija atliktiems darbams" data-en="✓ 30-day work warranty">✓ 30 d. garantija atliktiems darbams</span>
 </div>
 </div>
@@ -356,7 +322,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <p data-lt="Pašaliname nereikalingas programas, sutvarkome paleistį ir pagreitiname darbą." data-en="We remove unnecessary programs, fix startup and speed up performance.">Pašaliname nereikalingas programas, sutvarkome paleistį ir pagreitiname darbą.</p>
 </div>
 <div>
-    <span class="price" data-lt="Nuo 15 €" data-en="From €15">Nuo 15 €</span>
+    <span class="price-badge" data-lt="Individualus derinimas" data-en="Individual setup">Individualus derinimas</span>
     <span class="card-guarantee" data-lt="✓ 30 d. garantija atliktiems darbams" data-en="✓ 30-day work warranty">✓ 30 d. garantija atliktiems darbams</span>
 </div>
 </div>
@@ -367,7 +333,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <p data-lt="Ieškome priežasties, kodėl kompiuteris lėtėja, stringa ar veikia nestabiliai." data-en="We look for the reason why the computer slows down, freezes or behaves unstably.">Ieškome priežasties, kodėl kompiuteris lėtėja, stringa ar veikia nestabiliai.</p>
 </div>
 <div>
-    <span class="price" data-lt="Nuo 15 €" data-en="From €15">Nuo 15 €</span>
+    <span class="price-badge" data-lt="Greitas įvertinimas" data-en="Quick evaluation">Greitas įvertinimas</span>
     <span class="card-guarantee" data-lt="✓ Tikslus gedimo nustatymas" data-en="✓ Precise fault detection">✓ Tikslus gedimo nustatymas</span>
 </div>
 </div>
@@ -378,7 +344,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <p data-lt="Pagalba bandant atkurti netyčia ištrintas nuotraukas, dokumentus ar failus." data-en="Help trying to recover accidentally deleted photos, documents or files.">Pagalba bandant atkurti netyčia ištrintas nuotraukas, dokumentus ar failus.</p>
 </div>
 <div>
-    <span class="price" data-lt="Nuo 15 €" data-en="From €15">Nuo 15 €</span>
+    <span class="price-badge" data-lt="Saugus atkūrimas" data-en="Secure recovery">Saugus atkūrimas</span>
     <span class="card-guarantee" data-lt="✓ Asmens duomenų konfidencialumas" data-en="✓ Personal data confidentiality">✓ Asmens duomenų konfidencialumas</span>
 </div>
 </div>
@@ -389,7 +355,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <p data-lt="Reikalingų papildomų programų, tvarkyklių ir komponentų sutvarkymas." data-en="Setting up necessary additional software, drivers and components.">Reikalingų papildomų programų, tvarkyklių ir komponentų sutvarkymas.</p>
 </div>
 <div>
-    <span class="price" data-lt="Nuo 15 €" data-en="From €15">Nuo 15 €</span>
+    <span class="price-badge" data-lt="Pagal poreikį" data-en="As needed">Pagal poreikį</span>
     <span class="card-guarantee" data-lt="✓ 30 d. garantija atliktiems darbams" data-en="✓ 30-day work warranty">✓ 30 d. garantija atliktiems darbams</span>
 </div>
 </div>
@@ -400,10 +366,15 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     <p data-lt="Skubi pagalba per atstumą per „RustDesk“ programą, kai nereikia fizinio įsikišimo." data-en="Urgent remote assistance via RustDesk when physical intervention is not needed.">Skubi pagalba per atstumą per „RustDesk“ programą, kai nereikia fizinio įsikišimo.</p>
 </div>
 <div>
-    <span class="price" data-lt="Nuo 15 €" data-en="From €15">Nuo 15 €</span>
+    <span class="price-badge" data-lt="Nuotoliniu būdu" data-en="Remotely">Nuotoliniu būdu</span>
     <a href="nuotoline-pagalba.html" style="color:var(--accent); font-weight:700; display:block; margin-top:8px;" data-lt="→ Plačiau apie nuotolinę pagalbą" data-en="→ Learn more about remote support">→ Plačiau apie nuotolinę pagalbą</a>
 </div>
 </div>
+</div>
+
+<!-- Specialus mygtukas į kainoraščio polapį -->
+<div style="text-align:center; margin-top:40px;">
+    <a href="kainos.html" class="btn" style="background:#0f172a; color:#fff; border:1px solid #1e3a5f;" data-lt="📋 Peržiūrėti visą kainoraštį" data-en="📋 View Full Price List">📋 Peržiūrėti visą kainoraštį</a>
 </div>
 
 <!-- Išplėsta valymo paslauga (SEO atskiras blokas) -->
@@ -422,7 +393,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <li data-lt="✓ Temperatūrų bei aušinimo sistemos veikimo patikra" data-en="✓ Temperature and cooling system check"><i class="fa-solid fa-check"></i> <span>Temperatūrų bei aušinimo sistemos veikimo patikra</span></li>
 </ul>
 <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-    <span class="price" style="font-size: 16px; padding: 10px 18px;" data-lt="Kaina: Nuo 20 €" data-en="Price: From €20">Kaina: Nuo 20 €</span>
+    <a href="kainos.html" style="color:var(--accent); font-weight:700;" data-lt="Sužinoti valymo kainą →" data-en="Check cleaning price →">Sužinoti valymo kainą →</a>
     <a href="#uzklausa" class="btn alt" style="padding: 10px 20px; font-size: 14px;" data-lt="Užsisakyti paslaugą" data-en="Book service">Užsisakyti paslaugą</a>
 </div>
 </div>
