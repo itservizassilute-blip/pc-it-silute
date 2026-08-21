@@ -92,8 +92,62 @@ section{padding:90px 0}
 .price{font-weight:800;color:var(--accent);background:#0ea5e90f;padding:8px 14px;border-radius:10px;display:inline-block;font-size:14px}
 .card-guarantee{display:block;font-size:12px;color:#0369a1;font-weight:700;margin-top:8px}
 
-.service-img-wrap{margin: 30px 0 50px 0; display: flex; justify-content: center;}
-.service-img-wrap img{width: 100%; max-width: 650px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.08);}
+/* Profesionali išplėsta valymo paslaugų sekcija su integruotu vizualu */
+.deep-clean-feature {
+    background: linear-gradient(135deg, #071a30, #031022);
+    border: 1px solid #1e3a5f;
+    border-radius: 28px;
+    padding: 45px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.deep-clean-content h3 {
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+.deep-clean-content p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.deep-clean-list {
+    list-style: none;
+    margin-bottom: 25px;
+}
+.deep-clean-list li {
+    color: var(--text);
+    font-size: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.deep-clean-list li i {
+    color: var(--accent);
+}
+.deep-clean-img-wrap {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #1e3a5f;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    background: #020817;
+}
+.deep-clean-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.deep-clean-img-wrap:hover img {
+    transform: scale(1.03);
+}
 
 .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .process-card{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:24px;padding:35px;backdrop-filter:blur(10px);transition:0.4s}
@@ -136,6 +190,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     .cards, .process-grid{grid-template-columns:repeat(2,1fr)}
     .pain-grid{grid-template-columns:repeat(2,1fr)}
     .about-grid{grid-template-columns:1fr}
+    .deep-clean-feature{grid-template-columns:1fr}
     .guarantee-grid{grid-template-columns:repeat(2,1fr);gap:15px}
 }
 .mobile-cta{display:none}
@@ -308,17 +363,6 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </div>
 <div class="card">
 <div>
-    <i class="fa-solid fa-temperature-arrow-down ico"></i>
-    <h3 data-lt="Kompiuterio valymas ir termo pastos keitimas" data-en="Computer Cleaning & Thermal Paste Replacement">Kompiuterio valymas ir termo pastos keitimas</h3>
-    <p data-lt="Kruopštus kompiuterio valymas nuo dulkių, aušinimo sistemos ir ventiliatorių išvalymas bei procesoriaus (CPU) termo pastos keitimas. Patikriname aušinimo sistemos veikimą ir temperatūras." data-en="Thorough computer dust cleaning, cooling system and fan cleaning, and CPU thermal paste replacement. We check cooling system performance and temperatures.">Kruopštus kompiuterio valymas nuo dulkių, aušinimo sistemos ir ventiliatorių išvalymas bei procesoriaus (CPU) termo pastos keitimas. Patikriname aušinimo sistemos veikimą ir temperatūras.</p>
-</div>
-<div>
-    <span class="price" data-lt="Nuo 20 €" data-en="From €20">Nuo 20 €</span>
-    <span class="card-guarantee" data-lt="✓ Aušinimo sistemos patikra" data-en="✓ Cooling system check">✓ Aušinimo sistemos patikra</span>
-</div>
-</div>
-<div class="card">
-<div>
     <i class="fa-solid fa-screwdriver-wrench ico"></i>
     <h3 data-lt="Gedimų diagnostika" data-en="Fault Diagnostics">Gedimų diagnostika</h3>
     <p data-lt="Ieškome priežasties, kodėl kompiuteris lėtėja, stringa ar veikia nestabiliai." data-en="We look for the reason why the computer slows down, freezes or behaves unstably.">Ieškome priežasties, kodėl kompiuteris lėtėja, stringa ar veikia nestabiliai.</p>
@@ -363,9 +407,29 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </div>
 </div>
 
-<!-- Sukurtas vizualas SEO ir vartotojams prie paslaugų -->
-<div class="service-img-wrap">
-    <img src="pc-valymas.png" alt="Kompiuterio dulkių valymas ir CPU termo pastos keitimas Šilutėje">
+<!-- Išplėsta valymo paslauga ir profesionaliai įkomponuotas vizualas (tamsaus stiliaus blokas) -->
+<div class="deep-clean-feature">
+<div class="deep-clean-content">
+<div class="badge" style="margin-bottom:15px;" data-lt="⚙️ PROCESORIAUS APSAUGA IR AUŠINIMAS" data-en="⚙️ CPU PROTECTION & COOLING">
+    <i class="fa-solid fa-temperature-arrow-down"></i> <span>⚙️ PROCESORIAUS APSAUGA IR AUŠINIMAS</span>
+</div>
+<h3 data-lt="Kompiuterio valymas ir termo pastos keitimas" data-en="Computer Cleaning & Thermal Paste Replacement">Kompiuterio valymas ir termo pastos keitimas</h3>
+<p data-lt="Kruopštus kompiuterio išvalymas nuo dulkių, aušinimo sistemos ir ventiliatorių atgaivinimas bei kokybiškos procesoriaus (CPU) termo pastos keitimas. Tai apsaugo kompiuterį nuo perkaitimo, išjunginėjimo ir triukšmo." data-en="Thorough computer cleaning from dust, cooling system and fan restoration, and high-quality CPU thermal paste replacement. This protects your computer from overheating, shutdowns, and excessive noise.">
+    Kruopštus kompiuterio išvalymas nuo dulkių, aušinimo sistemos ir ventiliatorių atgaivinimas bei kokybiškos procesoriaus (CPU) termo pastos keitimas. Tai apsaugo kompiuterį nuo perkaitimo, išjunginėjimo ir triukšmo.
+</p>
+<ul class="deep-clean-list">
+<li data-lt="✓ Pilnas dulkių pašalinimas nuo aušintuvų ir radiatorių" data-en="✓ Full dust removal from fans and heatsinks"><i class="fa-solid fa-check"></i> <span>Pilnas dulkių pašalinimas nuo aušintuvų ir radiatorių</span></li>
+<li data-lt="✓ Šilumai laidžios pastos (termo pastos) keitimas" data-en="✓ Thermal paste replacement"><i class="fa-solid fa-check"></i> <span>Šilumai laidžios pastos (termo pastos) keitimas</span></li>
+<li data-lt="✓ Temperatūrų bei aušinimo sistemos veikimo patikra" data-en="✓ Temperature and cooling system check"><i class="fa-solid fa-check"></i> <span>Temperatūrų bei aušinimo sistemos veikimo patikra</span></li>
+</ul>
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+    <span class="price" style="font-size: 16px; padding: 10px 18px;" data-lt="Kaina: Nuo 20 €" data-en="Price: From €20">Kaina: Nuo 20 €</span>
+    <a href="#uzklausa" class="btn alt" style="padding: 10px 20px; font-size: 14px;" data-lt="Užsisakyti paslaugą" data-en="Book service">Užsisakyti paslaugą</a>
+</div>
+</div>
+<div class="deep-clean-img-wrap">
+<img src="pc-valymas.png" alt="Kompiuterio dulkių valymas ir CPU termo pastos keitimas Šilutėje">
+</div>
 </div>
 
 </div>
