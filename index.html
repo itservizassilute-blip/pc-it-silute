@@ -404,12 +404,12 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <form action="https://formspree.io/f/mkjwjqvd" method="POST">
 <div class="form-group">
 <label data-lt="Jūsų vardas:" data-en="Your name:">Jūsų vardas:</label>
-<input type="text" name="vardas" required autocomplete="name" placeholder="Įveskite savo vardą">
+<input type="text" name="vardas" required autocomplete="name" placeholder="Įveskite savo vardą" data-lt="Įveskite savo vardą" data-en="Enter your name">
 </div>
 
 <div class="form-group">
 <label data-lt="Tel. numeris arba el. paštas:" data-en="Phone number or email:">Tel. numeris arba el. paštas:</label>
-<input type="text" name="kontaktai" required autocomplete="email" placeholder="Pvz.: +37060000000 arba el. paštas">
+<input type="text" name="kontaktai" required autocomplete="email" placeholder="Pvz.: +37060000000 arba el. paštas" data-lt="Pvz.: +37060000000 arba el. paštas" data-en="E.g.: +37060000000 or email">
 </div>
 
 <div class="form-group">
@@ -426,7 +426,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 
 <div class="form-group">
 <label data-lt="Papildomas gedimo aprašymas:" data-en="Additional fault description:">Papildomas gedimo aprašymas:</label>
-<textarea name="aprasymas" placeholder="Trumpai aprašykite, kas nutiko su kompiuteriu..."></textarea>
+<textarea name="aprasymas" placeholder="Trumpai aprašykite, kas nutiko su kompiuteriu..." data-lt="Trumpai aprašykite, kas nutiko su kompiuteriu..." data-en="Briefly describe what happened to the computer..."></textarea>
 </div>
 
 <button type="submit" class="btn" style="width:100%; justify-content:center; padding:16px; font-size:17px;" data-lt="🚀 Siųsti užklausą" data-en="🚀 Send Inquiry">🚀 Siųsti užklausą</button>
@@ -485,7 +485,9 @@ function setLang(lang, save = true) {
 
     document.querySelectorAll('[data-lt]').forEach(el => {
         const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        if (el.tagName === 'INPUT' && el.type !== 'checkbox') {
+            el.placeholder = langText;
+        } else if (el.tagName === 'TEXTAREA') {
             el.placeholder = langText;
         } else {
             const icon = el.querySelector('i');
