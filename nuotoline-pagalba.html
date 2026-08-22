@@ -11,7 +11,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -35,20 +35,21 @@ nav{height:80px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px}
 .brand img{width:48px;height:48px;object-fit:contain}
 .brand b{color:var(--accent)}
-nav ul{display:flex;gap:20px;list-style:none;font-weight:700;align-items:center;font-size:15px}
-nav a{color: var(--text);opacity: 0.9;}
+
+nav ul{display:flex;gap:26px;list-style:none;font-weight:700;align-items:center;font-size:16px}
+nav a{color: var(--text);opacity: 0.9;white-space:nowrap;}
 nav a:hover{color:var(--accent);opacity: 1;}
 
-.lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px}
+.lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px;margin-left:6px}
 .lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:13px;padding:5px 10px;border-radius:7px;transition:0.3s}
 .lang-btn.active{background:var(--accent);color:var(--bg)}
 
-section{padding:70px 0 90px}
-.page-header{text-align:center;max-width:800px;margin:0 auto 45px}
-.page-header h1{font-size:clamp(32px, 4.5vw, 48px);font-weight:800;margin-bottom:15px}
+section{padding:80px 0}
+.page-header{text-align:center;max-width:800px;margin:0 auto 50px}
+.page-header h1{font-size:38px;font-weight:800;margin-bottom:12px}
 .page-header p{font-size:18px;color:var(--text-muted)}
 
-.remote-container{max-width:850px;margin:0 auto;background:var(--card-bg);border:1px solid #1e3a5f;border-radius:28px;padding:45px;backdrop-filter:blur(10px)}
+.remote-container{max-width:900px;margin:0 auto;background:var(--card-bg);border:1px solid #1e3a5f;border-radius:24px;padding:45px;backdrop-filter:blur(10px)}
 
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
 .step-card{background:#031022;border:1px solid #1e3a5f;border-radius:20px;padding:24px;text-align:center}
@@ -57,10 +58,11 @@ section{padding:70px 0 90px}
 .step-card p{font-size:14px;color:var(--text-muted)}
 
 .info-box{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:20px;padding:25px;margin-bottom:30px}
-.info-box h3{color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.info-box h3{color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:10px;font-size:18px}
+.info-box p{font-size:15px;color:var(--text-muted)}
 
 .download-box{text-align:center;background:linear-gradient(145deg, #071a30, #031226);border:1px solid #1e3a5f;border-radius:20px;padding:30px;margin-bottom:30px}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:14px 26px;border-radius:12px;cursor:pointer;border:none;transition:0.3s}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:14px 24px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s}
 .btn:hover{transform:translateY(-3px);filter:brightness(1.1)}
 
 .video-wrapper{margin-top:30px;text-align:center}
@@ -68,31 +70,41 @@ section{padding:70px 0 90px}
 .video-frame{position:relative;width:100%;padding-bottom:56.25%;height:0;border-radius:16px;overflow:hidden;border:1px solid #1e3a5f;box-shadow:0 15px 35px rgba(0,0,0,0.4)}
 .video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 
-.back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:30px}
+.back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:30px;font-size:15px}
 .back-link:hover{color:var(--accent)}
 
-@media(max-width:768px){ .steps-grid{grid-template-columns:1fr} nav ul{display:none} .remote-container{padding:20px} }
+@media(max-width:960px){
+    nav ul{display:none}
+    .steps-grid{grid-template-columns:1fr}
+    .remote-container{padding:25px}
+}
 </style>
 </head>
 <body>
 
 <header>
-<div class="wrap"><nav>
-<a class="brand" href="index.html"><img src="pc-it-logo.png" alt="PC IT"><span>PC <b>IT</b> Šilutė</span></a>
+<div class="wrap">
+<nav>
+<a class="brand" href="index.html">
+<img src="pc-it-logo.png" alt="PC IT">
+<span>PC <b>IT</b> Šilutė</span>
+</a>
 <ul>
 <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
 <li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
 <li><a href="nuotoline-pagalba.html" style="color:var(--accent)" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
-<li><a href="index.html#remontas-vietoje" data-lt="Kaip veikia" data-en="How it works">Kaip veikia</a></li>
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
 <li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
 <li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
-<li><div class="lang-switcher">
+<li>
+<div class="lang-switcher">
 <button class="lang-btn active" onclick="setLang('lt')">LT</button>
 <button class="lang-btn" onclick="setLang('en')">EN</button>
-</div></li>
+</div>
+</li>
 </ul>
-</nav></div>
+</nav>
+</div>
 </header>
 
 <main>
@@ -120,7 +132,7 @@ section{padding:70px 0 90px}
 
     <div class="download-box">
         <a href="https://github.com/rustdesk/rustdesk/releases/download/1.3.6/rustdesk-1.3.6-x86_64.exe" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-download"></i> <span data-lt="Atsisiųsti „RustDesk“ (Nemokamai)" data-en="Download RustDesk (Free)">Atsisiųsti „RustDesk“ (Nemokamai)</span></a>
-        <p style="margin-top:15px; font-size:15px; color:var(--text);" data-lt="<b>Kaina:</b> nuotolinės pagalbos kaina nuo 15 € (prieš pradedant darbą visada suderinama iš anksto)." data-en="<b>Price:</b> remote support from €15 (always agreed in advance before starting work)."><b>Kaina:</b> nuotolinės pagalbos kaina nuo 15 € (prieš pradedant darbą visada suderinama iš anksto).</p>
+        <p style="margin-top:20px; font-size:15px; color:var(--text-muted);" data-lt="<b>Kaina:</b> nuotolinės pagalbos kaina nuo 15 € (prieš pradedant darbą visada suderinama iš anksto)." data-en="<b>Price:</b> remote support from €15 (always agreed in advance before starting work)."><b>Kaina:</b> nuotolinės pagalbos kaina nuo 15 € (prieš pradedant darbą visada suderinama iš anksto).</p>
     </div>
 
     <div class="video-wrapper">
