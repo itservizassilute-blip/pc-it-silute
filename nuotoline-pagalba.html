@@ -35,11 +35,12 @@ nav{height:80px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px}
 .brand img{width:48px;height:48px;object-fit:contain}
 .brand b{color:var(--accent)}
-nav ul{display:flex;gap:22px;list-style:none;font-weight:600;align-items:center}
-nav a:hover{color:var(--accent)}
+nav ul{display:flex;gap:20px;list-style:none;font-weight:700;align-items:center;font-size:15px}
+nav a{color: var(--text);opacity: 0.9;}
+nav a:hover{color:var(--accent);opacity: 1;}
 
 .lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px}
-.lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:12px;padding:5px 10px;border-radius:7px;transition:0.3s}
+.lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:13px;padding:5px 10px;border-radius:7px;transition:0.3s}
 .lang-btn.active{background:var(--accent);color:var(--bg)}
 
 section{padding:70px 0 90px}
@@ -80,8 +81,11 @@ section{padding:70px 0 90px}
 <a class="brand" href="index.html"><img src="pc-it-logo.png" alt="PC IT"><span>PC <b>IT</b> Šilutė</span></a>
 <ul>
 <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
+<li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
 <li><a href="nuotoline-pagalba.html" style="color:var(--accent)" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
+<li><a href="index.html#remontas-vietoje" data-lt="Kaip veikia" data-en="How it works">Kaip veikia</a></li>
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
+<li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
 <li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
 <li><div class="lang-switcher">
 <button class="lang-btn active" onclick="setLang('lt')">LT</button>
@@ -103,7 +107,7 @@ section{padding:70px 0 90px}
     <div class="info-box">
         <h3 data-lt="ℹ️ Kada tinka, o kada ne?" data-en="ℹ️ When is it suitable and when not?">ℹ️ Kada tinka, o kada ne?</h3>
         <p data-lt="<b>Tinka:</b> kai kompiuteris įsijungia, turi internetą, bet veikia lėtai, reikia pašalinti virusus ar suderinti programinę įrangą (iš anksto sutarus laiką).<br><b>Netinka:</b> jei kompiuteris neįsijungia, sugadinta fizinė (aparatinė) dalis, arba jei reikia perrašyti visą Windows operacinę sistemą (šiam procesui reikalinga fizinė kompiuterio apžiūra pas meistrą)." 
-           data-en="<b>Suitable:</b> when the computer turns on, has internet, runs slowly, or needs software setup (by prior appointment).<br><b>Not suitable:</b> if the computer does not turn on, hardware is damaged, or if you need to reinstall the entire Windows operating system (this requires physical inspection at the workshop).">
+            data-en="<b>Suitable:</b> when the computer turns on, has internet, runs slowly, or needs software setup (by prior appointment).<br><b>Not suitable:</b> if the computer does not turn on, hardware is damaged, or if you need to reinstall the entire Windows operating system (this requires physical inspection at the workshop).">
         <b>Tinka:</b> kai kompiuteris įsijungia, turi internetą, bet veikia lėtai, reikia pašalinti virusus ar suderinti programinę įrangą (iš anksto sutarus laiką).<br>
         <b>Netinka:</b> jei kompiuteris neįsijungia, sugadinta fizinė (aparatinė) dalis, arba jei reikia perrašyti visą Windows operacinę sistemą (šiam procesui reikalinga fizinė kompiuterio apžiūra pas meistrą).</p>
     </div>
