@@ -33,7 +33,7 @@
 html{scroll-behavior:smooth;overflow-y:scroll}
 body{font-family:'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit;transition:0.3s}
-.wrap{max-width:900px;margin:auto;padding:0 22px}
+.wrap{max-width:1200px;margin:auto;padding:0 22px}
 
 header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
 nav{height:80px;display:flex;align-items:center;justify-content:space-between}
@@ -103,7 +103,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 
 <main>
 <section>
-<div class="wrap">
+<div class="wrap" style="max-width:900px;">
 <div class="page-header">
 <h1 data-lt="Dažniausiai užduodami klausimai" data-en="Frequently Asked Questions">Dažniausiai užduodami klausimai</h1>
 <p data-lt="Atsakymai į rūpimus klausimus apie kompiuterių remontą, kainas, duomenų saugumą ir atvykimą Šilutėje." data-en="Answers to your questions about computer repair, prices, data security and service in Šilutė.">Atsakymai į rūpimus klausimus apie kompiuterių remontą, kainas, duomenų saugumą ir atvykimą Šilutėje.</p>
@@ -275,7 +275,6 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </footer>
 
 <script>
-document.querySelectorAll('.accordion-header').header = document.querySelectorAll('.accordion-header');
 document.querySelectorAll('.accordion-header').forEach(header => {
     header.addEventListener('click', () => {
         const accordion = header.parentElement;
