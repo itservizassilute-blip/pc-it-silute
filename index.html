@@ -43,7 +43,7 @@ nav{height:80px;display:flex;align-items:center;justify-content:space-between}
 .brand img{width:48px;height:48px;object-fit:contain}
 .brand b{color:var(--accent)}
 
-nav ul{display:flex;gap:26px;list-style:none;font-weight:700;align-items:center;font-size:16px}
+nav ul{display:flex;gap:22px;list-style:none;font-weight:700;align-items:center;font-size:15px}
 nav a{color: var(--text);opacity: 0.9;white-space:nowrap;}
 nav a:hover{color:var(--accent);opacity: 1;}
 
@@ -143,6 +143,9 @@ section{padding:90px 0}
 .contact p{color:var(--text-muted);margin:10px auto 26px;font-size:18px}
 footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
 
+@media(max-width:1024px){
+    nav ul{gap:14px;font-size:14px}
+}
 @media(max-width:960px){
     .cards{grid-template-columns:repeat(2,1fr)}
     .pain-grid{grid-template-columns:repeat(2,1fr)}
@@ -179,6 +182,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <ul>
 <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
 <li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
+<li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
 <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
 <li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
