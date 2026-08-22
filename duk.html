@@ -33,15 +33,15 @@
 html{scroll-behavior:smooth;overflow-y:scroll}
 body{font-family:'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit;transition:0.3s}
-.wrap{max-width:1100px;margin:auto;padding:0 22px}
+.wrap{max-width:900px;margin:auto;padding:0 22px}
 
 header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
-nav{min-height:80px;padding:10px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px;}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px;flex-shrink:0;}
-.brand img{width:42px;height:42px;object-fit:contain}
+nav{height:80px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px;flex-shrink:0;}
+.brand img{width:48px;height:48px;object-fit:contain}
 .brand b{color:var(--accent)}
 
-nav ul{display:flex;gap:15px;list-style:none;font-weight:700;align-items:center;font-size:14px;margin:0;padding:0;flex-wrap:wrap;}
+nav ul{display:flex;gap:22px;list-style:none;font-weight:700;align-items:center;font-size:15px;margin:0;padding:0;}
 nav ul li{display:flex;align-items:center;}
 nav a{color: var(--text);opacity: 0.9;white-space:nowrap;padding: 5px 0;}
 nav a:hover{color:var(--accent);opacity: 1;}
@@ -70,13 +70,7 @@ section{padding:60px 0 90px}
 
 footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
 
-@media(max-width:1100px){ 
-    nav ul{font-size:13px;gap:10px;} 
-}
-@media(max-width:850px){ 
-    nav ul{display:none} 
-    .accordion-header{padding:16px 18px;font-size:15px} 
-}
+@media(max-width:960px){ nav ul{display:none} .accordion-header{padding:16px 18px;font-size:15px} }
 </style>
 </head>
 <body>
@@ -281,6 +275,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </footer>
 
 <script>
+document.querySelectorAll('.accordion-header').header = document.querySelectorAll('.accordion-header');
 document.querySelectorAll('.accordion-header').forEach(header => {
     header.addEventListener('click', () => {
         const accordion = header.parentElement;
