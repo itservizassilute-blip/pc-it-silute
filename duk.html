@@ -83,13 +83,13 @@
 <span>PC <b>IT</b> Šilutė</span>
 </a>
 <ul>
-<li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
-<li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
-<li><a href="duk.html" style="color:var(--accent)" data-lt="DUK" data-en="FAQ"><span data-lt="DUK" data-en="FAQ">DUK</span></a></li>
-<li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
-<li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
-<li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
-<li><a href="index.html#uzklausa" data-lt="Užklausa" data-en="Inquiry">Užklausa</a></li>
+<li><a href="index.html#paslaugos"><span data-lt="Paslaugos" data-en="Services">Paslaugos</span></a></li>
+<li><a href="kainos.html"><span data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</span></a></li>
+<li><a href="duk.html" style="color:var(--accent)"><span data-lt="DUK" data-en="FAQ">DUK</span></a></li>
+<li><a href="nuotoline-pagalba.html"><span data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</span></a></li>
+<li><a href="apie.html"><span data-lt="Apie mus" data-en="About Us">Apie mus</span></a></li>
+<li><a href="atsiliepimai.html"><span data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</span></a></li>
+<li><a href="index.html#uzklausa"><span data-lt="Užklausa" data-en="Inquiry">Užklausa</span></a></li>
 <li>
 <div class="lang-switcher">
 <button class="lang-btn active" onclick="setLang('lt')">LT</button>
@@ -110,7 +110,7 @@
 </div>
 
 <!-- 💰 Kaina ir remontas -->
-<div class="faq-category-title" data-lt="<i class='fa-solid fa-coins'></i> Kaina ir remontas" data-en="<i class='fa-solid fa-coins'></i> Price & Repair"><i class='fa-solid fa-coins'></i> Kaina ir remontas</div>
+<div class="faq-category-title"><span data-lt="<i class='fa-solid fa-coins'></i> Kaina ir remontas" data-en="<i class='fa-solid fa-coins'></i> Price & Repair"><i class='fa-solid fa-coins'></i> Kaina ir remontas</span></div>
 
 <div class="accordion">
 <button class="accordion-header">
@@ -144,7 +144,7 @@
 
 
 <!-- 💻 Windows ir programinė įranga -->
-<div class="faq-category-title" data-lt="<i class='fa-brands fa-windows'></i> Windows ir programinė įranga" data-en="<i class='fa-brands fa-windows'></i> Windows & Software"><i class='fa-brands fa-windows'></i> Windows ir programinė įranga</div>
+<div class="faq-category-title"><span data-lt="<i class='fa-brands fa-windows'></i> Windows ir programinė įranga" data-en="<i class='fa-brands fa-windows'></i> Windows & Software"><i class='fa-brands fa-windows'></i> Windows ir programinė įranga</span></div>
 
 <div class="accordion">
 <button class="accordion-header">
@@ -178,7 +178,7 @@
 
 
 <!-- 🔒 Duomenys -->
-<div class="faq-category-title" data-lt="<i class='fa-solid fa-shield-halved'></i> Duomenys" data-en="<i class='fa-solid fa-shield-halved'></i> Data"><i class='fa-solid fa-shield-halved'></i> Duomenys</div>
+<div class="faq-category-title"><span data-lt="<i class='fa-solid fa-shield-halved'></i> Duomenys" data-en="<i class='fa-solid fa-shield-halved'></i> Data"><i class='fa-solid fa-shield-halved'></i> Duomenys</span></div>
 
 <div class="accordion">
 <button class="accordion-header">
@@ -202,7 +202,7 @@
 
 
 <!-- 📍 Aptarnavimas -->
-<div class="faq-category-title" data-lt="<i class='fa-solid fa-location-dot'></i> Aptarnavimas" data-en="<i class='fa-solid fa-location-dot'></i> Service"><i class='fa-solid fa-location-dot'></i> Aptarnavimas</div>
+<div class="faq-category-title"><span data-lt="<i class='fa-solid fa-location-dot'></i> Aptarnavimas" data-en="<i class='fa-solid fa-location-dot'></i> Service"><i class='fa-solid fa-location-dot'></i> Aptarnavimas</span></div>
 
 <div class="accordion">
 <button class="accordion-header">
@@ -236,7 +236,7 @@
 
 
 <!-- ⏱️ Darbai -->
-<div class="faq-category-title" data-lt="<i class='fa-solid fa-clock'></i> Darbai ir garantijos" data-en="<i class='fa-solid fa-clock'></i> Work & Warranties"><i class='fa-solid fa-clock'></i> Darbai ir garantijos</div>
+<div class="faq-category-title"><span data-lt="<i class='fa-solid fa-clock'></i> Darbai ir garantijos" data-en="<i class='fa-solid fa-clock'></i> Work & Warranties"><i class='fa-solid fa-clock'></i> Darbai ir garantijos</span></div>
 
 <div class="accordion">
 <button class="accordion-header">
@@ -297,14 +297,7 @@ function setLang(lang, save = true) {
 
     document.querySelectorAll('[data-lt]').forEach(el => {
         const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
-        const icon = el.querySelector('i');
-        if (icon) {
-            const textNode = el.querySelector('span');
-            if(textNode) { textNode.innerHTML = langText; }
-            else { el.innerHTML = `<i class="${icon.className}"></i> ` + langText; }
-        } else {
-            el.innerHTML = langText;
-        }
+        el.innerHTML = langText;
     });
 }
 
