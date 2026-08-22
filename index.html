@@ -43,7 +43,7 @@ nav{height:80px;display:flex;align-items:center;justify-content:space-between}
 .brand img{width:48px;height:48px;object-fit:contain}
 .brand b{color:var(--accent)}
 
-nav ul{display:flex;gap:24px;list-style:none;font-weight:700;align-items:center;font-size:16px}
+nav ul{display:flex;gap:20px;list-style:none;font-weight:700;align-items:center;font-size:15px}
 nav a{color: var(--text);opacity: 0.9;}
 nav a:hover{color:var(--accent);opacity: 1;}
 
@@ -122,8 +122,6 @@ section{padding:90px 0}
 .process-card h3{margin-bottom:12px;color:#fff;font-size:20px}
 .process-card p{color:var(--text-muted);font-size:15px}
 
-.review-form-box{max-width:700px;margin:0 auto;background:var(--card-bg);border:1px solid #1e3a5f;padding:45px;border-radius:30px;backdrop-filter:blur(10px)}
-
 .video-container{display:flex;justify-content:center;margin-top:20px;width:100%}
 .video-responsive{position:relative;width:100%;max-width:560px;aspect-ratio:560/314;}
 .video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;overflow:hidden;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,0.4)}
@@ -191,6 +189,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
 <li><a href="#remontas-vietoje" data-lt="Kaip veikia" data-en="How it works">Kaip veikia</a></li>
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
+<li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
 <li><a href="#uzklausa" data-lt="Užklausa" data-en="Inquiry">Užklausa</a></li>
 <li>
 <div class="lang-switcher">
@@ -327,7 +326,6 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </div>
 </div>
 
-<!-- Įkelta atskira dulkių valymo ir termo pastos keitimo kortelė -->
 <div class="card" style="border: 2px solid var(--accent);">
 <div>
     <i class="fa-solid fa-temperature-arrow-down ico"></i>
@@ -377,12 +375,10 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </div>
 </div>
 
-<!-- Specialus mygtukas į kainoraščio polapį -->
 <div style="text-align:center; margin-top:40px;">
     <a href="kainos.html" class="btn" style="background:#0f172a; color:#fff; border:1px solid #1e3a5f;" data-lt="📋 Peržiūrėti visą kainoraštį" data-en="📋 View Full Price List">📋 Peržiūrėti visą kainoraštį</a>
 </div>
 
-<!-- Išplėsta valymo paslauga (SEO atskiras blokas) -->
 <div class="deep-clean-feature">
 <div class="deep-clean-content">
 <div class="badge" style="margin-bottom:15px;" data-lt="⚙️ PROCESORIAUS APSAUGA IR AUŠINIMAS" data-en="⚙️ CPU PROTECTION & COOLING">
@@ -418,47 +414,6 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <div class="video-responsive">
 <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F904624699392411%2F&show_text=false&width=560&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 </div>
-</div>
-</div>
-</section>
-
-<!-- ATSILIEPIMAI -->
-<section id="atsiliepimai" class="dark-sec" style="background:#020614;">
-<div class="wrap">
-<h2 class="title" data-lt="Klientų atsiliepimai ir įvertinimai" data-en="Customer Reviews & Ratings">Klientų atsiliepimai ir įvertinimai</h2>
-<p class="subtitle" data-lt="Naudojotės mūsų paslaugomis? Palikite savo atsiliepimą ar komentarą – mums tai labai svarbu!" data-en="Used our services? Leave your review or comment – it's very important to us!">Naudojotės mūsų paslaugomis? Palikite savo atsiliepimą ar komentarą – mums tai labai svarbu!</p>
-
-<div class="review-form-box">
-<form id="reviewForm" action="https://formspree.io/f/mkjwjqvd" method="POST">
-<div class="form-group">
-<label data-lt="Jūsų vardas:" data-en="Your name:">Jūsų vardas:</label>
-<input type="text" name="atsiliepimo_vardas" required autocomplete="name" placeholder="Įveskite savo vardą">
-</div>
-
-<div class="form-group">
-<label data-lt="Įvertinimas (Žvaigždutėmis):" data-en="Rating (Stars):">Įvertinimas (Žvaigždutėmis):</label>
-<select name="ivertinimas" class="form-control">
-<option value="5 žvaigždutės" data-lt="⭐⭐⭐⭐⭐ (5/5) Puikiai" data-en="⭐⭐⭐⭐⭐ (5/5) Excellent">⭐⭐⭐⭐⭐ (5/5) Puikiai</option>
-<option value="4 žvaigždutės" data-lt="⭐⭐⭐⭐ (4/5) Labai gerai" data-en="⭐⭐⭐⭐ (4/5) Very Good">⭐⭐⭐⭐ (4/5) Labai gerai</option>
-<option value="3 žvaigždutės" data-lt="⭐⭐⭐ (3/5) Vidutiniškai" data-en="⭐⭐⭐ (3/5) Average">⭐⭐⭐ (3/5) Vidutiniškai</option>
-<option value="2 žvaigždutės" data-lt="⭐⭐ (2/5) Prastai" data-en="⭐⭐ (2/5) Poor">⭐⭐ (2/5) Prastai</option>
-<option value="1 žvaigždutė" data-lt="⭐ (1/5) Labai prastai" data-en="⭐ (1/5) Very Poor">⭐ (1/5) Labai prastai</option>
-</select>
-</div>
-
-<div class="form-group">
-<label data-lt="Jūsų atsiliepimas / komentarai:" data-en="Your review / comments:">Jūsų atsiliepimas / komentarai:</label>
-<textarea name="atsiliepimo_tekstas" required placeholder="Parašykite, kaip patiko paslaugos, ar viskas veikia sklandžiai..."></textarea>
-</div>
-
-<div class="form-group" style="display:flex; align-items:flex-start; gap:12px; margin-top:15px;">
-<input type="checkbox" name="sutikimas_viesinimui" value="Taip" id="viesinimas" required style="width:20px; height:20px; margin-top:3px; accent-color:var(--accent);">
-<label for="viesinimas" style="font-size:14px; color:var(--text-muted); cursor:pointer; margin-bottom:0;" data-lt="Sutinku, kad mano vardas ir atsiliepimas būtų skelbiami PC IT Šilutė svetainėje." data-en="I agree that my name and review can be published on the PC IT Šilutė website.">Sutinku, kad mano vardas ir atsiliepimas būtų skelbiami PC IT Šilutė svetainėje.</label>
-</div>
-
-<button type="submit" class="btn" style="width:100%; justify-content:center; padding:16px; font-size:17px; margin-top:20px;" data-lt="⭐ Siųsti atsiliepimą" data-en="⭐ Send Review">⭐ Siųsti atsiliepimą</button>
-</form>
-
 </div>
 </div>
 </section>
