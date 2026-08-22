@@ -45,9 +45,8 @@ nav a:hover{color:var(--accent);opacity: 1;}
 .lang-btn.active{background:var(--accent);color:var(--bg)}
 
 section{padding:80px 0}
-.page-header{text-align:center;max-width:800px;margin:0 auto 50px}
-.page-header h1{font-size:38px;font-weight:800;margin-bottom:12px}
-.page-header p{font-size:18px;color:var(--text-muted)}
+.title{text-align:center;font-size:38px;margin-bottom:12px;font-weight:800}
+.subtitle{text-align:center;color:var(--text-muted);max-width:700px;margin:0 auto 50px;font-size:18px}
 
 .remote-container{max-width:900px;margin:0 auto;background:var(--card-bg);border:1px solid #1e3a5f;border-radius:24px;padding:45px;backdrop-filter:blur(10px)}
 
@@ -110,10 +109,8 @@ section{padding:80px 0}
 <main>
 <section>
 <div class="wrap">
-<div class="page-header">
-<h1 data-lt="Nuotolinė pagalba per „RustDesk“" data-en="Remote Support via RustDesk">Nuotolinė pagalba per „RustDesk“</h1>
-<p data-lt="Programinė pagalba per atstumą iš anksto sutarus laiką." data-en="Remote software support by prior appointment.">Programinė pagalba per atstumą iš anksto sutarus laiką.</p>
-</div>
+<h1 class="title" data-lt="Nuotolinė pagalba per „RustDesk“" data-en="Remote Support via RustDesk">Nuotolinė pagalba per „RustDesk“</h1>
+<p class="subtitle" data-lt="Programinė pagalba per atstumą iš anksto sutarus laiką." data-en="Remote software support by prior appointment.">Programinė pagalba per atstumą iš anksto sutarus laiką.</p>
 
 <div class="remote-container">
     <div class="info-box">
@@ -161,19 +158,31 @@ section{padding:80px 0}
 
 <script>
 function setLang(lang, save = true) {
-    if (save) localStorage.setItem('preferred_lang', lang);
+    if (save) { localStorage.setItem('preferred_lang', lang); }
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
     const activeBtn = lang === 'lt' ? document.querySelector('button[onclick*="lt"]') : document.querySelector('button[onclick*="en"]');
     if(activeBtn) activeBtn.classList.add('active');
 
     document.querySelectorAll('[data-lt]').forEach(el => {
-        el.innerHTML = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
+        const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = langText;
+        } else {
+            const icon = el.querySelector('i');
+            if (icon) {
+                const textNode = el.querySelector('span');
+                if(textNode) { textNode.innerHTML = langText; }
+                else { el.innerHTML = `<i class="${icon.className}"></i> ` + langText; }
+            } else {
+                el.innerHTML = langText;
+            }
+        }
     });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('preferred_lang') || 'lt';
-  setLang(savedLang, false);
+  const savedLang = localStorage.getItem('preferred_lang');
+  if (savedLang === 'en') { setLang('en', false); } else { setLang('lt', false); }
 });
 </script>
 </body>
