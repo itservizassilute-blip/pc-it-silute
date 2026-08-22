@@ -20,59 +20,66 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        :root {
-            --bg: #020817;
-            --card-bg: #071a3088;
-            --accent: #0ea5e9;
-            --text: #eef6ff;
-            --text-muted: #93c5fd;
-            --glass: rgba(2, 8, 23, 0.7);
-        }
+    :root {
+        --bg: #020817;
+        --card-bg: #071a3088;
+        --accent: #0ea5e9;
+        --text: #eef6ff;
+        --text-muted: #93c5fd;
+        --glass: rgba(2, 8, 23, 0.7);
+    }
 
-        *{box-sizing:border-box;margin:0;padding:0}
-        html{scroll-behavior:smooth;overflow-y:scroll}
-        body{font-family:'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-        a{text-decoration:none;color:inherit;transition:0.3s}
-        .wrap{max-width:1200px;margin:auto;padding:0 22px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    a{text-decoration:none;color:inherit;transition:0.3s}
+    .wrap{max-width:1120px;margin:auto;padding:0 22px}
 
-        header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
-        nav{height:80px;display:flex;align-items:center;justify-content:space-between}
-        .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px;flex-shrink:0;}
-        .brand img{width:48px;height:48px;object-fit:contain}
-        .brand b{color:var(--accent)}
+    header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
+    nav{height:80px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px}
+    .brand img{width:48px;height:48px;object-fit:contain}
+    .brand b{color:var(--accent)}
 
-        nav ul{display:flex;gap:22px;list-style:none;font-weight:700;align-items:center;font-size:15px;margin:0;padding:0;}
-        nav ul li{display:flex;align-items:center;}
-        nav a{color: var(--text);opacity: 0.9;white-space:nowrap;padding: 5px 0;}
-        nav a:hover{color:var(--accent);opacity: 1;}
+    nav ul{display:flex;gap:22px;list-style:none;font-weight:700;align-items:center;font-size:15px}
+    nav a{color: var(--text);opacity: 0.9;white-space:nowrap;}
+    nav a:hover{color:var(--accent);opacity: 1;}
 
-        .lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px;margin-left:4px}
-        .lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:13px;padding:5px 8px;border-radius:7px;transition:0.3s}
-        .lang-btn.active{background:var(--accent);color:var(--bg)}
+    .lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px;margin-left:6px}
+    .lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:13px;padding:5px 10px;border-radius:7px;transition:0.3s}
+    .lang-btn.active{background:var(--accent);color:var(--bg)}
 
-        section{padding:60px 0 90px}
-        .page-header{text-align:center;max-width:800px;margin:0 auto 40px}
-        .page-header h1{font-size:clamp(32px, 4.5vw, 46px);font-weight:800;margin-bottom:12px}
-        .page-header p{font-size:18px;color:var(--text-muted)}
+    section{padding:60px 0 90px}
+    .page-header{text-align:center;max-width:800px;margin:0 auto 40px}
+    .page-header h1{font-size:clamp(32px, 4.5vw, 46px);font-weight:800;margin-bottom:12px}
+    .page-header p{font-size:18px;color:var(--text-muted)}
 
-        .faq-category-title{font-size:20px;font-weight:800;color:var(--accent);margin:35px 0 15px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #1e3a5f;padding-bottom:8px}
+    .faq-category-title{font-size:20px;font-weight:800;color:var(--accent);margin:35px 0 15px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #1e3a5f;padding-bottom:8px}
 
-        .accordion{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:16px;margin-bottom:12px;backdrop-filter:blur(10px);overflow:hidden;transition:0.3s}
-        .accordion:hover{border-color:#1e40af}
-        .accordion-header{width:100%;background:none;border:none;padding:18px 22px;text-align:left;color:var(--text);font-family:inherit;font-size:16px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:15px}
-        .accordion-header i{color:var(--accent);font-size:14px;transition:transform 0.3s}
-        .accordion.active .accordion-header i{transform:rotate(180deg)}
-        .accordion-content{max-height:0;overflow:hidden;transition:max-height 0.3s ease-out;padding:0 22px}
-        .accordion-content p{color:var(--text-muted);font-size:15px;padding-bottom:20px;line-height:1.6}
+    .accordion{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:16px;margin-bottom:12px;backdrop-filter:blur(10px);overflow:hidden;transition:0.3s}
+    .accordion:hover{border-color:#1e40af}
+    .accordion-header{width:100%;background:none;border:none;padding:18px 22px;text-align:left;color:var(--text);font-family:inherit;font-size:16px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:15px}
+    .accordion-header i{color:var(--accent);font-size:14px;transition:transform 0.3s}
+    .accordion.active .accordion-header i{transform:rotate(180deg)}
+    .accordion-content{max-height:0;overflow:hidden;transition:max-height 0.3s ease-out;padding:0 22px}
+    .accordion-content p{color:var(--text-muted);font-size:15px;padding-bottom:20px;line-height:1.6}
 
-        .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:40px}
-        .back-link:hover{color:var(--accent)}
+    .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:40px}
+    .back-link:hover{color:var(--accent)}
 
-        footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
+    footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
 
-        @media(max-width:960px){ nav ul{display:none} .accordion-header{padding:16px 18px;font-size:15px} }
+    @media(max-width:1024px){
+        nav ul{gap:14px;font-size:14px}
+    }
+
+    @media(max-width:960px){
+        nav ul{display:none}
+        .accordion-header{padding:16px 18px;font-size:15px}
+    }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -82,14 +89,16 @@
 <img src="pc-it-logo.png" alt="PC IT">
 <span>PC <b>IT</b> Šilutė</span>
 </a>
+
 <ul>
-<li><a href="index.html#paslaugos"><span data-lt="Paslaugos" data-en="Services">Paslaugos</span></a></li>
-<li><a href="kainos.html"><span data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</span></a></li>
-<li><a href="duk.html" style="color:var(--accent)"><span data-lt="DUK" data-en="FAQ">DUK</span></a></li>
-<li><a href="nuotoline-pagalba.html"><span data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</span></a></li>
-<li><a href="apie.html"><span data-lt="Apie mus" data-en="About Us">Apie mus</span></a></li>
-<li><a href="atsiliepimai.html"><span data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</span></a></li>
-<li><a href="index.html#uzklausa"><span data-lt="Užklausa" data-en="Inquiry">Užklausa</span></a></li>
+<li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
+<li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
+<li><a href="duk.html" style="color:var(--accent)" data-lt="DUK" data-en="FAQ">DUK</a></li>
+<li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
+<li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
+<li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
+<li><a href="index.html#uzklausa" data-lt="Užklausa" data-en="Inquiry">Užklausa</a></li>
+
 <li>
 <div class="lang-switcher">
 <button class="lang-btn active" onclick="setLang('lt')">LT</button>
@@ -97,6 +106,7 @@
 </div>
 </li>
 </ul>
+
 </nav>
 </div>
 </header>
@@ -104,13 +114,18 @@
 <main>
 <section>
 <div class="wrap" style="max-width:900px;">
+
 <div class="page-header">
 <h1 data-lt="Dažniausiai užduodami klausimai" data-en="Frequently Asked Questions">Dažniausiai užduodami klausimai</h1>
 <p data-lt="Atsakymai į rūpimus klausimus apie kompiuterių remontą, kainas, duomenų saugumą ir atvykimą Šilutėje." data-en="Answers to your questions about computer repair, prices, data security and service in Šilutė.">Atsakymai į rūpimus klausimus apie kompiuterių remontą, kainas, duomenų saugumą ir atvykimą Šilutėje.</p>
 </div>
 
+
 <!-- 💰 Kaina ir remontas -->
-<div class="faq-category-title"><span data-lt="<i class='fa-solid fa-coins'></i> Kaina ir remontas" data-en="<i class='fa-solid fa-coins'></i> Price & Repair"><i class='fa-solid fa-coins'></i> Kaina ir remontas</span></div>
+
+<div class="faq-category-title" data-lt="<i class='fa-solid fa-coins'></i> Kaina ir remontas" data-en="<i class='fa-solid fa-coins'></i> Price & Repair">
+<i class='fa-solid fa-coins'></i> Kaina ir remontas
+</div>
 
 <div class="accordion">
 <button class="accordion-header">
@@ -144,7 +159,10 @@
 
 
 <!-- 💻 Windows ir programinė įranga -->
-<div class="faq-category-title"><span data-lt="<i class='fa-brands fa-windows'></i> Windows ir programinė įranga" data-en="<i class='fa-brands fa-windows'></i> Windows & Software"><i class='fa-brands fa-windows'></i> Windows ir programinė įranga</span></div>
+
+<div class="faq-category-title" data-lt="<i class='fa-brands fa-windows'></i> Windows ir programinė įranga" data-en="<i class='fa-brands fa-windows'></i> Windows & Software">
+<i class='fa-brands fa-windows'></i> Windows ir programinė įranga
+</div>
 
 <div class="accordion">
 <button class="accordion-header">
@@ -178,7 +196,10 @@
 
 
 <!-- 🔒 Duomenys -->
-<div class="faq-category-title"><span data-lt="<i class='fa-solid fa-shield-halved'></i> Duomenys" data-en="<i class='fa-solid fa-shield-halved'></i> Data"><i class='fa-solid fa-shield-halved'></i> Duomenys</span></div>
+
+<div class="faq-category-title" data-lt="<i class='fa-solid fa-shield-halved'></i> Duomenys" data-en="<i class='fa-solid fa-shield-halved'></i> Data">
+<i class='fa-solid fa-shield-halved'></i> Duomenys
+</div>
 
 <div class="accordion">
 <button class="accordion-header">
@@ -202,7 +223,10 @@
 
 
 <!-- 📍 Aptarnavimas -->
-<div class="faq-category-title"><span data-lt="<i class='fa-solid fa-location-dot'></i> Aptarnavimas" data-en="<i class='fa-solid fa-location-dot'></i> Service"><i class='fa-solid fa-location-dot'></i> Aptarnavimas</span></div>
+
+<div class="faq-category-title" data-lt="<i class='fa-solid fa-location-dot'></i> Aptarnavimas" data-en="<i class='fa-solid fa-location-dot'></i> Service">
+<i class='fa-solid fa-location-dot'></i> Aptarnavimas
+</div>
 
 <div class="accordion">
 <button class="accordion-header">
@@ -236,7 +260,10 @@
 
 
 <!-- ⏱️ Darbai -->
-<div class="faq-category-title"><span data-lt="<i class='fa-solid fa-clock'></i> Darbai ir garantijos" data-en="<i class='fa-solid fa-clock'></i> Work & Warranties"><i class='fa-solid fa-clock'></i> Darbai ir garantijos</span></div>
+
+<div class="faq-category-title" data-lt="<i class='fa-solid fa-clock'></i> Darbai ir garantijos" data-en="<i class='fa-solid fa-clock'></i> Work & Warranties">
+<i class='fa-solid fa-clock'></i> Darbai ir garantijos
+</div>
 
 <div class="accordion">
 <button class="accordion-header">
@@ -254,14 +281,16 @@
 <i class="fa-solid fa-chevron-down"></i>
 </button>
 <div class="accordion-content">
-<p data-lt="Taip, visiems atliktiems paslaugų ir remonto darbams suteikiame **30 dienų garantiją**. Jei per šį laikotarpį vėl iškiltų ta pati sutvarkyta problema, viską sutvarkysime nemokamai." data-en="Yes, we provide a **30-day warranty** for all completed service and repair work. If the same fixed issue arises again within this period, we will fix it free of charge.">Taip, visiems atliktiems paslaugų ir remonto darbams suteikiame **30 dienų garantiją**. Jei per šį laikotarpį vėl iškiltų ta pati sutvarkyta problema, viską sutvarkysime nemokamai.</p>
+<p data-lt="Taip, visiems atliktiems paslaugų ir remonto darbams suteikiame 30 dienų garantiją. Jei per šį laikotarpį vėl iškiltų ta pati sutvarkyta problema, viską sutvarkysime nemokamai." data-en="Yes, we provide a 30-day warranty for all completed service and repair work. If the same fixed issue arises again within this period, we will fix it free of charge.">Taip, visiems atliktiems paslaugų ir remonto darbams suteikiame 30 dienų garantiją. Jei per šį laikotarpį vėl iškiltų ta pati sutvarkyta problema, viską sutvarkysime nemokamai.</p>
 </div>
 </div>
 
+
 <div style="text-align: center;">
-    <a href="index.html" class="back-link">
-        <i class="fa-solid fa-arrow-left"></i> <span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to main page">Grįžti į pagrindinį puslapį</span>
-    </a>
+<a href="index.html" class="back-link">
+<i class="fa-solid fa-arrow-left"></i>
+<span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to main page">Grįžti į pagrindinį puslapį</span>
+</a>
 </div>
 
 </div>
@@ -274,13 +303,16 @@
 </div>
 </footer>
 
+
 <script>
+
 document.querySelectorAll('.accordion-header').forEach(header => {
     header.addEventListener('click', () => {
         const accordion = header.parentElement;
         const content = accordion.querySelector('.accordion-content');
-        
+
         accordion.classList.toggle('active');
+
         if (accordion.classList.contains('active')) {
             content.style.maxHeight = content.scrollHeight + "px";
         } else {
@@ -289,22 +321,63 @@ document.querySelectorAll('.accordion-header').forEach(header => {
     });
 });
 
+
 function setLang(lang, save = true) {
-    if (save) localStorage.setItem('preferred_lang', lang);
+
+    if (save) {
+        localStorage.setItem('preferred_lang', lang);
+    }
+
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    const activeBtn = lang === 'lt' ? document.querySelector('button[onclick*="lt"]') : document.querySelector('button[onclick*="en"]');
+
+    const activeBtn = lang === 'lt'
+        ? document.querySelector('button[onclick*="lt"]')
+        : document.querySelector('button[onclick*="en"]');
+
     if(activeBtn) activeBtn.classList.add('active');
 
+
     document.querySelectorAll('[data-lt]').forEach(el => {
-        const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
-        el.innerHTML = langText;
+
+        const langText = lang === 'en'
+            ? el.getAttribute('data-en')
+            : el.getAttribute('data-lt');
+
+        const icon = el.querySelector('i');
+
+        if (icon) {
+
+            const textNode = el.querySelector('span');
+
+            if(textNode) {
+                textNode.innerHTML = langText;
+            } else {
+                el.innerHTML = `<i class="${icon.className}"></i> ` + langText;
+            }
+
+        } else {
+
+            el.innerHTML = langText;
+
+        }
+
     });
 }
 
+
 window.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('preferred_lang') || 'lt';
-  setLang(savedLang, false);
+
+    const savedLang = localStorage.getItem('preferred_lang');
+
+    if (savedLang === 'en') {
+        setLang('en', false);
+    } else {
+        setLang('lt', false);
+    }
+
 });
+
 </script>
+
 </body>
 </html>
