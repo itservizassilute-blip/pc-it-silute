@@ -128,6 +128,45 @@ section{padding:90px 0}
 .video-responsive{position:relative;width:100%;max-width:560px;aspect-ratio:560/314;}
 .video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;overflow:hidden;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,0.4)}
 
+/* Atsiliepimų kortelių stiliai pagrindiniam puslapiui */
+.reviews-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+.review-card {
+    background: var(--card-bg);
+    border: 1px solid #1e3a5f;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+.review-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+.review-stars {
+    color: #fbbf24;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.review-text {
+    color: var(--text);
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-style: italic;
+}
+.review-author {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 14px;
+}
+
 .help-box{max-width:700px;margin:0 auto 30px;background:#0ea5e911;border:1px solid #0ea5e944;padding:25px 35px;border-radius:20px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .help-box p{color:var(--text);font-weight:600;font-size:16px;margin:0}
 
@@ -156,7 +195,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     nav ul{gap:14px;font-size:14px}
 }
 @media(max-width:960px){
-    .cards{grid-template-columns:repeat(2,1fr)}
+    .cards, .reviews-preview-grid{grid-template-columns:repeat(2,1fr)}
     .pain-grid{grid-template-columns:repeat(2,1fr)}
     .about-grid{grid-template-columns:1fr}
     .deep-clean-feature{grid-template-columns:1fr}
@@ -202,7 +241,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     .hero-grid{grid-template-columns:1fr;text-align:center}
     .hero p{margin-left:auto;margin-right:auto}
     .logo-card{order:-1}.logo-card img{width:240px}
-    .cards, .checkbox-grid, .pain-grid{grid-template-columns:1fr}
+    .cards, .checkbox-grid, .pain-grid, .reviews-preview-grid{grid-template-columns:1fr}
     .guarantee-grid{grid-template-columns:1fr}
     .help-box{flex-direction:column;text-align:center}
 }
@@ -434,6 +473,45 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 
 <section id="uzklausa" class="dark-sec" style="background:#020b1c;">
 <div class="wrap">
+<h2 class="title" data-lt="Ką sako mūsų klientai" data-en="What Our Customers Say">Ką sako mūsų klientai</h2>
+<p class="subtitle" data-lt="Tikri atsiliepimai iš Google Business Profile ir mūsų klientų." data-en="Real reviews from Google Business Profile and our customers.">Tikri atsiliepimai iš Google Business Profile ir mūsų klientų.</p>
+
+<div class="reviews-preview-grid">
+    <div class="review-card">
+        <div>
+            <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">„Kompiuteris buvo labai sulėtėjęs, programos ilgai kraudavosi. Sutvarkė ir optimizavo, dabar veikia daug greičiau. Darbas atliktas greitai, viskas aiškiai paaiškinta. Rekomenduoju.“</p>
+        </div>
+        <div class="review-author">— Evelina</div>
+    </div>
+
+    <div class="review-card">
+        <div>
+            <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">„Padėjo nuotoliniu būdu, viską tiksliai išaiskino, kad ir prireikė daugiau laiko, bet žmogus su kantrybe 😊 nereikėjo net niekur vežti kompiuterio. Super!“</p>
+        </div>
+        <div class="review-author">— Roberta</div>
+    </div>
+
+    <div class="review-card">
+        <div>
+            <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">„Sutvarkė kompiuterį, veikia puikiai. Žmogus išmano savo darbą.“</p>
+        </div>
+        <div class="review-author">— Laima</div>
+    </div>
+</div>
+
+<div style="text-align: center; margin-bottom: 50px;">
+    <a href="atsiliepimai.html" class="btn alt" style="font-size: 14px; padding: 12px 24px;" data-lt="⭐ Žiūrėti visus atsiliepimus" data-en="⭐ View all reviews">⭐ Žiūrėti visus atsiliepimus</a>
+</div>
+
 <h2 class="title" data-lt="Pateikti kompiuterio užklausą" data-en="Send a Computer Inquiry">Pateikti kompiuterio užklausą</h2>
 <p class="subtitle" data-lt="Užpildykite formą – aptarsime problemą ir suderinsime, kaip patogiausia perduoti kompiuterį." data-en="Fill out the form below, we will discuss the fault and coordinate delivery!">Užpildykite formą – aptarsime problemą ir suderinsime, kaip patogiausia perduoti kompiuterį.</p>
 
