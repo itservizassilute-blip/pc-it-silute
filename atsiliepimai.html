@@ -4,7 +4,7 @@
     <link rel="icon" type="image/png" href="pc-it-logo.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Palikite atsiliepimą apie PC IT Šilutė kompiuterių remonto ir aptarnavimo paslaugas.">
+<meta name="description" content="Klientų atsiliepimai apie PC IT Šilutė kompiuterių remonto ir aptarnavimo paslaugas. Palikite savo atsiliepimą.">
 <title>Atsiliepimai – PC IT Šilutė</title>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://itservizassilute-blip.github.io/pc-it-silute/atsiliepimai.html">
@@ -55,6 +55,48 @@ section{padding:90px 0}
 .title{text-align:center;font-size:38px;margin-bottom:12px;font-weight:800}
 .subtitle{text-align:center;color:var(--text-muted);max-width:700px;margin:0 auto 50px;font-size:18px}
 
+/* Atsiliepimų tinklelis */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 70px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.review-card {
+    background: var(--card-bg);
+    border: 1px solid #1e3a5f;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+.review-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+.review-stars {
+    color: #fbbf24;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.review-text {
+    color: var(--text);
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-style: italic;
+}
+.review-author {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 14px;
+}
+
 .review-form-box{max-width:700px;margin:0 auto;background:var(--card-bg);border:1px solid #1e3a5f;padding:45px;border-radius:30px;backdrop-filter:blur(10px)}
 .form-group{margin-bottom:20px}
 .form-group label{display:block;margin-bottom:8px;font-weight:600;color:var(--text-muted)}
@@ -68,6 +110,9 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 
 @media(max-width:960px){
     nav ul{display:none}
+}
+@media(max-width:640px){
+    .reviews-grid {grid-template-columns: 1fr;}
 }
 </style>
 </head>
@@ -103,7 +148,45 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <section class="dark-sec">
 <div class="wrap">
 <h2 class="title" data-lt="Klientų atsiliepimai ir įvertinimai" data-en="Customer Reviews & Ratings">Klientų atsiliepimai ir įvertinimai</h2>
-<p class="subtitle" data-lt="Jūsų nuomonė mums labai svarbi! Jei naudojotės mūsų paslaugomis Šilutėje, palikite atsiliepimą – tai padeda tobulėti kitiems." data-en="Your opinion is very important to us! If you used our services in Šilutė, please leave a review.">Jūsų nuomonė mums labai svarbi! Jei naudojotės mūsų paslaugomis Šilutėje, palikite atsiliepimą – tai padeda tobulėti kitiems.</p>
+<p class="subtitle" data-lt="Jūsų nuomonė mums labai svarbi! Peržiūrėkite ką sako mūsų klientai arba palikite savo atsiliepimą." data-en="Your opinion is very important to us! Read what our customers say or leave your own review.">Jūsų nuomonė mums labai svarbi! Peržiūrėkite ką sako mūsų klientai arba palikite savo atsiliepimą.</p>
+
+<!-- Tikri klientų atsiliepimai -->
+<div class="reviews-grid">
+    <div class="review-card">
+        <div>
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">„Kompiuteris buvo labai sulėtėjęs, programos ilgai kraudavosi. Sutvarkė ir optimizavo, dabar veikia daug greičiau. Darbas atliktas greitai, viskas aiškiai paaiškinta. Rekomenduoju.“</p>
+        </div>
+        <div class="review-author">— Evelina</div>
+    </div>
+
+    <div class="review-card">
+        <div>
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">„Padėjo nuotoliniu būdu, viską tiksliai išaiskino, kad ir prireikė daugiau laiko, bet žmogus su kantrybe 😊 nereikėjo net niekur vežti kompiuterio. Super!“</p>
+        </div>
+        <div class="review-author">— Roberta</div>
+    </div>
+
+    <div class="review-card">
+        <div>
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">„Sutvarkė kompiuterį, veikia puikiai. Žmogus išmano savo darbą.“</p>
+        </div>
+        <div class="review-author">— Laima</div>
+    </div>
+
+    <div class="review-card">
+        <div>
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">„Greitas ir profesionalus aptarnavimas. Labai džiaugiuosi atgautu ir puikiai veikiančiu kompiuteriu!“</p>
+        </div>
+        <div class="review-author">— Jurgita</div>
+    </div>
+</div>
+
+<h2 class="title" style="font-size: 30px; margin-bottom: 10px;" data-lt="Palikite savo atsiliepimą" data-en="Leave Your Review">Palikite savo atsiliepimą</h2>
+<p class="subtitle" style="margin-bottom: 30px;" data-lt="Jei naudojotės mūsų paslaugomis Šilutėje, parašykite savo nuomonę." data-en="If you used our services in Šilutė, please write your opinion.">Jei naudojotės mūsų paslaugomis Šilutėje, parašykite savo nuomonę.</p>
 
 <div class="review-form-box">
 <form action="https://formspree.io/f/mkjwjqvd" method="POST">
