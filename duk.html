@@ -16,6 +16,9 @@
 <meta property="og:image" content="https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png">
 <meta name="twitter:card" content="summary">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -29,30 +32,30 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-y:scroll}
+body{font-family:'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit;transition:0.3s}
 .wrap{max-width:1120px;margin:auto;padding:0 22px}
 
 header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
 nav{height:80px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px;flex-shrink:0;}
 .brand img{width:48px;height:48px;object-fit:contain}
 .brand b{color:var(--accent)}
 
-nav ul{display:flex;gap:22px;list-style:none;font-weight:700;align-items:center;font-size:15px}
-nav a{color: var(--text);opacity: 0.9;white-space:nowrap;}
+nav ul{display:flex;gap:22px;list-style:none;font-weight:700;align-items:center;font-size:15px;margin:0;padding:0;}
+nav ul li{display:flex;align-items:center;}
+nav a{color: var(--text);opacity: 0.9;white-space:nowrap;padding: 5px 0;}
 nav a:hover{color:var(--accent);opacity: 1;}
 
-.lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px;margin-left:6px}
-.lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:13px;padding:5px 10px;border-radius:7px;transition:0.3s}
+.lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px;margin-left:4px}
+.lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:13px;padding:5px 8px;border-radius:7px;transition:0.3s}
 .lang-btn.active{background:var(--accent);color:var(--bg)}
 
 .menu-toggle {
     display: none;
-    background: none;
-    border: 1px solid #1e3a5f;
     background: #071a3088;
+    border: 1px solid #1e3a5f;
     color: var(--text);
     font-size: 1.5rem;
     cursor: pointer;
@@ -60,7 +63,7 @@ nav a:hover{color:var(--accent);opacity: 1;}
     border-radius: 8px;
 }
 
-section{padding:80px 0}
+section{padding:90px 0}
 .title{text-align:center;font-size:38px;margin-bottom:12px;font-weight:800}
 .subtitle{text-align:center;color:var(--text-muted);max-width:700px;margin:0 auto 50px;font-size:18px}
 
@@ -114,9 +117,10 @@ section{padding:80px 0}
 .help-box{max-width:700px;margin:50px auto 0;background:#0ea5e911;border:1px solid #0ea5e944;padding:25px 35px;border-radius:20px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .help-box p{color:var(--text);font-weight:600;font-size:16px;margin:0}
 
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:14px 24px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s}
-.btn:hover{filter:brightness(1.1);transform:translateY(-2px)}
-.btn.messenger{background:#0084FF;color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:14px 24px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 15px 30px #0ea5e955;filter:brightness(1.1)}
+.btn.messenger{background:#0084FF;color:#fff;box-shadow:0 10px 25px #0084FF33}
+.btn.messenger:hover{box-shadow:0 15px 30px #0084FF55}
 
 footer {
     background: #010611;
@@ -161,16 +165,12 @@ footer {
 @media(max-width:1024px){
     .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
 }
-@media(max-width:760px){
-    body{padding-bottom:68px}
-    .mobile-cta{position:fixed;display:flex;left:12px;right:12px;bottom:12px;z-index:120;gap:10px}
-    .mobile-cta .btn{flex:1;justify-content:center;margin:0;padding:13px 10px;font-size:14px}
-    .mobile-cta .btn.alt{background:rgba(2,8,23,.94);backdrop-filter:blur(10px)}
-
+@media(max-width:960px){
+    nav ul{display:none}
     .menu-toggle{display:block}
     nav{position:relative}
-    nav ul{
-        display: none;
+    nav ul.active{
+        display: flex;
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -179,13 +179,19 @@ footer {
         background: rgba(2, 8, 23, 0.98);
         backdrop-filter: blur(16px);
         border-bottom: 1px solid #1e3a5f;
-        padding: 20px;
+        padding: 20px 22px;
         gap: 16px;
         box-shadow: 0 15px 30px rgba(0,0,0,0.5);
         align-items: flex-start;
     }
-    nav ul.active{display: flex}
     .lang-switcher{margin-left:0;margin-top:5px}
+}
+@media(max-width:760px){
+    body{padding-bottom:68px}
+    .mobile-cta{position:fixed;display:flex;left:12px;right:12px;bottom:12px;z-index:120;gap:10px}
+    .mobile-cta .btn{flex:1;justify-content:center;margin:0;padding:13px 10px;font-size:14px}
+    .mobile-cta .btn.alt{background:rgba(2,8,23,.94);backdrop-filter:blur(10px)}
+
     .footer-grid{grid-template-columns:1fr}
     .footer-bottom{flex-direction:column;text-align:center}
     .help-box{flex-direction:column;text-align:center}
@@ -209,7 +215,7 @@ footer {
 <ul id="navMenu">
 <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
 <li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
-<li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
+<li><a href="duk.html" style="color:var(--accent)" data-lt="DUK" data-en="FAQ">DUK</a></li>
 <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
 <li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
@@ -362,13 +368,19 @@ function setLang(lang, save = true) {
 
     document.querySelectorAll('[data-lt]').forEach(el => {
         const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
-        const icon = el.querySelector('i');
-        if (icon) {
-            const textNode = el.querySelector('span');
-            if(textNode) { textNode.innerHTML = langText; }
-            else { el.innerHTML = `<i class="${icon.className}"></i> ` + langText; }
+        if (el.tagName === 'INPUT' && el.type !== 'checkbox') {
+            el.placeholder = langText;
+        } else if (el.tagName === 'TEXTAREA') {
+            el.placeholder = langText;
         } else {
-            el.innerHTML = langText;
+            const icon = el.querySelector('i');
+            if (icon) {
+                const textNode = el.querySelector('span');
+                if(textNode) { textNode.innerHTML = langText; }
+                else { el.innerHTML = `<i class="${icon.className}"></i> ` + langText; }
+            } else {
+                el.innerHTML = langText;
+            }
         }
     });
 
