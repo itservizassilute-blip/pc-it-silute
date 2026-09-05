@@ -187,6 +187,46 @@ section{padding:90px 0}
 .checks li{margin:12px 0;font-size:16px;display:flex;align-items:center;gap:12px}
 .checks li i{color:var(--accent)}
 
+/* Trust / Software Standards bar */
+.trust-section {
+    padding: 30px 0;
+    border-top: 1px solid #1e3a5f;
+    background: rgba(3, 16, 34, 0.5);
+}
+.trust-title {
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.trust-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 14px;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+.trust-item:hover {
+    opacity: 1;
+    color: var(--text);
+}
+.trust-item i {
+    font-size: 18px;
+    color: var(--accent);
+}
+
 .contact{background:linear-gradient(135deg,#031226,#062642);text-align:center}
 .contact p{color:var(--text-muted);margin:10px auto 26px;font-size:18px}
 footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
@@ -200,6 +240,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
     .about-grid{grid-template-columns:1fr}
     .deep-clean-feature{grid-template-columns:1fr}
     .guarantee-grid{grid-template-columns:repeat(2,1fr);gap:15px}
+    .trust-grid{gap:20px}
 }
 
 .mobile-cta{display:none}
@@ -577,6 +618,31 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </div>
 </div>
 </section>
+
+<!-- Pasitikėjimo / Programinės įrangos standartų juosta -->
+<div class="trust-section">
+    <div class="wrap">
+        <p class="trust-title" data-lt="Profesionalūs įrankiai ir programinė įranga" data-en="Professional tools & software standards">Profesionalūs įrankiai ir programinė įranga</p>
+        <div class="trust-grid">
+            <div class="trust-item">
+                <i class="fa-brands fa-windows"></i>
+                <span data-lt="<b>Windows</b> diegimas ir derinimas" data-en="<b>Windows</b> setup & configuration"><b>Windows</b> diegimas ir derinimas</span>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-file-word"></i>
+                <span data-lt="<b>MS Office</b> paketų priežiūra" data-en="<b>MS Office</b> suite maintenance"><b>MS Office</b> paketų priežiūra</span>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-lock"></i>
+                <span data-lt="Saugus ryšys per <b>RustDesk</b>" data-en="Secure connection via <b>RustDesk</b>">Saugus ryšys per <b>RustDesk</b></span>
+            </div>
+            <div class="trust-item">
+                <i class="fa-brands fa-google"></i>
+                <span data-lt="Patvirtinta <b>Google Business</b>" data-en="Verified on <b>Google Business</b>">Patvirtinta <b>Google Business</b></span>
+            </div>
+        </div>
+    </div>
+</div>
 
 <section id="kontaktai" class="contact">
 <div class="wrap">
