@@ -14,6 +14,35 @@
 <meta property="og:url" content="https://itservizassilute-blip.github.io/pc-it-silute/atsiliepimai.html">
 <meta property="og:image" content="https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png">
 
+<!-- LocalBusiness Schema.org (JSON-LD) Vietiniam SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ComputerRepair",
+  "name": "PC IT Šilutė",
+  "alternateName": "PC MEISTRAS ŠILUTĖ",
+  "url": "https://itservizassilute-blip.github.io/pc-it-silute/atsiliepimai.html",
+  "logo": "https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png",
+  "image": "https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png",
+  "description": "Klientų atsiliepimai apie PC IT Šilutė kompiuterių remonto ir aptarnavimo paslaugas.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Šilutė",
+    "addressCountry": "LT"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Šilutė"
+  },
+  "priceRange": "€€",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "5"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -132,6 +161,7 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
 <li><a href="atsiliepimai.html" style="color:var(--accent)" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
+<li><a href="index.html#uzklausa" data-lt="Užklausa" data-en="Inquiry">Užklausa</a></li>
 <li><div class="lang-switcher">
 <button class="lang-btn active" onclick="setLang('lt')">LT</button>
 <button class="lang-btn" onclick="setLang('en')">EN</button>
@@ -245,7 +275,7 @@ function setLang(lang, save = true) {
         const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
         if (el.tagName === 'INPUT' && el.type !== 'checkbox') {
             el.placeholder = langText;
-        } else if (el.tagName === 'TEXT`AREA') {
+        } else if (el.tagName === 'TEXTAREA') {
             el.placeholder = langText;
         } else {
             const icon = el.querySelector('i');
