@@ -14,6 +14,7 @@
 <meta property="og:description" content="Kompiuterių remonto ir priežiūros paslaugų kainos Šilutėje.">
 <meta property="og:url" content="https://itservizassilute-blip.github.io/pc-it-silute/kainos.html">
 <meta property="og:image" content="https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png">
+<meta name="twitter:card" content="summary">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,9 +52,20 @@ nav a:hover{color:var(--accent);opacity: 1;}
 .lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:13px;padding:5px 8px;border-radius:7px;transition:0.3s}
 .lang-btn.active{background:var(--accent);color:var(--bg)}
 
-section{padding:80px 0}
+.menu-toggle {
+    display: none;
+    background: #071a3088;
+    border: 1px solid #1e3a5f;
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+section{padding:90px 0}
 .title{text-align:center;font-size:38px;margin-bottom:12px;font-weight:800}
-.subtitle{text-align:center;color:var(--text-muted);max-width:700px;margin:0 auto 35px;font-size:18px}
+.subtitle{text-align:center;color:var(--text-muted);max-width:700px;margin:0 auto 45px;font-size:18px}
 
 .pricing-trust-bar {
     display: flex;
@@ -140,13 +152,74 @@ section{padding:80px 0}
     color: #fff;
 }
 
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:14px 24px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s;margin-top:20px}
-.btn:hover{transform:translateY(-3px);filter:brightness(1.1)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:14px 24px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);margin-top:20px}
+.btn:hover{transform:translateY(-3px);box-shadow:0 15px 30px #0ea5e955;filter:brightness(1.1)}
+.btn.messenger{background:#0084FF;color:#fff;box-shadow:0 10px 25px #0084FF33}
+.btn.messenger:hover{box-shadow:0 15px 30px #0084FF55}
 
-footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
+footer {
+    background: #010611;
+    border-top: 1px solid #1e3a5f;
+    padding: 60px 0 30px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 45px;
+}
+.footer-col h3 {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.footer-col h3 i { color: var(--accent); }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { color: var(--text-muted); transition: 0.3s; }
+.footer-links a:hover { color: var(--accent); padding-left: 4px; }
+.footer-bottom {
+    border-top: 1px solid #1e3a5f33;
+    padding-top: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
 
+.mobile-cta{display:none}
+
+@media(max-width:1024px){
+    .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+}
 @media(max-width:960px){
     nav ul{display:none}
+    .menu-toggle{display:block}
+    nav{position:relative}
+    nav ul.active{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(2, 8, 23, 0.98);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid #1e3a5f;
+        padding: 20px 22px;
+        gap: 16px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        align-items: flex-start;
+    }
+    .lang-switcher{margin-left:0;margin-top:5px}
     .price-row { flex-direction: column; align-items: flex-start; gap: 15px; }
     .price-tag { align-self: flex-start; }
 }
@@ -160,6 +233,15 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
         padding: 8px 12px;
     }
 }
+@media(max-width:760px){
+    body{padding-bottom:68px}
+    .mobile-cta{position:fixed;display:flex;left:12px;right:12px;bottom:12px;z-index:120;gap:10px}
+    .mobile-cta .btn{flex:1;justify-content:center;margin:0;padding:13px 10px;font-size:14px}
+    .mobile-cta .btn.alt{background:rgba(2,8,23,.94);backdrop-filter:blur(10px)}
+
+    .footer-grid{grid-template-columns:1fr}
+    .footer-bottom{flex-direction:column;text-align:center}
+}
 </style>
 </head>
 <body>
@@ -171,10 +253,15 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 <img src="pc-it-logo.png" alt="PC IT">
 <span>PC <b>IT</b> Šilutė</span>
 </a>
-<ul>
+
+<button class="menu-toggle" id="menuToggleBtn" aria-label="Meniu">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<ul id="navMenu">
 <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
 <li><a href="kainos.html" style="color:var(--accent)" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
-<li><a href="index.html#duk" data-lt="DUK" data-en="FAQ">DUK</a></li>
+<li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
 <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
 <li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
@@ -278,13 +365,59 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </section>
 </main>
 
+<div class="mobile-cta">
+    <a class="btn messenger" href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="💬 Messenger" data-en="💬 Messenger">💬 Messenger</a>
+    <a class="btn" href="index.html#uzklausa" style="background:rgba(2,8,23,.94);border:1px solid #1e3a5f;color:var(--text);" data-lt="📝 Užklausa" data-en="📝 Inquiry">📝 Užklausa</a>
+</div>
+
 <footer>
 <div class="wrap">
-<p>© 2026 PC IT Šilutė. Visos teisės saugomos.</p>
+<div class="footer-grid">
+    <div class="footer-col">
+        <h3><i class="fa-solid fa-screwdriver-wrench"></i> PC IT Šilutė</h3>
+        <p data-lt="Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse." data-en="Professional computer repair, Windows setup, optimization and maintenance in Šilutė and surroundings.">Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse.</p>
+    </div>
+    <div class="footer-col">
+        <h3><i class="fa-solid fa-link"></i> <span data-lt="Greitos nuorodos" data-en="Quick Links">Greitos nuorodos</span></h3>
+        <ul class="footer-links">
+            <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
+            <li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
+            <li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
+            <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h3><i class="fa-solid fa-folder-open"></i> <span data-lt="Pagalba klientui" data-en="Client Support">Pagalba klientui</span></h3>
+        <ul class="footer-links">
+            <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
+            <li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
+            <li><a href="index.html#uzklausa" data-lt="Pateikti užklausą" data-en="Submit Inquiry">Pateikti užklausą</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h3><i class="fa-solid fa-certificate"></i> <span data-lt="Kokybės standartai" data-en="Quality Standards">Kokybės standartai</span></h3>
+        <p data-lt="✓ 30 d. darbų garantija<br>✓ Saugus nuotolinis ryšys<br>✓ Patvirtinti atsiliepimai" data-en="✓ 30-day work warranty<br>✓ Secure remote connection<br>✓ Verified reviews">✓ 30 d. darbų garantija<br>✓ Saugus nuotolinis ryšys<br>✓ Patvirtinti atsiliepimai</p>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>© 2026 PC IT Šilutė. <span data-lt="Visos teisės saugomos." data-en="All rights reserved.">Visos teisės saugomos.</span></p>
+    <p style="font-size: 13px; color: var(--text-muted);">itservizassilute@gmail.com</p>
+</div>
 </div>
 </footer>
 
 <script>
+const menuToggleBtn = document.getElementById('menuToggleBtn');
+const navMenu = document.getElementById('navMenu');
+
+if (menuToggleBtn && navMenu) {
+    menuToggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        const icon = menuToggleBtn.querySelector('i');
+        icon.className = navMenu.classList.contains('active') ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    });
+}
+
 function setLang(lang, save = true) {
     if (save) { localStorage.setItem('preferred_lang', lang); }
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
@@ -293,7 +426,9 @@ function setLang(lang, save = true) {
 
     document.querySelectorAll('[data-lt]').forEach(el => {
         const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        if (el.tagName === 'INPUT' && el.type !== 'checkbox') {
+            el.placeholder = langText;
+        } else if (el.tagName === 'TEXTAREA') {
             el.placeholder = langText;
         } else {
             const icon = el.querySelector('i');
@@ -306,6 +441,14 @@ function setLang(lang, save = true) {
             }
         }
     });
+
+    if (navMenu && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        if (menuToggleBtn) {
+            const icon = menuToggleBtn.querySelector('i');
+            if (icon) icon.className = 'fa-solid fa-bars';
+        }
+    }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
