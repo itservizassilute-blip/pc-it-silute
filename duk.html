@@ -170,7 +170,7 @@
         --accent: #0ea5e9;
         --text: #eef6ff;
         --text-muted: #93c5fd;
-        --glass: rgba(2, 8, 23, 0.7);
+        --glass: rgba(2, 8, 23, 0.9);
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
@@ -193,6 +193,24 @@
     .lang-switcher{display:flex;gap:4px;background:#1e3a5f55;border:1px solid #1e3a5f;padding:4px;border-radius:10px;margin-left:4px}
     .lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:13px;padding:5px 8px;border-radius:7px;transition:0.3s}
     .lang-btn.active{background:var(--accent);color:var(--bg)}
+
+    /* Mobilus hamburger mygtukas */
+    .menu-btn {
+        display: none;
+        background: none;
+        border: 1px solid #1e3a5f;
+        color: var(--text);
+        font-size: 20px;
+        cursor: pointer;
+        padding: 8px 12px;
+        border-radius: 10px;
+        background: #071a3088;
+        transition: 0.3s;
+    }
+    .menu-btn:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
 
     section{padding:60px 0 90px}
     .page-header{text-align:center;max-width:800px;margin:0 auto 40px}
@@ -222,7 +240,24 @@
     }
 
     @media(max-width:960px){
-        nav ul{display:none}
+        .menu-btn{display:block}
+        nav ul{
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background: rgba(2, 8, 23, 0.95);
+            backdrop-filter: blur(16px);
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 24px 22px;
+            gap: 16px;
+            border-bottom: 1px solid #1e3a5f;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: none;
+        }
+        nav ul.show{display:flex}
+        .lang-switcher{margin-left: 0; margin-top: 4px;}
         .accordion-header{padding:16px 18px;font-size:15px}
     }
     </style>
@@ -237,6 +272,10 @@
 <img src="pc-it-logo.png" alt="PC IT">
 <span>PC <b>IT</b> Šilutė</span>
 </a>
+
+<button class="menu-btn" aria-label="Meniu">
+<i class="fa-solid fa-bars"></i>
+</button>
 
 <ul>
 <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
@@ -463,7 +502,34 @@
 
 
 <script>
+// Hamburger meniu atidarymo/uždarymo logika
+const menuBtn = document.querySelector('.menu-btn');
+const navUl = document.querySelector('nav ul');
 
+menuBtn.addEventListener('click', () => {
+    navUl.classList.toggle('show');
+    const icon = menuBtn.querySelector('i');
+    if (navUl.classList.contains('show')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+    } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+    }
+});
+
+// Paspaudus ant nuorodos mobiliajame meniu, meniu užsidaro
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        navUl.classList.remove('show');
+        const icon = menuBtn.querySelector('i');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+    });
+});
+
+
+// Akordeono logika
 document.querySelectorAll('.accordion-header').forEach(header => {
     header.addEventListener('click', () => {
         const accordion = header.parentElement;
@@ -481,7 +547,6 @@ document.querySelectorAll('.accordion-header').forEach(header => {
 
 
 function setLang(lang, save = true) {
-
     if (save) {
         localStorage.setItem('preferred_lang', lang);
     }
@@ -496,7 +561,6 @@ function setLang(lang, save = true) {
 
 
     document.querySelectorAll('[data-lt]').forEach(el => {
-
         const langText = lang === 'en'
             ? el.getAttribute('data-en')
             : el.getAttribute('data-lt');
@@ -504,37 +568,27 @@ function setLang(lang, save = true) {
         const icon = el.querySelector('i');
 
         if (icon) {
-
             const textNode = el.querySelector('span');
-
             if(textNode) {
                 textNode.innerHTML = langText;
             } else {
                 el.innerHTML = `<i class="${icon.className}"></i> ` + langText;
             }
-
         } else {
-
             el.innerHTML = langText;
-
         }
-
     });
 }
 
 
 window.addEventListener('DOMContentLoaded', () => {
-
     const savedLang = localStorage.getItem('preferred_lang');
-
     if (savedLang === 'en') {
         setLang('en', false);
     } else {
         setLang('lt', false);
     }
-
 });
-
 </script>
 
 </body>
