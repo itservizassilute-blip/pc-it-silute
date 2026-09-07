@@ -4,10 +4,71 @@
     <link rel="icon" type="image/png" href="pc-it-logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kompiuterių remontas ir paslaugų kainos Šilutėje – skaidrūs įkainiai, diagnostika, programinės įrangos atnaujinimas ir kitos IT paslaugos.">
+    <meta name="description" content="Kompiuterių remonto ir priežiūros paslaugų kainoraštis Šilutėje. Skaidrios kainos, diagnostika, Windows įdiegimas, valymas.">
     <title>Kainoraštis – PC IT Šilutė</title>
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://itservizassilute-blip.github.io/pc-it-silute/kainas.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kainoraštis – PC IT Šilutė">
+    <meta property="og:description" content="Kompiuterių remonto, programinės įrangos atnaujinimo ir diagnostikos kainos Šilutėje.">
+    <meta property="og:url" content="https://itservizassilute-blip.github.io/pc-it-silute/kainas.html">
+    <meta property="og:image" content="https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png">
+
+    <!-- LocalBusiness & Service Schema.org (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ComputerRepair",
+          "name": "PC IT Šilutė",
+          "alternateName": "PC MEISTRAS ŠILUTĖ",
+          "url": "https://itservizassilute-blip.github.io/pc-it-silute/kainas.html",
+          "logo": "https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png",
+          "image": "https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Šilutė",
+            "addressCountry": "LT"
+          },
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Šilutė"
+          },
+          "priceRange": "€€"
+        },
+        {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Kompiuterio diagnostika",
+              "description": "Gedimo nustatymas ir remonto sąmatos sudarymas."
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Windows OS įdiegimas ir konfigūravimas",
+              "description": "Pilnas operacinės sistemos diegimas su tvarkyklėmis."
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Kompiuterio dulkių valymas ir termopastos keitimas",
+              "description": "Vidinis valymas, apsauga nuo perkaitimo."
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Nuotolinė pagalba",
+              "description": "Greita pagalba internetu per „RustDesk“."
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +93,7 @@
 
     header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
     nav{height:80px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px;flex-shrink:0; z-index: 101;}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px;flex-shrink:0;z-index:101}
     .brand img{width:48px;height:48px;object-fit:contain}
     .brand b{color:var(--accent)}
 
@@ -56,76 +117,32 @@
         z-index: 101;
     }
 
-    section{padding:80px 0}
-    .title{text-align:center;font-size:38px;margin-bottom:12px;font-weight:800}
-    .subtitle{text-align:center;color:var(--text-muted);max-width:700px;margin:0 auto 50px;font-size:18px}
+    section{padding:60px 0 90px}
+    .page-header{text-align:center;max-width:800px;margin:0 auto 40px}
+    .page-header h1{font-size:clamp(32px, 4.5vw, 46px);font-weight:800;margin-bottom:12px}
+    .page-header p{font-size:18px;color:var(--text-muted)}
 
-    .pricing-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 25px;
-        margin-bottom: 40px;
-    }
-    .price-card {
-        background: var(--card-bg);
-        border: 1px solid #1e3a5f;
-        border-radius: 20px;
-        padding: 30px;
-        backdrop-filter: blur(10px);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .price-card h3 {
-        font-size: 20px;
-        margin-bottom: 20px;
-        color: var(--accent);
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    .price-list {
-        list-style: none;
-        margin-bottom: 25px;
-    }
-    .price-list li {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 0;
-        border-bottom: 1px solid #1e3a5f55;
-        font-size: 15px;
-    }
-    .price-list li:last-child {
-        border-bottom: none;
-    }
-    .price-list span.price {
-        font-weight: 700;
-        color: var(--accent);
-        white-space: nowrap;
-        margin-left: 15px;
-    }
+    .price-category-title{font-size:22px;font-weight:800;color:var(--accent);margin:40px 0 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #1e3a5f;padding-bottom:10px}
 
-    .notice-box {
-        background: var(--card-bg);
-        border: 1px solid #1e3a5f;
-        border-radius: 20px;
-        padding: 25px;
-        text-align: center;
-        color: var(--text-muted);
-        font-size: 15px;
-        max-width: 800px;
-        margin: 0 auto 30px;
-    }
+    .price-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:20px;margin-bottom:20px}
+    .price-card{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:16px;padding:24px;backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:space-between;transition:0.3s}
+    .price-card:hover{border-color:#1e40af;transform:translateY(-3px)}
+    
+    .price-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:12px}
+    .price-title{font-size:18px;font-weight:700;color:var(--text)}
+    .price-tag{font-size:20px;font-weight:800;color:var(--accent);white-space:nowrap;background:#0ea5e915;padding:4px 12px;border-radius:10px;border:1px solid #0ea5e933}
+    .price-desc{font-size:14px;color:var(--text-muted);line-height:1.5}
 
-    .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:30px;font-size:15px}
+    .price-note{background:#071a30aa;border:1px dashed #1e3a5f;border-radius:14px;padding:20px;margin-top:40px;text-align:center;color:var(--text-muted);font-size:15px}
+    .price-note b{color:var(--text)}
+
+    .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:40px}
     .back-link:hover{color:var(--accent)}
 
-    footer {
-        text-align: center;
-        padding: 30px 0;
-        color: var(--text-muted);
-        font-size: 14px;
-        border-top: 1px solid #1e3a5f;
+    footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
+
+    @media(max-width:1024px){
+        nav ul{gap:14px;font-size:14px}
     }
 
     @media(max-width:960px){
@@ -151,23 +168,8 @@
         nav ul.active { right: 0; }
     }
     </style>
-
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ComputerRepair",
-      "name": "PC IT Šilutė",
-      "url": "https://itservizassilute-blip.github.io/pc-it-silute/",
-      "priceRange": "€€",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Šilutė",
-        "addressCountry": "LT"
-      }
-    }
-    </script>
 </head>
+
 <body>
 
 <header>
@@ -177,17 +179,20 @@
 <img src="pc-it-logo.png" alt="PC IT">
 <span>PC <b>IT</b> Šilutė</span>
 </a>
+
 <button class="menu-toggle" id="menuToggle" aria-label="Meniu">
     <i class="fa-solid fa-bars"></i>
 </button>
+
 <ul id="navMenu">
 <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
 <li><a href="kainas.html" style="color:var(--accent)" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
-<li><a href="index.html#duk" data-lt="DUK" data-en="FAQ">DUK</a></li>
+<li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
 <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
 <li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
 <li><a href="index.html#uzklausa" data-lt="Užklausa" data-en="Inquiry">Užklausa</a></li>
+
 <li>
 <div class="lang-switcher">
 <button class="lang-btn active" onclick="setLang('lt')">LT</button>
@@ -195,6 +200,7 @@
 </div>
 </li>
 </ul>
+
 </nav>
 </div>
 </header>
@@ -202,54 +208,109 @@
 <main>
 <section>
 <div class="wrap">
-<h1 class="title" data-lt="Paslaugų kainoraštis" data-en="Service Pricing">Paslaugų kainoraštis</h1>
-<p class="subtitle" data-lt="Skaidrios ir aiškios kompiuterių bei IT priežiūros paslaugų kainos Šilutėje." data-en="Transparent and clear prices for computer and IT maintenance services in Šilutė.">Skaidrios ir aiškios kompiuterių bei IT priežiūros paslaugų kainos Šilutėje.</p>
 
-<div class="pricing-grid">
-    <div class="price-card">
-        <div>
-            <h3 data-lt="<i class='fa-solid fa-laptop-code'></i> Diagnostika ir programinė įranga" data-en="<i class='fa-solid fa-laptop-code'></i> Diagnostics & Software"><i class='fa-solid fa-laptop-code'></i> Diagnostika ir programinė įranga</h3>
-            <ul class="price-list">
-                <li><span data-lt="Kompiuterio diagnostika (remontuojant pas mus)" data-en="Computer diagnostics (if repaired with us)">Kompiuterio diagnostika (remontuojant pas mus)</span><span class="price" data-lt="Nemokamai" data-en="Free">Nemokamai</span></li>
-                <li><span data-lt="Operacinės sistemų diegimas (Windows)" data-en="OS Installation (Windows)">Operacinės sistemų diegimas (Windows)</span><span class="price">nuo 25 €</span></li>
-                <li><span data-lt="Virusų valymas ir kenkėjiškų programų šal." data-en="Virus removal & malware cleanup">Virusų valymas ir kenkėjiškų programų šal.</span><span class="price">nuo 15 €</span></li>
-                <li><span data-lt="Duomenų atstatymas (nuo media tipų)" data-en="Data recovery">Duomenų atstatymas</span><span class="price">nuo 20 €</span></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="price-card">
-        <div>
-            <h3 data-lt="<i class='fa-solid fa-screwdriver-wrench'></i> Aparatinis remontas ir valymas" data-en="<i class='fa-solid fa-screwdriver-wrench'></i> Hardware & Maintenance"><i class='fa-solid fa-screwdriver-wrench'></i> Aparatinis remontas ir valymas</h3>
-            <ul class="price-list">
-                <li><span data-lt="Nešiojamo kompiuterio valymas + termopasta" data-en="Laptop cleaning + thermal paste">Nešiojamo kompiuterio valymas + termopasta</span><span class="price">nuo 25 €</span></li>
-                <li><span data-lt="Stalinio kompiuterio valymas ir priežiūra" data-en="Desktop PC cleaning & maintenance">Stalinio kompiuterio valymas ir priežiūra</span><span class="price">nuo 20 €</span></li>
-                <li><span data-lt="Detalių keitimas (ekranas, klaviatūra ir kt.)" data-en="Part replacement (screen, keyboard, etc.)">Detalių keitimas (ekranas, klaviatūra ir kt.)</span><span class="price">nuo 15 €</span></li>
-                <li><span data-lt="Maitinimo bloko ar pagrindinės plokštės rem." data-en="Power supply or motherboard repair">Maitinimo bloko / plokštės rem.</span><span class="price">nuo 25 €</span></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="price-card">
-        <div>
-            <h3 data-lt="<i class='fa-solid fa-network-wired'></i> Nuotolinė pagalba ir tinklai" data-en="<i class='fa-solid fa-network-wired'></i> Remote Support & Networks"><i class='fa-solid fa-network-wired'></i> Nuotolinė pagalba ir tinklai</h3>
-            <ul class="price-list">
-                <li><span data-lt="Nuotolinė pagalba per „RustDesk“ (val.)" data-en="Remote support via RustDesk (per hour)">Nuotolinė pagalba per „RustDesk“ (val.)</span><span class="price">nuo 15 €</span></li>
-                <li><span data-lt="Wi-Fi maršrutizatoriaus konfigūravimas" data-en="Wi-Fi router configuration">Wi-Fi maršrutizatoriaus konfigūravimas</span><span class="price">nuo 15 €</span></li>
-                <li><span data-lt="Programinės įrangos derinimas per atstumą" data-en="Remote software setup">Programinės įrangos derinimas per atstumą</span><span class="price">nuo 15 €</span></li>
-            </ul>
-        </div>
-    </div>
+<div class="page-header">
+<h1 data-lt="Paslaugų kainoraštis" data-en="Service Pricing">Paslaugų kainoraštis</h1>
+<p data-lt="Skaidrios ir aiškios kompiuterių remonto bei priežiūros paslaugų kainos Šilutėje. Galutinė kaina visada suderinama prieš pradedant darbus." data-en="Transparent and clear computer repair and maintenance service prices in Šilutė. The final price is always agreed upon before starting work.">Skaidrios ir aiškios kompiuterių remonto bei priežiūros paslaugų kainos Šilutėje. Galutinė kaina visada suderinama prieš pradedant darbus.</p>
 </div>
 
-<div class="notice-box">
-    <p data-lt="* Tiksli paslaugos kaina visada suderinama su klientu prieš pradedant bet kokius remonto darbus. Suteikiami garantiniai terminai atliktiems darbams." data-en="* Exact service price is always agreed with the client before starting any repair work. Warranty is provided for completed work.">* Tiksli paslaugos kaina visada suderinama su klientu prieš pradedant bet kokius remonto darbus. Suteikiami garantiniai terminai atliktiems darbams.</p>
+
+<!-- 🛠️ Diagnostika ir priežiūra -->
+<div class="price-category-title" data-lt="<i class='fa-solid fa-stethoscope'></i> Diagnostika ir techninė priežiūra" data-en="<i class='fa-solid fa-stethoscope'></i> Diagnostics & Maintenance">
+<i class='fa-solid fa-stethoscope'></i> Diagnostika ir techninė priežiūra
 </div>
+
+<div class="price-grid">
+
+<div class="price-card">
+<div class="price-card-top">
+<span class="price-title" data-lt="Kompiuterio diagnostika" data-en="Computer Diagnostics">Kompiuterio diagnostika</span>
+<span class="price-tag" data-lt="Nuo 10 €" data-en="From 10 €">Nuo 10 €</span>
+</div>
+<p class="price-desc" data-lt="Gedimo nustatymas, techninės būklės įvertinimas ir remonto sąmatos sudarymas." data-en="Fault identification, technical condition assessment, and repair estimate preparation.">Gedimo nustatymas, techninės būklės įvertinimas ir remonto sąmatos sudarymas.</p>
+</div>
+
+<div class="price-card">
+<div class="price-card-top">
+<span class="price-title" data-lt="Dulkių valymas ir termopastos keitimas" data-en="Dust Cleaning & Thermal Paste Replacement">Dulkių valymas ir termopastos keitimas</span>
+<span class="price-tag" data-lt="Nuo 15 – 30 €" data-en="From 15 – 30 €">Nuo 15 – 30 €</span>
+</div>
+<p class="price-desc" data-lt="Nešiojamo arba stacionaraus kompiuterio išvalymas nuo dulkių, naujų termopastų užtepimas ant procesoriaus ir vaizdo plokštės." data-en="Cleaning dust from laptop or desktop, applying new thermal paste to CPU and GPU.">Nešiojamo arba stacionaraus kompiuterio išvalymas nuo dulkių, naujų termopastų užtepimas ant procesoriaus ir vaizdo plokštės.</p>
+</div>
+
+</div>
+
+
+<!-- 💻 Programinė įranga -->
+<div class="price-category-title" data-lt="<i class='fa-brands fa-windows'></i> Programinė įranga ir operacinės sistemos" data-en="<i class='fa-brands fa-windows'></i> Software & Operating Systems">
+<i class='fa-brands fa-windows'></i> Programinė įranga ir operacinės sistemos
+</div>
+
+<div class="price-grid">
+
+<div class="price-card">
+<div class="price-card-top">
+<span class="price-title" data-lt="Windows OS diegimas / perrašymas" data-en="Windows OS Installation / Reinstallation">Windows OS diegimas / perrašymas</span>
+<span class="price-tag" data-lt="Nuo 20 €" data-en="From 20 €">Nuo 20 €</span>
+</div>
+<p class="price-desc" data-lt="Švarus Windows (Home / Pro / LTSC) įdiegimas, visų reikalingų tvarkyklių (driver) ir pagrindinių programų rinkinio įrašymas." data-en="Clean Windows (Home / Pro / LTSC) installation, installation of all necessary drivers and essential software package.">Švarus Windows (Home / Pro / LTSC) įdiegimas, visų reikalingų tvarkyklių (driver) ir pagrindinių programų rinkinio įrašymas.</p>
+</div>
+
+<div class="price-card">
+<div class="price-card-top">
+<span class="price-title" data-lt="Kompiuterio optimizavimas" data-en="Computer Optimization">Kompiuterio optimizavimas</span>
+<span class="price-tag" data-lt="Nuo 15 €" data-en="From 15 €">Nuo 15 €</span>
+</div>
+<p class="price-desc" data-lt="Sisteminio šlamšto šalinimas, paleisties tvarkymas, stabdančių programų išvalymas ir sistemos greitėjimo darbai be Windows perrašymo." data-en="System junk removal, startup management, removal of slowing apps, and system speedup without Windows reinstallation.">Sisteminio šlamšto šalinimas, paleisties tvarkymas, stabdančių programų išvalymas ir sistemos greitėjimo darbai be Windows perrašymo.</p>
+</div>
+
+<div class="price-card">
+<div class="price-card-top">
+<span class="price-title" data-lt="Duomenų išsaugojimas / atkūrimas" data-en="Data Backup / Recovery">Duomenų išsaugojimas / atkūrimas</span>
+<span class="price-tag" data-lt="Nuo 10 €" data-en="From 10 €">Nuo 10 €</span>
+</div>
+<p class="price-desc" data-lt="Svarbių failų, nuotraukų ir dokumentų perkėlimas arba paieška bei gelbėjimas iš pažeistų sistemų." data-en="Transferring important files, photos and documents, or searching and rescuing them from damaged systems.">Svarbių failų, nuotraukų ir dokumentų perkėlimas arba paieška bei gelbėjimas iš pažeistų sistemų.</p>
+</div>
+
+</div>
+
+
+<!-- 🔌 Aparatūrinis remontas -->
+<div class="price-category-title" data-lt="<i class='fa-solid fa-microchip'></i> Aparatūrinis remontas ir atnaujinimas" data-en="<i class='fa-solid fa-microchip'></i> Hardware Repair & Upgrades">
+<i class='fa-solid fa-microchip'></i> Aparatūrinis remontas ir atnaujinimas
+</div>
+
+<div class="price-grid">
+
+<div class="price-card">
+<div class="price-card-top">
+<span class="price-title" data-lt="Komponentų keitimas / atnaujinimas" data-en="Component Replacement / Upgrade">Komponentų keitimas / atnaujinimas</span>
+<span class="price-tag" data-lt="Nuo 10 €" data-en="From 10 €">Nuo 10 €</span>
+</div>
+<p class="price-desc" data-lt="SSD disko, RAM atminties ar kitų detalių montavimas bei keitimas (detalių kaina į darbą neįskaičiuota)." data-en="Installation and replacement of SSD, RAM or other parts (parts cost not included in labor price).">SSD disko, RAM atminties ar kitų detalių montavimas bei keitimas (detalių kaina į darbą neįskaičiuota).</p>
+</div>
+
+<div class="price-card">
+<div class="price-card-top">
+<span class="price-title" data-lt="Nuotolinė pagalba (per „RustDesk“)" data-en="Remote Support (via RustDesk)">Nuotolinė pagalba (per „RustDesk“)</span>
+<span class="price-tag" data-lt="Nuo 10 €" data-en="From 10 €">Nuo 10 €</span>
+</div>
+<p class="price-desc" data-lt="Programinių problemų sprendimas, nustatymai ir konsultacijos per atstumą, jei kompiuteris turi interneto ryšį." data-en="Software troubleshooting, settings and remote consultations if the computer has an internet connection.">Programinių problemų sprendimas, nustatymai ir konsultacijos per atstumą, jei kompiuteris turi interneto ryšį.</p>
+</div>
+
+</div>
+
+
+<div class="price-note">
+<p data-lt="<b>Pastaba:</b> Nurodytos kainos yra orientacinės ir gali kisti priklausomai nuo gedimo sudėtingumo bei kompiuterio modelio. <b>Prieš pradedant bet kokius darbus, kaina visada iš anksto suderinama su jumis.</b> Jokių netikėtų mokesčių!" data-en="<b>Note:</b> Listed prices are indicative and may vary depending on the complexity of the issue and computer model. <b>Before starting any work, the price is always agreed with you in advance.</b> No unexpected fees!"><b>Pastaba:</b> Nurodytos kainos yra orientacinės ir gali kisti priklausomai nuo gedimo sudėtingumo bei kompiuterio modelio. <b>Prieš pradedant bet kokius darbus, kaina visada iš anksto suderinama su jumis.</b> Jokių netikėtų mokesčių!</p>
+</div>
+
 
 <div style="text-align: center;">
-    <a href="index.html" class="back-link">
-        <i class="fa-solid fa-arrow-left"></i> <span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to main page">Grįžti į pagrindinį puslapį</span>
-    </a>
+<a href="index.html" class="back-link">
+<i class="fa-solid fa-arrow-left"></i>
+<span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to main page">Grįžti į pagrindinį puslapį</span>
+</a>
 </div>
 
 </div>
@@ -261,6 +322,7 @@
 <p>© 2026 PC IT Šilutė. Visos teisės saugomos.</p>
 </div>
 </footer>
+
 
 <script>
 // Mobiliojo meniu atidarymo / uždarymo logika
@@ -294,32 +356,47 @@ if (menuToggle && navMenu) {
 }
 
 function setLang(lang, save = true) {
-    if (save) { localStorage.setItem('preferred_lang', lang); }
+    if (save) {
+        localStorage.setItem('preferred_lang', lang);
+    }
+
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    const activeBtn = lang === 'lt' ? document.querySelector('button[onclick*="lt"]') : document.querySelector('button[onclick*="en"]');
+
+    const activeBtn = lang === 'lt'
+        ? document.querySelector('button[onclick*="lt"]')
+        : document.querySelector('button[onclick*="en"]');
+
     if(activeBtn) activeBtn.classList.add('active');
 
     document.querySelectorAll('[data-lt]').forEach(el => {
-        const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-            el.placeholder = langText;
-        } else {
-            const icon = el.querySelector('i');
-            if (icon) {
-                const textNode = el.querySelector('span');
-                if(textNode) { textNode.innerHTML = langText; }
-                else { el.innerHTML = `<i class="${icon.className}"></i> ` + langText; }
+        const langText = lang === 'en'
+            ? el.getAttribute('data-en')
+            : el.getAttribute('data-lt');
+
+        const icon = el.querySelector('i');
+
+        if (icon) {
+            const textNode = el.querySelector('span');
+            if(textNode) {
+                textNode.innerHTML = langText;
             } else {
-                el.innerHTML = langText;
+                el.innerHTML = `<i class="${icon.className}"></i> ` + langText;
             }
+        } else {
+            el.innerHTML = langText;
         }
     });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('preferred_lang');
-  if (savedLang === 'en') { setLang('en', false); } else { setLang('lt', false); }
+    const savedLang = localStorage.getItem('preferred_lang');
+    if (savedLang === 'en') {
+        setLang('en', false);
+    } else {
+        setLang('lt', false);
+    }
 });
 </script>
+
 </body>
 </html>
