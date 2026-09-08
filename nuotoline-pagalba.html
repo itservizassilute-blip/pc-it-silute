@@ -45,7 +45,6 @@
     .lang-btn{background:none;border:none;color:var(--text-muted);font-weight:700;cursor:pointer;font-size:13px;padding:5px 8px;border-radius:7px;transition:0.3s}
     .lang-btn.active{background:var(--accent);color:var(--bg)}
 
-    /* Mobilus meniu elementai */
     .menu-toggle {
         display: none;
         background: none;
@@ -84,25 +83,28 @@
     .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:30px;font-size:15px}
     .back-link:hover{color:var(--accent)}
 
-    /* Suvienodintas Footer stilius */
+    /* Tikslus 4-jų kolonu footeris, kaip kituose puslapiuose */
     footer {
         background: #010611;
         border-top: 1px solid #1e3a5f;
-        padding: 50px 0 30px;
+        padding: 60px 0 30px;
         color: var(--text-muted);
         font-size: 14px;
     }
     .footer-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 40px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
         margin-bottom: 40px;
     }
     .footer-col h4 {
         color: var(--text);
-        font-size: 16px;
+        font-size: 15px;
         margin-bottom: 15px;
         font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
     .footer-col p, .footer-col a {
         color: var(--text-muted);
@@ -112,16 +114,16 @@
     }
     .footer-col a:hover {
         color: var(--accent);
-        padding-left: 5px;
+        padding-left: 3px;
     }
     .footer-bottom {
-        text-align: center;
         border-top: 1px solid #1e3a5f;
         padding-top: 25px;
         display: flex;
-        flex-direction: column;
-        gap: 8px;
+        justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
     @media(max-width:960px){
@@ -147,6 +149,7 @@
         nav ul.active { right: 0; }
         .steps-grid{grid-template-columns:1fr}
         .remote-container{padding:25px}
+        .footer-grid { grid-template-columns: 1fr; gap: 30px; }
     }
     </style>
 </head>
@@ -240,31 +243,40 @@
 <div class="wrap">
     <div class="footer-grid">
         <div class="footer-col">
-            <h4 data-lt="PC IT Šilutė" data-en="PC IT Šilutė">PC IT Šilutė</h4>
-            <p data-lt="Profesionalus ir skaidrus kompiuterių remontas bei programinė priežiūra Šilutėje." data-en="Professional and transparent computer repair and software maintenance in Šilutė.">Profesionalus ir skaidrus kompiuterių remontas bei programinė priežiūra Šilutėje.</p>
+            <h4 data-lt="PC IT Šilutė" data-en="PC IT Šilutė"><i class="fa-solid fa-computer"></i> PC IT Šilutė</h4>
+            <p data-lt="Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse." data-en="Professional computer repair, Windows installation, optimization and maintenance in Šilutė and surroundings.">Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse.</p>
+            <p style="margin-top: 10px;" data-lt="📍 Remontas vietoje, galimas paėmimas / pristatymas susitarus." data-en="📍 On-site repair, pickup/delivery available by arrangement.">📍 Remontas vietoje, galimas paėmimas / pristatymas susitarus.</p>
         </div>
         <div class="footer-col">
-            <h4 data-lt="Greitos nuorodos" data-en="Quick Links">Greitos nuorodos</h4>
-            <a href="index.html" data-lt="Pagrindinis puslapis" data-en="Home">Pagrindinis puslapis</a>
+            <h4 data-lt="Greitos nuorodos" data-en="Quick Links"><i class="fa-solid fa-link"></i> Greitos nuorodos</h4>
+            <a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a>
             <a href="kainas.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a>
             <a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a>
             <a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a>
         </div>
         <div class="footer-col">
-            <h4 data-lt="Kontaktai" data-en="Contact">Kontaktai</h4>
-            <p data-lt="Šilutė, Lietuva" data-en="Šilutė, Lithuania">Šilutė, Lietuva</p>
-            <p>Tel.: <a href="tel:+37060000000" style="display:inline; color:var(--text-muted);">+370 6...</a></p>
+            <h4 data-lt="Pagalba klientui" data-en="Customer Support"><i class="fa-solid fa-headset"></i> Pagalba klientui</h4>
+            <a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a>
+            <a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a>
             <a href="index.html#uzklausa" data-lt="Pateikti užklausą" data-en="Send Inquiry">Pateikti užklausą</a>
+            <a href="nuotoline-pagalba.html" data-lt="Messenger pokalbis" data-en="Messenger Chat">Messenger pokalbis</a>
+        </div>
+        <div class="footer-col">
+            <h4 data-lt="Kokybės standartai" data-en="Quality Standards"><i class="fa-solid fa-shield-halved"></i> Kokybės standartai</h4>
+            <p><i class="fa-solid fa-circle-check" style="color:var(--accent);"></i> <span data-lt="30 d. darbų garantija" data-en="30 days work warranty">30 d. darbų garantija</span></p>
+            <p><i class="fa-solid fa-shield-halved" style="color:var(--accent);"></i> <span data-lt="Saugus nuotolinis ryšys" data-en="Secure remote connection">Saugus nuotolinis ryšys</span></p>
+            <p><i class="fa-solid fa-star" style="color:var(--accent);"></i> <span data-lt="Patvirtinti atsiliepimai" data-en="Verified reviews">Patvirtinti atsiliepimai</span></p>
         </div>
     </div>
     <div class="footer-bottom">
         <p data-lt="© 2026 PC IT Šilutė. Visos teisės saugomos." data-en="© 2026 PC IT Šilutė. All rights reserved.">© 2026 PC IT Šilutė. Visos teisės saugomos.</p>
+        <a href="index.html" style="color: var(--text-muted);" data-lt="← Grįžti į pagrindinį puslapį" data-en="← Back to home page">← Grįžti į pagrindinį puslapį</a>
+        <p>itservizassilute@gmail.com</p>
     </div>
 </div>
 </footer>
 
 <script>
-// Mobiliojo meniu atidarymo / uždarymo logika
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
 
@@ -280,7 +292,6 @@ menuToggle.addEventListener('click', () => {
     }
 });
 
-// Uždaryti meniu paspaudus ant nuorodos
 document.querySelectorAll('nav ul li a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
