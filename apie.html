@@ -120,23 +120,108 @@ section{padding:90px 0}
 
 .contact{background:linear-gradient(135deg,#031226,#062642);text-align:center}
 
-/* Footeris */
-footer{padding:40px 0;border-top:1px solid #1e3a5f;background:#010611}
-.footer-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 30px; text-align: left;}
-.footer-col h3 {font-size: 16px; margin-bottom: 15px; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 8px;}
-.footer-col p {color: var(--text-muted); font-size: 14px; line-height: 1.5; margin-bottom: 10px;}
-.footer-social-row {display: flex; gap: 10px; margin-top: 15px;}
-.footer-social-btn {width: 36px; height: 36px; border-radius: 8px; background: #1e3a5f55; border: 1px solid #1e3a5f; display: flex; align-items: center; justify-content: center; color: var(--text); transition: 0.3s;}
-.footer-social-btn:hover {background: var(--accent); color: var(--bg); border-color: var(--accent); transform: translateY(-2px);}
-.footer-links {list-style: none; padding: 0; margin: 0;}
-.footer-links li {margin-bottom: 8px;}
-.footer-links a {color: var(--text-muted); font-size: 14px; transition: 0.3s;}
-.footer-links a:hover {color: var(--accent); padding-left: 4px;}
-.footer-badges-list {display: flex; flex-direction: column; gap: 8px;}
-.footer-badge-item {display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted);}
-.footer-badge-item i {color: var(--accent);}
-.footer-bottom {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; border-top: 1px solid #1e3a5f22; padding-top: 20px;}
-.footer-bottom p {font-size: 14px; color: var(--text-muted); margin: 0;}
+/* Footer stilius tiksliai kaip index.html */
+footer {
+    background: #010611;
+    border-top: 1px solid #1e3a5f;
+    padding: 60px 0 30px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 45px;
+}
+.footer-col h3 {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.footer-col h3 i {
+    color: #0084ff;
+}
+.footer-col p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.footer-links {
+    list-style: none;
+}
+.footer-links li {
+    margin-bottom: 10px;
+}
+.footer-links a {
+    color: var(--text-muted);
+    transition: 0.3s;
+}
+.footer-links a:hover {
+    color: var(--accent);
+    padding-left: 4px;
+}
+.footer-social-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.footer-social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #0084ff22;
+    border: 1px solid #0084ff44;
+    color: #0084ff;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.footer-social-btn:hover {
+    background: #0084ff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+.footer-badges-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-badge-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #071a3055;
+    border: 1px solid #1e3a5f;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--text);
+}
+.footer-badge-item i {
+    color: var(--accent);
+}
+.footer-bottom {
+    border-top: 1px solid #1e3a5f33;
+    padding-top: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.footer-bottom a{color:var(--text-muted)}
+.footer-bottom a:hover{color:var(--accent)}
+
+@media(max-width:1024px){
+    .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+}
 
 @media(max-width:960px){
     .about-hero-grid, .timeline-grid{grid-template-columns:1fr}
@@ -169,6 +254,11 @@ footer{padding:40px 0;border-top:1px solid #1e3a5f;background:#010611}
     }
 
     .lang-switcher{margin-left: 0; margin-top: 5px;}
+}
+
+@media(max-width:600px){
+    .footer-grid{grid-template-columns:1fr}
+    .footer-bottom{flex-direction:column;text-align:center}
 }
 </style>
 </head>
@@ -348,8 +438,9 @@ footer{padding:40px 0;border-top:1px solid #1e3a5f;background:#010611}
 </div>
 
 <div class="footer-bottom">
-    <p>© 2026 PC IT Šilutė. <span data-lt="Visos teisės saugomos." data-en="All rights reserved.">Visos teisės saugomos.</span> — <a href="index.html" style="color:var(--accent); font-weight:600;" data-lt="Grįžti į pagrindinį" data-en="Back to Home">Grįžti į pagrindinį</a></p>
-    <p style="font-size: 13px; color: var(--text-muted);">itservizassilute@gmail.com</p>
+    <p>© 2026 PC IT Šilutė. <span data-lt="Visos teisės saugomos." data-en="All rights reserved.">Visos teisės saugomos.</span></p>
+    <p><a href="index.html"><i class="fa-solid fa-arrow-left"></i> <span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to home page">Grįžti į pagrindinį puslapį</span></a></p>
+    <p style="font-size: 13px; color: var(--text-muted);"><a href="mailto:itservizassilute@gmail.com">itservizassilute@gmail.com</a></p>
 </div>
 </div>
 </footer>
