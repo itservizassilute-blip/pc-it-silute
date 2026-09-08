@@ -181,7 +181,7 @@
 
     header{position:sticky;top:0;z-index:100;background:var(--glass);border-bottom:1px solid #1e3a5f;backdrop-filter:blur(12px)}
     nav{height:80px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px;flex-shrink:0;}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px;flex-shrink:0;z-index:101}
     .brand img{width:48px;height:48px;object-fit:contain}
     .brand b{color:var(--accent)}
 
@@ -197,21 +197,19 @@
     .menu-toggle {
         display: none;
         background: none;
-        border: 1px solid #1e3a5f;
-        background: #071a3088;
+        border: none;
         color: var(--text);
-        font-size: 1.5rem;
+        font-size: 24px;
         cursor: pointer;
-        padding: 6px 12px;
-        border-radius: 8px;
+        z-index: 101;
     }
 
-    section{padding:90px 0}
+    section{padding:60px 0 90px}
     .page-header{text-align:center;max-width:800px;margin:0 auto 40px}
     .page-header h1{font-size:clamp(32px, 4.5vw, 46px);font-weight:800;margin-bottom:12px}
     .page-header p{font-size:18px;color:var(--text-muted)}
 
-    .faq-category-title{font-size:20px;font-weight:800;color:var(--accent);margin:35px 0 15px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #1e3a5f;padding-bottom:8px}
+    .faq-category-title{font-size:22px;font-weight:800;color:var(--accent);margin:40px 0 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #1e3a5f;padding-bottom:10px}
 
     .accordion{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:16px;margin-bottom:12px;backdrop-filter:blur(10px);overflow:hidden;transition:0.3s}
     .accordion:hover{border-color:#1e40af}
@@ -224,54 +222,108 @@
     .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:40px}
     .back-link:hover{color:var(--accent)}
 
-    /* Footeris */
-    footer{padding:40px 0;border-top:1px solid #1e3a5f;background:#010611}
-    .footer-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 30px; text-align: left;}
-    .footer-col h3 {font-size: 16px; margin-bottom: 15px; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 8px;}
-    .footer-col p {color: var(--text-muted); font-size: 14px; line-height: 1.5; margin-bottom: 10px;}
-    .footer-links {list-style: none; padding: 0; margin: 0;}
-    .footer-links li {margin-bottom: 8px;}
-    .footer-links a {color: var(--text-muted); font-size: 14px; transition: 0.3s;}
-    .footer-links a:hover {color: var(--accent); padding-left: 4px;}
-    .footer-badges-list {display: flex; flex-direction: column; gap: 8px;}
-    .footer-badge-item {display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted);}
-    .footer-badge-item i {color: var(--accent);}
-    .footer-bottom {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; border-top: 1px solid #1e3a5f22; padding-top: 20px;}
-    .footer-bottom p {font-size: 14px; color: var(--text-muted); margin: 0;}
+    /* Profesionalus Footer stilius (vienodas su kainoraščiu) */
+    footer {
+        background: #010611;
+        border-top: 1px solid #1e3a5f;
+        color: var(--text-muted);
+        font-size: 14px;
+        padding: 50px 0 25px;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    .footer-col h3 {
+        color: var(--text);
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .footer-col p {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        color: var(--text-muted);
+    }
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer-col ul li {
+        margin-bottom: 8px;
+    }
+    .footer-col ul li a {
+        color: var(--text-muted);
+        font-size: 13px;
+        transition: 0.3s;
+    }
+    .footer-col ul li a:hover {
+        color: var(--accent);
+    }
+    .footer-bottom {
+        border-top: 1px solid #1e3a5f;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .footer-bottom a {
+        color: var(--text-muted);
+    }
+    .footer-bottom a:hover {
+        color: var(--accent);
+    }
 
     @media(max-width:1024px){
         nav ul{gap:14px;font-size:14px}
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
     }
 
     @media(max-width:960px){
-        .menu-toggle{display:block}
-        
-        nav {
-            position: relative;
-        }
-
+        .menu-toggle { display: block; }
         nav ul{
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: rgba(2, 8, 23, 0.98);
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: #020817f8;
             backdrop-filter: blur(16px);
-            border-bottom: 1px solid #1e3a5f;
-            padding: 20px;
-            gap: 16px;
+            flex-direction: column;
+            justify-content: center;
             align-items: flex-start;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-        }
-
-        nav ul.active{
+            padding: 40px;
+            gap: 20px;
+            box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+            border-left: 1px solid #1e3a5f;
+            transition: 0.4s ease-in-out;
             display: flex;
         }
-
-        .lang-switcher{margin-left: 0; margin-top: 5px;}
+        nav ul.active { right: 0; }
         .accordion-header{padding:16px 18px;font-size:15px}
+    }
+
+    @media(max-width:600px){
+        .footer-grid {
+            grid-template-columns: 1fr;
+        }
+        .footer-bottom {
+            flex-direction: column;
+            text-align: center;
+        }
     }
     </style>
 </head>
@@ -286,13 +338,13 @@
 <span>PC <b>IT</b> Šilutė</span>
 </a>
 
-<button class="menu-toggle" id="menuToggleBtn" aria-label="Meniu">
+<button class="menu-toggle" id="menuToggle" aria-label="Meniu">
     <i class="fa-solid fa-bars"></i>
 </button>
 
 <ul id="navMenu">
 <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
-<li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
+<li><a href="kainas.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
 <li><a href="duk.html" style="color:var(--accent)" data-lt="DUK" data-en="FAQ">DUK</a></li>
 <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
 <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
@@ -322,7 +374,6 @@
 
 
 <!-- 💰 Kaina ir remontas -->
-
 <div class="faq-category-title" data-lt="<i class='fa-solid fa-coins'></i> Kaina ir remontas" data-en="<i class='fa-solid fa-coins'></i> Price & Repair">
 <i class='fa-solid fa-coins'></i> Kaina ir remontas
 </div>
@@ -359,7 +410,6 @@
 
 
 <!-- 💻 Windows ir programinė įranga -->
-
 <div class="faq-category-title" data-lt="<i class='fa-brands fa-windows'></i> Windows ir programinė įranga" data-en="<i class='fa-brands fa-windows'></i> Windows & Software">
 <i class='fa-brands fa-windows'></i> Windows ir programinė įranga
 </div>
@@ -396,7 +446,6 @@
 
 
 <!-- 🔒 Duomenys -->
-
 <div class="faq-category-title" data-lt="<i class='fa-solid fa-shield-halved'></i> Duomenys" data-en="<i class='fa-solid fa-shield-halved'></i> Data">
 <i class='fa-solid fa-shield-halved'></i> Duomenys
 </div>
@@ -423,7 +472,6 @@
 
 
 <!-- 📍 Aptarnavimas -->
-
 <div class="faq-category-title" data-lt="<i class='fa-solid fa-location-dot'></i> Aptarnavimas" data-en="<i class='fa-solid fa-location-dot'></i> Service">
 <i class='fa-solid fa-location-dot'></i> Aptarnavimas
 </div>
@@ -469,8 +517,7 @@
 </div>
 
 
-<!-- ⏱️ Darbai -->
-
+<!-- ⏱️ Darbai ir garantijos -->
 <div class="faq-category-title" data-lt="<i class='fa-solid fa-clock'></i> Darbai ir garantijos" data-en="<i class='fa-solid fa-clock'></i> Work & Warranties">
 <i class='fa-solid fa-clock'></i> Darbai ir garantijos
 </div>
@@ -496,7 +543,7 @@
 </div>
 
 
-<div style="text-align: center;">
+<div>
 <a href="index.html" class="back-link">
 <i class="fa-solid fa-arrow-left"></i>
 <span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to main page">Grįžti į pagrindinį puslapį</span>
@@ -507,92 +554,79 @@
 </section>
 </main>
 
-<!-- Footeris -->
+<!-- Vienodas, profesionalus 4 stulpelių footeris -->
 <footer>
 <div class="wrap">
 <div class="footer-grid">
     <div class="footer-col">
-        <h3><i class="fa-solid fa-screwdriver-wrench"></i> PC IT Šilutė <a href="tel:+37069187006" style="margin-left: auto; font-size: 14px; color: var(--accent);"><i class="fa-solid fa-phone"></i> +370 691 87006</a></h3>
-        <p data-lt="Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse. Patirtis technologijose nuo 1988 metų." data-en="Professional computer repair, Windows setup, optimization and maintenance in Šilutė and surroundings. Technology experience since 1988.">Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse. Patirtis technologijose nuo 1988 metų.</p>
-        <p data-lt="📍 Remontas vietoje, galimas paėmimas / pristatymas susitarus." data-en="📍 Local repair, pickup / delivery available upon agreement.">📍 Remontas vietoje, galimas paėmimas / pristatymas susitarus.</p>
+        <h3><i class="fa-solid fa-computer"></i> PC IT Šilutė</h3>
+        <p data-lt="Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse. Patirtis technologijose nuo 1988 metų." data-en="Professional computer repair, Windows installation, optimization and maintenance in Šilutė and surroundings. Experience in tech since 1988.">Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse. Patirtis technologijose nuo 1988 metų.</p>
+        <p><i class="fa-solid fa-location-dot" style="color:var(--accent);"></i> <span data-lt="Remontas vietoje, galimas paėmimas / pristatymas susitarus." data-en="On-site repair, pickup / delivery available upon agreement.">Remontas vietoje, galimas paėmimas / pristatymas susitarus.</span></p>
     </div>
-
     <div class="footer-col">
-        <h3><i class="fa-solid fa-link"></i> <span data-lt="Greitos nuorodos" data-en="Quick Links">Greitos nuorodos</span></h3>
-        <ul class="footer-links">
+        <h3 data-lt="Greitos nuorodos" data-en="Quick Links">Greitos nuorodos</h3>
+        <ul>
             <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
-            <li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
+            <li><a href="kainas.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
             <li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
             <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
         </ul>
     </div>
-
     <div class="footer-col">
-        <h3><i class="fa-solid fa-folder-open"></i> <span data-lt="Pagalba klientui" data-en="Client Support">Pagalba klientui</span></h3>
-        <ul class="footer-links">
+        <h3 data-lt="Pagalba klientui" data-en="Customer Support">Pagalba klientui</h3>
+        <ul>
             <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
             <li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
             <li><a href="index.html#uzklausa" data-lt="Pateikti užklausą" data-en="Submit Inquiry">Pateikti užklausą</a></li>
-            <li><a href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="Messenger pokalbis" data-en="Messenger Chat">Messenger pokalbis</a></li>
+            <li><a href="https://m.me/" target="_blank" data-lt="Messenger pokalbis" data-en="Messenger Chat">Messenger pokalbis</a></li>
         </ul>
     </div>
-
     <div class="footer-col">
-        <h3><i class="fa-solid fa-certificate"></i> <span data-lt="Kokybės standartai" data-en="Quality Standards">Kokybės standartai</span></h3>
-        <div class="footer-badges-list">
-            <div class="footer-badge-item">
-                <i class="fa-solid fa-shield-check"></i>
-                <span data-lt="30 d. darbų garantija" data-en="30-day work warranty">30 d. darbų garantija</span>
-            </div>
-            <div class="footer-badge-item">
-                <i class="fa-solid fa-lock"></i>
-                <span data-lt="Saugus nuotolinis ryšys" data-en="Secure remote connection">Saugus nuotolinis ryšys</span>
-            </div>
-            <div class="footer-badge-item">
-                <i class="fa-solid fa-star"></i>
-                <span data-lt="Patvirtinti atsiliepimai" data-en="Verified reviews">Patvirtinti atsiliepimai</span>
-            </div>
-        </div>
+        <h3 data-lt="Kokybės standartai" data-en="Quality Standards">Kokybės standartai</h3>
+        <ul>
+            <li><i class="fa-solid fa-shield-halved" style="color:var(--accent);"></i> <span data-lt="30 d. darbų garantija" data-en="30-day work warranty">30 d. darbų garantija</span></li>
+            <li><i class="fa-solid fa-lock" style="color:var(--accent);"></i> <span data-lt="Saugus nuotolinis ryšys" data-en="Secure remote connection">Saugus nuotolinis ryšys</span></li>
+            <li><i class="fa-solid fa-star" style="color:var(--accent);"></i> <span data-lt="Patvirtinti atsiliepimai" data-en="Verified reviews">Patvirtinti atsiliepimai</span></li>
+        </ul>
     </div>
 </div>
-
 <div class="footer-bottom">
-    <p>© 2026 PC IT Šilutė. <span data-lt="Visos teisės saugomos." data-en="All rights reserved.">Visos teisės saugomos.</span></p>
-    <a href="index.html" style="color: var(--accent); font-weight: 700; text-decoration: none;" data-lt="← Grįžti į pagrindinį puslapį" data-en="← Back to home page">← Grįžti į pagrindinį puslapį</a>
-    <p style="font-size: 13px; color: var(--text-muted); margin: 0;">itservizassilute@gmail.com</p>
+    <div>© 2026 PC IT Šilutė. <span data-lt="Visos teisės saugomos." data-en="All rights reserved.">Visos teisės saugomos.</span></div>
+    <div><a href="index.html"><i class="fa-solid fa-arrow-left"></i> <span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to home page">Grįžti į pagrindinį puslapį</span></a></div>
+    <div><a href="mailto:itservizassilute@gmail.com"><i class="fa-solid fa-envelope"></i> itservizassilute@gmail.com</a></div>
 </div>
 </div>
 </footer>
 
 
 <script>
-// Hamburger meniu atidarymo/uždarymo logika
-const menuToggleBtn = document.getElementById('menuToggleBtn');
+const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
 
-if (menuToggleBtn && navMenu) {
-    menuToggleBtn.addEventListener('click', () => {
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
-        const icon = menuToggleBtn.querySelector('i');
+        const icon = menuToggle.querySelector('i');
         if (navMenu.classList.contains('active')) {
-            icon.className = 'fa-solid fa-xmark';
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
         } else {
-            icon.className = 'fa-solid fa-bars';
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
         }
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
     });
 }
-
-// Paspaudus ant nuorodos mobiliajame meniu, meniu užsidaro
-document.querySelectorAll('nav ul li a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (navMenu) navMenu.classList.remove('active');
-        const icon = menuToggleBtn ? menuToggleBtn.querySelector('i') : null;
-        if (icon) {
-            icon.className = 'fa-solid fa-bars';
-        }
-    });
-});
-
 
 // Akordeono logika
 document.querySelectorAll('.accordion-header').forEach(header => {
@@ -610,7 +644,6 @@ document.querySelectorAll('.accordion-header').forEach(header => {
     });
 });
 
-
 function setLang(lang, save = true) {
     if (save) {
         localStorage.setItem('preferred_lang', lang);
@@ -623,7 +656,6 @@ function setLang(lang, save = true) {
         : document.querySelector('button[onclick*="en"]');
 
     if(activeBtn) activeBtn.classList.add('active');
-
 
     document.querySelectorAll('[data-lt]').forEach(el => {
         const langText = lang === 'en'
@@ -644,7 +676,6 @@ function setLang(lang, save = true) {
         }
     });
 }
-
 
 window.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferred_lang');
