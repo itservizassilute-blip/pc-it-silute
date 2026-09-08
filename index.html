@@ -110,7 +110,8 @@ nav a:hover{color:var(--accent);opacity: 1;}
 
 .hero{min-height:75vh;display:flex;align-items:center;position:relative;background: radial-gradient(circle at 80% 20%, #0ea5e915 0%, transparent 40%); padding-top: 40px; padding-bottom: 40px;}
 .hero-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:50px;align-items:center}
-.badge{display:inline-flex;align-items:center;gap:8px;color:var(--accent);border:1px solid #0ea5e933;background:#0ea5e90a;border-radius:30px;padding:8px 16px;font-weight:700;margin-bottom:20px;font-size:14px;letter-spacing:1px}
+.badge{display:inline-flex;align-items:center;gap:8px;color:var(--accent);border:1px solid #0ea5e933;background:#0ea5e90a;border-radius:30px;padding:8px 16px;font-weight:700;margin-bottom:20px;font-size:14px;letter-spacing:1px;text-decoration:none;transition:0.3s}
+.badge:hover{background:#0ea5e922;border-color:var(--accent);transform:translateY(-2px)}
 h1{font-size:clamp(38px,5.5vw,62px);line-height:1.1;margin-bottom:24px;font-weight:800}
 h1 span{color:var(--accent);background:linear-gradient(90deg, #0ea5e9, #6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .hero p{font-size:20px;color:var(--text-muted);max-width:600px;margin-bottom:35px}
@@ -480,9 +481,9 @@ footer {
 <section class="hero">
 <div class="wrap hero-grid">
 <div>
-<div class="badge" data-lt="📍 ŠILUTĖ IR APYLINKĖS • KOMPIUTERIŲ REMONTAS IR PROGRAMINĖ PAGALBA" data-en="📍 ŠILUTĖ & SURROUNDINGS • COMPUTER REPAIR & SOFTWARE SUPPORT">
-    <i class="fa-solid fa-screwdriver-wrench"></i> <span>📍 ŠILUTĖ IR APYLINKĖS • KOMPIUTERIŲ REMONTAS IR PROGRAMINĖ PAGALBA</span>
-</div>
+<a href="https://www.facebook.com/61592840316716" target="_blank" rel="noopener noreferrer" class="badge" data-lt="🌐 „PC IT Šilutė“ Facebook Puslapis" data-en="🌐 „PC IT Šilutė“ Facebook Page">
+    <i class="fa-brands fa-facebook" style="color:#0084ff; font-size: 16px;"></i> <span data-lt="🌐 „PC IT Šilutė“ Facebook Puslapis" data-en="🌐 „PC IT Šilutė“ Facebook Page">🌐 „PC IT Šilutė“ Facebook Puslapis</span>
+</a>
 <h1 data-lt="Kompiuteris pradėjo ožiuotis?<br><span>Sutvarkome Šilutėje, vietoje.</span>" data-en="Is your computer acting up?<br><span>We fix it locally in Šilutė.</span>">
     Kompiuteris pradėjo ožiuotis?<br><span>Sutvarkome Šilutėje, vietoje.</span>
 </h1>
