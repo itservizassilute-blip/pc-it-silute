@@ -230,97 +230,22 @@
     .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:40px}
     .back-link:hover{color:var(--accent)}
 
-    /* Profesionalus Footer stilius */
-    footer {
-        background: #010611;
-        border-top: 1px solid #1e3a5f;
-        color: var(--text-muted);
-        font-size: 14px;
-        padding: 50px 0 25px;
-    }
-    .footer-grid {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr 1fr 1fr;
-        gap: 30px;
-        margin-bottom: 40px;
-    }
-    .footer-col h3 {
-        color: var(--text);
-        font-size: 16px;
-        font-weight: 700;
-        margin-bottom: 16px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    .footer-col p {
-        font-size: 13px;
-        line-height: 1.6;
-        margin-bottom: 12px;
-        color: var(--text-muted);
-    }
-    .footer-col ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .footer-col ul li {
-        margin-bottom: 8px;
-    }
-    .footer-col ul li a {
-        color: var(--text-muted);
-        font-size: 13px;
-        transition: 0.3s;
-    }
-    .footer-col ul li a:hover {
-        color: var(--accent);
-    }
-    .social-links {
-        display: flex;
-        gap: 12px;
-        margin-top: 15px;
-    }
-    .social-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: #1e3a5f55;
-        border: 1px solid #1e3a5f;
-        color: var(--text);
-        padding: 8px 14px;
-        border-radius: 8px;
-        font-size: 13px;
-        font-weight: 600;
-        transition: 0.3s;
-    }
-    .social-btn:hover {
-        background: var(--accent);
-        color: var(--bg);
-        border-color: var(--accent);
-    }
-    .footer-bottom {
-        border-top: 1px solid #1e3a5f;
-        padding-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 13px;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-    .footer-bottom a {
-        color: var(--text-muted);
-    }
-    .footer-bottom a:hover {
-        color: var(--accent);
-    }
+    /* Footer stilius tiksliai kaip index */
+    footer{background:#010611;border-top:1px solid #1e3a5f;color:var(--text-muted);font-size:14px;padding:50px 0 25px}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;margin-bottom:40px}
+    .footer-col h3{color:var(--text);font-size:16px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+    .footer-col p{font-size:13px;line-height:1.6;margin-bottom:12px}
+    .footer-col ul{list-style:none}
+    .footer-col ul li{margin-bottom:8px}
+    .footer-col ul li a{color:var(--text-muted);font-size:13px}
+    .footer-col ul li a:hover{color:var(--accent)}
+    .footer-bottom{border-top:1px solid #1e3a5f;padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:13px;flex-wrap:wrap;gap:15px}
+    .footer-bottom a{color:var(--text-muted)}
+    .footer-bottom a:hover{color:var(--accent)}
 
     @media(max-width:1024px){
         nav ul{gap:14px;font-size:14px}
-        .footer-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
+        .footer-grid{grid-template-columns:1fr 1fr;gap:25px}
     }
 
     @media(max-width:960px){
@@ -348,13 +273,8 @@
     }
 
     @media(max-width:600px){
-        .footer-grid {
-            grid-template-columns: 1fr;
-        }
-        .footer-bottom {
-            flex-direction: column;
-            text-align: center;
-        }
+        .footer-grid{grid-template-columns:1fr}
+        .footer-bottom{flex-direction:column;text-align:center}
     }
     </style>
 </head>
@@ -595,20 +515,17 @@
 </section>
 </main>
 
-<!-- Vienodas, profesionalus 4 stulpelių footeris su Facebook nuoroda -->
+<!-- Footer tiksliai kaip index.html -->
 <footer>
 <div class="wrap">
 <div class="footer-grid">
     <div class="footer-col">
         <h3><i class="fa-solid fa-computer"></i> PC IT Šilutė</h3>
-        <p data-lt="Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse. Patirtis technologijose nuo 1988 metų." data-en="Professional computer repair, Windows installation, optimization and maintenance in Šilutė and surroundings. Experience in tech since 1988.">Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse. Patirtis technologijose nuo 1988 metų.</p>
-        <p><i class="fa-solid fa-location-dot" style="color:var(--accent);"></i> <span data-lt="Remontas vietoje, galimas paėmimas / pristatymas susitarus." data-en="On-site repair, pickup / delivery available upon agreement.">Remontas vietoje, galimas paėmimas / pristatymas susitarus.</span></p>
-        
-        <div class="social-links">
-            <a href="https://www.facebook.com/" target="_blank" class="social-btn">
-                <i class="fa-brands fa-facebook-f" style="color:#1877f2;"></i>
-                <span data-lt="Sekite mus Facebook'e" data-en="Follow on Facebook">Sekite mus Facebook'e</span>
-            </a>
+        <p data-lt="Operatyvus stacionarių ir nešiojamų kompiuterių remontas, programinės įrangos konfigūravimas." data-en="Prompt repair of desktop and laptop computers, software configuration.">Operatyvus stacionarių ir nešiojamų kompiuterių remontas, programinės įrangos konfigūravimas.</p>
+        <p><i class="fa-solid fa-location-dot" style="color:var(--accent);"></i> <span data-lt="Remontas vietoje arba nuotolinė Šilutėje ir apylinkėse." data-en="On-site or remote repair in Šilutė and surroundings.">Remontas vietoje arba nuotolinė Šilutėje ir apylinkėse.</span></p>
+        <div style="display:flex;gap:10px;margin-top:15px;">
+            <a href="https://facebook.com" target="_blank" style="background:#1e3a5f;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--text);transition:0.3s;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://m.me/" target="_blank" style="background:#1e3a5f;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--text);transition:0.3s;"><i class="fa-brands fa-facebook-messenger"></i></a>
         </div>
     </div>
     <div class="footer-col">
