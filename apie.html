@@ -119,7 +119,21 @@ section{padding:90px 0}
 .btn.alt{background:transparent;color:var(--text);border:1px solid #1e3a5f}
 
 .contact{background:linear-gradient(135deg,#031226,#062642);text-align:center}
-footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
+
+/* Footeris */
+footer{padding:40px 0;border-top:1px solid #1e3a5f;background:#010611}
+.footer-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 30px; text-align: left;}
+.footer-col h3 {font-size: 16px; margin-bottom: 15px; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 8px;}
+.footer-col p {color: var(--text-muted); font-size: 14px; line-height: 1.5; margin-bottom: 10px;}
+.footer-links {list-style: none; padding: 0; margin: 0;}
+.footer-links li {margin-bottom: 8px;}
+.footer-links a {color: var(--text-muted); font-size: 14px; transition: 0.3s;}
+.footer-links a:hover {color: var(--accent); padding-left: 4px;}
+.footer-badges-list {display: flex; flex-direction: column; gap: 8px;}
+.footer-badge-item {display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted);}
+.footer-badge-item i {color: var(--accent);}
+.footer-bottom {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; border-top: 1px solid #1e3a5f22; padding-top: 20px;}
+.footer-bottom p {font-size: 14px; color: var(--text-muted); margin: 0;}
 
 @media(max-width:960px){
     .about-hero-grid, .timeline-grid{grid-template-columns:1fr}
@@ -273,9 +287,60 @@ footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--t
 </section>
 </main>
 
+<!-- Footeris -->
 <footer>
 <div class="wrap">
-<p>© 2026 PC IT Šilutė. Visos teisės saugomos.</p>
+<div class="footer-grid">
+    <div class="footer-col">
+        <h3><i class="fa-solid fa-screwdriver-wrench"></i> PC IT Šilutė <a href="tel:+37069187006" style="margin-left: auto; font-size: 14px; color: var(--accent);"><i class="fa-solid fa-phone"></i> +370 691 87006</a></h3>
+        <p data-lt="Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse. Patirtis technologijose nuo 1988 metų." data-en="Professional computer repair, Windows setup, optimization and maintenance in Šilutė and surroundings. Technology experience since 1988.">Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse. Patirtis technologijose nuo 1988 metų.</p>
+        <p data-lt="📍 Remontas vietoje, galimas paėmimas / pristatymas susitarus." data-en="📍 Local repair, pickup / delivery available upon agreement.">📍 Remontas vietoje, galimas paėmimas / pristatymas susitarus.</p>
+    </div>
+
+    <div class="footer-col">
+        <h3><i class="fa-solid fa-link"></i> <span data-lt="Greitos nuorodos" data-en="Quick Links">Greitos nuorodos</span></h3>
+        <ul class="footer-links">
+            <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
+            <li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
+            <li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
+            <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h3><i class="fa-solid fa-folder-open"></i> <span data-lt="Pagalba klientui" data-en="Client Support">Pagalba klientui</span></h3>
+        <ul class="footer-links">
+            <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
+            <li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
+            <li><a href="index.html#uzklausa" data-lt="Pateikti užklausą" data-en="Submit Inquiry">Pateikti užklausą</a></li>
+            <li><a href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" data-lt="Messenger pokalbis" data-en="Messenger Chat">Messenger pokalbis</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h3><i class="fa-solid fa-certificate"></i> <span data-lt="Kokybės standartai" data-en="Quality Standards">Kokybės standartai</span></h3>
+        <div class="footer-badges-list">
+            <div class="footer-badge-item">
+                <i class="fa-solid fa-shield-check"></i>
+                <span data-lt="30 d. darbų garantija" data-en="30-day work warranty">30 d. darbų garantija</span>
+            </div>
+            <div class="footer-badge-item">
+                <i class="fa-solid fa-lock"></i>
+                <span data-lt="Saugus nuotolinis ryšys" data-en="Secure remote connection">Saugus nuotolinis ryšys</span>
+            </div>
+            <div class="footer-badge-item">
+                <i class="fa-solid fa-star"></i>
+                <span data-lt="Patvirtinti atsiliepimai" data-en="Verified reviews">Patvirtinti atsiliepimai</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-bottom">
+    <p>© 2026 PC IT Šilutė. <span data-lt="Visos teisės saugomos." data-en="All rights reserved.">Visos teisės saugomos.</span></p>
+    <a href="index.html" style="color: var(--accent); font-weight: 700; text-decoration: none;" data-lt="← Grįžti į pagrindinį puslapį" data-en="← Back to home page">← Grįžti į pagrindinį puslapį</a>
+    <p style="font-size: 13px; color: var(--text-muted); margin: 0;">itservizassilute@gmail.com</p>
+</div>
 </div>
 </footer>
 
