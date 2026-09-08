@@ -139,7 +139,7 @@
     .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:40px}
     .back-link:hover{color:var(--accent)}
 
-    footer{padding:35px;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
+    footer{padding:35px 0;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
 
     @media(max-width:1024px){
         nav ul{gap:14px;font-size:14px}
@@ -319,7 +319,15 @@
 
 <footer>
 <div class="wrap">
-<p>© 2026 PC IT Šilutė. Visos teisės saugomos.</p>
+<div class="footer-content" style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
+<p style="margin: 0;" data-lt="Profesionalus ir skaidrus kompiuterių remontas bei priežiūra Šilutėje. Dirbame tam, kad jūsų technika tarnautų ilgai ir patikimai." data-en="Professional and transparent computer repair and maintenance in Šilutė. We work to ensure your equipment serves you long and reliably.">Profesionalus ir skaidrus kompiuterių remontas bei priežiūra Šilutėje. Dirbame tam, kad jūsų technika tarnautų ilgai ir patikimai.</p>
+<div style="display: flex; gap: 20px; font-size: 14px; font-weight: 600;">
+<a href="index.html" style="color: var(--text-muted); transition: 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'" data-lt="Grįžti į pagrindinį" data-en="Back to Home">Grįžti į pagrindinį</a>
+<a href="kainas.html" style="color: var(--accent); transition: 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a>
+<a href="index.html#uzklausa" style="color: var(--text-muted); transition: 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'" data-lt="Užklausa" data-en="Inquiry">Užklausa</a>
+</div>
+<p style="margin: 0; border-top: 1px solid #1e3a5f; width: 100%; padding-top: 16px;">© 2026 PC IT Šilutė. Visos teisės saugomos.</p>
+</div>
 </div>
 </footer>
 
