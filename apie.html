@@ -125,6 +125,9 @@ footer{padding:40px 0;border-top:1px solid #1e3a5f;background:#010611}
 .footer-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 30px; text-align: left;}
 .footer-col h3 {font-size: 16px; margin-bottom: 15px; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 8px;}
 .footer-col p {color: var(--text-muted); font-size: 14px; line-height: 1.5; margin-bottom: 10px;}
+.footer-social-row {display: flex; gap: 10px; margin-top: 15px;}
+.footer-social-btn {width: 36px; height: 36px; border-radius: 8px; background: #1e3a5f55; border: 1px solid #1e3a5f; display: flex; align-items: center; justify-content: center; color: var(--text); transition: 0.3s;}
+.footer-social-btn:hover {background: var(--accent); color: var(--bg); border-color: var(--accent); transform: translateY(-2px);}
 .footer-links {list-style: none; padding: 0; margin: 0;}
 .footer-links li {margin-bottom: 8px;}
 .footer-links a {color: var(--text-muted); font-size: 14px; transition: 0.3s;}
@@ -292,9 +295,17 @@ footer{padding:40px 0;border-top:1px solid #1e3a5f;background:#010611}
 <div class="wrap">
 <div class="footer-grid">
     <div class="footer-col">
-        <h3><i class="fa-solid fa-screwdriver-wrench"></i> PC IT Šilutė <a href="tel:+37069187006" style="margin-left: auto; font-size: 14px; color: var(--accent);"><i class="fa-solid fa-phone"></i> +370 691 87006</a></h3>
-        <p data-lt="Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse. Patirtis technologijose nuo 1988 metų." data-en="Professional computer repair, Windows setup, optimization and maintenance in Šilutė and surroundings. Technology experience since 1988.">Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse. Patirtis technologijose nuo 1988 metų.</p>
-        <p data-lt="📍 Remontas vietoje, galimas paėmimas / pristatymas susitarus." data-en="📍 Local repair, pickup / delivery available upon agreement.">📍 Remontas vietoje, galimas paėmimas / pristatymas susitarus.</p>
+        <h3><i class="fa-brands fa-facebook" style="color:#0084ff;"></i> PC IT Šilutė <a href="tel:+37069187006" style="margin-left: auto; font-size: 14px; color: var(--accent);"><i class="fa-solid fa-phone"></i> +370 691 87006</a></h3>
+        <p data-lt="Operatyvus stacionarių ir nešiojamų kompiuterių remontas, programinės įrangos konfigūravimas." data-en="Prompt desktop and laptop repair, software configuration.">Operatyvus stacionarių ir nešiojamų kompiuterių remontas, programinės įrangos konfigūravimas.</p>
+        <p data-lt="📍 Remontas vietoje arba nuotolinė pagalba Šilutėje ir apylinkėse." data-en="📍 Local repair or remote support in Šilutė and surroundings.">📍 Remontas vietoje arba nuotolinė pagalba Šilutėje ir apylinkėse.</p>
+        <div class="footer-social-row">
+            <a href="https://www.facebook.com/61592840316716" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook puslapis" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Messenger" aria-label="Messenger" style="background:#0084ff22; color:#0084ff;">
+                <i class="fa-brands fa-facebook-messenger"></i>
+            </a>
+        </div>
     </div>
 
     <div class="footer-col">
@@ -337,9 +348,8 @@ footer{padding:40px 0;border-top:1px solid #1e3a5f;background:#010611}
 </div>
 
 <div class="footer-bottom">
-    <p>© 2026 PC IT Šilutė. <span data-lt="Visos teisės saugomos." data-en="All rights reserved.">Visos teisės saugomos.</span></p>
-    <a href="index.html" style="color: var(--accent); font-weight: 700; text-decoration: none;" data-lt="← Grįžti į pagrindinį puslapį" data-en="← Back to home page">← Grįžti į pagrindinį puslapį</a>
-    <p style="font-size: 13px; color: var(--text-muted); margin: 0;">itservizassilute@gmail.com</p>
+    <p>© 2026 PC IT Šilutė. <span data-lt="Visos teisės saugomos." data-en="All rights reserved.">Visos teisės saugomos.</span> — <a href="index.html" style="color:var(--accent); font-weight:600;" data-lt="Grįžti į pagrindinį" data-en="Back to Home">Grįžti į pagrindinį</a></p>
+    <p style="font-size: 13px; color: var(--text-muted);">itservizassilute@gmail.com</p>
 </div>
 </div>
 </footer>
