@@ -84,7 +84,45 @@
     .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-weight:600;margin-top:30px;font-size:15px}
     .back-link:hover{color:var(--accent)}
 
-    footer{padding:35px 0;border-top:1px solid #1e3a5f;text-align:center;color:var(--text-muted);font-size:14px;background:#010611}
+    /* Suvienodintas Footer stilius */
+    footer {
+        background: #010611;
+        border-top: 1px solid #1e3a5f;
+        padding: 50px 0 30px;
+        color: var(--text-muted);
+        font-size: 14px;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    .footer-col h4 {
+        color: var(--text);
+        font-size: 16px;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    .footer-col p, .footer-col a {
+        color: var(--text-muted);
+        display: block;
+        margin-bottom: 8px;
+        transition: 0.3s;
+    }
+    .footer-col a:hover {
+        color: var(--accent);
+        padding-left: 5px;
+    }
+    .footer-bottom {
+        text-align: center;
+        border-top: 1px solid #1e3a5f;
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
 
     @media(max-width:960px){
         .menu-toggle { display: block; }
@@ -151,7 +189,7 @@
 
 <div class="remote-container">
     <div class="info-box">
-        <h3 data-lt="ℹ️ Kada tinka, o kada ne?" data-en="ℹ️ When is it suitable and when not?">ℹ️ Kada tinka, o kada ne?</h3>
+        <h3 data-lt="ℹ️ Kada tinka, o kada netinka?" data-en="ℹ️ When is it suitable and when not?">ℹ️ Kada tinka, o kada netinka?</h3>
         <p data-lt="<b>Tinka:</b> kai kompiuteris įsijungia, turi internetą, bet veikia lėtai, reikia pašalinti virusus ar suderinti programinę įrangą (iš anksto sutarus laiką).<br><b>Netinka:</b> jei kompiuteris neįsijungia, sugadinta fizinė (aparatinė) dalis, arba jei reikia perrašyti visą Windows operacinę sistemą (šiam procesui reikalinga fizinė kompiuterio apžiūra pas meistrą)." 
             data-en="<b>Suitable:</b> when the computer turns on, has internet, runs slowly, or needs software setup (by prior appointment).<br><b>Not suitable:</b> if the computer does not turn on, hardware is damaged, or if you need to reinstall the entire Windows operating system (this requires physical inspection at the workshop).">
         <b>Tinka:</b> kai kompiuteris įsijungia, turi internetą, bet veikia lėtai, reikia pašalinti virusus ar suderinti programinę įrangą (iš anksto sutarus laiką).<br>
@@ -200,15 +238,28 @@
 
 <footer>
 <div class="wrap">
-<div class="footer-content" style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
-<p style="margin: 0;" data-lt="Profesionalus ir skaidrus kompiuterių remontas bei priežiūra Šilutėje. Dirbame tam, kad jūsų technika tarnautų ilgai ir patikimai." data-en="Professional and transparent computer repair and maintenance in Šilutė. We work to ensure your equipment serves you long and reliably.">Profesionalus ir skaidrus kompiuterių remontas bei priežiūra Šilutėje. Dirbame tam, kad jūsų technika tarnautų ilgai ir patikimai.</p>
-<div style="display: flex; gap: 20px; font-size: 14px; font-weight: 600;">
-<a href="index.html" style="color: var(--text-muted); transition: 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'" data-lt="Grįžti į pagrindinį" data-en="Back to Home">Grįžti į pagrindinį</a>
-<a href="kainas.html" style="color: var(--text-muted); transition: 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a>
-<a href="index.html#uzklausa" style="color: var(--text-muted); transition: 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'" data-lt="Užklausa" data-en="Inquiry">Užklausa</a>
-</div>
-<p style="margin: 0; border-top: 1px solid #1e3a5f; width: 100%; padding-top: 16px;">© 2026 PC IT Šilutė. Visos teisės saugomos.</p>
-</div>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4 data-lt="PC IT Šilutė" data-en="PC IT Šilutė">PC IT Šilutė</h4>
+            <p data-lt="Profesionalus ir skaidrus kompiuterių remontas bei programinė priežiūra Šilutėje." data-en="Professional and transparent computer repair and software maintenance in Šilutė.">Profesionalus ir skaidrus kompiuterių remontas bei programinė priežiūra Šilutėje.</p>
+        </div>
+        <div class="footer-col">
+            <h4 data-lt="Greitos nuorodos" data-en="Quick Links">Greitos nuorodos</h4>
+            <a href="index.html" data-lt="Pagrindinis puslapis" data-en="Home">Pagrindinis puslapis</a>
+            <a href="kainas.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a>
+            <a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a>
+            <a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a>
+        </div>
+        <div class="footer-col">
+            <h4 data-lt="Kontaktai" data-en="Contact">Kontaktai</h4>
+            <p data-lt="Šilutė, Lietuva" data-en="Šilutė, Lithuania">Šilutė, Lietuva</p>
+            <p>Tel.: <a href="tel:+37060000000" style="display:inline; color:var(--text-muted);">+370 6...</a></p>
+            <a href="index.html#uzklausa" data-lt="Pateikti užklausą" data-en="Send Inquiry">Pateikti užklausą</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p data-lt="© 2026 PC IT Šilutė. Visos teisės saugomos." data-en="© 2026 PC IT Šilutė. All rights reserved.">© 2026 PC IT Šilutė. Visos teisės saugomos.</p>
+    </div>
 </div>
 </footer>
 
