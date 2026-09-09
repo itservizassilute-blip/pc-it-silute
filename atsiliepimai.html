@@ -147,20 +147,108 @@ section{padding:90px 0}
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:15px 26px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)}
 .btn:hover{transform:translateY(-3px);box-shadow:0 15px 30px #0ea5e955;filter:brightness(1.1)}
 
-/* Footeris */
-footer{padding:40px 0;border-top:1px solid #1e3a5f;background:#010611}
-.footer-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 30px; text-align: left;}
-.footer-col h3 {font-size: 16px; margin-bottom: 15px; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 8px;}
-.footer-col p {color: var(--text-muted); font-size: 14px; line-height: 1.5; margin-bottom: 10px;}
-.footer-links {list-style: none; padding: 0; margin: 0;}
-.footer-links li {margin-bottom: 8px;}
-.footer-links a {color: var(--text-muted); font-size: 14px; transition: 0.3s;}
-.footer-links a:hover {color: var(--accent); padding-left: 4px;}
-.footer-badges-list {display: flex; flex-direction: column; gap: 8px;}
-.footer-badge-item {display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted);}
-.footer-badge-item i {color: var(--accent);}
-.footer-bottom {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; border-top: 1px solid #1e3a5f22; padding-top: 20px;}
-.footer-bottom p {font-size: 14px; color: var(--text-muted); margin: 0;}
+/* Footer stilius tiksliai kaip index.html */
+footer {
+    background: #010611;
+    border-top: 1px solid #1e3a5f;
+    padding: 60px 0 30px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 45px;
+}
+.footer-col h3 {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.footer-col h3 i {
+    color: #0084ff;
+}
+.footer-col p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.footer-links {
+    list-style: none;
+}
+.footer-links li {
+    margin-bottom: 10px;
+}
+.footer-links a {
+    color: var(--text-muted);
+    transition: 0.3s;
+}
+.footer-links a:hover {
+    color: var(--accent);
+    padding-left: 4px;
+}
+.footer-social-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.footer-social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #0084ff22;
+    border: 1px solid #0084ff44;
+    color: #0084ff;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.footer-social-btn:hover {
+    background: #0084ff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+.footer-badges-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-badge-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #071a3055;
+    border: 1px solid #1e3a5f;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--text);
+}
+.footer-badge-item i {
+    color: var(--accent);
+}
+.footer-bottom {
+    border-top: 1px solid #1e3a5f33;
+    padding-top: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.footer-bottom a{color:var(--text-muted)}
+.footer-bottom a:hover{color:var(--accent)}
+
+@media(max-width:1024px){
+    .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+}
 
 @media(max-width:960px){
     .menu-toggle{display:block}
@@ -193,6 +281,10 @@ footer{padding:40px 0;border-top:1px solid #1e3a5f;background:#010611}
 }
 @media(max-width:640px){
     .reviews-grid {grid-template-columns: 1fr;}
+}
+@media(max-width:600px){
+    .footer-grid{grid-template-columns:1fr}
+    .footer-bottom{flex-direction:column;text-align:center}
 }
 </style>
 </head>
@@ -317,9 +409,17 @@ footer{padding:40px 0;border-top:1px solid #1e3a5f;background:#010611}
 <div class="wrap">
 <div class="footer-grid">
     <div class="footer-col">
-        <h3><i class="fa-solid fa-screwdriver-wrench"></i> PC IT Šilutė <a href="tel:+37069187006" style="margin-left: auto; font-size: 14px; color: var(--accent);"><i class="fa-solid fa-phone"></i> +370 691 87006</a></h3>
-        <p data-lt="Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse. Patirtis technologijose nuo 1988 metų." data-en="Professional computer repair, Windows setup, optimization and maintenance in Šilutė and surroundings. Technology experience since 1988.">Profesionalus kompiuterių remontas, Windows diegimas, optimizavimas ir priežiūra Šilutėje bei apylinkėse. Patirtis technologijose nuo 1988 metų.</p>
-        <p data-lt="📍 Remontas vietoje, galimas paėmimas / pristatymas susitarus." data-en="📍 Local repair, pickup / delivery available upon agreement.">📍 Remontas vietoje, galimas paėmimas / pristatymas susitarus.</p>
+        <h3><i class="fa-brands fa-facebook" style="color:#0084ff;"></i> PC IT Šilutė <a href="tel:+37069187006" style="margin-left: auto; font-size: 14px; color: var(--accent);"><i class="fa-solid fa-phone"></i> +370 691 87006</a></h3>
+        <p data-lt="Operatyvus stacionarių ir nešiojamų kompiuterių remontas, programinės įrangos konfigūravimas." data-en="Prompt desktop and laptop repair, software configuration.">Operatyvus stacionarių ir nešiojamų kompiuterių remontas, programinės įrangos konfigūravimas.</p>
+        <p data-lt="📍 Remontas vietoje arba nuotolinė pagalba Šilutėje ir apylinkėse." data-en="📍 Local repair or remote support in Šilutė and surroundings.">📍 Remontas vietoje arba nuotolinė pagalba Šilutėje ir apylinkėse.</p>
+        <div class="footer-social-row">
+            <a href="https://www.facebook.com/61592840316716" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook puslapis" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://m.me/61592840316716" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Messenger" aria-label="Messenger" style="background:#0084ff22; color:#0084ff;">
+                <i class="fa-brands fa-facebook-messenger"></i>
+            </a>
+        </div>
     </div>
 
     <div class="footer-col">
@@ -363,8 +463,8 @@ footer{padding:40px 0;border-top:1px solid #1e3a5f;background:#010611}
 
 <div class="footer-bottom">
     <p>© 2026 PC IT Šilutė. <span data-lt="Visos teisės saugomos." data-en="All rights reserved.">Visos teisės saugomos.</span></p>
-    <a href="index.html" style="color: var(--accent); font-weight: 700; text-decoration: none;" data-lt="← Grįžti į pagrindinį puslapį" data-en="← Back to home page">← Grįžti į pagrindinį puslapį</a>
-    <p style="font-size: 13px; color: var(--text-muted); margin: 0;">itservizassilute@gmail.com</p>
+    <p><a href="index.html"><i class="fa-solid fa-arrow-left"></i> <span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to home page">Grįžti į pagrindinį puslapį</span></a></p>
+    <p style="font-size: 13px; color: var(--text-muted);"><a href="mailto:itservizassilute@gmail.com">itservizassilute@gmail.com</a></p>
 </div>
 </div>
 </footer>
