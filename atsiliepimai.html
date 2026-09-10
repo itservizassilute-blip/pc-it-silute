@@ -430,7 +430,7 @@ footer {
 <div class="review-form-box">
 <h3 data-lt="📝 Atsiliepimas mūsų svetainėje" data-en="📝 Review on our website">📝 Atsiliepimas mūsų svetainėje</h3>
 <p data-lt="Jei norite pasidalinti savo patirtimi mūsų svetainėje, užpildykite formą žemiau." data-en="If you would like to share your experience on our website, fill out the form below.">Jei norite pasidalinti savo patirtimi mūsų svetainėje, užpildykite formą žemiau.</p>
-<form action="https://formspree.io/f/mkjwjqvd" method="POST">
+<form id="reviewForm" action="https://formspree.io/f/mkjwjqvd" method="POST">
 <div class="form-group">
 <label data-lt="Jūsų vardas:" data-en="Your name:">Jūsų vardas:</label>
 <input type="text" name="atsiliepimo_vardas" required autocomplete="name" placeholder="Įveskite savo vardą" data-lt="Įveskite savo vardą" data-en="Enter your name">
@@ -457,8 +457,14 @@ footer {
 <label for="viesinimas" style="font-size:14px; color:var(--text-muted); cursor:pointer; margin-bottom:0;" data-lt="Sutinku, kad mano vardas ir atsiliepimas būtų skelbiami PC IT Šilutė svetainėje." data-en="I agree that my name and review can be published on the PC IT Šilutė website.">Sutinku, kad mano vardas ir atsiliepimas būtų skelbiami PC IT Šilutė svetainėje.</label>
 </div>
 
-<button type="submit" class="btn" style="width:100%; justify-content:center; margin-top:20px;" data-lt="⭐ Siųsti atsiliepimą" data-en="⭐ Send Review">⭐ Siųsti atsiliepimą</button>
+<button type="submit" id="submitBtn" class="btn" style="width:100%; justify-content:center; margin-top:20px;" data-lt="⭐ Siųsti atsiliepimą" data-en="⭐ Send Review">⭐ Siųsti atsiliepimą</button>
 </form>
+
+<div id="formSuccessMsg" style="display:none; text-align:center; padding: 20px 0;">
+    <div style="font-size: 48px; color: #10b981; margin-bottom: 15px;"><i class="fa-solid fa-circle-check"></i></div>
+    <h4 style="font-size: 20px; color: #fff; margin-bottom: 10px;" data-lt="Ačiū už jūsų atsiliepimą!" data-en="Thank you for your review!">Ačiū už jūsų atsiliepimą!</h4>
+    <p style="color: var(--text-muted); font-size: 15px;" data-lt="Jūsų atsiliepimą sėkmingai gavome ir perskaitysime artimiausiu metu." data-en="We have successfully received your review and will read it shortly.">Jūsų atsiliepimą sėkmingai gavome ir perskaitysime artimiausiu metu.</p>
+</div>
 </div>
 </div>
 </section>
@@ -580,6 +586,44 @@ window.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('preferred_lang');
   if (savedLang === 'en') { setLang('en', false); } else { setLang('lt', false); }
 });
+
+// Formspree AJAX pateikimas ir sėkmės pranešimas
+const reviewForm = document.getElementById('reviewForm');
+const formSuccessMsg = document.getElementById('formSuccessMsg');
+
+if (reviewForm) {
+    reviewForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const submitBtn = document.getElementById('submitBtn');
+        const originalBtnText = submitBtn.innerHTML;
+        
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Siunčiama...';
+
+        try {
+            const response = await fetch(reviewForm.action, {
+                method: 'POST',
+                body: new FormData(reviewForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                reviewForm.style.display = 'none';
+                formSuccessMsg.style.display = 'block';
+            } else {
+                alert('Įvyko klaida siunčiant atsiliepimą. Bandykite dar kartą.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
+        } catch (error) {
+            alert('Įvyko tinklo klaida. Patikrinkite interneto ryšį.');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        }
+    });
+}
 </script>
    <!-- Tik vienas švarus stacionarių/desktop mygtukų blokas (Messenger + Užklausa) -->
 <div id="sticky-buttons-desktop" style="position:fixed;bottom:20px;right:20px;flex-direction:column;gap:12px;z-index:9999;">
