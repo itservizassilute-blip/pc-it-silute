@@ -165,75 +165,72 @@ section{padding:90px 0}
 .btn:hover{transform:translateY(-3px);box-shadow:0 15px 30px #0ea5e955;filter:brightness(1.1)}
 
 /* Footer stilius tiksliai kaip index.html */
-<footer>
-<div class="wrap">
-<div class="footer-grid">
-    <div class="footer-col">
-        <h3><i class="fa-brands fa-facebook" style="color:#0084ff;"></i> PC IT Šilutė <a href="tel:+37069187006" style="margin-left: auto; font-size: 14px; color: var(--accent);"><i class="fa-solid fa-phone"></i> +370 691 87006</a></h3>
-        <p data-lt="Operatyvus stacionarių ir nešiojamų kompiuterių remontas, programinės įrangos konfigūravimas." data-en="Prompt desktop and laptop repair, software configuration.">Operatyvus stacionarių ir nešiojamų kompiuterių remontas, programinės įrangos konfigūravimas.</p>
-        <p data-lt="📍 Remontas vietoje arba nuotolinė pagalba Šilutėje ir apylinkėse." data-en="📍 Local repair or remote support in Šilutė and surroundings.">📍 Remontas vietoje arba nuotolinė pagalba Šilutėje ir apylinkėse.</p>
-        
-        <!-- Google atsiliepimų kortelė -->
-        <a href="https://share.google/BKJiiYf29raKUk5lY" target="_blank" rel="noopener noreferrer" class="google-badge">
-            <i class="fa-brands fa-google"></i>
-            <span class="g-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
-            <span data-lt="Peržiūrėkite mus Google" data-en="Review us on Google">Peržiūrėkite mus Google</span>
-        </a>
-
-        <!-- Facebook sekimo kortelė (tik ikona ir tekstas) -->
-        <a href="https://www.facebook.com/61592840316716" target="_blank" rel="noopener noreferrer" class="google-badge" style="margin-top: 10px;">
-            <i class="fa-brands fa-facebook-f" style="color: #0084ff;"></i>
-            <span class="g-stars" style="display: none;"></span>
-            <span data-lt="Sekite mus Facebook" data-en="Follow us on Facebook">Sekite mus Facebook</span>
-        </a>
-    </div>
-
-    <div class="footer-col">
-        <h3><i class="fa-solid fa-link"></i> <span data-lt="Greitos nuorodos" data-en="Quick Links">Greitos nuorodos</span></h3>
-        <ul class="footer-links">
-            <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
-            <li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
-            <li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
-            <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
-        </ul>
-    </div>
-
-    <div class="footer-col">
-        <h3><i class="fa-solid fa-folder-open"></i> <span data-lt="Pagalba klientui" data-en="Client Support">Pagalba klientui</span></h3>
-        <ul class="footer-links">
-            <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
-            <li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
-            <li><a href="index.html#uzklausa" data-lt="Pateikti užklausą" data-en="Submit Inquiry">Pateikti užklausą</a></li>
-            <li><a href="https://m.me/1259100567284528" target="_blank" rel="noopener noreferrer" data-lt="Messenger pokalbis" data-en="Messenger Chat">Messenger pokalbis</a></li>
-        </ul>
-    </div>
-
-    <div class="footer-col">
-        <h3><i class="fa-solid fa-certificate"></i> <span data-lt="Kokybės standartai" data-en="Quality Standards">Kokybės standartai</span></h3>
-        <div class="footer-badges-list">
-            <div class="footer-badge-item">
-                <i class="fa-solid fa-shield-check"></i>
-                <span data-lt="30 d. darbų garantija" data-en="30-day work warranty">30 d. darbų garantija</span>
-            </div>
-            <div class="footer-badge-item">
-                <i class="fa-solid fa-lock"></i>
-                <span data-lt="Saugus nuotolinis ryšys" data-en="Secure remote connection">Saugus nuotolinis ryšys</span>
-            </div>
-            <div class="footer-badge-item">
-                <i class="fa-solid fa-star"></i>
-                <span data-lt="Patvirtinti atsiliepimai" data-en="Verified reviews">Patvirtinti atsiliepimai</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="footer-bottom">
-    <p>© 2026 PC IT Šilutė. <span data-lt="Visos teisės saugomos." data-en="All rights reserved.">Visos teisės saugomos.</span></p>
-    <p><a href="index.html"><i class="fa-solid fa-arrow-left"></i> <span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to home page">Grįžti į pagrindinį puslapį</span></a></p>
-    <p style="font-size: 13px; color: var(--text-muted);"><a href="mailto:itservizassilute@gmail.com">itservizassilute@gmail.com</a></p>
-</div>
-</div>
-</footer>
+footer {
+    background: #010611;
+    border-top: 1px solid #1e3a5f;
+    padding: 60px 0 30px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 45px;
+}
+.footer-col h3 {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.footer-col h3 i {
+    color: #0084ff;
+}
+.footer-col p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.footer-links {
+    list-style: none;
+}
+.footer-links li {
+    margin-bottom: 10px;
+}
+.footer-links a {
+    color: var(--text-muted);
+    transition: 0.3s;
+}
+.footer-links a:hover {
+    color: var(--accent);
+    padding-left: 4px;
+}
+.footer-social-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.footer-social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #0084ff22;
+    border: 1px solid #0084ff44;
+    color: #0084ff;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.footer-social-btn:hover {
+    background: #0084ff;
+    color: #fff;
+    transform: translateY(-2px);
+}
     .google-badge {
         display: inline-flex;
         align-items: center;
@@ -418,17 +415,6 @@ section{padding:90px 0}
 <p class="subtitle" style="margin-bottom: 30px;" data-lt="Jei naudojotės mūsų paslaugomis Šilutėje, parašykite savo nuomonę." data-en="If you used our services in Šilutė, please write your opinion.">Jei naudojotės mūsų paslaugomis Šilutėje, parašykite savo nuomonę.</p>
 
 <div class="review-form-box">
-
-<!-- Kvietimas palikti atsiliepimą Google (GBP tiesioginė nuoroda) -->
-<div style="background: rgba(2, 8, 23, 0.5); border: 1px solid #1e3a5f; padding: 22px; border-radius: 16px; text-align: center; margin-bottom: 30px;">
-    <h3 style="margin-bottom: 8px; color: #fff; font-size: 18px;"><i class="fa-brands fa-google" style="color: #4285F4; margin-right: 8px;"></i> <span data-lt="Įvertinkite mus Google" data-en="Review us on Google">Įvertinkite mus Google</span></h3>
-    <p style="color: var(--text-muted); margin-bottom: 16px; font-size: 14px;" data-lt="Jūsų atsiliepimas padeda mums augti ir tobulinti paslaugas Šilutėje!" data-en="Your review helps us grow and improve our services in Šilutė!">Jūsų atsiliepimas padeda mums augti ir tobulinti paslaugas Šilutėje!</p>
-    <a href="https://g.page/r/CWJ1F4SSl3uZEBM/review" target="_blank" rel="noopener noreferrer" class="google-badge" style="margin-top: 0; display: inline-flex; text-decoration: none;">
-        <span class="g-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
-        <span data-lt="Palikti atsiliepimą Google" data-en="Leave a Google Review">Palikti atsiliepimą Google</span>
-    </a>
-</div>
-
 <form action="https://formspree.io/f/mkjwjqvd" method="POST">
 <div class="form-group">
 <label data-lt="Jūsų vardas:" data-en="Your name:">Jūsų vardas:</label>
@@ -462,6 +448,77 @@ section{padding:90px 0}
 </div>
 </section>
 </main>
+
+<!-- Footeris -->
+<footer>
+<div class="wrap">
+<div class="footer-grid">
+    <div class="footer-col">
+        <h3><i class="fa-brands fa-facebook" style="color:#0084ff;"></i> PC IT Šilutė <a href="tel:+37069187006" style="margin-left: auto; font-size: 14px; color: var(--accent);"><i class="fa-solid fa-phone"></i> +370 691 87006</a></h3>
+        <p data-lt="Operatyvus stacionarių ir nešiojamų kompiuterių remontas, programinės įrangos konfigūravimas." data-en="Prompt desktop and laptop repair, software configuration.">Operatyvus stacionarių ir nešiojamų kompiuterių remontas, programinės įrangos konfigūravimas.</p>
+        <p data-lt="📍 Remontas vietoje arba nuotolinė pagalba Šilutėje ir apylinkėse." data-en="📍 Local repair or remote support in Šilutė and surroundings.">📍 Remontas vietoje arba nuotolinė pagalba Šilutėje ir apylinkėse.</p>
+        
+        <!-- Google atsiliepimų kortelė -->
+        <a href="https://share.google/BKJiiYf29raKUk5lY" target="_blank" rel="noopener noreferrer" class="google-badge">
+            <i class="fa-brands fa-google"></i>
+            <span class="g-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <span data-lt="Peržiūrėkite mus Google" data-en="Review us on Google">Peržiūrėkite mus Google</span>
+        </a>
+
+        <!-- Facebook sekimo kortelė (tik ikona ir tekstas) -->
+        <a href="https://www.facebook.com/61592840316716" target="_blank" rel="noopener noreferrer" class="google-badge" style="margin-top: 10px;">
+            <i class="fa-brands fa-facebook-f" style="color: #0084ff;"></i>
+            <span class="g-stars" style="display: none;"></span>
+            <span data-lt="Sekite mus Facebook" data-en="Follow us on Facebook">Sekite mus Facebook</span>
+        </a>
+    </div>
+
+    <div class="footer-col">
+        <h3><i class="fa-solid fa-link"></i> <span data-lt="Greitos nuorodos" data-en="Quick Links">Greitos nuorodos</span></h3>
+        <ul class="footer-links">
+            <li><a href="index.html#paslaugos" data-lt="Paslaugos" data-en="Services">Paslaugos</a></li>
+            <li><a href="kainos.html" data-lt="Kainoraštis" data-en="Pricing">Kainoraštis</a></li>
+            <li><a href="duk.html" data-lt="DUK" data-en="FAQ">DUK</a></li>
+            <li><a href="nuotoline-pagalba.html" data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h3><i class="fa-solid fa-folder-open"></i> <span data-lt="Pagalba klientui" data-en="Client Support">Pagalba klientui</span></h3>
+        <ul class="footer-links">
+            <li><a href="apie.html" data-lt="Apie mus" data-en="About Us">Apie mus</a></li>
+            <li><a href="atsiliepimai.html" data-lt="Atsiliepimai" data-en="Reviews">Atsiliepimai</a></li>
+            <li><a href="index.html#uzklausa" data-lt="Pateikti užklausą" data-en="Submit Inquiry">Pateikti užklausą</a></li>
+            <li><a href="https://m.me/1259100567284528" target="_blank" rel="noopener noreferrer" data-lt="Messenger pokalbis" data-en="Messenger Chat">Messenger pokalbis</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h3><i class="fa-solid fa-certificate"></i> <span data-lt="Kokybės standartai" data-en="Quality Standards">Kokybės standartai</span></h3>
+        <div class="footer-badges-list">
+            <div class="footer-badge-item">
+                <i class="fa-solid fa-shield-check"></i>
+                <span data-lt="30 d. darbų garantija" data-en="30-day work warranty">30 d. darbų garantija</span>
+            </div>
+            <div class="footer-badge-item">
+                <i class="fa-solid fa-lock"></i>
+                <span data-lt="Saugus nuotolinis ryšys" data-en="Secure remote connection">Saugus nuotolinis ryšys</span>
+            </div>
+            <div class="footer-badge-item">
+                <i class="fa-solid fa-star"></i>
+                <span data-lt="Patvirtinti atsiliepimai" data-en="Verified reviews">Patvirtinti atsiliepimai</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-bottom">
+    <p>© 2026 PC IT Šilutė. <span data-lt="Visos teisės saugomos." data-en="All rights reserved.">Visos teisės saugomos.</span></p>
+    <p><a href="index.html"><i class="fa-solid fa-arrow-left"></i> <span data-lt="Grįžti į pagrindinį puslapį" data-en="Back to home page">Grįžti į pagrindinį puslapį</span></a></p>
+    <p style="font-size: 13px; color: var(--text-muted);"><a href="mailto:itservizassilute@gmail.com">itservizassilute@gmail.com</a></p>
+</div>
+</div>
+</footer>
 
 <script>
 const menuToggleBtn = document.getElementById('menuToggleBtn');
