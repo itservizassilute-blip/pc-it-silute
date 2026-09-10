@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="lt">
 <head>
@@ -32,10 +33,11 @@
             "addressLocality": "Šilutė",
             "addressCountry": "LT"
           },
-          "areaServed": {
-            "@type": "AdministrativeArea",
-            "name": "Šilutė"
-          },
+          "areaServed": [
+            { "@type": "Place", "name": "Europe" },
+            { "@type": "Place", "name": "North America" },
+            { "@type": "Place", "name": "Worldwide (remote)" }
+          ],
           "priceRange": "€€"
         },
         {
@@ -143,6 +145,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Taip! Jei kompiuteris įsijungia ir turi interneto ryšį, nesudėtingas programines problemas ar nustatymus galime sutvarkyti per atstumą per „RustDesk“ programą."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ar galiu susisiekti ne lietuviškai?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Taip, bendraujame keliomis kalbomis – susisiekus aptarsime, kuri jums patogiausia."
               }
             },
             {
@@ -626,6 +636,16 @@
 </button>
 <div class="accordion-content">
 <p data-lt="Taip! Jei kompiuteris įsijungia ir turi interneto ryšį, nesudėtingas programines problemas ar nustatymus galime sutvarkyti per atstumą per „RustDesk“ programą." data-en="Yes! If the computer turns on and has internet connection, we can fix minor software issues or settings remotely via RustDesk.">Taip! Jei kompiuteris įsijungia ir turi interneto ryšį, nesudėtingas programines problemas ar nustatymus galime sutvarkyti per atstumą per „RustDesk“ programą.</p>
+</div>
+</div>
+
+<div class="accordion">
+<button class="accordion-header">
+<span data-lt="Ar galiu susisiekti ne lietuviškai?" data-en="Can I contact you in a language other than Lithuanian?">Ar galiu susisiekti ne lietuviškai?</span>
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+<div class="accordion-content">
+<p data-lt="Taip, bendraujame keliomis kalbomis – susisiekus aptarsime, kuri jums patogiausia." data-en="Yes, we communicate in several languages – once you reach out, we'll find what works best for you.">Taip, bendraujame keliomis kalbomis – susisiekus aptarsime, kuri jums patogiausia.</p>
 </div>
 </div>
 
