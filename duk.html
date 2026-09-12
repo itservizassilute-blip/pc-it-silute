@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="lt">
 <head>
@@ -15,9 +14,6 @@
     <meta property="og:description" content="Atsakymai į rūpimus klausimus apie kompiuterių remontą, kainas, duomenų saugumą ir atvykimą Šilutėje.">
     <meta property="og:url" content="https://itservizassilute-blip.github.io/pc-it-silute/duk.html">
     <meta property="og:image" content="https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png">
-    <meta property="og:locale" content="lt_LT">
-    <meta property="og:locale:alternate" content="en_US">
-    <meta name="twitter:card" content="summary">
 
     <!-- FAQPage & LocalBusiness Schema.org (JSON-LD) -->
     <script type="application/ld+json">
@@ -36,20 +32,23 @@
             "addressLocality": "Šilutė",
             "addressCountry": "LT"
           },
-          "areaServed": [
-            { "@type": "Place", "name": "Europe" },
-            { "@type": "Place", "name": "North America" },
-            { "@type": "Place", "name": "Worldwide (remote)" }
-          ],
-          "availableLanguage": ["Lithuanian", "English", "Russian", "Spanish"],
-          "priceRange": "€€",
-          "sameAs": [
-            "https://www.facebook.com/61592840316716"
-          ]
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Šilutė"
+          },
+          "priceRange": "€€"
         },
         {
           "@type": "FAQPage",
           "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ar atliekate aparatinį (hardware) remontą, pvz., keičiate detales?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Specializuojuosi programinėje priežiūroje – Windows diegime, optimizavime, virusų šalinime, duomenų atkūrime ir panašiuose darbuose. Sudėtingesnį aparatinį remontą (plokščių litavimą, komponentų keitimą) rekomenduoju atlikti specializuotuose servisuose, tačiau visada galiu padėti įvertinti, kas tiksliai negerai su jūsų kompiuteriu."
+              }
+            },
             {
               "@type": "Question",
               "name": "Ar prieš remontą žinosiu, kiek kainuos?",
@@ -152,14 +151,6 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Taip! Jei kompiuteris įsijungia ir turi interneto ryšį, nesudėtingas programines problemas ar nustatymus galime sutvarkyti per atstumą per „RustDesk“ programą."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Ar galiu susisiekti ne lietuviškai?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Taip, bendraujame keliomis kalbomis – susisiekus aptarsime, kuri jums patogiausia."
               }
             },
             {
@@ -500,6 +491,16 @@
 
 <div class="accordion">
 <button class="accordion-header">
+<span data-lt="Ar atliekate aparatinį (hardware) remontą, pvz., keičiate detales?" data-en="Do you perform hardware repairs, e.g. replacing parts?">Ar atliekate aparatinį (hardware) remontą, pvz., keičiate detales?</span>
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+<div class="accordion-content">
+<p data-lt="Specializuojuosi programinėje priežiūroje – Windows diegime, optimizavime, virusų šalinime, duomenų atkūrime ir panašiuose darbuose. Sudėtingesnį aparatinį remontą (plokščių litavimą, komponentų keitimą) rekomenduoju atlikti specializuotuose servisuose, tačiau visada galiu padėti įvertinti, kas tiksliai negerai su jūsų kompiuteriu." data-en="I specialize in software maintenance – Windows installation, optimization, virus removal, data recovery and similar work. For more complex hardware repairs (board soldering, component replacement) I recommend a specialized service, but I can always help evaluate what exactly is wrong with your computer.">Specializuojuosi programinėje priežiūroje – Windows diegime, optimizavime, virusų šalinime, duomenų atkūrime ir panašiuose darbuose. Sudėtingesnį aparatinį remontą (plokščių litavimą, komponentų keitimą) rekomenduoju atlikti specializuotuose servisuose, tačiau visada galiu padėti įvertinti, kas tiksliai negerai su jūsų kompiuteriu.</p>
+</div>
+</div>
+
+<div class="accordion">
+<button class="accordion-header">
 <span data-lt="Ar prieš remontą žinosiu, kiek kainuos?" data-en="Will I know the cost before repair?">Ar prieš remontą žinosiu, kiek kainuos?</span>
 <i class="fa-solid fa-chevron-down"></i>
 </button>
@@ -643,16 +644,6 @@
 </button>
 <div class="accordion-content">
 <p data-lt="Taip! Jei kompiuteris įsijungia ir turi interneto ryšį, nesudėtingas programines problemas ar nustatymus galime sutvarkyti per atstumą per „RustDesk“ programą." data-en="Yes! If the computer turns on and has internet connection, we can fix minor software issues or settings remotely via RustDesk.">Taip! Jei kompiuteris įsijungia ir turi interneto ryšį, nesudėtingas programines problemas ar nustatymus galime sutvarkyti per atstumą per „RustDesk“ programą.</p>
-</div>
-</div>
-
-<div class="accordion">
-<button class="accordion-header">
-<span data-lt="Ar galiu susisiekti ne lietuviškai?" data-en="Can I contact you in a language other than Lithuanian?">Ar galiu susisiekti ne lietuviškai?</span>
-<i class="fa-solid fa-chevron-down"></i>
-</button>
-<div class="accordion-content">
-<p data-lt="Taip, bendraujame keliomis kalbomis – susisiekus aptarsime, kuri jums patogiausia." data-en="Yes, we communicate in several languages – once you reach out, we'll find what works best for you.">Taip, bendraujame keliomis kalbomis – susisiekus aptarsime, kuri jums patogiausia.</p>
 </div>
 </div>
 
