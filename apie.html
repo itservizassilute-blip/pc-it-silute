@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="lt">
 <head>
@@ -73,7 +72,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 :root {
@@ -147,6 +145,10 @@ section{padding:90px 0}
 .principle-box i{font-size:40px;color:var(--accent);margin-bottom:20px}
 .principle-box h3{font-size:24px;margin-bottom:15px;font-weight:800}
 .principle-box p{color:var(--text-muted);font-size:17px;line-height:1.7}
+.story-box{max-width:950px;margin:0 auto;background:linear-gradient(145deg,#071a30,#03101e);border:1px solid #1e3a5f;border-radius:24px;padding:45px;text-align:left;backdrop-filter:blur(10px)}
+.story-box h3{font-size:24px;margin-bottom:22px;font-weight:800;text-align:center;color:var(--accent)}
+.story-box p{color:var(--text-muted);font-size:16px;line-height:1.75;margin-bottom:18px}
+.story-box p:last-child{margin-bottom:0}
 
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:15px 26px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s}
 .btn:hover{transform:translateY(-3px);filter:brightness(1.1)}
@@ -288,6 +290,8 @@ footer {
 @media(max-width:960px){
     .about-hero-grid, .timeline-grid{grid-template-columns:1fr}
     .stats-bar{grid-template-columns:1fr}
+    .story-box{padding:28px 22px}
+    .story-box p{font-size:15px}
     
     .menu-toggle{display:block}
     
@@ -426,6 +430,20 @@ footer {
 <i class="fa-solid fa-shield-heart"></i>
 <h3 data-lt="Mūsų darbo principas" data-en="Our Working Principle">Mūsų darbo principas</h3>
 <p data-lt="Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį ar brangias paslaugas. Jei neturite laiko vežti į vietą – susitarus galime parvežti atgal, o pagalba pasiekiama net ir savaitgaliais." data-en="We first look for the cause of the problem, not a reason to sell a new computer or expensive services. If you don't have time to transport it to the location – by agreement we can bring it back, and support is available even on weekends.">Pirmiausia ieškome problemos priežasties, o ne priežasties parduoti naują kompiuterį ar brangias paslaugas. Jei neturite laiko vežti į vietą – susitarus galime parvežti atgal, o pagalba pasiekiama net ir savaitgaliais.</p>
+</div>
+</div>
+</section>
+
+<!-- Istorija, kuri paskatino veikti oficialiai -->
+<section class="dark-sec" style="padding-top:0;">
+<div class="wrap">
+<div class="story-box">
+<h3 data-lt="Istorija, kuri paskatino veikti oficialiai" data-en="The story that started it all">Istorija, kuri paskatino veikti oficialiai</h3>
+<p data-lt="Kompiuterius tvarkau jau senokai – sau ir aplink gyvenantiems giminaičiams. Bet vienas atvejis paskatino pasiūlyti šias paslaugas ir platesniam ratui." data-en="I've been fixing computers for a long time – for myself and family members nearby. But one particular situation is what pushed me to offer these services more widely.">Kompiuterius tvarkau jau senokai – sau ir aplink gyvenantiems giminaičiams. Bet vienas atvejis paskatino pasiūlyti šias paslaugas ir platesniam ratui.</p>
+<p data-lt="Susidūriau su neįprasta problema – ant paties kompiuterio BIOS buvo uždėtas slaptažodis, kurio niekas nežinojo. Pagalvojau: jei jau kas, tai meistras tikrai žinos, kaip tai apeiti – ir nunešiau kompiuterį pas vietinį specialistą. Vietoj sprendimo, po apsilankymo problemos ne tik neišnyko, bet kompiuteris ėmė mesti klaidas, o antrą kartą kreipusis buvo pasakyta, kad remontuoti neapsimoka – geriau pirkti naują su SSD." data-en="I ran into an unusual problem – my computer's BIOS had a password set that nobody knew. I thought: if anyone can bypass this, surely a technician can – so I took the computer to a local specialist. Instead of a solution, after the visit the problems didn't go away – the computer started throwing errors, and on a second visit I was told it wasn't worth repairing – better to buy a new one with an SSD.">Susidūriau su neįprasta problema – ant paties kompiuterio BIOS buvo uždėtas slaptažodis, kurio niekas nežinojo. Pagalvojau: jei jau kas, tai meistras tikrai žinos, kaip tai apeiti – ir nunešiau kompiuterį pas vietinį specialistą. Vietoj sprendimo, po apsilankymo problemos ne tik neišnyko, bet kompiuteris ėmė mesti klaidas, o antrą kartą kreipusis buvo pasakyta, kad remontuoti neapsimoka – geriau pirkti naują su SSD.</p>
+<p data-lt="Nesutikau su tokiu atsakymu. Parsivežiau kompiuterį namo ir pats susitvarkiau su BIOS slaptažodžiu. Patikrinęs diską įsitikinau, kad jis visiškai gyvybingas – tereikėjo įdiegti naują Windows sistemą su visomis reikalingomis programomis. Kompiuteris iki šiol veikia puikiai." data-en="I didn't accept that answer. I brought the computer home and fixed the BIOS password myself. After checking the drive, I confirmed it was completely healthy – all it needed was a fresh Windows installation with the necessary programs. The computer has been running great ever since.">Nesutikau su tokiu atsakymu. Parsivežiau kompiuterį namo ir pats susitvarkiau su BIOS slaptažodžiu. Patikrinęs diską įsitikinau, kad jis visiškai gyvybingas – tereikėjo įdiegti naują Windows sistemą su visomis reikalingomis programomis. Kompiuteris iki šiol veikia puikiai.</p>
+<p data-lt="Norėdamas įsitikinti, kiek dar gali šis „nurašytas“ kompiuteris, išbandžiau ant jo visas Windows 10 versijas, o vėliau radau būdą paleisti net Windows 11 – nors techniškai tai neturėjo būti įmanoma dėl per seno kompiuterio. Sistema veikė, bet dėl Windows 11 dydžio ir specifikos nusprendžiau negrūdinti seno kompiuterio ir grįžau prie lengvesnės Windows 10 versijos." data-en="Wanting to see how much life was really left in this &quot;written-off&quot; computer, I tried every version of Windows 10 on it, and later even found a way to run Windows 11 – even though technically that shouldn't have been possible on such an old machine. It worked, but given the size and demands of Windows 11, I decided not to push the old computer too hard and went back to a lighter Windows 10 build.">Norėdamas įsitikinti, kiek dar gali šis „nurašytas“ kompiuteris, išbandžiau ant jo visas Windows 10 versijas, o vėliau radau būdą paleisti net Windows 11 – nors techniškai tai neturėjo būti įmanoma dėl per seno kompiuterio. Sistema veikė, bet dėl Windows 11 dydžio ir specifikos nusprendžiau negrūdinti seno kompiuterio ir grįžau prie lengvesnės Windows 10 versijos.</p>
+<p data-lt="Tas pats kompiuteris, kurį profesionalas pavadino „neverta taisyti“, iki šiol dirba be jokių problemų. Būtent tada supratau – jei sugebu išspręsti tokias problemas pats, kodėl neturėčiau to pasiūlyti ir kitiems oficialiai? Taip gimė ši veikla." data-en="The same computer that a professional called &quot;not worth fixing&quot; is still running without any issues today. That's when I realized – if I could solve problems like this myself, why not offer that to others officially? That's how this business began.">Tas pats kompiuteris, kurį profesionalas pavadino „neverta taisyti“, iki šiol dirba be jokių problemų. Būtent tada supratau – jei sugebu išspręsti tokias problemas pats, kodėl neturėčiau to pasiūlyti ir kitiems oficialiai? Taip gimė ši veikla.</p>
 </div>
 </div>
 </section>
