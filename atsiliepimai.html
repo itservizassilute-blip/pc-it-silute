@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-30PKF7ZHKH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+
+      gtag("config", "G-30PKF7ZHKH");
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="pc-it-logo.png">
 <meta charset="UTF-8">
@@ -8,12 +17,15 @@
 <meta name="description" content="Klientų atsiliepimai apie PC IT Šilutė kompiuterių remonto ir aptarnavimo paslaugas. Palikite savo atsiliepimą.">
 <title>Atsiliepimai – PC IT Šilutė</title>
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://itservizassilute-blip.github.io/pc-it-silute/atsiliepimai.html">
+<link rel="canonical" href="https://pcmeistras-silute.lt/atsiliepimai.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Atsiliepimai – PC IT Šilutė">
-<meta property="og:description" content="Pasidalykite savo nuomone apie mūsų teikiamas paslaugas Šilutėje.">
-<meta property="og:url" content="https://itservizassilute-blip.github.io/pc-it-silute/atsiliepimai.html">
-<meta property="og:image" content="https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png">
+<meta property="og:description" content="Pasidalykite savo nuomone apie mūsų teikiamas paslaugas.">
+<meta property="og:url" content="https://pcmeistras-silute.lt/atsiliepimai.html">
+<meta property="og:image" content="https://pcmeistras-silute.lt/pc-it-logo.png">
+<meta property="og:locale" content="lt_LT">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
 
 <!-- LocalBusiness Schema.org (JSON-LD) Vietiniam SEO -->
 <script type="application/ld+json">
@@ -22,20 +34,25 @@
   "@type": "ComputerRepair",
   "name": "PC IT Šilutė",
   "alternateName": "PC MEISTRAS ŠILUTĖ",
-  "url": "https://itservizassilute-blip.github.io/pc-it-silute/atsiliepimai.html",
-  "logo": "https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png",
-  "image": "https://itservizassilute-blip.github.io/pc-it-silute/pc-it-logo.png",
+  "url": "https://pcmeistras-silute.lt/atsiliepimai.html",
+  "logo": "https://pcmeistras-silute.lt/pc-it-logo.png",
+  "image": "https://pcmeistras-silute.lt/pc-it-logo.png",
   "description": "Klientų atsiliepimai apie PC IT Šilutė kompiuterių remonto ir aptarnavimo paslaugas.",
+  "availableLanguage": ["Lithuanian", "English", "Russian", "Spanish"],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Šilutė",
     "addressCountry": "LT"
   },
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": "Šilutė"
-  },
-  "priceRange": "€€"
+  "areaServed": [
+    { "@type": "Place", "name": "Europe" },
+    { "@type": "Place", "name": "North America" },
+    { "@type": "Place", "name": "Worldwide (remote)" }
+  ],
+  "priceRange": "€€",
+  "sameAs": [
+    "https://www.facebook.com/61592840316716"
+  ]
 }
 </script>
 
@@ -49,13 +66,13 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Pradžia",
-      "item": "https://itservizassilute-blip.github.io/pc-it-silute/"
+      "item": "https://pcmeistras-silute.lt/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Atsiliepimai",
-      "item": "https://itservizassilute-blip.github.io/pc-it-silute/atsiliepimai.html"
+      "item": "https://pcmeistras-silute.lt/atsiliepimai.html"
     }
   ]
 }
@@ -155,7 +172,14 @@ section{padding:90px 0}
     font-size: 14px;
 }
 
+.google-review-card{max-width:700px;margin:0 auto 25px;padding:25px;background:#071a3055;border:1px solid #1e3a5f;border-radius:20px;text-align:center;backdrop-filter:blur(10px)}
+.google-review-card p{margin:0 0 16px;color:var(--text-muted);font-size:15px}
+.google-review-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:#fff;color:#3c4043;padding:11px 18px;border-radius:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,0.2);transition:0.3s}
+.google-review-btn:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,0.3)}
+.google-review-btn i{color:#4285F4}
 .review-form-box{max-width:700px;margin:0 auto;background:var(--card-bg);border:1px solid #1e3a5f;padding:45px;border-radius:30px;backdrop-filter:blur(10px)}
+.review-form-box h3{text-align:center;font-size:24px;margin-bottom:8px;color:var(--text)}
+.review-form-box > p{text-align:center;color:var(--text-muted);font-size:15px;margin-bottom:25px}
 .form-group{margin-bottom:20px}
 .form-group label{display:block;margin-bottom:8px;font-weight:600;color:var(--text-muted)}
 .form-group input, .form-group textarea, .form-group select{width:100%;padding:14px 16px;background:var(--bg);border:1px solid #1e3a5f;border-radius:12px;color:#fff;font-family:inherit;font-size:15px}
@@ -164,7 +188,7 @@ section{padding:90px 0}
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);font-weight:800;padding:15px 26px;border-radius:12px;box-shadow:0 10px 25px #0ea5e933;cursor:pointer;border:none;transition:0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)}
 .btn:hover{transform:translateY(-3px);box-shadow:0 15px 30px #0ea5e955;filter:brightness(1.1)}
 
-/* Footer stilius tiksliai kaip index.html */
+/* Footer stilius */
 footer {
     background: #010611;
     border-top: 1px solid #1e3a5f;
@@ -208,56 +232,33 @@ footer {
     color: var(--accent);
     padding-left: 4px;
 }
-.footer-social-row {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-.footer-social-btn {
+.google-badge {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: #0084ff22;
-    border: 1px solid #0084ff44;
-    color: #0084ff;
-    border-radius: 10px;
-    font-size: 18px;
+    gap: 8px;
+    background: #ffffff;
+    color: #3c4043;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     transition: 0.3s;
 }
-.footer-social-btn:hover {
-    background: #0084ff;
-    color: #fff;
+.google-badge:hover {
     transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
 }
-    .google-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: #ffffff;
-        color: #3c4043;
-        padding: 8px 14px;
-        border-radius: 20px;
-        font-size: 13px;
-        font-weight: 700;
-        margin-top: 14px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        transition: 0.3s;
-    }
-    .google-badge:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 14px rgba(0,0,0,0.3);
-    }
-    .google-badge i.fa-google {
-        color: #4285F4;
-        font-size: 15px;
-    }
-    .google-badge .g-stars {
-        color: #fbbf24;
-        font-size: 11px;
-        letter-spacing: 1px;
-    }
+.google-badge i.fa-google {
+    color: #4285F4;
+    font-size: 15px;
+}
+.google-badge .g-stars {
+    color: #fbbf24;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
 
 .footer-badges-list {
     display: flex;
@@ -297,11 +298,7 @@ footer {
 
 @media(max-width:960px){
     .menu-toggle{display:block}
-    
-    nav {
-        position: relative;
-    }
-
+    nav { position: relative; }
     nav ul{
         display: none;
         flex-direction: column;
@@ -317,11 +314,7 @@ footer {
         align-items: flex-start;
         box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     }
-
-    nav ul.active{
-        display: flex;
-    }
-
+    nav ul.active{ display: flex; }
     .lang-switcher{margin-left: 0; margin-top: 5px;}
 }
 @media(max-width:640px){
@@ -368,7 +361,7 @@ footer {
 <h2 class="title" data-lt="Klientų atsiliepimai ir įvertinimai" data-en="Customer Reviews & Ratings">Klientų atsiliepimai ir įvertinimai</h2>
 <p class="subtitle" data-lt="Jūsų nuomonė mums labai svarbi! Peržiūrėkite ką sako mūsų klientai arba palikite savo atsiliepimą." data-en="Your opinion is very important to us! Read what our customers say or leave your own review.">Jūsų nuomonė mums labai svarbi! Peržiūrėkite ką sako mūsų klientai arba palikite savo atsiliepimą.</p>
 
-<!-- Tikri klientų atsiliepimai -->
+<!-- Klientų atsiliepimai -->
 <div class="reviews-grid">
     <div class="review-card">
         <div>
@@ -412,10 +405,20 @@ footer {
 </div>
 
 <h2 class="title" style="font-size: 30px; margin-bottom: 10px;" data-lt="Palikite savo atsiliepimą" data-en="Leave Your Review">Palikite savo atsiliepimą</h2>
-<p class="subtitle" style="margin-bottom: 30px;" data-lt="Jei naudojotės mūsų paslaugomis Šilutėje, parašykite savo nuomonę." data-en="If you used our services in Šilutė, please write your opinion.">Jei naudojotės mūsų paslaugomis Šilutėje, parašykite savo nuomonę.</p>
+<p class="subtitle" style="margin-bottom: 30px;" data-lt="Jei naudojotės mūsų paslaugomis, parašykite savo nuomonę, mums ji labai pravers." data-en="If you used our services, please write your opinion it will help us.">Jei naudojotės mūsų paslaugomis, parašykite savo nuomonę, mums ji labai pravers.</p>
+
+<div class="google-review-card">
+    <h3 style="font-size:24px; margin-bottom:8px;" data-lt="⭐ Atsiliepimas Google" data-en="⭐ Google Review">⭐ Atsiliepimas Google</h3>
+    <p data-lt="Jei norite palikti viešą atsiliepimą Google, spustelėkite žemiau esantį mygtuką." data-en="If you would like to leave a public review on Google, click the button below.">Jei norite palikti viešą atsiliepimą Google, spustelėkite žemiau esantį mygtuką.</p>
+    <a href="https://g.page/r/CWJ1F4SSl3uZEBM/review" target="_blank" rel="noopener noreferrer" class="google-review-btn" data-lt="⭐ Palikti atsiliepimą Google →" data-en="⭐ Leave a Google Review →">⭐ Palikti atsiliepimą Google →</a>
+</div>
 
 <div class="review-form-box">
-<form action="https://formspree.io/f/mkjwjqvd" method="POST">
+<h3 data-lt="📝 Atsiliepimas mūsų svetainėje" data-en="📝 Review on our website">📝 Atsiliepimas mūsų svetainėje</h3>
+<p data-lt="Jei norite pasidalinti savo patirtimi mūsų svetainėje, užpildykite formą žemiau." data-en="If you would like to share your experience on our website, fill out the form below.">Jei norite pasidalinti savo patirtimi mūsų svetainėje, užpildykite formą žemiau.</p>
+
+<!-- Atsiliepimų forma su automatinio atsakymo palaikymu -->
+<form id="reviewForm" action="https://formspree.io/f/mkjwjqvd" method="POST">
 <div class="form-group">
 <label data-lt="Jūsų vardas:" data-en="Your name:">Jūsų vardas:</label>
 <input type="text" name="atsiliepimo_vardas" required autocomplete="name" placeholder="Įveskite savo vardą" data-lt="Įveskite savo vardą" data-en="Enter your name">
@@ -424,11 +427,11 @@ footer {
 <div class="form-group">
 <label data-lt="Įvertinimas (Žvaigždutėmis):" data-en="Rating (Stars):">Įvertinimas (Žvaigždutėmis):</label>
 <select name="ivertinimas" style="background:#020817;">
-<option value="5 žvaigždutės" data-lt="⭐⭐⭐⭐⭐ (5/5) Puikiai" data-en="⭐⭐⭐⭐⭐ (5/5) Excellent">⭐⭐⭐⭐⭐ (5/5) Puikiai</option>
-<option value="4 žvaigždutės" data-lt="⭐⭐⭐⭐ (4/5) Labai gerai" data-en="⭐⭐⭐⭐ (4/5) Very Good">⭐⭐⭐⭐ (4/5) Labai gerai</option>
-<option value="3 žvaigždutės" data-lt="⭐⭐⭐ (3/5) Vidutiniškai" data-en="⭐⭐⭐ (3/5) Average">⭐⭐⭐ (3/5) Vidutiniškai</option>
-<option value="2 žvaigždutės" data-lt="⭐⭐ (2/5) Prastai" data-en="⭐⭐ (2/5) Poor">⭐⭐ (2/5) Prastai</option>
-<option value="1 žvaigždutė" data-lt="⭐ (1/5) Labai prastai" data-en="⭐ (1/5) Very Poor">⭐ (1/5) Labai prastai</option>
+<option value="5 žvaigždutės">⭐⭐⭐⭐⭐ (5/5) Puikiai</option>
+<option value="4 žvaigždutės">⭐⭐⭐⭐ (4/5) Labai gerai</option>
+<option value="3 žvaigždutės">⭐⭐⭐ (3/5) Vidutiniškai</option>
+<option value="2 žvaigždutės">⭐⭐ (2/5) Prastai</option>
+<option value="1 žvaigždutė">⭐ (1/5) Labai prastai</option>
 </select>
 </div>
 
@@ -442,14 +445,21 @@ footer {
 <label for="viesinimas" style="font-size:14px; color:var(--text-muted); cursor:pointer; margin-bottom:0;" data-lt="Sutinku, kad mano vardas ir atsiliepimas būtų skelbiami PC IT Šilutė svetainėje." data-en="I agree that my name and review can be published on the PC IT Šilutė website.">Sutinku, kad mano vardas ir atsiliepimas būtų skelbiami PC IT Šilutė svetainėje.</label>
 </div>
 
-<button type="submit" class="btn" style="width:100%; justify-content:center; margin-top:20px;" data-lt="⭐ Siųsti atsiliepimą" data-en="⭐ Send Review">⭐ Siųsti atsiliepimą</button>
+<button type="submit" id="submitBtn" class="btn" style="width:100%; justify-content:center; margin-top:20px;" data-lt="⭐ Siųsti atsiliepimą" data-en="⭐ Send Review">⭐ Siųsti atsiliepimą</button>
 </form>
+
+<!-- Autoatsakymo / Sėkmės pranešimas, kurį pamato klientas pateikęs atsiliepimą -->
+<div id="formSuccessMsg" style="display:none; text-align:center; padding: 20px 0;">
+    <div style="font-size: 48px; color: #10b981; margin-bottom: 15px;"><i class="fa-solid fa-circle-check"></i></div>
+    <h4 style="font-size: 22px; color: #fff; margin-bottom: 10px;" data-lt="Ačiū už jūsų atsiliepimą!" data-en="Thank you for your review!">Ačiū už jūsų atsiliepimą!</h4>
+    <p style="color: var(--text-muted); font-size: 15px; line-height: 1.5;" data-lt="Jūsų atsiliepimą gavome ir labai jį vertiname. Dėkojame, kad renkatės PC IT Šilutė paslaugas!" data-en="We have successfully received your review and truly appreciate it. Thank you for choosing PC IT Šilutė!">Jūsų atsiliepimą gavome ir labai jį vertiname. Dėkojame, kad renkatės PC IT Šilutė paslaugas!</p>
+</div>
+
 </div>
 </div>
 </section>
 </main>
 
-<!-- Footeris -->
 <footer>
 <div class="wrap">
 <div class="footer-grid">
@@ -458,17 +468,14 @@ footer {
         <p data-lt="Operatyvus stacionarių ir nešiojamų kompiuterių remontas, programinės įrangos konfigūravimas." data-en="Prompt desktop and laptop repair, software configuration.">Operatyvus stacionarių ir nešiojamų kompiuterių remontas, programinės įrangos konfigūravimas.</p>
         <p data-lt="📍 Remontas vietoje arba nuotolinė pagalba Šilutėje ir apylinkėse." data-en="📍 Local repair or remote support in Šilutė and surroundings.">📍 Remontas vietoje arba nuotolinė pagalba Šilutėje ir apylinkėse.</p>
         
-        <!-- Google atsiliepimų kortelė -->
         <a href="https://share.google/BKJiiYf29raKUk5lY" target="_blank" rel="noopener noreferrer" class="google-badge">
             <i class="fa-brands fa-google"></i>
             <span class="g-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
             <span data-lt="Peržiūrėkite mus Google" data-en="Review us on Google">Peržiūrėkite mus Google</span>
         </a>
 
-        <!-- Facebook sekimo kortelė (tik ikona ir tekstas) -->
         <a href="https://www.facebook.com/61592840316716" target="_blank" rel="noopener noreferrer" class="google-badge" style="margin-top: 10px;">
             <i class="fa-brands fa-facebook-f" style="color: #0084ff;"></i>
-            <span class="g-stars" style="display: none;"></span>
             <span data-lt="Sekite mus Facebook" data-en="Follow us on Facebook">Sekite mus Facebook</span>
         </a>
     </div>
@@ -565,10 +572,48 @@ window.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('preferred_lang');
   if (savedLang === 'en') { setLang('en', false); } else { setLang('lt', false); }
 });
+
+/* AJAX forma, kad pateikus atsiliepimą iškart būtų parodytas gražus padėkos pranešimas */
+const reviewForm = document.getElementById('reviewForm');
+const formSuccessMsg = document.getElementById('formSuccessMsg');
+
+if (reviewForm) {
+    reviewForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const submitBtn = document.getElementById('submitBtn');
+        const originalBtnText = submitBtn.innerHTML;
+        
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Siunčiama...';
+
+        try {
+            const response = await fetch(reviewForm.action, {
+                method: 'POST',
+                body: new FormData(reviewForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                reviewForm.style.display = 'none';
+                formSuccessMsg.style.display = 'block';
+            } else {
+                alert('Įvyko klaida siunčiant atsiliepimą. Bandykite dar kartą.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
+        } catch (error) {
+            alert('Įvyko tinklo klaida. Patikrinkite interneto ryšį.');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        }
+    });
+}
 </script>
-   <!-- Tik vienas švarus stacionarių/desktop mygtukų blokas (Messenger + Užklausa) -->
+
+<!-- Floating Messenger & Inquiry Buttons (Desktop) -->
 <div id="sticky-buttons-desktop" style="position:fixed;bottom:20px;right:20px;flex-direction:column;gap:12px;z-index:9999;">
-    <!-- Messenger mygtukas -->
     <a href="https://m.me/1259100567284528" target="_blank" rel="noopener noreferrer"
        style="background:#0084ff;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,132,255,0.4);transition:transform 0.3s ease, box-shadow 0.3s ease;font-size:28px;"
        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 16px rgba(0,132,255,0.5)';"
@@ -578,7 +623,6 @@ window.addEventListener('DOMContentLoaded', () => {
         <i class="fa-brands fa-facebook-messenger"></i>
     </a>
     
-    <!-- Užklausos formos mygtukas -->
     <a href="index.html#uzklausa" 
        style="background:#0ea5e9;color:#020817;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(14,165,233,0.4);transition:transform 0.3s ease, box-shadow 0.3s ease;font-weight:800;font-size:24px;"
        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 16px rgba(14,165,233,0.5)';"
@@ -590,17 +634,11 @@ window.addEventListener('DOMContentLoaded', () => {
 </div>
 
 <style>
-/* Mobile - slėpti sticky mygtukus, nes apačioje veikia apatinė juosta */
 @media(max-width: 960px) {
-    #sticky-buttons-desktop {
-        display: none !important;
-    }
+    #sticky-buttons-desktop { display: none !important; }
 }
-/* Desktop - rodyti sticky mygtukus dešiniajame kampe */
 @media(min-width: 961px) {
-    #sticky-buttons-desktop {
-        display: flex !important;
-    }
+    #sticky-buttons-desktop { display: flex !important; }
 }
 </style>
 </body>
