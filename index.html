@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-30PKF7ZHKH"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-30PKF7ZHKH');
-    </script>
+    <!-- Google Analytics (gtag.js) įkeliamas tik gavus vartotojo sutikimą - žr. slapukų juostos JS failo pabaigoje -->
     <link rel="icon" type="image/png" href="pc-it-logo.png">
 <meta name="google-site-verification" content="9HHZStCOf6CGXHCcgVjp6vmrdG7brj5vt7xB4nFKcbI">
 <meta charset="UTF-8">
@@ -1066,6 +1058,109 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 }
 </style>
+
+<!-- Slapukų sutikimo juosta -->
+<div id="cookie-banner" style="display:none;">
+    <p data-lt="Naudojame Google Analytics slapukus, kad suprastume, kaip lankytojai naudojasi svetaine. Jie bus įjungti tik gavus Jūsų sutikimą. Daugiau informacijos <a href='privatumas.html'>Privatumo politikoje</a>." data-en="We use Google Analytics cookies to understand how visitors use the site. They will only be enabled with your consent. More information in the <a href='privacy.html'>Privacy Policy</a>.">Naudojame Google Analytics slapukus, kad suprastume, kaip lankytojai naudojasi svetaine. Jie bus įjungti tik gavus Jūsų sutikimą. Daugiau informacijos <a href="privatumas.html">Privatumo politikoje</a>.</p>
+    <div class="cookie-actions">
+        <button type="button" id="cookie-reject" data-lt="Atmesti viską" data-en="Reject All">Atmesti viską</button>
+        <button type="button" id="cookie-accept" data-lt="Priimti viską" data-en="Accept All">Priimti viską</button>
+    </div>
+</div>
+
+<style>
+#cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:10000;background:#051020ee;backdrop-filter:blur(10px);border-top:1px solid #1e3a5f;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;box-shadow:0 -6px 20px rgba(0,0,0,0.35)}
+#cookie-banner p{color:var(--text-muted);font-size:14px;line-height:1.5;margin:0;flex:1;min-width:240px}
+#cookie-banner p a{color:var(--accent);text-decoration:underline}
+#cookie-banner .cookie-actions{display:flex;gap:10px;flex-shrink:0}
+#cookie-banner button{padding:11px 22px;border-radius:10px;font-weight:700;font-size:14px;cursor:pointer;border:1px solid #1e3a5f;transition:0.3s;font-family:inherit}
+#cookie-banner #cookie-accept{background:var(--accent);color:#020817;border-color:var(--accent)}
+#cookie-banner #cookie-accept:hover{filter:brightness(1.1);transform:translateY(-2px)}
+#cookie-banner #cookie-reject{background:transparent;color:var(--text)}
+#cookie-banner #cookie-reject:hover{background:#1e3a5f55}
+body.has-cookie-banner .mobile-cta{bottom:84px !important}
+body.has-cookie-banner #sticky-buttons-desktop{bottom:110px !important}
+@media(max-width:600px){
+    #cookie-banner{flex-direction:column;align-items:stretch;padding:16px;text-align:center}
+    #cookie-banner .cookie-actions{width:100%}
+    #cookie-banner button{flex:1}
+}
+</style>
+
+<script>
+(function(){
+    var CONSENT_KEY = 'cookie_consent';
+    var CONSENT_DAYS = 180;
+    var GA_ID = 'G-30PKF7ZHKH';
+
+    function loadGA(){
+        if(window.gaLoaded) return;
+        window.gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+    }
+
+    function getConsent(){
+        try{
+            var raw = localStorage.getItem(CONSENT_KEY);
+            if(!raw) return null;
+            var data = JSON.parse(raw);
+            var ageDays = (Date.now() - data.ts) / (1000*60*60*24);
+            if(ageDays > CONSENT_DAYS) return null;
+            return data.value;
+        }catch(e){ return null; }
+    }
+
+    function setConsent(value){
+        try{
+            localStorage.setItem(CONSENT_KEY, JSON.stringify({value: value, ts: Date.now()}));
+        }catch(e){}
+    }
+
+    function hideBanner(){
+        var b = document.getElementById('cookie-banner');
+        if(b) b.style.display = 'none';
+        document.body.classList.remove('has-cookie-banner');
+    }
+
+    function showBanner(){
+        var b = document.getElementById('cookie-banner');
+        if(b) b.style.display = 'flex';
+        document.body.classList.add('has-cookie-banner');
+    }
+
+    window.addEventListener('DOMContentLoaded', function(){
+        var consent = getConsent();
+        if(consent === 'accepted'){
+            loadGA();
+            hideBanner();
+        } else if(consent === 'rejected'){
+            hideBanner();
+        } else {
+            showBanner();
+        }
+
+        var acceptBtn = document.getElementById('cookie-accept');
+        var rejectBtn = document.getElementById('cookie-reject');
+        if(acceptBtn) acceptBtn.addEventListener('click', function(){
+            setConsent('accepted');
+            loadGA();
+            hideBanner();
+        });
+        if(rejectBtn) rejectBtn.addEventListener('click', function(){
+            setConsent('rejected');
+            hideBanner();
+        });
+    });
+})();
+</script>
 
 </body>
 </html>
