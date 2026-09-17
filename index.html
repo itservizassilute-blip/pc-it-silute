@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18402663752"></script>
+    <!-- Google tag (gtag.js) - Pakeistas teisingas ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-6962212549"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-18402663752');
+  gtag('config', 'AW-6962212549');
 </script>
     <!-- Cloudflare Web Analytics -->
     <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "49838167417746dca9af9e344a2c910b"}'></script>
@@ -848,7 +848,8 @@ footer {
     </span>
 </label>
 
-<button type="submit" class="btn" style="width:100%; justify-content:center; padding:16px; font-size:17px;" onclick="gtag('event', 'conversion', {'send_to': 'AW-18402663752'});" data-lt="🚀 Siųsti užklausą" data-en="🚀 Send Inquiry">🚀 Siųsti užklausą</button>
+<!-- Atnaujintas mygtukas su teisingu AW-6962212549 ID -->
+<button type="submit" class="btn" style="width:100%; justify-content:center; padding:16px; font-size:17px;" onclick="gtag('event', 'conversion', {'send_to': 'AW-6962212549'});" data-lt="🚀 Siųsti užklausą" data-en="🚀 Send Inquiry">🚀 Siųsti užklausą</button>
 </form>
 </div>
 </div>
@@ -990,7 +991,6 @@ function setLang(lang, save = true) {
     const activeBtn = lang === 'lt' ? document.querySelector('button[onclick*="lt"]') : document.querySelector('button[onclick*="en"]');
     if(activeBtn) activeBtn.classList.add('active');
 
-    // Pakeičiama valymo nuotrauka ir jos alt tekstas pagal kalbą
     const cleanImg = document.getElementById('cleanImg');
     if (cleanImg) {
         if (lang === 'en') {
@@ -1035,9 +1035,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<!-- Tik vienas švarus stacionarių/desktop mygtukų blokas (Messenger + Užklausa) -->
 <div id="sticky-buttons-desktop" style="position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:12px;z-index:9999;">
-    <!-- Messenger mygtukas -->
     <a href="https://m.me/1259100567284528" target="_blank" rel="noopener noreferrer"
        style="background:#0084ff;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,132,255,0.4);transition:transform 0.3s ease, box-shadow 0.3s ease;font-size:28px;"
        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 16px rgba(0,132,255,0.5)';"
@@ -1047,7 +1045,6 @@ window.addEventListener('DOMContentLoaded', () => {
         <i class="fa-brands fa-facebook-messenger"></i>
     </a>
     
-    <!-- Užklausos formos mygtukas -->
     <a href="index.html#uzklausa" 
        style="background:#0ea5e9;color:#020817;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(14,165,233,0.4);transition:transform 0.3s ease, box-shadow 0.3s ease;font-weight:800;font-size:24px;"
        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 16px rgba(14,165,233,0.5)';"
@@ -1059,13 +1056,11 @@ window.addEventListener('DOMContentLoaded', () => {
 </div>
 
 <style>
-/* Mobile - slėpti sticky mygtukus, nes apačioje veikia .mobile-cta juosta */
 @media(max-width: 960px) {
     #sticky-buttons-desktop {
         display: none !important;
     }
 }
-/* Desktop - rodyti sticky mygtukus dešiniajame kampe */
 @media(min-width: 961px) {
     #sticky-buttons-desktop {
         display: flex !important;
