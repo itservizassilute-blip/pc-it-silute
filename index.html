@@ -810,7 +810,7 @@ footer {
 
 <div class="form-group">
 <label data-lt="Tel. numeris arba el. paštas:" data-en="Phone number or email:">Tel. numeris arba el. paštas:</label>
-<input type="text" name="kontaktai" required autocomplete="email" placeholder="Pvz.: +37060000000 arba el. paštas" data-lt="Pvz.: +37060000000 arba el. paštas" data-en="E.g.: +37060000000 or email">
+<input type="text" name="kontaktai" required autocomplete="email" pattern="^([0-9+\s\-()]{7,20}|[^\s@]+@[^\s@]+\.[^\s@]+)$" title="Įveskite telefono numerį (bent 7 skaitmenys) arba galiojantį el. paštą" placeholder="+370 6XX XXXXX arba jusu@pastas.lt" data-lt="+370 6XX XXXXX arba jusu@pastas.lt" data-en="+370 6XX XXXXX or your@email.com">
 </div>
 
 <div class="form-group">
