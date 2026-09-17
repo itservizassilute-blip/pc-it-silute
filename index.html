@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-    <!-- Google tag (gtag.js) - Pakeistas teisingas ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-6962212549"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-6962212549"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'AW-6962212549');
-</script>
+      gtag('config', 'AW-6962212549');
+      
+      // Konversijos sekimo funkcijos aktyvavimui
+      function trackFormConversion() {
+        gtag('event', 'conversion', {'send_to': 'AW-7773452390/konversijos_etikete'});
+      }
+    </script>
     <!-- Cloudflare Web Analytics -->
     <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "49838167417746dca9af9e344a2c910b"}'></script>
     <!-- End Cloudflare Web Analytics -->
@@ -848,8 +853,8 @@ footer {
     </span>
 </label>
 
-<!-- Sutvarkytas mygtukas be klaidingo onclick -->
-<button type="submit" class="btn" style="width:100%; justify-content:center; padding:16px; font-size:17px;" data-lt="🚀 Siųsti užklausą" data-en="🚀 Send Inquiry">🚀 Siųsti užklausą</button>
+<!-- Pridėta konversijos fiksavimo funkcija ant mygtuko -->
+<button type="submit" onclick="trackFormConversion()" class="btn" style="width:100%; justify-content:center; padding:16px; font-size:17px;" data-lt="🚀 Siųsti užklausą" data-en="🚀 Send Inquiry">🚀 Siųsti užklausą</button>
 </form>
 </div>
 </div>
