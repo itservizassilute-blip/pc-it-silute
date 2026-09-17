@@ -9,11 +9,6 @@
       gtag('js', new Date());
 
       gtag('config', 'AW-6962212549');
-      
-      // Konversijos sekimo funkcijos aktyvavimui
-      function trackFormConversion() {
-        gtag('event', 'conversion', {'send_to': 'AW-7773452390/f7nqCObw1focEMi6icdE'});
-      }
     </script>
     <!-- Cloudflare Web Analytics -->
     <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "49838167417746dca9af9e344a2c910b"}'></script>
@@ -816,8 +811,7 @@ footer {
 </div>
 
 <div class="form-container">
-<form action="https://formspree.io/f/mkjwjqvd" method="POST">
-<input type="hidden" name="_next" value="https://pcmeistras-silute.lt/aciu.html">
+<form id="inquiryForm" action="https://formspree.io/f/mkjwjqvd" method="POST">
 <div class="form-group">
 <label data-lt="Jūsų vardas:" data-en="Your name:">Jūsų vardas:</label>
 <input type="text" name="vardas" required autocomplete="name" placeholder="Įveskite savo vardą" data-lt="Įveskite savo vardą" data-en="Enter your name">
@@ -853,9 +847,15 @@ footer {
     </span>
 </label>
 
-<!-- Pridėta konversijos fiksavimo funkcija ant mygtuko -->
-<button type="submit" onclick="trackFormConversion()" class="btn" style="width:100%; justify-content:center; padding:16px; font-size:17px;" data-lt="🚀 Siųsti užklausą" data-en="🚀 Send Inquiry">🚀 Siųsti užklausą</button>
+<button type="submit" class="btn" style="width:100%; justify-content:center; padding:16px; font-size:17px;" data-lt="🚀 Siųsti užklausą" data-en="🚀 Send Inquiry">🚀 Siųsti užklausą</button>
+
+<p id="formErrorMessage" style="display:none; color:#ef4444; text-align:center; padding:12px; margin-top:10px; font-size:14px;" data-lt="Įvyko klaida siunčiant užklausą. Bandykite dar kartą arba rašykite per Messenger." data-en="An error occurred while sending your inquiry. Please try again or message us via Messenger.">Įvyko klaida siunčiant užklausą. Bandykite dar kartą arba rašykite per Messenger.</p>
 </form>
+
+<div id="formSuccessMessage" style="display:none; text-align:center; padding:40px 20px;">
+<p style="font-size:22px; color:var(--accent); font-weight:800; margin-bottom:10px;" data-lt="✅ Ačiū! Jūsų užklausa gauta." data-en="✅ Thank you! Your inquiry has been received.">✅ Ačiū! Jūsų užklausa gauta.</p>
+<p style="color:var(--text-muted);" data-lt="Susisieksime su jumis kuo greičiau." data-en="We will contact you as soon as possible.">Susisieksime su jumis kuo greičiau.</p>
+</div>
 </div>
 </div>
 </section>
@@ -1072,6 +1072,58 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 }
 </style>
+
+<script>
+(function(){
+    var form = document.getElementById('inquiryForm');
+    if(!form) return;
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        if(!form.checkValidity()){
+            form.reportValidity();
+            return;
+        }
+
+        var submitBtn = form.querySelector('button[type="submit"]');
+        var originalText = submitBtn ? submitBtn.innerHTML : '';
+        var errorMsg = document.getElementById('formErrorMessage');
+
+        if(errorMsg) errorMsg.style.display = 'none';
+        if(submitBtn){
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '...';
+        }
+
+        var data = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        }).then(function(response){
+            if(response.ok){
+                form.style.display = 'none';
+                var successMsg = document.getElementById('formSuccessMessage');
+                if(successMsg) successMsg.style.display = 'block';
+
+                if(typeof gtag === 'function'){
+                    gtag('event', 'conversion', {'send_to': 'AW-7773452390/f7nqCObw1focEMi6icdE'});
+                }
+            } else {
+                throw new Error('Formspree klaida');
+            }
+        }).catch(function(){
+            if(errorMsg) errorMsg.style.display = 'block';
+            if(submitBtn){
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        });
+    });
+})();
+</script>
 
 </body>
 </html>
