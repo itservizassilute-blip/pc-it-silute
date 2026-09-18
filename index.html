@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="lt">
 <head>
@@ -764,19 +763,10 @@ footer {
 <h2 class="title" data-lt="Darbo užkulisiai ir vaizdo įrašai" data-en="Behind the Scenes & Videos">Darbo užkulisiai ir vaizdo įrašai</h2>
 <p class="subtitle" data-lt="Pažiūrėkite trumpą vaizdo įrašą iš mūsų kasdienio darbo." data-en="Watch a short video from our daily work.">Pažiūrėkite trumpą vaizdo įrašą iš mūsų kasdienio darbo.</p>
 <div class="video-container">
-<div class="video-responsive" id="fbVideoWrap" style="background:#071a30;display:flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid #1e3a5f;" onclick="loadFbVideo()">
-    <div style="text-align:center;color:var(--text);">
-        <i class="fa-brands fa-facebook" style="font-size:48px;color:#0084FF;margin-bottom:10px;display:block;"></i>
-        <span style="font-weight:700;" data-lt="▶ Rodyti vaizdo įrašą" data-en="▶ Show video">▶ Rodyti vaizdo įrašą</span>
-    </div>
+<div class="video-responsive">
+<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F904624699392411%2F&show_text=false&width=560&t=0" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 </div>
 </div>
-<script>
-function loadFbVideo(){
-    var wrap = document.getElementById('fbVideoWrap');
-    wrap.outerHTML = '<div class="video-responsive"><iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F904624699392411%2F&show_text=false&width=560&t=0&autoplay=true" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>';
-}
-</script>
 </div>
 </section>
 
