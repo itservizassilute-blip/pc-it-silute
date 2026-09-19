@@ -1,10 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="lt">
 <head>
     <!-- Cloudflare Web Analytics -->
     <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "49838167417746dca9af9e344a2c910b"}'></script>
     <!-- End Cloudflare Web Analytics -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link rel="icon" type="image/png" href="pc-it-logo.png">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -254,6 +257,21 @@
         .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
     }
 
+    .btn.alt{background:transparent;color:var(--text);border:1px solid #1e3a5f}
+    .btn.messenger{background:#0084FF;color:#fff;box-shadow:0 10px 25px #0084ff33}
+
+    .order-box{margin-top:40px}
+    .form-container{max-width:700px;margin:0 auto;background:var(--bg);border:1px solid #1e3a5f;padding:40px;border-radius:24px}
+    .form-group{margin-bottom:20px}
+    .form-group label{display:block;margin-bottom:8px;font-weight:600;color:var(--text-muted)}
+    .form-group input, .form-group textarea{width:100%;padding:14px 16px;background:var(--bg);border:1px solid #1e3a5f;border-radius:12px;color:#fff;font-family:inherit;font-size:15px}
+    .form-group textarea{resize:vertical;height:110px}
+    .form-privacy-consent{display:flex;align-items:flex-start;gap:12px;background:#1e3a5f22;border:1px solid #1e3a5f;padding:14px 16px;border-radius:12px;margin-bottom:20px;cursor:pointer;transition:0.3s}
+    .form-privacy-consent:hover{background:#1e3a5f44}
+    .form-privacy-consent input{width:18px;height:18px;accent-color:var(--accent);margin-top:2px;flex-shrink:0;cursor:pointer}
+    .form-privacy-consent span{font-size:14px;color:var(--text-muted);line-height:1.4}
+    .form-privacy-consent a{color:var(--accent);text-decoration:underline}
+
     @media(max-width:960px){
         .menu-toggle { display: block; }
         nav ul{
@@ -291,7 +309,7 @@
 <div class="wrap">
 <nav>
 <a class="brand" href="index.html">
-<img src="pc-it-logo.png" alt="PC IT">
+<img src="pc-it-logo.webp" alt="PC IT" width="48" height="48" loading="eager" decoding="async">
 <span>PC <b>IT</b> Šilutė</span>
 </a>
 <button class="menu-toggle" id="menuToggle" aria-label="Meniu">
@@ -363,6 +381,46 @@
         <h3 data-lt="Kaip naudotis „RustDesk“ (vaizdo instrukcija)" data-en="How to use RustDesk (Video Guide)">Kaip naudotis „RustDesk“ (vaizdo instrukcija)</h3>
         <div class="video-frame">
             <iframe src="https://www.youtube.com/embed/kcSB6jatr_s" title="How to Use RustDesk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="order-box" id="uzsakymas">
+        <h3 style="text-align:center; font-size:22px; margin-bottom:10px;" data-lt="✅ Viskas aišku? Užsakykite nuotolinę pagalbą" data-en="✅ Everything clear? Order remote support">✅ Viskas aišku? Užsakykite nuotolinę pagalbą</h3>
+        <p class="subtitle" style="margin-bottom:30px;" data-lt="Palikite užklausą – susisieksime ir suderinsime patogiausią laiką." data-en="Leave a request – we will contact you and arrange the most convenient time.">Palikite užklausą – susisieksime ir suderinsime patogiausią laiką.</p>
+
+        <div class="form-container">
+        <form id="remoteForm" action="https://formspree.io/f/mkjwjqvd" method="POST">
+        <input type="hidden" name="problema[]" value="Norėčiau nuotolinės pagalbos">
+
+        <div class="form-group">
+        <label data-lt="Jūsų vardas:" data-en="Your name:">Jūsų vardas:</label>
+        <input type="text" name="vardas" required autocomplete="name" placeholder="Įveskite savo vardą" data-lt="Įveskite savo vardą" data-en="Enter your name">
+        </div>
+
+        <div class="form-group">
+        <label data-lt="Tel. numeris arba el. paštas:" data-en="Phone number or email:">Tel. numeris arba el. paštas:</label>
+        <input type="text" name="kontaktai" required autocomplete="email" pattern="^([0-9+\s\-()]{7,20}|[^\s@]+@[^\s@]+\.[^\s@]+)$" title="Įveskite telefono numerį (bent 7 skaitmenys) arba galiojantį el. paštą" placeholder="+370 6XX XXXXX arba jusu@pastas.lt" data-lt="+370 6XX XXXXX arba jusu@pastas.lt" data-en="+370 6XX XXXXX or your@email.com">
+        </div>
+
+        <div class="form-group">
+        <label data-lt="Trumpai aprašykite problemą:" data-en="Briefly describe the issue:">Trumpai aprašykite problemą:</label>
+        <textarea name="aprasymas" placeholder="Pvz.: kompiuteris lėtai veikia, reikia pašalinti virusus..." data-lt="Pvz.: kompiuteris lėtai veikia, reikia pašalinti virusus..." data-en="E.g.: computer is running slow, need to remove viruses..."></textarea>
+        </div>
+
+        <label class="form-privacy-consent">
+            <input type="checkbox" name="privatumo_sutikimas" required>
+            <span data-lt="Sutinku, kad pateikti duomenys būtų tvarkomi užklausos nagrinėjimo ir paslaugos teikimo tikslais. Daugiau informacijos <a href='privatumas.html' target='_blank'>Privatumo politikoje</a>." data-en="I agree that the submitted data will be processed for the purpose of handling inquiries and service delivery. More information in the <a href='privacy.html' target='_blank'>Privacy Policy</a>.">Sutinku, kad pateikti duomenys būtų tvarkomi užklausos nagrinėjimo ir paslaugos teikimo tikslais. Daugiau informacijos <a href="privatumas.html" target="_blank">Privatumo politikoje</a>.</span>
+        </label>
+
+        <button type="submit" class="btn" style="width:100%; justify-content:center; padding:16px; font-size:17px;" data-lt="🚀 Užsakyti nuotolinę pagalbą" data-en="🚀 Order remote support">🚀 Užsakyti nuotolinę pagalbą</button>
+
+        <p id="remoteFormError" style="display:none; color:#ef4444; text-align:center; padding:12px; margin-top:10px; font-size:14px;" data-lt="Įvyko klaida siunčiant užklausą. Bandykite dar kartą arba rašykite per Messenger." data-en="An error occurred while sending your inquiry. Please try again or message us via Messenger.">Įvyko klaida siunčiant užklausą. Bandykite dar kartą arba rašykite per Messenger.</p>
+        </form>
+
+        <div id="remoteFormSuccess" style="display:none; text-align:center; padding:40px 20px;">
+        <p style="font-size:22px; color:var(--accent); font-weight:800; margin-bottom:10px;" data-lt="✅ Ačiū! Jūsų užklausa gauta." data-en="✅ Thank you! Your inquiry has been received.">✅ Ačiū! Jūsų užklausa gauta.</p>
+        <p style="color:var(--text-muted);" data-lt="Susisieksime su jumis kuo greičiau." data-en="We will contact you as soon as possible.">Susisieksime su jumis kuo greičiau.</p>
+        </div>
         </div>
     </div>
 
@@ -531,5 +589,53 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 }
 </style>
+
+<script>
+(function(){
+    var form = document.getElementById('remoteForm');
+    if(!form) return;
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        if(!form.checkValidity()){
+            form.reportValidity();
+            return;
+        }
+
+        var submitBtn = form.querySelector('button[type="submit"]');
+        var originalText = submitBtn ? submitBtn.innerHTML : '';
+        var errorMsg = document.getElementById('remoteFormError');
+
+        if(errorMsg) errorMsg.style.display = 'none';
+        if(submitBtn){
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '...';
+        }
+
+        var data = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        }).then(function(response){
+            if(response.ok){
+                form.style.display = 'none';
+                var successMsg = document.getElementById('remoteFormSuccess');
+                if(successMsg) successMsg.style.display = 'block';
+            } else {
+                throw new Error('Formspree klaida');
+            }
+        }).catch(function(){
+            if(errorMsg) errorMsg.style.display = 'block';
+            if(submitBtn){
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        });
+    });
+})();
+</script>
 </body>
 </html>
