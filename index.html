@@ -1,10 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="lt">
 <head>
     <!-- Cloudflare Web Analytics -->
     <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "49838167417746dca9af9e344a2c910b"}'></script>
     <!-- End Cloudflare Web Analytics -->
+    <!-- Meta Pixel Code -->
+    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1757988018789968');
+    fbq('track', 'PageView');</script>
+    <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=1757988018789968&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel Code -->
     <link rel="icon" type="image/png" href="pc-it-logo.png">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -1102,6 +1107,10 @@ window.addEventListener('DOMContentLoaded', () => {
                 form.style.display = 'none';
                 var successMsg = document.getElementById('formSuccessMessage');
                 if(successMsg) successMsg.style.display = 'block';
+
+                if(typeof fbq === 'function'){
+                    fbq('track', 'Lead');
+                }
             } else {
                 throw new Error('Formspree klaida');
             }
