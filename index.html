@@ -201,9 +201,10 @@ section{padding:90px 0}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .card{background:white;border:1px solid #e2e8f0;border-radius:24px;padding:30px;transition:0.4s;display:flex;flex-direction:column;justify-content:space-between}
 .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,0.06);border-color:var(--accent)}
+.card > div:first-child{display:flex;flex-direction:column;flex:1 1 auto}
 .card .ico{font-size:36px;color:var(--accent);margin-bottom:18px;display:block}
 .card h3{font-size:20px;margin-bottom:10px;font-weight:700}
-.card p{color:#475569;margin-bottom:20px;font-size:15px}
+.card p{color:#475569;margin-bottom:20px;font-size:15px;flex:1 1 auto}
 .price-badge{font-weight:700;color:#0369a1;background:#0ea5e911;padding:8px 14px;border-radius:10px;display:inline-block;font-size:14px;border:1px solid #0ea5e933}
 .card-guarantee{display:block;font-size:12px;color:#0369a1;font-weight:700;margin-top:8px}
 
@@ -709,10 +710,10 @@ footer {
     <i class="fa-solid fa-laptop ico" style="color:var(--accent)"></i>
     <h3 data-lt="Nuotolinė pagalba" data-en="Remote Support">Nuotolinė pagalba</h3>
     <p data-lt="Skubi pagalba per atstumą per „RustDesk“ programą, kai nereikia fizinio įsikišimo." data-en="Urgent remote assistance via RustDesk when physical intervention is not needed.">Skubi pagalba per atstumą per „RustDesk“ programą, kai nereikia fizinio įsikišimo.</p>
+    <a href="nuotoline-pagalba.html" style="color:var(--accent); font-weight:700; font-size:14px; display:inline-block; margin-top:4px;" data-lt="→ Plačiau apie nuotolinę pagalbą" data-en="→ Learn more about remote support">→ Plačiau apie nuotolinę pagalbą</a>
 </div>
 <div>
     <span class="price-badge" data-lt="Nuotoliniu būdu" data-en="Remotely">Nuotoliniu būdu</span>
-    <a href="nuotoline-pagalba.html" style="color:var(--accent); font-weight:700; display:block; margin-top:8px;" data-lt="→ Plačiau apie nuotolinę pagalbą" data-en="→ Learn more about remote support">→ Plačiau apie nuotolinę pagalbą</a>
 </div>
 </div>
 </div>
