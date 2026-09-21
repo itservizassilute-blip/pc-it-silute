@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="lt">
 <head>
@@ -1007,23 +1008,34 @@ function setLang(lang, save = true) {
         }
     }
 
-    document.querySelectorAll('[data-lt]').forEach(el => {
-        const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
-        if (el.tagName === 'INPUT' && el.type !== 'checkbox') {
-            el.placeholder = langText;
-        } else if (el.tagName === 'TEXTAREA') {
-            el.placeholder = langText;
-        } else {
-            const icon = el.querySelector('i');
-            if (icon) {
-                const textNode = el.querySelector('span');
-                if(textNode) { textNode.innerHTML = langText; }
-                else { el.innerHTML = `<i class="${icon.className}"></i> ` + langText; }
+    const langElements = document.querySelectorAll('[data-lt]');
+    let langIdx = 0;
+    const langBatchSize = 40;
+    function processLangBatch() {
+        const end = Math.min(langIdx + langBatchSize, langElements.length);
+        for (; langIdx < end; langIdx++) {
+            const el = langElements[langIdx];
+            const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
+            if (el.tagName === 'INPUT' && el.type !== 'checkbox') {
+                el.placeholder = langText;
+            } else if (el.tagName === 'TEXTAREA') {
+                el.placeholder = langText;
             } else {
-                el.innerHTML = langText;
+                const icon = el.querySelector('i');
+                if (icon) {
+                    const textNode = el.querySelector('span');
+                    if(textNode) { textNode.textContent = langText; }
+                    else { el.innerHTML = `<i class="${icon.className}"></i> ` + langText; }
+                } else if (langText.indexOf('<') === -1) {
+                    el.textContent = langText;
+                } else {
+                    el.innerHTML = langText;
+                }
             }
         }
-    });
+        if (langIdx < langElements.length) { requestAnimationFrame(processLangBatch); }
+    }
+    processLangBatch();
 
     if (navMenu && navMenu.classList.contains('active')) {
         navMenu.classList.remove('active');
