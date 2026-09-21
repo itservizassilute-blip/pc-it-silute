@@ -356,7 +356,7 @@
 
     <div class="info-box">
         <h3 data-lt="⏳ Kas būtų, jei atidėliotumėte?" data-en="⏳ What if you put it off?">⏳ Kas būtų, jei atidėliotumėte?</h3>
-        <p style="margin-bottom:12px;" data-lt="Kompiuteris paprastai lėtėja palaipsniui, todėl tai lengva ignoruoti – kol vieną dieną pastebite, kad juo tapo praktiškai nebeįmanoma naudotis." data-en="Slowdown usually happens gradually, which makes it easy to ignore – until one day you notice the computer has become practically unusable.">Lėtėjimas dažniausiai vyksta pamažu, todėl lengva jį ignoruoti – kol vieną dieną pastebite, kad kompiuteris tapo praktiškai nepakeliamas.</p>
+        <p style="margin-bottom:12px;" data-lt="Kompiuteris paprastai lėtėja palaipsniui, todėl tai lengva ignoruoti – kol vieną dieną pastebite, kad juo tapo praktiškai nebeįmanoma naudotis." data-en="Slowdown usually happens gradually, which makes it easy to ignore – until one day you notice the computer has become practically unusable.">Kompiuteris paprastai lėtėja palaipsniui, todėl tai lengva ignoruoti – kol vieną dieną pastebite, kad juo tapo praktiškai nebeįmanoma naudotis.</p>
         <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-muted); font-size: 15px; display: flex; flex-direction: column; gap: 10px;">
             <li data-lt="<b>Problema kaupiasi, o ne išnyksta.</b> Kiekviena nauja programa, kiekvienas atnaujinimas prideda dar vieną foninį procesą – be reguliaraus sutvarkymo šis sąrašas tik ilgėja." data-en="<b>The problem accumulates rather than disappears.</b> Every new program, every update adds another background process – without regular maintenance, this list only grows."><b>Problema kaupiasi, o ne išnyksta.</b> Kiekviena nauja programa, kiekvienas atnaujinimas prideda dar vieną foninį procesą – be reguliaraus sutvarkymo šis sąrašas tik ilgėja.</li>
             <li data-lt="<b>Laikini failai ir šiukšlės užima vis daugiau vietos</b>, o tai savaime dar labiau lėtina diską, ypač jei jis jau beveik pilnas." data-en="<b>Temporary files and clutter take up more and more space</b>, which itself further slows down the disk, especially once it's nearly full."><b>Laikini failai ir šiukšlės užima vis daugiau vietos</b>, o tai savaime dar labiau lėtina diską, ypač jei jis jau beveik pilnas.</li>
@@ -491,21 +491,32 @@ function setLang(lang, save = true) {
     const activeBtn = lang === 'lt' ? document.querySelector('button[onclick*="lt"]') : document.querySelector('button[onclick*="en"]');
     if(activeBtn) activeBtn.classList.add('active');
 
-    document.querySelectorAll('[data-lt]').forEach(el => {
-        const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-            el.placeholder = langText;
-        } else {
-            const icon = el.querySelector('i');
-            if (icon) {
-                const textNode = el.querySelector('span');
-                if(textNode) { textNode.innerHTML = langText; }
-                else { el.innerHTML = `<i class="${icon.className}"></i> ` + langText; }
+    const langElements = document.querySelectorAll('[data-lt]');
+    let langIdx = 0;
+    const langBatchSize = 40;
+    function processLangBatch() {
+        const end = Math.min(langIdx + langBatchSize, langElements.length);
+        for (; langIdx < end; langIdx++) {
+            const el = langElements[langIdx];
+            const langText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-lt');
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = langText;
             } else {
-                el.innerHTML = langText;
+                const icon = el.querySelector('i');
+                if (icon) {
+                    const textNode = el.querySelector('span');
+                    if(textNode) { textNode.textContent = langText; }
+                    else { el.innerHTML = `<i class="${icon.className}"></i> ` + langText; }
+                } else if (langText.indexOf('<') === -1) {
+                    el.textContent = langText;
+                } else {
+                    el.innerHTML = langText;
+                }
             }
         }
-    });
+        if (langIdx < langElements.length) { requestAnimationFrame(processLangBatch); }
+    }
+    processLangBatch();
 }
 
 window.addEventListener('DOMContentLoaded', () => {
