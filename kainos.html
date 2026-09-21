@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="lt">
 <head>
@@ -577,24 +578,35 @@ function setLang(lang, save = true) {
 
     if(activeBtn) activeBtn.classList.add('active');
 
-    document.querySelectorAll('[data-lt]').forEach(el => {
-        const langText = lang === 'en'
-            ? el.getAttribute('data-en')
-            : el.getAttribute('data-lt');
+    const langElements = document.querySelectorAll('[data-lt]');
+    let langIdx = 0;
+    const langBatchSize = 40;
+    function processLangBatch() {
+        const end = Math.min(langIdx + langBatchSize, langElements.length);
+        for (; langIdx < end; langIdx++) {
+            const el = langElements[langIdx];
+            const langText = lang === 'en'
+                ? el.getAttribute('data-en')
+                : el.getAttribute('data-lt');
 
-        const icon = el.querySelector('i');
+            const icon = el.querySelector('i');
 
-        if (icon) {
-            const textNode = el.querySelector('span');
-            if(textNode) {
-                textNode.innerHTML = langText;
+            if (icon) {
+                const textNode = el.querySelector('span');
+                if(textNode) {
+                    textNode.textContent = langText;
+                } else {
+                    el.innerHTML = `<i class="${icon.className}"></i> ` + langText;
+                }
+            } else if (langText.indexOf('<') === -1) {
+                el.textContent = langText;
             } else {
-                el.innerHTML = `<i class="${icon.className}"></i> ` + langText;
+                el.innerHTML = langText;
             }
-        } else {
-            el.innerHTML = langText;
         }
-    });
+        if (langIdx < langElements.length) { requestAnimationFrame(processLangBatch); }
+    }
+    processLangBatch();
 }
 
 window.addEventListener('DOMContentLoaded', () => {
