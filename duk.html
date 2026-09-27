@@ -854,6 +854,7 @@ document.querySelectorAll('.accordion-header').forEach(header => {
     });
 });
 
+let currentLang = 'lt';
 function setLang(lang, save = true) {
     if (save) {
         localStorage.setItem('preferred_lang', lang);
@@ -866,6 +867,9 @@ function setLang(lang, save = true) {
         : document.querySelector('button[onclick*="en"]');
 
     if(activeBtn) activeBtn.classList.add('active');
+
+    if (lang === currentLang) { return; }
+    currentLang = lang;
 
     const langElements = document.querySelectorAll('[data-lt]');
     let langIdx = 0;
