@@ -164,6 +164,8 @@
     .price-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:20px;margin-bottom:20px}
     .price-card{background:var(--card-bg);border:1px solid #1e3a5f;border-radius:16px;padding:24px;backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:space-between;transition:0.3s;position:relative}
     .price-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+    .popular-badge.new{background:#22c55e;color:#052e16;box-shadow:0 3px 8px rgba(34,197,94,0.4)}
+    .price-card.new{border-color:#22c55e77}
     .price-card.popular{border-color:#f59e0b66}
     .popular-badge{position:absolute;top:-11px;right:16px;background:#f59e0b;color:#1a1000;font-size:11px;font-weight:800;padding:4px 10px;border-radius:8px;box-shadow:0 3px 8px rgba(245,158,11,0.4);white-space:nowrap;letter-spacing:0.3px}
     
@@ -390,8 +392,8 @@
 
 
 <!-- 💎 Paketas -->
-<h2 class="price-category-title" data-lt="<i class='fa-solid fa-gem'></i> Populiariausias paketas" data-en="<i class='fa-solid fa-gem'></i> Most Popular Bundle">
-<i class='fa-solid fa-gem'></i> Populiariausias paketas
+<h2 class="price-category-title" data-lt="<i class='fa-solid fa-gem'></i> Paketai" data-en="<i class='fa-solid fa-gem'></i> Bundles">
+<i class='fa-solid fa-gem'></i> Paketai
 </h2>
 
 <div class="price-grid">
@@ -405,6 +407,15 @@
 <p class="price-desc" data-lt="Švarus Windows diegimas kartu su pilnu aušinimo sistemos išvalymu ir kokybiškos termo pastos keitimu – vienu vizitu sutvarkoma ir programinė, ir techninė kompiuterio būklė." data-en="Clean Windows installation together with full cooling system dust cleaning and quality thermal paste replacement – both software and hardware condition handled in a single visit.">Švarus Windows diegimas kartu su pilnu aušinimo sistemos išvalymu ir kokybiškos termo pastos keitimu – vienu vizitu sutvarkoma ir programinė, ir techninė kompiuterio būklė.</p>
 </div>
 
+
+<div class="price-card popular" style="border-color:#f59e0b99;">
+<span class="popular-badge" data-lt="💎 Sutaupote 5 €" data-en="💎 Save €5">💎 Sutaupote 5 €</span>
+<div class="price-card-top">
+<span class="price-title" data-lt="Dulkių valymas + BIOS (nešiojamam)" data-en="Dust cleaning + BIOS (laptop)">Dulkių valymas + BIOS (nešiojamam)</span>
+<span class="price-tag" data-lt="Nuo 45 € <s style='color:var(--text-muted);font-weight:400;font-size:14px;'>vietoj 50 €</s>" data-en="From €45 <s style='color:var(--text-muted);font-weight:400;font-size:14px;'>instead of €50</s>">Nuo 45 € <s style='color:var(--text-muted);font-weight:400;font-size:14px;'>vietoj 50 €</s></span>
+</div>
+<p class="price-desc" data-lt="Dulkių valymas ir BIOS darbas vieno išardymo metu. Išardymo mokestis paketui netaikomas." data-en="Dust cleaning and BIOS work in a single disassembly. The disassembly fee does not apply to the bundle.">Dulkių valymas ir BIOS darbas vieno išardymo metu. Išardymo mokestis paketui netaikomas.</p>
+</div>
 </div>
 
 
@@ -482,8 +493,48 @@
 <a href="nuotoline-pagalba.html" style="color:var(--accent); font-weight:700; font-size:14px; display:inline-block; margin-top:8px;" data-lt="→ Plačiau apie nuotolinę pagalbą" data-en="→ Learn more about remote support">→ Plačiau apie nuotolinę pagalbą</a>
 </div>
 
+
+<div class="price-card new">
+<span class="popular-badge new" data-lt="🆕 Naujiena" data-en="🆕 New">🆕 Naujiena</span>
+<div class="price-card-top">
+<span class="price-title" data-lt="BIOS slaptažodis ir lustų programavimas" data-en="BIOS Password & Chip Programming">BIOS slaptažodis ir lustų programavimas</span>
+<span class="price-tag" data-lt="Nuo 15 €" data-en="From €15">Nuo 15 €</span>
+</div>
+<p class="price-desc" data-lt="BIOS slaptažodžio nuėmimas ir sugadinto BIOS atkūrimas be litavimo. Nešiojamiems kompiuteriams nuo 30 €. Jei BIOS dalies atlikti neįmanoma, už ją nemokate; nešiojamam taikomas 10 € išardymo ir diagnostikos mokestis." data-en="BIOS password removal and corrupted BIOS recovery without soldering. From €30 for laptops. If the BIOS part cannot be done, you do not pay for it; a €10 disassembly and diagnostics fee applies to laptops.">BIOS slaptažodžio nuėmimas ir sugadinto BIOS atkūrimas be litavimo. Nešiojamiems kompiuteriams nuo 30 €. Jei BIOS dalies atlikti neįmanoma, už ją nemokate; nešiojamam taikomas 10 € išardymo ir diagnostikos mokestis.</p>
+<a href="bios-atkurimas.html" style="color:var(--accent); font-weight:700; font-size:14px; display:inline-block; margin-top:8px;" data-lt="→ Plačiau: kada tai reikalinga?" data-en="→ More: when is it needed?">→ Plačiau: kada tai reikalinga?</a>
+</div>
 </div>
 
+
+
+<!-- 🖥️ Kompiuterių surinkimas -->
+<h2 class="price-category-title" data-lt="<i class='fa-solid fa-computer'></i> Kompiuterių surinkimas" data-en="<i class='fa-solid fa-computer'></i> Computer Assembly">
+<i class='fa-solid fa-computer'></i> Kompiuterių surinkimas
+</h2>
+
+<div class="price-grid">
+
+<div class="price-card new">
+<span class="popular-badge new" data-lt="🆕 Naujiena" data-en="🆕 New">🆕 Naujiena</span>
+<div class="price-card-top">
+<span class="price-title" data-lt="Kompiuterio surinkimas (Plug &amp; Play)" data-en="Computer Assembly (Plug &amp; Play)">Kompiuterio surinkimas (Plug &amp; Play)</span>
+<span class="price-tag" data-lt="Nuo 50 €" data-en="From €50">Nuo 50 €</span>
+</div>
+<p class="price-desc" data-lt="Surinkimas iš jūsų detalių, kabelių sutvarkymas, BIOS atnaujinimas ir XMP, švarus Windows, tvarkyklės, programos ir stabilumo testai. Detalių ir licencijų kaina neįskaičiuota." data-en="Assembly from your parts, cable management, BIOS update and XMP, clean Windows, drivers, programs and stability tests. Parts and license costs are not included.">Surinkimas iš jūsų detalių, kabelių sutvarkymas, BIOS atnaujinimas ir XMP, švarus Windows, tvarkyklės, programos ir stabilumo testai. Detalių ir licencijų kaina neįskaičiuota.</p>
+<a href="kompiuterio-surinkimas.html#surinkimas" style="color:var(--accent); font-weight:700; font-size:14px; display:inline-block; margin-top:8px;" data-lt="→ Plačiau: ką apima surinkimas?" data-en="→ More: what does assembly include?">→ Plačiau: ką apima surinkimas?</a>
+</div>
+
+<div class="price-card new">
+<span class="popular-badge new" data-lt="🆕 Naujiena" data-en="🆕 New">🆕 Naujiena</span>
+<div class="price-card-top">
+<span class="price-title" data-lt="Pilnas komplektavimas" data-en="Full Custom Build">Pilnas komplektavimas</span>
+<span class="price-tag" data-lt="Nuo 70 €" data-en="From €70">Nuo 70 €</span>
+</div>
+<p class="price-desc" data-lt="Detalių parinkimas pagal biudžetą (naujos arba hibridinis variantas), suderinamumo patikra, pirkimo koordinavimas, surinkimas ir paruošimas naudoti. Detalių ir licencijų kaina neįskaičiuota." data-en="Parts selection for your budget (new or hybrid), compatibility check, purchase coordination, assembly and preparation for use. Parts and license costs are not included.">Detalių parinkimas pagal biudžetą (naujos arba hibridinis variantas), suderinamumo patikra, pirkimo koordinavimas, surinkimas ir paruošimas naudoti. Detalių ir licencijų kaina neįskaičiuota.</p>
+<a href="kompiuterio-surinkimas.html#komplektavimas" style="color:var(--accent); font-weight:700; font-size:14px; display:inline-block; margin-top:8px;" data-lt="→ Plačiau: nauji ar hibridiniai komponentai?" data-en="→ More: new or hybrid parts?">→ Plačiau: nauji ar hibridiniai komponentai?</a>
+</div>
+
+</div>
 
 <div class="price-note">
 <p data-lt="<b>Pastaba:</b> Nurodytos kainos yra orientacinės. Galutinė kaina visada iš anksto suderinama su jumis prieš pradedant bet kokius darbus." data-en="<b>Note:</b> Listed prices are indicative. The final price is always agreed with you in advance before starting any work."><b>Pastaba:</b> Nurodytos kainos yra orientacinės. Galutinė kaina visada iš anksto suderinama su jumis prieš pradedant bet kokius darbus.</p>
